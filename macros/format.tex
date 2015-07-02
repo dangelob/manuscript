@@ -1,4 +1,5 @@
 % Formattage headers footers ---------------------------------------------------
+% package fancyhdr
 \fancyhf{}
 
 % Définition des différents style de header
@@ -38,3 +39,8 @@
 %  \renewcommand{\footrulewidth}{0pt}% No footer rule
 %  \fancyhf{}% Clear header/footer
 %}
+
+% Formattage titles ------------------------------------------------------------
+% package titlesec
+\titleformat{\chapter}{\Huge}{\thechapter}{1em}{}	% format les chapitres
+\titleformat{\section}{\huge}{\thesection}{1em}{}	% format les sections

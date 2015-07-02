@@ -41,15 +41,13 @@
 \include{macros/format}
 
 % temporary setup/package ------------------------------------------------------
-\geometry{showframe=true}
+%\geometry{showframe=true}
 \usepackage[textwidth=60pt,textsize=footnotesize]{todonotes}
 \usepackage{lineno}					% Numéro de lignes
 
-% Formattage des sections ------------------------------------------------------
+
 % Effet inconnu des commandes ci-dessous (positionnement ? après begin{document} ?)
-%\titleformat{\chapter}{\Huge}{\thechapter}{1em}{}
-%\titleformat{\section}{\huge}{\thesection}{1em}{} %Les Sections
-% Redéfinition de chpatermark et sectionmark
+% Redéfinition de chaptermark et sectionmark
 %\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}}
 %\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
 
@@ -78,25 +76,26 @@
 \renewcommand{\listfigurename}{Liste des figures}%
 %\renewcommand{\listtablename}{Nouveau nom}%
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Frontmatter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frontmatter%
-\include{front_back_pages/frontcover}
+\frontmatter
+\include{front_back_pages/frontcover}	% insertion page de garde
+\pagenumbering{roman} 					% On active la numérotation des pages
 
-\pagenumbering{roman} % On active la numérotation des pages
-
-\pagestyle{frontmatter}% frontmatter page style
+\pagestyle{frontmatter}					% frontmatter page style
 
 \tableofcontents
 \addcontentsline{toc}{chapter}{Table des matières}
+
 \listoffigures
 \addcontentsline{toc}{chapter}{Liste des figures}
+
 \listoftables
 \addcontentsline{toc}{chapter}{Liste des tableaux}
+
 \include{front_back_pages/avantPropos}
+
 \include{front_back_pages/remerciement}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -104,7 +103,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
 \doublespacing
-\pagestyle{mainmatter}% mainmatter page style
+\pagestyle{mainmatter}					% mainmatter page style
 
 \include{content/introduction}
 \include{content/chapitre1}
@@ -122,7 +121,7 @@
 % Backmatter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \backmatter
-\pagestyle{backmatter}% backmatter page style
+\pagestyle{backmatter}					% backmatter page style
 
 % Conclusions ------------------------------------------------------------------
 \include{content/conclusions}
