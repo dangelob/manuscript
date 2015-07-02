@@ -9,35 +9,25 @@
 \usepackage[T1]{fontenc}			%codage de caractères T1
 \usepackage[utf8]{inputenc}			%caractères accentués
 \usepackage[francais]{babel}		%adaptation de LaTeX au français
-\usepackage{xspace}					%Gestion des espaces
+
 \usepackage{graphicx}				%inclure des graphiques
-%\usepackage{vmargin}				%Definition des marges
-%\setmarginsrb{2cm}{1cm}{2cm}{1cm}{0cm}{1cm}{1cm}{1cm}
-%\usepackage[scaled]{uarial}   %arial pour les pages de couv et 4ème
-
 %\usepackage{siunitx} % Pour les unités
-
-
 
 %\usepackage[longnamesfirst]{natbib}
 
-\usepackage[francais]{layout} %Incompatible avec vmargin
+%\usepackage[francais]{layout} %Incompatible avec vmargin
 %\usepackage{fullpage}
 
 %\usepackage[left=1.2in, right=1in, top=1in, bottom=1in]{geometry}
 %\usepackage[left=3cm, right=2.5cm, top=2.5cm, bottom=2.5cm, bindingoffset=0.5cm]{geometry}
 \usepackage[includeheadfoot, margin=2.6cm, bindingoffset=0.5cm]{geometry}
-%\geometry{showframe=true}
 
-\setlength{\marginparwidth}{60pt}
-\setlength{\headheight}{28pt} % apparemment bien pour fancyhdr
-\usepackage[textwidth=60pt,textsize=footnotesize]{todonotes}
 
 
 \usepackage{fancyhdr}
 
 % Autres packages non utilisés pour les couv.
-\usepackage{lineno}					% Numéro de lignes
+
 \usepackage{textcomp} 				% améliore l'affichage des symbol (degré °) TEST
 \usepackage{amsmath}				% complement mathematique
 \usepackage{amssymb}				% ajoute des symboles
@@ -49,7 +39,7 @@
 %\usepackage{algorithm}				% Pour les algorithmes
 %\usepackage{algorithmic}			% Pour les algorithmes
 \usepackage{makeidx}				% Pour l'index
-%\usepackage{xspace}					% Permet les espace après macro newcommand
+\usepackage{xspace}					% Permet les espace après macro newcommand
 \usepackage{apalike}				% Formattage de la biblio
 \usepackage{setspace}				% Interligne double
 
@@ -58,20 +48,22 @@
 %\usepackage{pdfpages}
 %\usepackage{quotchap}
 \usepackage{booktabs}
-\usepackage{titlesec} %Formattage des sction
+\usepackage{titlesec} %Formattage des section
 \usepackage[colorlinks = true, allcolors=blue]{hyperref}
+
+
 
 
 % Formattage headers footers ---------------------------------------------------
 \fancyhf{}
 
 % Définition des différents style de header
-\fancypagestyle{plain}{ % Redéfinition des entête et pied pour page chapitre
-\fancyhf{}
-\fancyfoot[C]{\thepage}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-}
+%\fancypagestyle{plain}{ % Redéfinition des entête et pied pour page chapitre
+%\fancyhf{}
+%\fancyfoot[C]{\thepage}
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}
+%}
 
 \fancypagestyle{frontmatter}{% Définition des entête et pied de page pour frontmatter
   \renewcommand{\headrulewidth}{0pt}% No header rule
@@ -80,7 +72,7 @@
   \fancyfoot[C]{\thepage}%
 }
 
-\fancypagestyle{mainmatter}{% Définition des entête et pied de page pour frontmatter
+\fancypagestyle{mainmatter}{% Définition des entête et pied de page pour mainmatter
   \fancyhf{}
   \fancyhead[LE]{\normalfont\nouppercase{\leftmark}}
   \fancyfoot[LE,RO]{\thepage} % partie gauche du pied de page
@@ -96,44 +88,57 @@
   \fancyfoot[C]{\thepage}%
 }
 
-\fancypagestyle{emptyPerso}{% Définition des entête et pied de page pour frontmatter
-  \renewcommand{\headrulewidth}{0pt}% No header rule
-  \renewcommand{\footrulewidth}{0pt}% No footer rule
-  \fancyhf{}% Clear header/footer
-}
-% Redéfinition de chpatermark et sectionmark
-\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+%% style vide pas de footer (aucun numéro de page) pas de header
+%\fancypagestyle{emptyPerso}{% Définition des entête et pied de page pour frontmatter
+%  \renewcommand{\headrulewidth}{0pt}% No header rule
+%  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \fancyhf{}% Clear header/footer
+%}
+
+% temporary setup/package ------------------------------------------------------
+\geometry{showframe=true}
+\usepackage[textwidth=60pt,textsize=footnotesize]{todonotes}
+\usepackage{lineno}					% Numéro de lignes
 
 % Formattage des sections ------------------------------------------------------
 %\titleformat{\chapter}{\Huge}{\thechapter}{1em}{}
 \titleformat{\section}{\huge}{\thesection}{1em}{} %Les Sections
 
 % Autres -----------------------------------------------------------------------
-\makeindex								% "lancer" le log de l'index
+\makeindex							% "lancer" le log de l'index
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{document}
-
-% Franciser certaines commandes
-\renewcommand{\tablename}{Tableau}
-%\renewcommand{\figurename}{Nom de figure}
-\renewcommand{\listfigurename}{Liste des figures}%
-%\renewcommand{\listtablename}{Nouveau nom}%
+\setlength{\marginparwidth}{60pt}
+\setlength{\headheight}{28pt}		% apparemment bien pour fancyhdr
 
 % Ajout de commandes utiles
 \newcommand\plop{\textbf{(Réf needed)\xspace}}
 \newcommand\COO{CO$_{2}$\xspace}
 \newcommand\CHH{CH$_{4}$\xspace}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document start
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% setup ------------------------------------------------------------------------
+% Franciser certaines commandes
+\renewcommand{\tablename}{Tableau}
+%\renewcommand{\figurename}{Nom de figure}
+\renewcommand{\listfigurename}{Liste des figures}%
+%\renewcommand{\listtablename}{Nouveau nom}%
+
+% Redéfinition de chpatermark et sectionmark
+%\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}}
+%\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Frontmatter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frontmatter%
-\pagestyle{emptyPerso}
+%\pagestyle{emptyPerso}
 \include{front_back_pages/frontcover}
 
 \pagenumbering{roman} % On active la numérotation des pages
@@ -156,17 +161,17 @@
 \doublespacing
 \pagestyle{mainmatter}% mainmatter page style
 
-\include{Introduction/introduction}
-\include{Chapitre1/chapitre1}
+\include{content/introduction}
+\include{content/chapitre1}
 %\part{Observation}
-\include{Chapitre2/chapitre2}
-\include{Chapitre3/chapitre3}
+\include{content/chapitre2}
+\include{content/chapitre3}
 %\part{Expérimentation}
-\include{Chapitre4/chapitre4}
-\include{Chapitre5/chapitre5}
-\include{Chapitre6/chapitre6}
+\include{content/chapitre4}
+\include{content/chapitre5}
+\include{content/chapitre6}
 %\part{Modélisation}
-\include{Chapitre7/chapitre7}
+\include{content/chapitre7}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Backmatter
@@ -175,7 +180,7 @@
 \pagestyle{backmatter}% backmatter page style
 
 % Conclusions ------------------------------------------------------------------
-\include{Conclusions/conclusions}
+\include{content/conclusions}
 
 % Bibliographie ----------------------------------------------------------------
 \bibliography{manuscript}{}
@@ -189,7 +194,7 @@
 \printindex
 
 % 4e de couverture -------------------------------------------------------------
-\thispagestyle{plain}
+%\thispagestyle{plain}
 \singlespacing
 \include{front_back_pages/backcover}
 
