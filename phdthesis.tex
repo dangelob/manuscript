@@ -45,12 +45,6 @@
 \usepackage[textwidth=60pt,textsize=footnotesize]{todonotes}
 \usepackage{lineno}					% Numéro de lignes
 
-
-% Effet inconnu des commandes ci-dessous (positionnement ? après begin{document} ?)
-% Redéfinition de chaptermark et sectionmark
-%\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}}
-%\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
-
 % Autres -----------------------------------------------------------------------
 \makeindex							% "lancer" le log de l'index
 
@@ -104,6 +98,10 @@
 \mainmatter
 \doublespacing
 \pagestyle{mainmatter}					% mainmatter page style
+% Ces commandes permettent de modifier le texte renvoyé aux headers
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+
 
 \include{content/introduction}
 \include{content/chapitre1}
