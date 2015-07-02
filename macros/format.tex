@@ -1,0 +1,40 @@
+% Formattage headers footers ---------------------------------------------------
+\fancyhf{}
+
+% Définition des différents style de header
+%\fancypagestyle{plain}{ % Redéfinition des entête et pied pour page chapitre
+%\fancyhf{}
+%\fancyfoot[C]{\thepage}
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}
+%}
+
+\fancypagestyle{frontmatter}{% Définition des entête et pied de page pour frontmatter
+  \renewcommand{\headrulewidth}{0pt}% No header rule
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+  \fancyhf{}% Clear header/footer
+  \fancyfoot[C]{\thepage}%
+}
+
+\fancypagestyle{mainmatter}{% Définition des entête et pied de page pour mainmatter
+  \fancyhf{}
+  \fancyhead[LE]{\normalfont\nouppercase{\leftmark}}
+  \fancyfoot[LE,RO]{\thepage} % partie gauche du pied de page
+  \fancyhead[RO]{\normalfont\nouppercase{\rightmark}} % partie droite de l'en-tête
+  \fancyfoot[RO]{\thepage}  % partie droite du pied de page
+  \renewcommand{\headrulewidth}{0.4pt}
+}
+
+\fancypagestyle{backmatter}{% Définition des entête et pied de page pour frontmatter
+  \renewcommand{\headrulewidth}{0pt}% No header rule
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+  \fancyhf{}% Clear header/footer
+  \fancyfoot[C]{\thepage}%
+}
+
+%% style vide pas de footer (aucun numéro de page) pas de header
+%\fancypagestyle{emptyPerso}{% Définition des entête et pied de page pour frontmatter
+%  \renewcommand{\headrulewidth}{0pt}% No header rule
+%  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \fancyhf{}% Clear header/footer
+%}
