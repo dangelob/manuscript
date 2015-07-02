@@ -1,0 +1,193 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%THESES ORLEANAISES : STYLES POUR LES PAGES DE COUV et DE DOS obligatoires
+%helene.jouguet@univ-orleans.fr / SCD
+
+%Classe du document : book :
+\documentclass[a4paper,12pt, twoside]{book}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Packages :
+\usepackage[T1]{fontenc}			%codage de caractères T1
+\usepackage[utf8]{inputenc}			%caractères accentués
+\usepackage[francais]{babel}		%adaptation de LaTeX au français
+\usepackage{xspace}					%Gestion des espaces
+\usepackage{graphicx}				%inclure des graphiques
+%\usepackage{vmargin}				%Definition des marges
+%\setmarginsrb{2cm}{1cm}{2cm}{1cm}{0cm}{1cm}{1cm}{1cm}
+%\usepackage[scaled]{uarial}   %arial pour les pages de couv et 4ème
+
+%\usepackage{siunitx} % Pour les unités
+
+%\usepackage[longnamesfirst]{natbib}
+
+\usepackage[francais]{layout} %Incompatible avec vmargin
+%\usepackage{fullpage}
+
+%\usepackage[left=1.2in, right=1in, top=1in, bottom=1in]{geometry}
+%\usepackage[left=3cm, right=2.5cm, top=2.5cm, bottom=2.5cm, bindingoffset=0.5cm]{geometry}
+\usepackage[includeheadfoot, margin=2.6cm, bindingoffset=0.5cm]{geometry}
+%\geometry{showframe=true}
+
+\setlength{\marginparwidth}{60pt}
+\setlength{\headheight}{28pt} % apparemment bien pour fancyhdr
+\usepackage[textwidth=60pt,textsize=footnotesize]{todonotes}
+
+
+\usepackage{fancyhdr}
+\fancyhf{}
+
+% Définition des différents style de header
+\fancypagestyle{plain}{ % Redéfinition des entête et pied pour page chapitre
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+}
+
+\fancypagestyle{frontmatter}{% Définition des entête et pied de page pour frontmatter
+  \renewcommand{\headrulewidth}{0pt}% No header rule
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+  \fancyhf{}% Clear header/footer
+  \fancyfoot[C]{\thepage}%
+}
+
+\fancypagestyle{mainmatter}{% Définition des entête et pied de page pour frontmatter
+  \fancyhf{}
+  \fancyhead[LE]{\normalfont\nouppercase{\leftmark}}
+  \fancyfoot[LE,RO]{\thepage} % partie gauche du pied de page
+  \fancyhead[RO]{\normalfont\nouppercase{\rightmark}} % partie droite de l'en-tête
+  \fancyfoot[RO]{\thepage}  % partie droite du pied de page
+  \renewcommand{\headrulewidth}{0.4pt}
+}
+
+\fancypagestyle{backmatter}{% Définition des entête et pied de page pour frontmatter
+  \renewcommand{\headrulewidth}{0pt}% No header rule
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+  \fancyhf{}% Clear header/footer
+  \fancyfoot[C]{\thepage}%
+}
+
+\fancypagestyle{emptyPerso}{% Définition des entête et pied de page pour frontmatter
+  \renewcommand{\headrulewidth}{0pt}% No header rule
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+  \fancyhf{}% Clear header/footer
+}
+% Redéfinition de chpatermark et sectionmark
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+
+% Autres packages non utilisés pour les couv.
+\usepackage{lineno}					% Numéro de lignes
+\usepackage{textcomp} 				% améliore l'affichage des symbol (degré °) TEST
+\usepackage{amsmath}				% complement mathematique
+\usepackage{amssymb}				% ajoute des symboles
+%\usepackage{array}					% Outils supplémentaires pour les tableaux
+%\usepackage{multicol}				% Plusieurs colonnes possibles
+%\usepackage{indentfirst} 			% indenter le premier paragraphe après une nouvelle section
+%\usepackage{latexsym}				% ajoute des symboles
+%\usepackage{setspace}				% Pour les Interlignes
+%\usepackage{algorithm}				% Pour les algorithmes
+%\usepackage{algorithmic}			% Pour les algorithmes
+\usepackage{makeidx}				% Pour l'index
+%\usepackage{xspace}					% Permet les espace après macro newcommand
+\usepackage{apalike}				% Formattage de la biblio
+\usepackage{setspace}				% Interligne double
+
+\usepackage[export]{adjustbox}		%allow to align images by the top
+\usepackage{framed}					%allow to do the box arround the title
+%\usepackage{pdfpages}
+%\usepackage{quotchap}
+\usepackage{booktabs}
+\usepackage{titlesec} %Formattage des sction
+%\titleformat{\chapter}{\Huge}{\thechapter}{1em}{}
+\titleformat{\section}{\huge}{\thesection}{1em}{} %Les Sections
+\usepackage[colorlinks = true, allcolors=blue]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeindex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pagenumbering{gobble} % On stop la numérotation des pages pour les 1re pages
+%\renewcommand{\figurename}{Nom de figure}
+\renewcommand{\tablename}{Tableau}
+
+\renewcommand{\listfigurename}{Liste des figures}%
+%\renewcommand{\listtablename}{Nouveau nom}%
+
+\newcommand\plop{\textbf{(Réf needed)\xspace}}
+\newcommand\COO{CO$_{2}$\xspace}
+\newcommand\CHH{CH$_{4}$\xspace}
+
+%\includepdf[pages={1},offset=100 -100]{./OrleansLatex/PageGardeOrleans.pdf}
+%http://tex.stackexchange.com/questions/103216/insert-external-pdf-pages-with-adapted-size-position-and-margins
+%\noindent
+%\thispagestyle{empty}
+\pagestyle{emptyPerso}
+
+%\includegraphics[
+%    page=1,
+%    width=\textwidth,
+%    height=\textheight,
+%    keepaspectratio
+%]{./OrleansLatex/PgG.pdf}
+
+\include{front_back_pages/frontcover}
+
+%\vfill
+
+
+\pagenumbering{roman} % On active la numérotation des pages
+\frontmatter%
+\pagestyle{frontmatter}% frontmatter page style
+
+\tableofcontents
+\addcontentsline{toc}{chapter}{Table des matières}
+\listoffigures
+\addcontentsline{toc}{chapter}{Liste des figures}
+\listoftables
+\addcontentsline{toc}{chapter}{Liste des tableaux}
+\include{front_back_pages/avantPropos}
+\include{front_back_pages/remerciement}
+
+
+\mainmatter
+\doublespacing
+\pagestyle{mainmatter}% mainmatter page style
+
+\include{Introduction/introduction}
+
+attention première citation \cite{francez2000}
+test d'une apostrophe !
+L'Ann\'ee Biologique
+
+\include{Chapitre1/chapitre1}
+%\part{Observation}
+\include{Chapitre2/chapitre2}
+\include{Chapitre3/chapitre3}
+%\part{Expérimentation}
+\include{Chapitre4/chapitre4}
+\include{Chapitre5/chapitre5}
+\include{Chapitre6/chapitre6}
+%\part{Modélisation}
+\include{Chapitre7/chapitre7}
+
+\backmatter
+\pagestyle{backmatter}% backmatter page style
+
+\include{Conclusions/conclusions}
+
+\bibliography{manuscript}{}
+\bibliographystyle{apalike}
+\addcontentsline{toc}{chapter}{Références bibliographiques}
+\clearpage
+
+\phantomsection % Permet "d'accrocher" hyperref
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+\thispagestyle{plain}
+\singlespacing
+\include{front_back_pages/backcover}
+
+\listoftodos
+\end{document}

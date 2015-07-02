@@ -1,0 +1,82 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1e de couverture
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set-up -----------------------------------------------------------------------
+\pagenumbering{gobble} % stop page numbering
+\newgeometry{left=2cm,top=1.5cm,right=1.5cm,bottom=1.5cm} % set up margin
+\usefont{T1}{phv}{m}{n} % Set up font style
+{\parindent0pt % disables indentation for all the text between { and }
+
+% logos and university name ----------------------------------------------------
+\includegraphics[width=0.2\textwidth, valign=c]{./images/pucvl}
+\hfill
+{\LARGE\textbf{UNIVERSITÉ D'ORLÉANS}}
+\hfill
+\includegraphics[width=0.2\textwidth, valign=c]{./images/univ}
+
+% PhD Informations -------------------------------------------------------------
+\begin{center}
+	{\large\textit{\textbf{ÉCOLE DOCTORALE ÉNERGIE, MATÉRIAUX, SCIENCES DE LA TERRE ET DE L'UNIVERS}}}\\
+
+	\vspace{1.1cm}
+
+	{\large Laboratoire de Physique et Chimie de l'Environnement et de l'Espace} \\
+
+	\vspace{1.1cm}
+
+	{\Large\textbf{THÈSE}} présentée par :\\
+	{\Large\textbf{Benoît D'ANGELO}}\\
+
+	\vspace{1.1cm}
+
+	\begin{tabular}{r l}
+		soutenue le : & \textbf{[XX mois en lettres 2015]} \\ [.8cm]
+		pour obtenir le grade de : & \textbf{Docteur de l'universit\'e d'Orl\'eans}\\[.2cm]
+		Discipline : &  \textbf{Sciences de la Terre et de l'Univers}\\
+	\end{tabular}
+\end{center}
+
+%\vspace{0.2cm}
+\vfill
+
+% Title box --------------------------------------------------------------------
+\begin{framed}
+	\begin{minipage}{\dimexpr\textwidth-2\fboxrule-2\fboxsep}
+	\centering
+		\vspace{0.2cm}
+			{\Large\textbf{[Titre de la th\`ese]}\\ \vspace{0.3cm}
+			[Sous titre \'eventuel]}
+		\vspace{0.2cm}
+	\end{minipage}
+\end{framed}
+
+} % end of the "no indentation" parametrization
+
+\vfill
+
+% Encadrement/Jury -------------------------------------------------------------
+\begin{center}
+\begin{tabular}{l l l l}
+\multicolumn{2}{l}{\textbf{\textsc{Thèse} dirig\'ee par : }} & & \\[.5ex]
+	& \textbf{Christophe \textsc{Guimbaud}} &  &  Co-directeur de recherche, LPC2E, Orléans\\
+	& \textbf{Fatima \textsc{Laggoun}} & &  Co-directeur de recherche, ISTO, Orléans\\[1ex]
+\multicolumn{2}{l}{\textsc{\textbf{Rapporteurs :}}} & & \\[.5ex]
+%\begin{tabular}{l p{1cm} p{10cm}}
+	& \textbf{Pr\'enom \textsc{Nom}} & &  Titre, \'etablissement\\
+	& \textbf{Pr\'enom \textsc{Nom}} & &  Titre, \'etablissement\\[1ex]
+\hline\\ [-1ex]
+\multicolumn{2}{l}{\textsc{\textbf{Jury : }}} & &\\[.5ex]
+	&\textbf{Pr\'enom \textsc{Nom}} &  & Titre, \'etablissement, Pr\'esident du jury\\
+	&\textbf{Pr\'enom \textsc{Nom}} &  &  Titre, \'etablissement\\
+	&\textbf{Pr\'enom \textsc{Nom}} &  &  Titre, \'etablissement\\
+	&\textbf{Pr\'enom \textsc{Nom}} &  &  Titre, \'etablissement\\
+	&\textbf{Pr\'enom \textsc{Nom}} &  &  Titre, \'etablissement\\
+	&\textbf{Pr\'enom \textsc{Nom}} &  &  Titre, \'etablissement\\
+	&\textbf{Pr\'enom \textsc{Nom}} &  &  Titre, \'etablissement\\
+\end{tabular}
+\end{center}
+
+\vfill
+
+\restoregeometry % restore base margins
+\usefont{T1}{cmr}{m}{n} % restore base font
