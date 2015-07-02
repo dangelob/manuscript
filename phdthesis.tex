@@ -46,9 +46,12 @@
 \usepackage{lineno}					% Numéro de lignes
 
 % Formattage des sections ------------------------------------------------------
-% Effet inconnu des commandes ci-dessous
+% Effet inconnu des commandes ci-dessous (positionnement ? après begin{document} ?)
 %\titleformat{\chapter}{\Huge}{\thechapter}{1em}{}
 %\titleformat{\section}{\huge}{\thesection}{1em}{} %Les Sections
+% Redéfinition de chpatermark et sectionmark
+%\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}}
+%\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
 
 % Autres -----------------------------------------------------------------------
 \makeindex							% "lancer" le log de l'index
@@ -61,7 +64,6 @@
 \newcommand\COO{CO$_{2}$\xspace}
 \newcommand\CHH{CH$_{4}$\xspace}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Document start
@@ -70,21 +72,18 @@
 \begin{document}
 
 % setup ------------------------------------------------------------------------
-% Franciser certaines commandes
+% Changer la françisation de certaines commandes
 \renewcommand{\tablename}{Tableau}
 %\renewcommand{\figurename}{Nom de figure}
 \renewcommand{\listfigurename}{Liste des figures}%
 %\renewcommand{\listtablename}{Nouveau nom}%
 
-% Redéfinition de chpatermark et sectionmark
-%\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}}
-%\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Frontmatter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frontmatter%
-%\pagestyle{emptyPerso}
 \include{front_back_pages/frontcover}
 
 \pagenumbering{roman} % On active la numérotation des pages
@@ -140,9 +139,13 @@
 \printindex
 
 % 4e de couverture -------------------------------------------------------------
-%\thispagestyle{plain}
 \singlespacing
 \include{front_back_pages/backcover}
 
 \listoftodos
 \end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document end
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
