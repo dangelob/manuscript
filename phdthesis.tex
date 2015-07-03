@@ -20,7 +20,10 @@
 \usepackage{framed}					%allow to do the box arround the title
 
 % Other packages ---------------------------------------------------------------
-%\usepackage{siunitx}				% Pour les unités
+\usepackage[load-configurations=abbreviations]{siunitx}		% Pour les unités
+\sisetup{locale = FR,
+detect-all, % permet de garder la même font que dans le texte
+}
 %\usepackage{array}					% Outils supplémentaires pour les tableaux
 %\usepackage{multicol}				% Plusieurs colonnes possibles
 %\usepackage{indentfirst} 			% indenter le premier paragraphe après une nouvelle section
