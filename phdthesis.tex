@@ -54,13 +54,13 @@ detect-all, % permet de garder la même font que dans le texte
 \makeindex							% "lancer" le log de l'index
 
 %\setlength{\marginparwidth}{60pt}	% taille marge (todo ?)
-%\setlength{\headheight}{28pt}		% taille header apparemment bien pour fancyhdr
+\setlength{\headheight}{20pt}		% taille header 28pt apparemment bien pour fancyhdr
 
 % set up path to graphs
 \graphicspath{ {images/} }
 
 % partie à compiler 
-\includeonly{content/chapitre1}
+%\includeonly{content/chapitre1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -110,16 +110,13 @@ detect-all, % permet de garder la même font que dans le texte
 
 
 \include{content/introduction}
-\include{content/chapitre1}
-%\part{Observation}
-\include{content/chapitre2}
-\include{content/chapitre3}
-%\part{Expérimentation}
-\include{content/chapitre4}
-\include{content/chapitre5}
-\include{content/chapitre6}
-%\part{Modélisation}
-\include{content/chapitre7}
+\include{content/chapitre1} %Synthèse bibliographique
+\include{content/chapitre2} %Sites d'études et méthodologies employées
+\include{content/chapitre3} %Bilan de C de la tourbière de La Guette
+\include{content/chapitre4} %Effets de l'hydrologie sur les flux de CO2 et CH4
+\include{content/chapitre5} %Variation journalière de la respiration de l'écosystème
+%\include{content/chapitre6}
+%\include{content/chapitre7}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Backmatter
@@ -145,7 +142,7 @@ detect-all, % permet de garder la même font que dans le texte
 \singlespacing
 \include{front_back_pages/backcover}
 
-\listoftodos
+%\listoftodos
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
