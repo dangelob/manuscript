@@ -7,7 +7,3 @@ headings_flag 1
 delim_0 "\\dotfill"
 delim_1 "\\dotfill"
 delim_2 "\\dotfill"
-
-%Retour à la ligne pour sous-entrées
-%item_1  "\n \\subitem "
-%item_x1  "\n \\subitem "
