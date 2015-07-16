@@ -135,7 +135,7 @@ Plus de \SI{85}{\percent} d'entre elles sont situés dans l'hémisphère nord, m
 \centering
 \includegraphics[width=\textwidth]{peatlandGlobalDistribution}
 \caption{Global distribution of peatlands}
-\label{peatlandGlobalDistribution}\index{tourbières!distribution} 
+\label{fig:peatlandGlobalDistribution}\index{tourbières!distribution} 
 \end{figure}
 
 Différentes classifications sont utilisées pour classer ces écosystèmes.
@@ -180,7 +180,7 @@ Le carbone stocké dans les tourbières représente 10 à \SI{25}{\percent} du c
 \begin{table}
 \centering
 \caption{Estimations des stocks de C pour différents environnements}
-\label{CCycleStocks}
+\label{table:CCycleStocks}
 \begin{tabular}{llp{7cm}}\toprule
 Compartiment & Stock (en Gt de C) & référence \\ \midrule
 Tourbières & 270 -- 455 & \cite{gorham1991,turunen2002} \\ 
@@ -438,11 +438,16 @@ C'est l'intérêt d'établir des bilans de carbone.
 
 \subsection{Bilans de carbone}
 
-Les flux gazeux entrants et sortant des écosystèmes tourbeux ont été précisé précédemment.
-Il s'agit bien sur des respirations (\coo et \chh) et de la photosynthèse.
-Cependant d'autres flux de C peuvent jouer sur le bilan de carbone : 
-Les flux dissous, le carbone organique dissous et de carbone inorganique dissous.
-Les flux de carbone particulaire, et plus anecdotiquement les flux liées au composés organo-volatils (COV), au monoxyde de carbone.
+Le calcul d'un bilan de carbone à l'échelle d'un écosystème, permet de déterminer si l'équilibre (où le déséquilibre) des flux tend à stocker du carbone, le système fonctionnant alors comme un puits, ou bien à libérer du carbone, le système fonctionnant alors comme une source.
+Il existe différentes façon de réaliser le bilan de carbone d'une tourbière que l'on peut séparer en deux approches principales.
+La première approche consiste à utiliser l'archive tourbeuse pour estimer des vitesses d'accumulation de la tourbe.
+Cette méthode permet d'étudier la fonction puits sur des temps long (derniers millénaires) et de lier d'éventuels changements dans les vitesses d'accumulation à des facteurs environnementaux.
+La seconde approche se base d'avantage sur des mesures actuelles des différents flux afin d'étudier, sur des temps forcément plus court, l'évolution de la prépondérance puits/source d'un écosystème.
+
+\subsubsection{passé}
+
+\subsubsection{présent}
+C'est cette seconde approche qui va être mise en œuvre.
 
 \begin{equation*}
 BCNE=\frac{dC}{dt}=\overbrace{PPB - Re}^{ENE}  - F_{COD} - F_{COP} - F_{CH_{4}} \textcolor{gray}{- F_{CID} - F_{COV} - F_{CO}}
@@ -463,9 +468,6 @@ BCNE=\frac{dC}{dt}=\overbrace{PPB - Re}^{ENE}  - F_{COD} - F_{COP} - F_{CH_{4}} 
 
 Les bilans les plus complets réalisées sur les tourbières comprennent la partie gazeuse, dissoute...
 
-\subsubsection{passé}
-
-\subsubsection{présent}
 
 
 %\section{Objectifs du travail}
