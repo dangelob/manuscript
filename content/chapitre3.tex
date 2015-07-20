@@ -89,6 +89,18 @@ En moyenne l'ENE est de \SI{2.85(305)}{\uml} en 2013 et de \SI{2.93(277)}{\uml} 
 
 \section{Le bilan de carbone}
 
+\begin{equation}
+RE = a \times exp(b\times T5)
+\end{equation}
+
+\begin{equation}
+PPBsat = a \times exp(-((Tair - b)/ c)^2)
+\end{equation}
+
+\begin{align}
+ENE &= PPB - RE\\
+ENE &= a \times exp(b\times T5) - a \times exp(-((Tair - b)/ c)^2)
+\end{align}
 \section{Évaluation du bilan}
 
 \subsection{sensibilité des paramètres}
