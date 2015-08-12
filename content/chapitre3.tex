@@ -4,11 +4,21 @@
 
 \section{Introduction}
 
-\section{Matériels et méthodes}
+Afin de pouvoir interpoler les mesures de respiration mensuelles, il est nécessaire de les relier à des variables environnementales nous l'avons vu.
+Un des facteurs de contrôle des flux est la température qui régule les processus chimiques et biologiques.
+La température à \SI{-5}{\cm} est la plus souvent utilisée \cite{ballantyne2014}, même si d'autres comme la température de l'air ou encore la température du sol à \SI{-10}{\cm} peuvent également l'être \cite{bortoluzzi2006,kim1992}.
+Cette profondeur, \SI{-5}{\cm}, est régulièrement utilisée car c'est dans la tourbe, proche de la surface qu'est produit la majorité du \coo.
+\textbf{production CO2 ? profils ?}
+C'est également à des profondeurs relativement faibles que se situent la majorité des racines \plop qui peuvent contribuer à la respiration du sol \textbf{(de l'écosystème?)} pour 35 à \SI{60}{\percent} \cite{silvola1996a,crow2005}.
 
-\subsection{méthodes de mesure}
+Objectif : bilan de C
 
-\subsubsection{mesures de flux de gaz}
+
+\section{Procédure expérimentale et analytique}
+
+\subsection{Méthodes de mesure}
+
+\subsubsection{Mesures de flux de gaz}
 La mesure des flux de \coo et de \chh ont été effectué en utilisant la méthode décrite dans la partie~\ref{sec:clsd_chbr_method}.
 En XmoisX YannéeY, 20 placettes ont été installées\footnote{je remercie ici Sébastien Gogo pour avoir installé ces placettes sur le terrain avant même mon arrivée.}. 
 Les placettes délimitées par des piquets occupaient une surface de \SI{4}{\square\metre} (2$\times$\SI{2}{\metre}), à l'intérieur de laquelle ont été installé de façon permanente un piézomètre et une embase permettant la mesure des flux de gaz.
@@ -28,16 +38,22 @@ Les mesures automatiquement acquise via une station météo campbell sont la tem
 
 \subsection{modélisation du bilan de C}
 
-Afin de pouvoir interpoler les mesures de respiration mensuelles, il est nécessaire de les relier à des variables environnementales nous l'avons vu.
-Un des facteurs de contrôle des flux est la température qui régule les processus chimiques et biologiques.
-La température à \SI{-5}{\cm} est la plus souvent utilisée \cite{ballantyne2014}, même si d'autres comme la température de l'air ou encore la température du sol à \SI{-10}{\cm} peuvent également l'être \cite{bortoluzzi2006,kim1992}.
-Cette profondeur, \SI{-5}{\cm}, est régulièrement utilisée car c'est dans la tourbe, proche de la surface qu'est produit la majorité du \coo.
-\textbf{production CO2 ? profils ?}
-C'est également à des profondeurs relativement faibles que se situent la majorité des racines \plop qui peuvent contribuer à la respiration du sol \textbf{(de l'écosystème?)} pour 35 à \SI{60}{\percent} \cite{silvola1996a,crow2005}.
+Le bilan de C considéré ici est constitué de 3 éléments majeurs, le \coo, le \chh et de COD.
+Le \coo et de \chh sont regroupés dans ce qui est appelé bilan de GES.
 
-\section{Évolution générale des facteurs contrôlants et des flux}
+\subsubsection{Bilan des GES}
 
-\subsection{Les facteurs contrôlants}
+Afin d'établir un modèle empirique reliant les émissions de GES à des facteurs contrôlants, les données acquises ont été moyennées par campagne de mesure.
+Ceci afin de séparer la variabilité spatiale de la variabilité temporelle.
+Par la suite grâce aux données acquises en continu, les facteur contrôlants ont été interpolés et les flux de GES simulé.
+
+\subsubsection{COD}
+
+\section{Résultats}
+
+\subsection{Évolution générale des facteurs contrôlants et des flux}
+
+\subsubsection{Les facteurs contrôlants}
 
 L'évolution du niveau de la nappe des 20 placettes, décrite dans la figure~\ref{fig:WTL_mean_evolution}, est marquée par un étiage d'une vingtaine de centimètres en moyenne en 2013 et l'absence d'un étiage net en 2014 avec un niveau de la nappe moyen ne descendant que rarement sous la barre des \SI{-10}{\cm}.
 Ces observations sont cohérentes avec la figure~\ref{fig:WTL} représentant des données acquises à plus haute fréquence, et confirment la particularité de ces 2 années vis à vis des précédentes qui présentent des étiages bien plus fort.
@@ -79,7 +95,7 @@ Ces observations sont cohérentes avec la figure~\ref{fig:WTL} représentant des
 \caption{Évolution de la teneur en eau du sol pendant la période de mesure (mars 2013 -- février 2015)}
 \label{fig:RH_mean_evolution}
 \end{figure}
-\subsection{Le \coo}
+\subsubsection{Les GES}
 
 
 \begin{figure}
@@ -160,8 +176,6 @@ les moyennes de l'ENE en 2013 et 2014 sont très proche est sont respectivement 
 %\label{fig:NEE_evolution_avg}
 %\end{figure}
 
-\subsection{Le \chh}
-
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{chap3/CH4_evolution_avg}
@@ -169,9 +183,20 @@ les moyennes de l'ENE en 2013 et 2014 sont très proche est sont respectivement 
 \label{fig:CH4_evolution_avg}
 \end{figure}
 
-\subsection{Le Carbone Organique Dissous (COD)}
+\subsubsection{Le Carbone Organique Dissous (COD)}
 
-\section{Le bilan de carbone}
+
+\subsection{Relation entre flux et facteurs contrôlant}
+
+\subsubsection{\coo et facteurs contrôlants}
+
+\subsubsection{\chh et facteurs contrôlants}
+
+\subsubsection{COD}
+
+\subsection{Le bilan de carbone}
+
+\subsubsection{Bilan annuel}
 
 \begin{align}
 RE &= a \times exp(b\times T5)\\
@@ -179,12 +204,20 @@ PPBsat &= a \times exp(-((Tair - b)/ c)^2)\\
 ENE &= PPB - RE\\
 ENE &= a \times exp(b\times T5) - a \times exp(-((Tair - b)/ c)^2)
 \end{align}
-\section{Évaluation du bilan}
+\subsubsection{Évaluation du bilan}
 
-\subsection{sensibilité des paramètres}
+sensibilité des paramètres
 
-\subsection{capacité à modéliser d'autres données}
+capacité à modéliser d'autres données
 
-\subsection{représentativité locale}
+représentativité locale
 
-\section{représentativité locale ?}
+\section{Discussion}
+
+\subsection{Représentativité du modèle à l'échelle de l'écosystème}
+
+\subsection{Représentativité locale du modèle}
+
+\subsection{Sensibilité et limitations du bilan}
+
+
