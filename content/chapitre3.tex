@@ -43,9 +43,21 @@ Le \coo et de \chh sont regroupés dans ce qui est appelé bilan de GES.
 
 \subsubsection{Bilan des GES}
 
-Afin d'établir un modèle empirique reliant les émissions de GES à des facteurs contrôlants, les données acquises ont été moyennées par campagne de mesure.
-Ceci afin de séparer la variabilité spatiale de la variabilité temporelle.
-Par la suite grâce aux données acquises en continu, les facteur contrôlants ont été interpolés et les flux de GES simulé.
+Afin d'établir un modèle empirique permettant de relier les émission de GES du site à des facteurs contrôlant à l'échelle de l'écosystème, les données acquises mensuellement ont été moyennées par campagne de mesure.
+Ceci permettant, dans un premier temps, de s'affranchir de la variabilité spatiale des flux pour se concentrer sur la variabilité temporelle.
+Les relations entre flux et facteurs contrôlant ont ensuite été étudiées deux à deux.
+
+Les flux ont été modélisé en partant de l'équation ENE = PPB - ER \textbf{(dvlper PPBsat...)}.
+
+La température a été choisie comme base de départ à la construction des modèles, à la fois car c'est le facteur de contrôle le plus souvent invoqué et à la fois car les corrélations avec les flux étaient les plus forte.
+Les résidus\footnote{Valeurs moyennes - Valeurs moyennes estimées} de ces modèles de base ont ensuite été étudié en fonction des facteurs de contrôle restant.
+Dans le cas ou une tendance est visible, le facteur est intégré.
+Les modèles ont été comparés avec différents indicateurs, principalement Le R2, la NRMSE, mais l'AIC également \textbf{(dvlp intérêt de chacun)}.
+
+Une fois l'ENE modélisé (via la RE et la PPB), les facteurs de contrôle utilisés dans les modèles ont été interpolés au pas de mesure de la station météo présente sur le site, c'est à dire à l'heure.
+L'interpolation étant soit une simple interpolation linéaire entre les données mensuelles, soit une relation avec les facteurs acquis par la station météorologique.
+À l'aide de ces interpolations et des équations les flux ont ensuite été recalculés sur les 2 années de mesure.
+
 
 \subsubsection{COD}
 
