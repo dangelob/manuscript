@@ -64,9 +64,35 @@ Au sein de ses sites de nombreuses mesures ont été effectuée et notamment des
 \section{Mesures de flux}
 \label{sec:clsd_chbr_method}
 
-Il existe de nombreuses façon de mesurer des flux de gaz. 
-Des méthodes globale comme les tour à flux utilisant des méthodes d'Eddy Covariance. 
-Des méthodes plus locale, les chambres d'accumulation de gaz qui peuvent être statique ou dynamique, selon que la sonde mesurant le gaz soit directement dans la chambre ou que le gaz soit apportée à cette dernière via un système de pompe. Elles peuvent être ouverte ou fermée.
+\subsection{Présentation des méthodologies possibles}
+De nombreuses techniques permettent de mesurer des flux de gaz, avec en premier lieu les méthodes de chambres.
+
+
+Les chambres peuvent être ouvertes, c'est à dire que la mesure se fait lorsque le gaz à l'intérieur de la chambre à l'équilibre avec celui à l'extérieur, ou fermées, dans ce cas le gaz à l'intérieur de la chambre n'est pas à l'équilibre avec celui à l'extérieur.
+Elles peuvent également être dynamique, lorsqu'un système de pompe, permettant notamment de transporter le gaz jusqu'à l'analyseur, est présent.
+Ou statique si le système est sans flux artificiel.
+
+Trois grandes techniques de chambre existent.
+D'abord les chambres \textbf{dynamiques ouvertes} qui se basent sur un état d'équilibre et mesurent une différence de concentration d'un gaz dont une partie passe par la chambre et l'autre non. 
+Cette méthode nécessite un système de pompe et donc le passage d'un flux.
+Ensuite les chambres \textbf{dynamiques fermées} qui mesurent l'évolution de la concentration du gaz au sein de la chambre à l'aide d'un système de pompe permettant l'envoi du gaz dans un analyseur externe.
+Enfin les chambres \textbf{statiques fermées} qui mesurent également l'évolution de la concentration du gaz au sein de la chambre sans qu'un système de pompe ne soit présent.
+Dans ce cas soit l'analyseur est présent dans la chambre, soit des prélèvements sont fait à intervalles réguliers puis analysés par la suite en chromatographie gazeuse.
+
+Il faut noter que les dénominations anglaises de ces méthodes doit faire l'objet d'une attention particulière.
+\textit{Closed chamber} par exemple est parfois utilisé pour se référer à l'état ou non d'équilibre, comme défini dans ce document, mais parfois également pour désigner les méthodes de chambre sans système de flux ce qui peut prêter à confusion \cite{pumpanen2004}.
+Souvent utilisées les dénominations \textit{open}/\textit{closed} et \textit{dynamic}/\textit{static} sont décrites dans \cite{luo2006161}, une autre convention peut être rencontrée : \textit{flow-through}/\textit{non-flow-through} et \textit{steady state}/\textit{non-steady state} \cite{livingston1995}
+
+Ces différentes méthodes ont divers avantages et inconvénients.
+
+Ces méthodes sont souvent utilisées car elles on un coût modeste, et sont très versatiles ce qui permet leur utilisation dans de nombreuses situations.
+D'autres méthodes plus globales existent comme les méthodes d'Eddy Covariance.
+
+Les méthodes d'Eddy Covariance se base sur...
+
+Comparaison entre les méthodes de chambre et les méthodes d'Eddy Covariance.
+
+\subsection{Les mesures de \coo}
 
 La méthode de mesure retenue pour ces travaux est l'utilisation de chambre statique fermée, permettant une mesure locale et directe des flux.
 Pour cela des embases sont placées sur le terrain.
@@ -82,6 +108,8 @@ De nombreux écueils peuvent rendre une mesure inexploitable. D'abord le placeme
 Au vu du volume de données acquises et souhaitant garder l'intérêt de mesure manuelle, à savoir le contrôle humain des flux et des conditions de mesure, il a été nécessaire de développer un outil de traitement facilitant le contrôle et le calcul des flux.
 Ceci afin d'éviter de recourir à des seuils arbitraires (typiquement une valeur de R$^{2}$) pour le contrôle qualité des données, mais également de permettre une reproductibilité et un traçage des modifications effectuées sur les données brutes.
 (donner des exemples)
+
+\subsection{Les mesures de \chh}
 
 QUESTIONS :
 
