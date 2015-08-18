@@ -43,4 +43,18 @@
 % Formattage titles ------------------------------------------------------------
 % package titlesec
 \titleformat{\chapter}{\Huge}{\thechapter}{1em}{}	% format les chapitres
+\titlespacing*{\chapter}{0pt}{3ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
 \titleformat{\section}{\huge}{\thesection}{1em}{}	% format les sections
+\titlespacing*{\section}{0pt}{4ex plus 1ex minus .2ex}{3.5ex plus .2ex}
+
+% \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
+% <left> : left margin
+% <before-sep> : vertical space before title
+% <after-sep> : vertical space after title
+% spacing: how to read {12pt plus 4pt minus 2pt}
+%           12pt is what we would like the spacing to be
+%           plus 4pt means that TeX can stretch it by at most 4pt
+%           minus 2pt means that TeX can shrink it by at most 2pt
+%       This is one example of the concept of, 'glue', in TeX
+%
