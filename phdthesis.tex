@@ -43,6 +43,8 @@ multi-part-units=single, % enlève les parenthèse autour nombre+incertitdes
 \usepackage{emptypage}				% pre­vents page num­bers and head­ings from ap­pear­ing on empty pages
 \usepackage{booktabs}				% Better tables
 \usepackage{titlesec}				% Formattage des section
+\usepackage[french]{minitoc}		% Add chapter toc
+
 \usepackage[colorlinks = true, allcolors=blue]{hyperref}
 
 % document formatting ----------------------------------------------------------
@@ -56,6 +58,8 @@ multi-part-units=single, % enlève les parenthèse autour nombre+incertitdes
 
 % Autres -----------------------------------------------------------------------
 \makeindex							% "lancer" le log de l'index
+
+\dominitoc							% création des minitoc
 
 %\setlength{\marginparwidth}{60pt}	% taille marge (todo ?)
 \setlength{\headheight}{20pt}		% taille header 28pt apparemment bien pour fancyhdr
@@ -114,6 +118,7 @@ multi-part-units=single, % enlève les parenthèse autour nombre+incertitdes
 
 
 \include{content/introduction}
+\setcounter{mtc}{5}
 \include{content/chapitre1} %Synthèse bibliographique
 \include{content/chapitre2} %Sites d'études et méthodologies employées
 \include{content/chapitre3} %Bilan de C de la tourbière de La Guette

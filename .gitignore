@@ -23,3 +23,5 @@
 *.tdo
 *.fls
 *.fdb_latexmk
+*.mtc
+*.mtc*
