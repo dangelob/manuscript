@@ -292,6 +292,15 @@ Cependant l'ajout d'un paramètre avec un gain forcément limité ne semble pas 
 
 \subsubsection{ENE et facteurs contrôlants}
 
+L'ENE est ensuite modélisé en utilisant l'équation suivante :
+
+\begin{equation}
+ENE = \frac{a*PAR*PPBsat}{a+PAR*PPBsat}-ER
+\end{equation}
+
+Le résultat de cette équation (Figure~\ref{fig:ENE_Tair_mdl}), montre que ce modèle permet d'expliquer une grande partie des variations de l'ENE.
+Les résidus de cette équation sont répartis de manière a peu près homogène.
+
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{chap3/ENE_TaIV_Ta_mdl}
@@ -314,6 +323,9 @@ Cependant l'ajout d'un paramètre avec un gain forcément limité ne semble pas 
 
 \subsubsection{Bilan de gaz annuel}
 
+Afin de calculer le bilan à l'aide des équations XXXX, la température de l'air mesurée au niveau de la station météo à été utilisée.
+Pour l'indice de végétation, le bilan a été calculé avec une interpolation linéaire entre les points.
+
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{chap3/ENE_BdCitp_TaIVcov_Ta}
@@ -328,12 +340,14 @@ Cependant l'ajout d'un paramètre avec un gain forcément limité ne semble pas 
 %\label{fig:ENE_BdC_TairHH_mod_mes}
 %\end{figure}
 
-\begin{align}
-RE &= a \times exp(b\times T5)\\
-PPBsat &= a \times exp(-((Tair - b)/ c)^2)\\
-ENE &= PPB - RE\\
-ENE &= a \times exp(b\times T5) - a \times exp(-((Tair - b)/ c)^2)
-\end{align}
+%\begin{align}
+%RE &= a \times exp(b\times T5)\\
+%PPBsat &= a \times exp(-((Tair - b)/ c)^2)\\
+%ENE &= PPB - RE\\
+%ENE &= a \times exp(b\times T5) - a \times exp(-((Tair - b)/ c)^2)
+%\end{align}
+
+
 \subsubsection{Évaluation du bilan}
 
 sensibilité des paramètres
