@@ -208,6 +208,27 @@ les moyennes de l'ENE en 2013 et 2014 sont très proche est sont respectivement 
 Modélisation de la production primaire brute à lumière saturante.
 L'utilisation de l'équation de June se justifie par ?
 
+\begin{equation}
+PPBsat = a*exp(b*Tair)
+\end{equation}
+
+L'utilisation de l'équation de June seule, avec la température de l'air comme variable explicative de la PPBsat, permet d'expliquer 65 \% des variations observées (Figure~\ref{fig:PPB_Ta_mdl}).
+
+RMSE ?
+
+Les résidus de ce modèle se répartissent de façon relativement homogène et sans tendance.
+
+Lorsque qu'ils sont corrélés avec d'autres facteurs contrôlant important, le niveau de la nappe, la teneur en eau du sol, et un indice de végétation ils ne montrent de tendance qu'avec ce dernier (Figure~\ref{fig:PPB_Ta_res}).
+Il semble y avoir une relation linéaire entre les résidus de l'équation et l'indice de végétation.
+Le modèle est donc transformé en 
+
+\begin{equation}
+PPBsat = (a * IV + b)exp(c*Tair)
+\end{equation}
+
+Cette nouvelle équation permet d'expliquer une part plus importante des variations de PPBsat (R$^{2}$ = 0,86) et augmente la proximité entre les données mesurées et les données modélisées (La RMSE diminue) (Figure~\ref{fig:PPB_TaIV_mdl}).
+Les résidus de cette équation sont, à l'exception d'un point, répartis de façon homogène autour de 0, sans tendance particulière.
+
 %\begin{figure}
 %\centering
 %\includegraphics[width=\textwidth]{chap3/PPB_ctrlFact}
@@ -219,7 +240,7 @@ L'utilisation de l'équation de June se justifie par ?
 \centering
 \includegraphics[width=\textwidth]{chap3/GPP_Ta_mdl_mesmod}
 \caption{PPB modèles Tair}
-\label{fig:PPB_Ta_mdl_res}
+\label{fig:PPB_Ta_mdl}
 \end{figure}
 
 \begin{figure}
