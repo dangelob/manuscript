@@ -55,7 +55,9 @@ Les flux ont été modélisé en partant de l'équation ENE = PPB - ER \textbf{(
 La température a été choisie comme base de départ à la construction des modèles, à la fois car c'est le facteur de contrôle le plus souvent invoqué et à la fois car les corrélations avec les flux étaient les plus forte.
 Les résidus\footnote{Valeurs moyennes - Valeurs moyennes estimées} de ces modèles de base ont ensuite été étudié en fonction des facteurs de contrôle restant.
 Dans le cas ou une tendance est visible, le facteur est intégré.
-Les modèles ont été comparés avec différents indicateurs, principalement Le R2, la NRMSE, mais l'AIC également \textbf{(dvlp intérêt de chacun)}.
+Les modèles ont été comparés avec différents indicateurs, principalement Le R2, la NRMSE.
+Le R$^{2}$ est utilisé comme indicateur de la proportion de la variabilité des données expliqué par le modèle, sa valeur est comprise entre 0 et 1.
+La RMSE et sa normalisation par la moyenne NRMSE sont utilisés comme indicateur de l'écart entre les données mesurées et les données modélisées.
 
 Une fois l'ENE modélisé (via la RE et la PPB), les facteurs de contrôle utilisés dans les modèles ont été interpolés au pas de mesure de la station météo présente sur le site, c'est à dire à l'heure.
 L'interpolation étant soit une simple interpolation linéaire entre les données mensuelles, soit une relation avec les facteurs acquis par la station météorologique.
