@@ -260,9 +260,15 @@ Les résidus de cette équation sont, à l'exception d'un point, répartis de fa
 \subsubsection{RE et facteurs contrôlants}
 
 Les variations de la RE moyenne au cours du temps suivent les variations saisonnières de la température.
-La température de l'air utilisée dans un modèle exponentiel permet d'expliquer une grande partie des variations de la respiration de l'écosystème (Figure~\ref{fig:ER_Ta_mdl}).
-Les résidus de cette équation semble répartis de façon non-biaisée (pas de tendance dans le nuage de point). \textbf{figtodo}
 
+\begin{equation}
+RE = a*exp(b*Tair)
+\end{equation}
+
+La température de l'air utilisée dans un modèle exponentiel permet d'expliquer une grande partie, 90 \%, des variations de la respiration de l'écosystème (Figure~\ref{fig:ER_Ta_mdl}).
+Les résidus de cette équation semble répartis de façon non-biaisée, pas de tendance dans le nuage de point (Figure~\ref{fig:ER_Ta_mdl}). 
+Comme pour la GPPsat, la seule tendance qui semble se dégager lorsque que l'on corrèle ces résidus aux autres facteurs contrôlant, est une tendance linéaire avec l'indice de végétation (Figure~\ref{fig:ER_Ta_res}).
+Cependant l'ajout d'un paramètre avec un gain forcément limité ne semble pas utile/pertinent.
 %\begin{figure}
 %\centering
 %\includegraphics[width=\textwidth]{chap3/ER_ctrlFact}
