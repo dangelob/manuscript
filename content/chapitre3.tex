@@ -251,13 +251,13 @@ L'utilisation de l'équation de June se justifie par ?
 PPBsat = a*exp(b*Tair)
 \end{equation}
 
-L'utilisation de l'équation de June seule, avec la température de l'air comme variable explicative de la PPBsat, permet d'expliquer 65 \% des variations observées (Figure~\ref{fig:PPB_Ta_mdl}).
+L'utilisation de l'équation de June seule, avec la température de l'air comme variable explicative de la PPBsat, permet d'expliquer 65 \% des variations observées (Figure~\ref{fig:PPB_T5_mdl}).
 
 RMSE ?
 
 Les résidus de ce modèle se répartissent de façon relativement homogène et sans tendance.
 
-Lorsque qu'ils sont corrélés avec d'autres facteurs contrôlant important, le niveau de la nappe, la teneur en eau du sol, et un indice de végétation ils ne montrent de tendance qu'avec ce dernier (Figure~\ref{fig:PPB_Ta_res}).
+Lorsque qu'ils sont corrélés avec d'autres facteurs contrôlant important, le niveau de la nappe, la teneur en eau du sol, et un indice de végétation ils ne montrent de tendance qu'avec ce dernier (Figure~\ref{fig:PPB_T5_res}).
 Il semble y avoir une relation linéaire entre les résidus de l'équation et l'indice de végétation.
 Le modèle est donc transformé en 
 
@@ -265,7 +265,7 @@ Le modèle est donc transformé en
 PPBsat = (a * IV + b)exp(c*Tair)
 \end{equation}
 
-Cette nouvelle équation permet d'expliquer une part plus importante des variations de PPBsat (R$^{2}$ = 0,86) et augmente la proximité entre les données mesurées et les données modélisées (La RMSE diminue) (Figure~\ref{fig:PPB_TaIV_mdl}).
+Cette nouvelle équation permet d'expliquer une part plus importante des variations de PPBsat (R$^{2}$ = 0,86) et augmente la proximité entre les données mesurées et les données modélisées (La RMSE diminue) (Figure~\ref{fig:PPB_T5IV_mdl}).
 Les résidus de cette équation sont, à l'exception d'un point, répartis de façon homogène autour de 0, sans tendance particulière.
 
 %\begin{figure}
@@ -277,23 +277,37 @@ Les résidus de cette équation sont, à l'exception d'un point, répartis de fa
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{chap3/GPP_Ta_mdl_mesmod}
+\includegraphics[width=\textwidth]{chap3/GPPsat_T5_mdl_mesmod}
 \caption{PPB modèles Tair}
-\label{fig:PPB_Ta_mdl}
+\label{fig:PPBsat_T5_mdl}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{chap3/GPP_Ta_mdl_res}
+\includegraphics[width=.5\textwidth]{chap3/GPPsat_T5_mdl_res}
 \caption{PPB résidus modèle Ta}
-\label{fig:PPB_Ta_res}
+\label{fig:PPBsat_T5_res}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{chap3/GPP_TaIV_mdl_mesmod}
+\includegraphics[width=\textwidth]{chap3/GPPsat_T5IV_mdl_mesmod}
 \caption{PPB modèles Tair + IV}
 \label{fig:PPB_TaIV_mdl}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/GPP_T5_mdl_mesmod}
+\caption{PPB modèles Tair}
+\label{fig:PPB_T5_mdl}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/GPP_T5IV_mdl_mesmod}
+\caption{PPB résidus modèle Ta}
+\label{fig:PPB_T5_res}
 \end{figure}
 
 \subsubsection{RE et facteurs contrôlants}
@@ -304,9 +318,9 @@ Les variations de la RE moyenne au cours du temps suivent les variations saisonn
 RE = a*exp(b*Tair)
 \end{equation}
 
-La température de l'air utilisée dans un modèle exponentiel permet d'expliquer une grande partie, 90 \%, des variations de la respiration de l'écosystème (Figure~\ref{fig:ER_Ta_mdl}).
-Les résidus de cette équation semble répartis de façon non-biaisée, pas de tendance dans le nuage de point (Figure~\ref{fig:ER_Ta_mdl}). 
-Comme pour la GPPsat, la seule tendance qui semble se dégager lorsque que l'on corrèle ces résidus aux autres facteurs contrôlant, est une tendance linéaire avec l'indice de végétation (Figure~\ref{fig:ER_Ta_res}).
+La température de l'air utilisée dans un modèle exponentiel permet d'expliquer une grande partie, 90 \%, des variations de la respiration de l'écosystème (Figure~\ref{fig:ER_T5_mdl}).
+Les résidus de cette équation semble répartis de façon non-biaisée, pas de tendance dans le nuage de point (Figure~\ref{fig:ER_T5_mdl}). 
+Comme pour la GPPsat, la seule tendance qui semble se dégager lorsque que l'on corrèle ces résidus aux autres facteurs contrôlant, est une tendance linéaire avec l'indice de végétation (Figure~\ref{fig:ER_T5_res}).
 Cependant l'ajout d'un paramètre avec un gain forcément limité ne semble pas utile/pertinent.
 %\begin{figure}
 %\centering
@@ -317,16 +331,16 @@ Cependant l'ajout d'un paramètre avec un gain forcément limité ne semble pas 
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{chap3/ER_Ta_mdl_mesmod}
+\includegraphics[width=\textwidth]{chap3/ER_T5_mdl_mesmod}
 \caption{RE modèles avec Tair}
-\label{fig:ER_Ta_mdl}
+\label{fig:ER_T5_mdl}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{chap3/ER_Ta_mdl_res}
+\includegraphics[width=.5\textwidth]{chap3/ER_T5_mdl_res}
 \caption{RE, résidus du modèle avec Tair}
-\label{fig:ER_Ta_res}
+\label{fig:ER_T5_res}
 \end{figure}
 
 \subsubsection{ENE et facteurs contrôlants}
@@ -337,15 +351,23 @@ L'ENE est ensuite modélisé en utilisant l'équation suivante :
 ENE = \frac{a*PAR*PPBsat}{a+PAR*PPBsat}-ER
 \end{equation}
 
-Le résultat de cette équation (Figure~\ref{fig:ENE_Tair_mdl}), montre que ce modèle permet d'expliquer une grande partie des variations de l'ENE.
+Le résultat de cette équation (Figure~\ref{fig:ENE_T5_mdl}), montre que ce modèle permet d'expliquer une grande partie des variations de l'ENE.
 Les résidus de cette équation sont répartis de manière a peu près homogène.
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{chap3/ENE_TaIV_Ta_mdl}
+\includegraphics[width=\textwidth]{chap3/NEE_T5-T5_mdl_mesmod}
 \caption{ENE modèle Ta IV}
-\label{fig:ENE_Tair_mdl}
+\label{fig:ENE_T5_mdl}
 \end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/NEE_T5IVcov-T5_mdl_mesmod}
+\caption{ENE modèle Ta IV}
+\label{fig:ENE_T5IV_mdl}
+\end{figure}
+
 
 %\begin{figure}
 %\centering
@@ -367,9 +389,16 @@ Pour l'indice de végétation, le bilan a été calculé avec une interpolation 
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{chap3/ENE_BdCitp_TaIVcov_Ta}
+\includegraphics[width=\textwidth]{chap3/ENE_BdCitp_T5IVcov_T5}
 \caption{ENE modèles (2 variable explicative)}
-\label{fig:ENE_BdC_Tair_mod_mes}
+\label{fig:ENE_BdC_T5IVcov-T5_mod_mes}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/ENE_BdCitp_T5_T5}
+\caption{ENE modèles (2 variable explicative)}
+\label{fig:ENE_BdC_T5-T5_mod_mes}
 \end{figure}
 
 %\begin{figure}
