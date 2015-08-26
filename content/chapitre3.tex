@@ -44,21 +44,50 @@ Ces mesures nécessitant d'accéder aux placettes régulièrement, des planches 
 
 Les mesures automatiquement acquise via une station météo campbell sont la température de l'air, température de la tourbe à X, X et X profondeur, vitesse et direction du vent, humidité relative de l'air, irradiation solaire, pression atmosphérique.
 
-\subsection{modélisation du bilan de C}
-
+\subsection{Modélisation du bilan de C}
+%principe général
+\subsubsection{Démarche générale}
 Le bilan de C considéré ici est constitué de 3 éléments majeurs, le \coo, le \chh et de COD.
 Le \coo et de \chh sont regroupés dans ce qui est appelé bilan de GES.
-
-\subsubsection{Bilan des GES}
 
 Afin d'établir un modèle empirique permettant de relier les émission de GES du site à des facteurs contrôlant à l'échelle de l'écosystème, les données acquises mensuellement ont été moyennées par campagne de mesure.
 Ceci permettant, dans un premier temps, de s'affranchir de la variabilité spatiale des flux pour se concentrer sur la variabilité temporelle.
 Les relations entre flux et facteurs contrôlant ont ensuite été étudiées deux à deux.
 
+Les résidus\footnote{Valeurs moyennes - Valeurs moyennes estimées} de ces modèles de base ont ensuite été étudié en fonction des facteurs de contrôle restant.
+Dans le cas ou une tendance est visible, le facteur est intégré.
+Les modèles ont été comparés avec différents indicateurs, principalement Le R2, la NRMSE et l'AIC.
+Le R$^{2}$ est utilisé comme indicateur de la proportion de la variabilité des données expliqué par le modèle, sa valeur est comprise entre 0 et 1.
+La RMSE et sa normalisation par la moyenne NRMSE sont utilisés comme indicateur de l'écart entre les données mesurées et les données modélisées.
+L'AIC (Akaile...) permet de déterminer si l'amélioration d'un modèle suite à l'ajout d'un paramètre est suffisamment intéressante pour que ce modèle plus complexe soit utilisé.
+
+Après cette phase de calibration, les facteurs de contrôle utilisés dans les modèles ont été interpolés au pas de mesure de la station météo présente sur le site, c'est à dire à l'heure.
+L'interpolation étant soit une simple interpolation linéaire entre les données mensuelles, soit une relation avec les facteurs acquis par la station météorologique.
+À l'aide de ces interpolations et des équations les flux ont ensuite été recalculés sur les 2 années de mesure.
+
+Enfin ces modèles ont été évalués sur des données issues d'une autre expérimentation.On ne parle pas ici de validation car les données utilisées bien qu'indépendante du jeu de données utilisé pour la calibration n'ont pas été acquise suivant un protocole identique, notamment au niveau de la répartition des embases sur le site.
+
+
+\subsubsection{Bilan de \coo}
+
 Les flux de \coo ont été modélisé en partant de l'équation ENE = PPB - RE, et le bilan a été établi en estimant de façon séparée la PPB et la RE.
 Cette séparation permettant de distinguer si une variation du bilan est liée à l'un ou l'autre des flux ou bien aux deux.
-La RE est estimée directement à partir des données acquises moyennées en partant de la température connue pour contrôler une grande partie de ce flux.
-Différents modèles ont été testés parmi les plus souvent utilisés (linéaire, exponentiel, arrhénius).
+
+La température a été choisie comme base de départ à la construction des modèles de RE et PPBsat, à la fois car c'est le facteur de contrôle le plus souvent invoqué et à la fois car les corrélations avec les flux étaient les plus forte.
+Idéalement la température utilisée pour estimer la photosynthèse serait celle de l'air et celle pour estimer la respiration serait celle du sol à faible profondeur, typiquement \SI{-5}{\centi\metre}.
+En effet ce sont celles qui font le plus sens, la photosynthèse prenant place dans l'air et la majorité de la respiration se faisant dans les premiers centimètres du sol.
+Ce sont également celles qui sont le plus utilisées dans la littérature.
+Cependant les température de l'air mesurée manuellement au niveau de chaque embase lors des différentes campagnes de mesures, sont sujette à caution 
+En effet elles sont quasiment certainement sur-estimées et donc biaisées.
+La source de ce biais est la difficulté de maintenir à l'ombre de thermomètre utilisé lors des campagnes.
+La température affichée par ce dernier ayant tendance à monter drastiquement quand exposé au soleil.
+A l'inverse les températures mesurées dans le sol sont plus fiable (\textbf{pourquoi ?}).
+L'utilisation de ces deux températures conjointement pour l'estimation d'un bilan risquant donc de le déséquilibrer il a été décider d'utiliser la température à \SI{-5}{\centi\metre} à la fois pour la RE mais aussi pour la PPB, ceci afin de pouvoir conserver une calibration issue de données locale.
+L'autre solution aurait été d'utiliser les données de température de la station pour la calibration.
+
+
+%%%%%%%%%%%%%%%%%%%%% PPB 
+
 L'estimation de la PPB se fait en deux temps.
 Le premier consiste à estimer le potentiel maximum de photosynthèse à un instant donné dans des conditions de lumière saturante.
 Ce potentiel peut varier avec les conditions environnementales.
@@ -81,30 +110,139 @@ PPB = \frac{PPBsat * a * PAR}{\sqrt{PPBsat^2 + (a * PAR)^2}}
 
 L'équation~\ref{eq:PPB_bubier} a été proposée par \cite{bubier1998} et utilisée par \cite{bortoluzzi2006,worrall2009} et tandis que l'équation~\ref{eq:PPB_sig}, plus rarement utilisée a été introduite par \cite{smith1937} et utilisée par \cite{wohlfahrt2010,gorres2014}.
 
-Les résidus\footnote{Valeurs moyennes - Valeurs moyennes estimées} de ces modèles de base ont ensuite été étudié en fonction des facteurs de contrôle restant.
-Dans le cas ou une tendance est visible, le facteur est intégré.
-Les modèles ont été comparés avec différents indicateurs, principalement Le R2, la NRMSE et l'AIC.
-Le R$^{2}$ est utilisé comme indicateur de la proportion de la variabilité des données expliqué par le modèle, sa valeur est comprise entre 0 et 1.
-La RMSE et sa normalisation par la moyenne NRMSE sont utilisés comme indicateur de l'écart entre les données mesurées et les données modélisées.
-L'AIC (Akaile...) permet de déterminer si l'amélioration d'un modèle suite à l'ajout d'un paramètre est suffisamment intéressante pour que ce modèle plus complexe soit utilisé.
 
-La température a été choisie comme base de départ à la construction des modèles de RE et PPBsat, à la fois car c'est le facteur de contrôle le plus souvent invoqué et à la fois car les corrélations avec les flux étaient les plus forte.
-Idéalement la température utilisée pour estimer la photosynthèse serait celle de l'air et celle pour estimer la respiration serait celle du sol à faible profondeur, typiquement \SI{-5}{\centi\metre}.
-En effet ce sont celles qui font le plus sens, la photosynthèse prenant place dans l'air et la majorité de la respiration se faisant dans les premiers centimètres du sol.
-Ce sont également celles qui sont le plus utilisées dans la littérature.
-Cependant les température de l'air mesurée manuellement au niveau de chaque embase lors des différentes campagnes de mesures, sont sujette à caution 
-En effet elles sont quasiment certainement sur-estimées et donc biaisées.
-La source de ce biais est la difficulté de maintenir à l'ombre de thermomètre utilisé lors des campagnes.
-La température affichée par ce dernier ayant tendance à monter drastiquement quand exposé au soleil.
-A l'inverse les températures mesurées dans le sol sont plus fiable (\textbf{pourquoi ?}).
-L'utilisation de ces deux températures conjointement pour l'estimation d'un bilan risquant donc de le déséquilibrer il a été décider d'utiliser la température à \SI{-5}{\centi\metre} à la fois pour la RE mais aussi pour la PPB, ceci afin de pouvoir conserver une calibration issue de données locale.
-L'autre solution aurait été d'utiliser les données de température de la station pour la calibration.
 
-Après cette phase de calibration, les facteurs de contrôle utilisés dans les modèles ont été interpolés au pas de mesure de la station météo présente sur le site, c'est à dire à l'heure.
-L'interpolation étant soit une simple interpolation linéaire entre les données mensuelles, soit une relation avec les facteurs acquis par la station météorologique.
-À l'aide de ces interpolations et des équations les flux ont ensuite été recalculés sur les 2 années de mesure.
+Modélisation de la production primaire brute à lumière saturante.
+L'utilisation de l'équation de June se justifie par ?
 
-Enfin ces modèles ont été évalués sur des données issues d'une autre expérimentation.On ne parle pas ici de validation car les données utilisées bien qu'indépendante du jeu de données utilisé pour la calibration n'ont pas été acquise suivant un protocole identique, notamment au niveau de la répartition des embases sur le site.
+\begin{equation}
+PPBsat = a*exp(b*Tair)
+\end{equation}
+
+L'utilisation de l'équation de June seule, avec la température de l'air comme variable explicative de la PPBsat, permet d'expliquer 65 \% des variations observées (Figure~\ref{fig:PPB_T5_mdl}).
+
+RMSE ?
+
+Les résidus de ce modèle se répartissent de façon relativement homogène et sans tendance.
+
+Lorsque qu'ils sont corrélés avec d'autres facteurs contrôlant important, le niveau de la nappe, la teneur en eau du sol, et un indice de végétation ils ne montrent de tendance qu'avec ce dernier (Figure~\ref{fig:PPB_T5_res}).
+Il semble y avoir une relation linéaire entre les résidus de l'équation et l'indice de végétation.
+Le modèle est donc transformé en 
+
+\begin{equation}
+PPBsat = (a * IV + b)exp(c*Tair)
+\end{equation}
+
+Cette nouvelle équation permet d'expliquer une part plus importante des variations de PPBsat (R$^{2}$ = 0,86) et augmente la proximité entre les données mesurées et les données modélisées (La RMSE diminue) (Figure~\ref{fig:PPB_T5IV_mdl}).
+Les résidus de cette équation sont, à l'exception d'un point, répartis de façon homogène autour de 0, sans tendance particulière.
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=\textwidth]{chap3/PPB_ctrlFact}
+%\caption{Inter-relation entre la production primaire brute et les principaux facteurs contrôlant)}
+%\label{fig:PPB_ctrlFact}
+%\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/GPPsat_T5_mdl_mesmod}
+\caption{PPB modèles Tair}
+\label{fig:PPBsat_T5_mdl}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=.5\textwidth]{chap3/GPPsat_T5_mdl_res}
+\caption{PPB résidus modèle Ta}
+\label{fig:PPBsat_T5_res}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/GPPsat_T5IV_mdl_mesmod}
+\caption{PPB modèles Tair + IV}
+\label{fig:PPB_TaIV_mdl}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/GPP_T5_mdl_mesmod}
+\caption{PPB modèles Tair}
+\label{fig:PPB_T5_mdl}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/GPP_T5IV_mdl_mesmod}
+\caption{PPB résidus modèle Ta}
+\label{fig:PPB_T5_res}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%% RE
+
+La RE est estimée directement à partir des données acquises moyennées en partant de la température connue pour contrôler une grande partie de ce flux.
+Différents modèles ont été testés parmi les plus souvent utilisés (linéaire, exponentiel, arrhénius).
+
+
+Les variations de la RE moyenne au cours du temps suivent les variations saisonnières de la température.
+
+\begin{equation}
+RE = a*exp(b*Tair)
+\end{equation}
+
+La température de l'air utilisée dans un modèle exponentiel permet d'expliquer une grande partie, 90 \%, des variations de la respiration de l'écosystème (Figure~\ref{fig:ER_T5_mdl}).
+Les résidus de cette équation semble répartis de façon non-biaisée, pas de tendance dans le nuage de point (Figure~\ref{fig:ER_T5_mdl}). 
+Comme pour la GPPsat, la seule tendance qui semble se dégager lorsque que l'on corrèle ces résidus aux autres facteurs contrôlant, est une tendance linéaire avec l'indice de végétation (Figure~\ref{fig:ER_T5_res}).
+Cependant l'ajout d'un paramètre avec un gain forcément limité ne semble pas utile/pertinent.
+%\begin{figure}
+%\centering
+%\includegraphics[width=\textwidth]{chap3/ER_ctrlFact}
+%\caption{Inter-relation entre la respiration de l'écosystème et les principaux facteurs contrôlant)}
+%\label{fig:ER_ctrlFact}
+%\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/ER_T5_mdl_mesmod}
+\caption{RE modèles avec Tair}
+\label{fig:ER_T5_mdl}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=.5\textwidth]{chap3/ER_T5_mdl_res}
+\caption{RE, résidus du modèle avec Tair}
+\label{fig:ER_T5_res}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%% ENE
+
+L'ENE est ensuite modélisé en utilisant l'équation suivante :
+
+\begin{equation}
+ENE = \frac{a*PAR*PPBsat}{a+PAR*PPBsat}-ER
+\end{equation}
+
+Le résultat de cette équation (Figure~\ref{fig:ENE_T5_mdl}), montre que ce modèle permet d'expliquer une grande partie des variations de l'ENE.
+Les résidus de cette équation sont répartis de manière a peu près homogène.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/NEE_T5-T5_mdl_mesmod}
+\caption{ENE modèle Ta IV}
+\label{fig:ENE_T5_mdl}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/NEE_T5IVcov-T5_mdl_mesmod}
+\caption{ENE modèle Ta IV}
+\label{fig:ENE_T5IV_mdl}
+\end{figure}
+
+\subsubsection{Bilan de \chh}
 
 \subsubsection{COD}
 
@@ -259,131 +397,16 @@ En 2013 les flux sont moins important qu'en 2014 avec des maximum de \SIlist{0.0
 
 \subsection{Relation entre flux et facteurs contrôlant}
 
-\subsubsection{PPB et facteurs contrôlants}
+%\subsubsection{PPB et facteurs contrôlants}
+%
+%
+%
+%\subsubsection{RE et facteurs contrôlants}
+%
+%
+%
+%\subsubsection{ENE et facteurs contrôlants}
 
-Modélisation de la production primaire brute à lumière saturante.
-L'utilisation de l'équation de June se justifie par ?
-
-\begin{equation}
-PPBsat = a*exp(b*Tair)
-\end{equation}
-
-L'utilisation de l'équation de June seule, avec la température de l'air comme variable explicative de la PPBsat, permet d'expliquer 65 \% des variations observées (Figure~\ref{fig:PPB_T5_mdl}).
-
-RMSE ?
-
-Les résidus de ce modèle se répartissent de façon relativement homogène et sans tendance.
-
-Lorsque qu'ils sont corrélés avec d'autres facteurs contrôlant important, le niveau de la nappe, la teneur en eau du sol, et un indice de végétation ils ne montrent de tendance qu'avec ce dernier (Figure~\ref{fig:PPB_T5_res}).
-Il semble y avoir une relation linéaire entre les résidus de l'équation et l'indice de végétation.
-Le modèle est donc transformé en 
-
-\begin{equation}
-PPBsat = (a * IV + b)exp(c*Tair)
-\end{equation}
-
-Cette nouvelle équation permet d'expliquer une part plus importante des variations de PPBsat (R$^{2}$ = 0,86) et augmente la proximité entre les données mesurées et les données modélisées (La RMSE diminue) (Figure~\ref{fig:PPB_T5IV_mdl}).
-Les résidus de cette équation sont, à l'exception d'un point, répartis de façon homogène autour de 0, sans tendance particulière.
-
-%\begin{figure}
-%\centering
-%\includegraphics[width=\textwidth]{chap3/PPB_ctrlFact}
-%\caption{Inter-relation entre la production primaire brute et les principaux facteurs contrôlant)}
-%\label{fig:PPB_ctrlFact}
-%\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/GPPsat_T5_mdl_mesmod}
-\caption{PPB modèles Tair}
-\label{fig:PPBsat_T5_mdl}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=.5\textwidth]{chap3/GPPsat_T5_mdl_res}
-\caption{PPB résidus modèle Ta}
-\label{fig:PPBsat_T5_res}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/GPPsat_T5IV_mdl_mesmod}
-\caption{PPB modèles Tair + IV}
-\label{fig:PPB_TaIV_mdl}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/GPP_T5_mdl_mesmod}
-\caption{PPB modèles Tair}
-\label{fig:PPB_T5_mdl}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/GPP_T5IV_mdl_mesmod}
-\caption{PPB résidus modèle Ta}
-\label{fig:PPB_T5_res}
-\end{figure}
-
-\subsubsection{RE et facteurs contrôlants}
-
-Les variations de la RE moyenne au cours du temps suivent les variations saisonnières de la température.
-
-\begin{equation}
-RE = a*exp(b*Tair)
-\end{equation}
-
-La température de l'air utilisée dans un modèle exponentiel permet d'expliquer une grande partie, 90 \%, des variations de la respiration de l'écosystème (Figure~\ref{fig:ER_T5_mdl}).
-Les résidus de cette équation semble répartis de façon non-biaisée, pas de tendance dans le nuage de point (Figure~\ref{fig:ER_T5_mdl}). 
-Comme pour la GPPsat, la seule tendance qui semble se dégager lorsque que l'on corrèle ces résidus aux autres facteurs contrôlant, est une tendance linéaire avec l'indice de végétation (Figure~\ref{fig:ER_T5_res}).
-Cependant l'ajout d'un paramètre avec un gain forcément limité ne semble pas utile/pertinent.
-%\begin{figure}
-%\centering
-%\includegraphics[width=\textwidth]{chap3/ER_ctrlFact}
-%\caption{Inter-relation entre la respiration de l'écosystème et les principaux facteurs contrôlant)}
-%\label{fig:ER_ctrlFact}
-%\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/ER_T5_mdl_mesmod}
-\caption{RE modèles avec Tair}
-\label{fig:ER_T5_mdl}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=.5\textwidth]{chap3/ER_T5_mdl_res}
-\caption{RE, résidus du modèle avec Tair}
-\label{fig:ER_T5_res}
-\end{figure}
-
-\subsubsection{ENE et facteurs contrôlants}
-
-L'ENE est ensuite modélisé en utilisant l'équation suivante :
-
-\begin{equation}
-ENE = \frac{a*PAR*PPBsat}{a+PAR*PPBsat}-ER
-\end{equation}
-
-Le résultat de cette équation (Figure~\ref{fig:ENE_T5_mdl}), montre que ce modèle permet d'expliquer une grande partie des variations de l'ENE.
-Les résidus de cette équation sont répartis de manière a peu près homogène.
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/NEE_T5-T5_mdl_mesmod}
-\caption{ENE modèle Ta IV}
-\label{fig:ENE_T5_mdl}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/NEE_T5IVcov-T5_mdl_mesmod}
-\caption{ENE modèle Ta IV}
-\label{fig:ENE_T5IV_mdl}
-\end{figure}
 
 
 %\begin{figure}
