@@ -410,26 +410,25 @@ Pour l'indice de végétation, le bilan a été calculé avec une interpolation 
 \label{fig:PPB_BdC_TairIVcov}
 \end{figure}
 
-%\begin{figure}
-%\centering
-%\includegraphics[width=\textwidth]{chap3/ENE_BdCitp_T5_T5}
-%\caption{ENE modèles (2 variable explicative)}
-%\label{fig:ENE_BdC_T5-T5_mod_mes}
-%\end{figure}
 
-%\begin{figure}
-%\centering
-%\includegraphics[width=\textwidth]{chap3/ENE_BdC_TairHH_mod_mes}
-%\caption{ENE modèles (2 variable explicative)}
-%\label{fig:ENE_BdC_TairHH_mod_mes}
-%\end{figure}
-
-%\begin{align}
-%RE &= a \times exp(b\times T5)\\
-%PPBsat &= a \times exp(-((Tair - b)/ c)^2)\\
-%ENE &= PPB - RE\\
-%ENE &= a \times exp(b\times T5) - a \times exp(-((Tair - b)/ c)^2)
-%\end{align}
+\begin{table}
+\centering
+\caption{Bilan en gCm2an1}
+\label{table:mdl_sensitiv}
+\begin{tabular}{lllllll}\toprule
+& année & PBB & RE & CH4 & COD & BCNE \\ \midrule
+mdl 1 & 2013 & 1317.8 & 1332.8 & 17.4 & & \\[+.5ex]
+& 2014 & 1257.7 & 1234.9 & 23.8 & & \\ [+1ex]
+& total & 1287.7 & 1283.9 & 20.6 & &\\[+2ex]
+mdl 2 & 2013 & 1035.2 & 1332.8 & 17.4 & & \\[+.5ex]
+& 2014 & 1212.9 & 1234.9 & 23.8 &  & \\ [+1ex]
+& total & 1124.1 & 1283.9 & 20.6 & &\\[+2ex]
+mdl 3 & 2013 & 1035.2 & 1228.6 & 17.4 & & \\[+.5ex]
+& 2014 & 1212.9 & 1309.6 & 23.8 & & \\ [+1ex]
+& total & 1124.1 & 1269.0 & 20.6 & &\\[+1ex]
+\bottomrule
+\end{tabular}
+\end{table}
 
 
 \subsection{Évaluation du bilan}
@@ -447,22 +446,6 @@ Considérant le modèle de PPB prenant en compte la végétation, la sensibilit�
 \centering
 \caption{Sensibilité relative (en \%) du bilan de \coo (ENE) en réponse à une variation de $\pm$\SI{10}{\percent} de chacun des paramètres des modèles.}
 \label{table:mdl_sensitiv}
-%\begin{tabular}{llccc}\toprule
-%& & valeur & \SI{+10}{\percent} & \SI{-10}{\percent} \\ \midrule
-%RE & \multicolumn{4}{l}{équation~\ref{eq:RE_T5}} \\ 
-%& a & 0.34 & +10 & -10 \\
-%& b & 0.10 & +24 & -19 \\ [+1ex]
-%GPP & \multicolumn{4}{l}{équation~\ref{eq:juneTair} et \ref{eq:PPB_bubier}} \\
-%& a & 26.23 & +9 & -10 \\
-%& b & 53.68 & -36 & 44 \\
-%& c & 27.21 & +22 & -23 \\
-%& i & 1.84 & 0 & -1 \\ [+1ex]
-%GPP & \multicolumn{4}{l}{équation~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier}} \\ 
-%& a & 33.66 & -1 & -17 \\
-%& b & 42.45 & -27 & 8 \\
-%& c & 25.77 & -1 & -18 \\
-%& i & 0.33 & -8 & -10 \\
-
 \begin{tabular}{llccccccccccc}\toprule
 & \multicolumn{4}{l}{RE} & \multicolumn{4}{l}{GPP} & \multicolumn{4}{l}{\chh} \\ 
 & par & valeur & \SI{-10}{\percent} & +\SI{+10}{\percent} & par & valeur & \SI{-10}{\percent} & +\SI{+10}{\percent} & par & valeur & \SI{-10}{\percent} & +\SI{+10}{\percent} \\ \midrule
@@ -481,19 +464,6 @@ Considérant le modèle de PPB prenant en compte la végétation, la sensibilit�
 & b & 0.09 & -149.40 & 189.01 & b & 42.45 & -130.64 & 134.84 & b & 0.03 & -1.53 & 1.79 \\
 & c & 0.14 & -20.89 & 20.89 & c & 25.77 & 68.28 & -58.08 & & & & \\
 &  &  & & & i & 0.33 & 7.57 & -6.56 & & & & \\
-%& a & 0.34 & +10 & -10 \\
-%& b & 0.10 & +24 & -19 \\ [+1ex]
-%GPP & \multicolumn{4}{l}{équation~\ref{eq:juneTair} et \ref{eq:PPB_bubier}} \\
-%& a & 26.23 & +9 & -10 \\
-%& b & 53.68 & -36 & 44 \\
-%& c & 27.21 & +22 & -23 \\
-%& i & 1.84 & 0 & -1 \\ [+1ex]
-%GPP & \multicolumn{4}{l}{équation~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier}} \\ 
-%& a & 33.66 & -1 & -17 \\
-%& b & 42.45 & -27 & 8 \\
-%& c & 25.77 & -1 & -18 \\
-%& i & 0.33 & -8 & -10 \\
-
 \bottomrule
 \end{tabular}
 \end{table}
