@@ -67,16 +67,19 @@ La RMSE et sa normalisation par la moyenne NRMSE sont utilisés comme indicateur
 L'AIC (Akaile...) permet de déterminer si l'amélioration d'un modèle suite à l'ajout d'un paramètre est suffisamment intéressante pour que ce modèle plus complexe soit utilisé.
 
 La température a été choisie comme base de départ à la construction des modèles de RE et PPBsat, à la fois car c'est le facteur de contrôle le plus souvent invoqué et à la fois car les corrélations avec les flux étaient les plus forte.
-Idéalement la température utilisée pour estimer la photosynthèse serait celle de l'air et celle pour estimer la respiration serait celle du sol à faible profondeur, typiquement \SI{-5}{\centi\metre}.
-En effet ce sont celles qui font le plus sens, la photosynthèse prenant place dans l'air et la majorité de la respiration se faisant dans les premiers centimètres du sol.
-Ce sont également celles qui sont le plus utilisées dans la littérature.
-Cependant les température de l'air mesurée manuellement au niveau de chaque embase lors des différentes campagnes de mesures, sont sujette à caution 
-En effet elles sont quasiment certainement sur-estimées et donc biaisées.
-La source de ce biais est la difficulté de maintenir à l'ombre de thermomètre utilisé lors des campagnes.
-La température affichée par ce dernier ayant tendance à monter drastiquement quand exposé au soleil.
-A l'inverse les températures mesurées dans le sol sont plus fiable (\textbf{pourquoi ?}).
-L'utilisation de ces deux températures conjointement pour l'estimation d'un bilan risquant donc de le déséquilibrer il a été décider d'utiliser la température à \SI{-5}{\centi\metre} à la fois pour la RE mais aussi pour la PPB, ceci afin de pouvoir conserver une calibration issue de données locale et néanmoins robuste.
-L'autre solution aurait été d'utiliser les données de température de la station pour la calibration.
+%Idéalement la température utilisée pour estimer la photosynthèse serait celle de l'air. et celle pour estimer la respiration serait celle du sol à faible profondeur, typiquement \SI{-5}{\centi\metre}.
+%En effet ce sont celles qui font le plus sens, la photosynthèse prenant place dans l'air et la majorité de la respiration se faisant dans les premiers centimètres du sol.
+%Ce sont également celles qui sont le plus utilisées dans la littérature.
+%Cependant les température de l'air mesurée manuellement au niveau de chaque embase lors des différentes campagnes de mesures, sont sujette à caution 
+%En effet elles sont quasiment certainement sur-estimées et donc biaisées.
+%La source de ce biais est la difficulté de maintenir à l'ombre de thermomètre utilisé lors des campagnes.
+%La température affichée par ce dernier ayant tendance à monter drastiquement quand exposé au soleil.
+%A l'inverse les températures mesurées dans le sol sont plus fiable (\textbf{pourquoi ?}).
+%L'utilisation de ces deux températures conjointement pour l'estimation d'un bilan risquant donc de le déséquilibrer il a été décider d'utiliser la température à \SI{-5}{\centi\metre} à la fois pour la RE mais aussi pour la PPB, ceci afin de pouvoir conserver une calibration issue de données locale et néanmoins robuste.
+%L'autre solution aurait été d'utiliser les données de température de la station pour la calibration.
+Concernant la respiration de l'écosystème, les températures utilisées dans la littérature sont variables.
+La température qui semble le plus utilisée est la température du sol à \SI{-5}{\centi\metre} \plop, même si d'autres, notamment la température de l'air et la température du sol à \SI{-10}{\centi\metre} le sont également régulièrement.
+
 
 Après cette phase de calibration, les facteurs de contrôle utilisés dans les modèles ont été interpolés au pas de mesure de la station météo présente sur le site, c'est à dire à l'heure.
 L'interpolation étant soit une simple interpolation linéaire entre les données mensuelles, soit une relation avec les facteurs acquis par la station météorologique.
