@@ -95,17 +95,16 @@ Enfin ces modèles ont été évalués sur des données issues d'une autre expé
 
 %%%%%%%%%%%%%%%%%%%%% PPB 
 
-L'estimation de la PPB se fait en deux temps.
-Le premier consiste à estimer le potentiel maximum de photosynthèse à un instant donné dans des conditions de lumière saturante.
-Ce potentiel peut varier avec les conditions environnementales.
-Il est estimé en partant de l'équation de \cite{june2004}
-
-Modélisation de la production primaire brute à lumière saturante.
-L'utilisation de l'équation de June se justifie par ?
+L'estimation de la PPB se fait en deux étapes.
+Dans un premier temps on estime le potentiel maximum de photosynthèse à un instant donné dans des conditions de lumière saturante (PPBsat).
+Ce potentiel peut varier avec les conditions environnementales et a été déterminé en utilisant l'équation de \cite{june2004} qui relie la vitesse de transport des électrons photosynthétique à lumière saturante à la température :
 
 \begin{equation}\label{eq:juneTair}
-PPBsat = a * exp(\frac{Tair - b}{c}^2)
+PPBsat = a * exp(\frac{Tair - b}{c})^2
 \end{equation}
+
+Avec a la vitesse de transport des électrons photosynthétique à lumière saturante, b la température optimale pour ce transport et c la différence de température à laquelle à laquelle PBBsat vaut e$^{-1}$ de sa valeur à la température optimale.
+
 
 \begin{figure}
 \centering
@@ -121,11 +120,18 @@ PPBsat = a * exp(\frac{Tair - b}{c}^2)
 %\label{fig:PPBsat_Tair_res}
 %\end{figure}
 
-L'utilisation de l'équation de June seule, avec la température de l'air comme variable explicative de la PPBsat, permet d'expliquer 65 \% des variations observées (Figure~\ref{fig:PPB_Tair_mdl}).
+L'utilisation de l'équation de June seule, avec la température de l'air comme variable explicative de la PPBsat, permet d'expliquer 66 \% des variations observées (Figure~\ref{fig:PPB_Tair_mdl}-a).
+Les résidus de ce modèle se répartissent de façon relativement homogène (Figure~\ref{fig:PPB_Tair_mdl}-b).
+Corrélés avec l'indice de végétation IV, ils présentent une tendance linéaire croissante (Figure~\ref{fig:PPB_Tair_mdl}-c), mais ne présentent pas de tendance particulière avec le niveau de la nappe (Figure~\ref{fig:PPB_Tair_mdl}-d)
+Afin de prendre en compte cette tendance linéaire le modèle est adapté :
 
-RMSE ?
+\begin{equation}\label{eq:juneTairIV}
+PPBsat = (a * IV) * exp(\frac{T - b}{c})^2
+\end{equation}
 
-Les résidus de ce modèle se répartissent de façon relativement homogène et sans tendance.
+Cette nouvelle équation permet d'expliquer une part plus importante des variations de PPBsat (R$^{2}$ = 0,85) et augmente la proximité entre les données mesurées et les données modélisées (La RMSE diminue) (Figure~\ref{fig:PPBsat_TaIV_mdl}).
+Les résidus de cette équation semblent répartis de façon moins homogène que précédemment, avec d'avantage de résidus présent entre \num{-1} et \num{-2} qu'entre \num{1} et 2, ainsi qu'un point de valeur supérieur à \num{4}.
+Le biais reste malgré tout léger au regard de l'amélioration apportée.
 
 
 \begin{figure}
@@ -135,31 +141,12 @@ Les résidus de ce modèle se répartissent de façon relativement homogène et 
 \label{fig:PPBsat_TaIV_mdl}
 \end{figure}
 
-Lorsque qu'ils sont corrélés avec d'autres facteurs contrôlant important, le niveau de la nappe, la teneur en eau du sol, et un indice de végétation ils ne montrent de tendance qu'avec ce dernier (Figure~\ref{fig:PPBsat_Tair_res}).
-Il semble y avoir une relation linéaire entre les résidus de l'équation et l'indice de végétation.
-Le modèle est donc transformé en 
-
-\begin{equation}\label{eq:juneTairIV}
-PPBsat = (a * IV + b) * exp(\frac{T - b}{c}^2)
-\end{equation}
-
-Cette nouvelle équation permet d'expliquer une part plus importante des variations de PPBsat (R$^{2}$ = 0,86) et augmente la proximité entre les données mesurées et les données modélisées (La RMSE diminue) (Figure~\ref{fig:PPB_TairIV_mdl}).
-Les résidus de cette équation sont, à l'exception d'un point, répartis de façon homogène autour de 0, sans tendance particulière.
-
-À partir de ce potentiel la PPB est estimée en prenant en compte la luminosité.
-Deux équations ont été testées :
+À partir de ce potentiel à lumière saturante, la PPB est estimée en prenant en compte la luminosité.
+On utilise l'équation~\ref{eq:PPB_bubier} proposée par \cite{bubier1998} et régulièrement et souvent utilisée \cite{bortoluzzi2006,worrall2009}:
 
 \begin{equation} \label{eq:PPB_bubier}
 PPB = \frac{PPBsat * a * PAR}{PPBsat + a * PAR}
 \end{equation}
-
-%\begin{equation} \label{eq:PPB_sig}
-%PPB = \frac{PPBsat * a * PAR}{\sqrt{PPBsat^2 + (a * PAR)^2}}
-%\end{equation}
-
-L'équation~\ref{eq:PPB_bubier} a été proposée par \cite{bubier1998} et utilisée par \cite{bortoluzzi2006,worrall2009}.
-% et tandis que l'équation~\ref{eq:PPB_sig}, plus rarement utilisée a été introduite par \cite{smith1937} et utilisée par \cite{wohlfahrt2010,gorres2014}.
-
 
 \begin{figure}
 \centering
@@ -168,12 +155,8 @@ L'équation~\ref{eq:PPB_bubier} a été proposée par \cite{bubier1998} et utili
 \label{fig:PPB_Tair_mdl}
 \end{figure}
 
-%\begin{figure}
-%\centering
-%\includegraphics[width=\textwidth]{chap3/GPP_TairIV_mdl_mesmod}
-%\caption{PPB résidus modèle Tair}
-%\label{fig:PPB_TairIV_mdl}
-%\end{figure}
+La PPB calculée à partir de l'équation~\ref{eq:juneTair} présente des résidus relativement homogène avec cependant d'avantage de points situés entre \num{-2} et \num{-4} qu'entre \num{2} et \num{4} (Figure~\ref{fig:PPB_Tair_mdl}--a,b).
+Une observation similaire peut être faire pour PPB calculé à partir de l'équation~\ref{eq:juneTairIV}, avec cependant des résidus resserrés entre \num{-2} et \num{2} et un point un peu plus extrême(Figure~\ref{fig:PPB_Tair_mdl}--c,d).
 
 \subsubsection{La Respiration de l'Écosystème}
 
