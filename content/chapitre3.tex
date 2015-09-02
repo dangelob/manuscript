@@ -168,14 +168,16 @@ Différents modèles ont été testés parmi les plus souvent utilisés (linéai
 
 Les variations de la RE moyenne au cours du temps suivent les variations saisonnières de la température.
 
-\begin{equation} \label{eq:RE_T5}
-RE = a*exp(b*T5)
+\begin{equation} \label{eq:RE_T}
+RE = a*exp(b*T)
 \end{equation}
 
-La température de l'air utilisée dans un modèle exponentiel permet d'expliquer une grande partie, 90 \%, des variations de la respiration de l'écosystème (Figure~\ref{fig:ER_mdl}).
-Les résidus de cette équation semble répartis de façon non-biaisée, pas de tendance dans le nuage de point (Figure~\ref{fig:ER_T5_mdl}). 
-Comme pour la GPPsat, la seule tendance qui semble se dégager lorsque que l'on corrèle ces résidus aux autres facteurs contrôlant, est une tendance linéaire avec l'indice de végétation (Figure~\ref{fig:ER_mdl}).
-Cependant l'ajout d'un paramètre avec un gain forcément limité ne semble pas utile/pertinent.
+La température de l'air utilisée dans un modèle exponentiel permet d'expliquer une grande partie, 90 \%, des variations de la respiration de l'écosystème (Figure~\ref{fig:ER_mdl}--a).
+Les résidus de cette équation semble répartis de façon non-biaisée, pas de tendance dans le nuage de point (Figure~\ref{fig:ER_mdl}--b).
+Une légère tendance, moins claire que pour la PPBsat, est visible entre les résidus et l'indice de végétation.
+Très souvent utilisée, la température à \SI{-5}{\centi\metre} donne des résultats proche mais moins bons notamment avec une hétéroscédasticité des résidus.
+La tendance des résidus avec l'indice de végétation est ici moins marqué encore qu'avec la température de l'air.
+Dans les deux cas, le gain possible en ajoutant un paramètre semble limité et peu pertinent.
 
 \begin{figure}
 \centering
@@ -192,6 +194,14 @@ Cependant l'ajout d'un paramètre avec un gain forcément limité ne semble pas 
 %\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%% ENE
+\subsubsection{L'Échange Net de l'Écosystème}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/NEE_mdl_mesmod}
+\caption{ENE modèle T5 IV}
+\label{fig:ENE_mdl}
+\end{figure}
 
 L'ENE est ensuite modélisé en utilisant l'équation suivante :
 
@@ -202,12 +212,7 @@ ENE = PBB-RE
 Le résultat de cette équation (Figure~\ref{fig:ENE_mdl}), montre que ce modèle permet d'expliquer une grande partie des variations de l'ENE.
 Les résidus de cette équation sont répartis de manière a peu près homogène.
 
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/NEE_mdl_mesmod}
-\caption{ENE modèle T5 IV}
-\label{fig:ENE_mdl}
-\end{figure}
+
 
 %\begin{figure}
 %\centering
@@ -224,6 +229,20 @@ Les résidus de cette équation sont répartis de manière a peu près homogène
 \caption{CH4 modèle H}
 \label{fig:CH4_mdl}
 \end{figure}
+
+
+Pas de consensus clair émerge de la littérature quand aux facteurs prépondérant dans le contrôle du \chh.
+La température, peut être utilisée \cite{alm1999,bubier1995}, le niveau de la nappe \cite{bubier1993} ou la végétation \cite{bortoluzzi2006}.
+Avec les données acquises, le recouvrement les herbacées H est le meilleur prédicteur (Figure~\ref{fig:CH4_mdl}).
+le méthane est également corrélé avec les températures, faiblement avec les température de surface puis plus fortement avec les températures du sol à plus forte profondeur.
+Enfin il est anti-corrélé (R=-0.51) avec le niveau de la nappe.
+%Le \chh est traditionnellement 
+
+%bortoluzzi veg
+%Alm 1999 T -30 cm
+%Bellisario relation inverse avec WTL (increased flux with lower WTL) T10
+%Bubier 1993a WTL majeur
+%Bubier 1995 Température humidité végétation
 
 \subsubsection{Le COD}
 
