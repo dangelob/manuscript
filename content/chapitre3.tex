@@ -23,7 +23,7 @@ Objectif : bilan de C
 
 \subsubsection{Mesures de flux de gaz}
 La mesure des flux de \coo et de \chh ont été effectué en utilisant la méthode décrite dans la partie~\ref{sec:clsd_chbr_method}.
-En XmoisX YannéeY, 20 placettes ont été installées\footnote{je remercie ici Sébastien Gogo pour avoir installé ces placettes sur le terrain avant même mon arrivée.} selon un échantillonnage aléatoire stratifié:
+En juin 2011, 20 placettes ont été installées\footnote{je remercie ici Sébastien Gogo pour avoir installé ces placettes sur le terrain avant même mon arrivée.} selon un échantillonnage aléatoire stratifié:
 La surface de la tourbière a été divisée selon une grille de 20 mailles et un point choisi aléatoirement dans chaque maille localise chaque placette.
 Cette méthode permet de conserver un échantillonnage aléatoire tout en étant assuré d'avoir une représentativité homogène du site. 
 Les placettes, délimitées par des piquets, occupaient une surface de \SI{4}{\square\metre} (2$\times$\SI{2}{\metre}), à l'intérieur de laquelle ont été installé de façon permanente un piézomètre et une embase permettant la mesure des flux de gaz.
@@ -90,10 +90,12 @@ Enfin ces modèles ont été évalués sur des données issues d'une autre expé
 
 \subsubsection{La Production Primaire Brute}
 
-
-
-
-%%%%%%%%%%%%%%%%%%%%% PPB 
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/GPPsat_Tair_mesmod}
+\caption{PPBsat modèles Tair utilisant l'équation~\ref{eq:juneTair}}
+\label{fig:PPBsat_Tair_mdl}
+\end{figure}
 
 L'estimation de la PPB se fait en deux étapes.
 Dans un premier temps on estime le potentiel maximum de photosynthèse à un instant donné dans des conditions de lumière saturante (PPBsat).
@@ -106,12 +108,7 @@ PPBsat = a * exp(\frac{Tair - b}{c})^2
 Avec a la vitesse de transport des électrons photosynthétique à lumière saturante, b la température optimale pour ce transport et c la différence de température à laquelle à laquelle PBBsat vaut e$^{-1}$ de sa valeur à la température optimale.
 
 
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/GPPsat_Tair_mesmod}
-\caption{PPBsat modèles Tair utilisant l'équation~\ref{eq:juneTair}}
-\label{fig:PPBsat_Tair_mdl}
-\end{figure}
+
 
 %\begin{figure}
 %\centering
@@ -129,17 +126,16 @@ Afin de prendre en compte cette tendance linéaire le modèle est adapté :
 PPBsat = (a * IV) * exp(\frac{T - b}{c})^2
 \end{equation}
 
-Cette nouvelle équation permet d'expliquer une part plus importante des variations de PPBsat (R$^{2}$ = 0,85) et augmente la proximité entre les données mesurées et les données modélisées (La RMSE diminue) (Figure~\ref{fig:PPBsat_TaIV_mdl}).
-Les résidus de cette équation semblent répartis de façon moins homogène que précédemment, avec d'avantage de résidus présent entre \num{-1} et \num{-2} qu'entre \num{1} et 2, ainsi qu'un point de valeur supérieur à \num{4}.
-Le biais reste malgré tout léger au regard de l'amélioration apportée.
-
-
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{chap3/GPPsat_TairIV_mesmod}
 \caption{PPBsat modèles Tair utilisant l'équation~\ref{eq:juneTairIV}}
 \label{fig:PPBsat_TaIV_mdl}
 \end{figure}
+
+Cette nouvelle équation permet d'expliquer une part plus importante des variations de PPBsat (R$^{2}$ = 0,85) et augmente la proximité entre les données mesurées et les données modélisées (La RMSE diminue) (Figure~\ref{fig:PPBsat_TaIV_mdl}).
+Les résidus de cette équation semblent répartis de façon moins homogène que précédemment, avec d'avantage de résidus présent entre \num{-1} et \num{-2} qu'entre \num{1} et 2, ainsi qu'un point de valeur supérieur à \num{4}.
+Le biais reste malgré tout léger au regard de l'amélioration apportée.
 
 À partir de ce potentiel à lumière saturante, la PPB est estimée en prenant en compte la luminosité.
 On utilise l'équation~\ref{eq:PPB_bubier} proposée par \cite{bubier1998} et régulièrement et souvent utilisée \cite{bortoluzzi2006,worrall2009}:
