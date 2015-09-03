@@ -18,6 +18,7 @@ Le second objectif est de caractériser la variabilité spatiale de ces flux de 
 \subsection{Méthodes de mesure}
 
 \subsubsection{Mesures de flux de gaz}
+\textbf{placer carte tourbière embase + quadrillage}
 La mesure des flux de \coo et de \chh ont été effectué en utilisant la méthode décrite dans la partie~\ref{sec:clsd_chbr_method}.
 En juin 2011, 20 placettes ont été installées\footnote{je remercie ici Sébastien Gogo pour avoir installé ces placettes sur le terrain avant même mon arrivée.} selon un échantillonnage aléatoire stratifié:
 La surface de la tourbière a été divisée selon une grille de 20 mailles et un point choisi aléatoirement dans chaque maille localise chaque placette.
@@ -201,7 +202,9 @@ Enfin il est anti-corrélé (R=-0.51) avec le niveau de la nappe.
 
 \section{Résultats}
 
-\subsection{Évolution générale des facteurs contrôlants sur la tourbière de La Guette}
+\subsection{Évolution générale des flux et facteurs contrôlants sur la tourbière de La Guette}
+
+\subsubsection{Les Facteurs contrôlant}
 
 \begin{figure}
 \centering
@@ -261,9 +264,9 @@ Ces valeurs sont cohérentes avec la classification \textit{poor-fen} du site .
 \label{fig:NPOC_mean_evolution}
 \end{figure}
 
-\subsection{Évolution générale des flux de C sur la tourbière de La Guette}
+%\subsection{Évolution générale des flux de C sur la tourbière de La Guette}
 
-\subsubsection{Le \coo}
+\subsubsection{Les flux de carbone}
 
 \begin{figure}
 	\centering
@@ -313,7 +316,7 @@ En 2014, l'ENE maximum est atteinte en juillet avec \SI{99999(888)}{\uml} avant 
 Cette baisse est cependant plus homogène qu'en 2013.
 les moyennes de l'ENE en 2013 et 2014 sont très proche est sont respectivement de \SI{2.85(305)}{\uml} et \SI{2.93(277)}{\uml} (Figure~\ref{fig:NEE_evolution_avg}).
 
-\subsubsection{Le \chh}
+%\subsubsection{Le \chh}
 
 Le \chh comme le \coo montre une variabilité saisonnière importante, cependant les flux mesurés sont un ordre de grandeur en dessous de ceux mesurés pour le \coo.
 À l'inverse de ce dernier, l'importance des flux de \chh mesurés en 2013 et 2014 est différente.
@@ -326,33 +329,44 @@ En 2013 les flux sont moins important qu'en 2014 avec des maximum de \SIlist{0.0
 \label{fig:CH4_evolution_avg}
 \end{figure}
 
-\subsubsection{Le Carbone Organique Dissous (COD)}
+%\subsubsection{Le Carbone Organique Dissous (COD)}
+
+\subsubsection{Les relation flux gazeux et facteurs contrôlants}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/Fl_FC}
+\caption{Relation entre les flux de gaz et les principaux facteurs contrôlant}
+\label{fig:Fl_FC}
+\end{figure}
 
 \subsection{Le bilan de carbone de la tourbière de La Guette à l'échelle de l'écosystème}
 
 Afin de calculer le bilan à l'aide des équations XXXX, la température de l'air mesurée au niveau de la station météo à été utilisée.
 Pour l'indice de végétation, le bilan a été calculé avec une interpolation linéaire entre les points.
 
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/GPP_BdCitp_TairIVcov}
-\caption{GPP interpolées à partir des équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier})}
-\label{fig:ENE_BdC_TairIVcov-T5}
-\end{figure}
+\subsubsection{Bilan (param et valeur)}
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{chap3/ER_BdCitp_T5}
-\caption{RE interpolée à partir de l'équation~\ref{eq:RE_T5})}
-\label{fig:RE_BdC_T5}
+\includegraphics[width=\textwidth]{chap3/BdC_interp}
+\caption{Flux de \coo interpolé à partir des équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier} pour la GPP et de l'équation~\ref{eq:RE_T} pour RE.}
+\label{fig:BdC_interp}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/ENE_BdCitp_TairIVcov_T5}
-\caption{ENE, PPB-RE, de la tourbière de La Guette}
-\label{fig:PPB_BdC_TairIVcov}
-\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[width=\textwidth]{chap3/ER_BdCitp_T5}
+%\caption{RE interpolée à partir de l'équation~\ref{eq:RE_T5})}
+%\label{fig:RE_BdC_T5}
+%\end{figure}
+%
+%\begin{figure}
+%\centering
+%\includegraphics[width=\textwidth]{chap3/ENE_BdCitp_TairIVcov_T5}
+%\caption{ENE, PPB-RE, de la tourbière de La Guette}
+%\label{fig:PPB_BdC_TairIVcov}
+%\end{figure}
 
 
 \begin{table}
@@ -375,9 +389,9 @@ mdl 3 & 2013 & 1035.2 & 1228.6 & 17.4 & & \\[+.5ex]
 \end{table}
 
 
-\subsection{Évaluation du bilan}
+\subsubsection{Évaluation du bilan}
 
-\subsubsection{sensibilité des paramètres}
+%\subsubsection{sensibilité des paramètres}
 
 L'analyse de sensibilité, consistant à faire varier chaque paramètre des modèles de $\pm$\SI{10}{\percent}, montre pour une équation exponentielle simple des valeurs attendues $\pm$\SI{10}{\percent} pour le paramètre a et \num{+29} à \SI{-22}{\percent} pour le b (Figure~\ref{table:mdl_sensitiv}).
 Pour la PPB issue des équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier} le paramètre i à très peu d'effet sur le bilan, \num{0} à \SI{-1}{\percent}.
@@ -434,7 +448,38 @@ Considérant le modèle de PPB prenant en compte la végétation, la sensibilit�
 \end{tabular}
 \end{table}
 
-\subsubsection{pseudo-validation et erreur}
+
+\begin{table}
+\centering
+\caption{Sensibilité relative (en \%) des flux en réponse à une variation de $\pm$\SI{10}{\percent} de chacun des paramètres des modèles.}
+\label{table:mdl_par}
+\begin{tabular}{llccccc}\toprule
+
+& par & valeur & se & pval & \SI{-10}{\percent} & +\SI{+10}{\percent} \\ \midrule
+\multicolumn{7}{l}{PPB -- Tair}  \\ [+.5ex]
+& a & 26.23 & 62.07 & & -9.7 & 9.6 	\\
+& b & 53.68 & 61.27 & & 43.7 &-35.1 \\
+& c & 27.21 & 28.56 & &-22.5 & 21.9 \\
+& i &  1.84 &       & & -0.4 &  0.4 \\[+1ex]
+\multicolumn{7}{l}{PPB -- Tair IV}  \\ [+.5ex]
+& a & 33.66 & 19.89 & & -9.0 & 8.9 \\
+& b & 42.45 & 22.28 & & 19.3 & -19.9 \\
+& c & 25.77 & 15.28 & & -10.1 & 8.6 \\
+& i &  0.33 &       & & -1.1 & 1.0 \\[+1ex]
+\multicolumn{7}{l}{ER -- Tair}  \\ [+.5ex]
+& a & 0.34 & 0.08 &  & -10 & +10 \\
+& b & 0.10 & 0.01  & & -22.6 & +29.9  \\[+1ex]
+\multicolumn{7}{l}{ER -- T5}  \\ [+.5ex]
+& a & 0.51 & 0.12 & &  &  \\
+& b & 0.12 & 0.01 & &  &  \\[+1ex]
+\multicolumn{7}{l}{CH4 -- IV}  \\ [+.5ex]
+& a &  &       & &  &  \\
+& b &  &       & &  &  \\[+1ex]
+\bottomrule
+\end{tabular}
+\end{table}
+
+%\subsubsection{pseudo-validation et erreur}
 
 \begin{figure}
 \centering
@@ -449,8 +494,13 @@ Considérant le modèle de PPB prenant en compte la végétation, la sensibilit�
 \label{fig:GPP_TairIVcov_val}
 \end{figure}
 
-\subsubsection{représentativité locale}
+\subsection{Variabilité spatiale du bilan}
 
+\subsubsection{Représentativité locale}
+
+\subsubsection{Modélisation par placette}
+
+\subsubsection{Corrélation avec facteurs contrôlant}
 
 \section{Discussion}
 

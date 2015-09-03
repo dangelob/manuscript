@@ -25,3 +25,4 @@
 *.fdb_latexmk
 *.mtc
 *.mtc*
+/images/chap3/old
