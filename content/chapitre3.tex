@@ -19,7 +19,8 @@ Le second objectif est de caractériser la variabilité spatiale de ces flux de 
 
 \subsubsection{Mesures de flux de gaz}
 \textbf{placer carte tourbière embase + quadrillage}
-La mesure des flux de \coo et de \chh ont été effectué en utilisant la méthode décrite dans la partie~\ref{sec:clsd_chbr_method}.
+
+Les mesures des flux de \coo et de \chh ont été effectués en utilisant la méthode décrite dans la partie~\ref{sec:clsd_chbr_method}.
 En juin 2011, 20 placettes ont été installées\footnote{je remercie ici Sébastien Gogo pour avoir installé ces placettes sur le terrain avant même mon arrivée.} selon un échantillonnage aléatoire stratifié:
 La surface de la tourbière a été divisée selon une grille de 20 mailles et un point choisi aléatoirement dans chaque maille localise chaque placette.
 Cette méthode permet de conserver un échantillonnage aléatoire tout en étant assuré d'avoir une représentativité homogène du site. 
@@ -29,15 +30,15 @@ Elles peuvent également être séparées en zone dans la tourbière, haut-marai
 Afin de gagner en représentativité spatiale, la taille du site le permettant, il a donc été décidé de positionner des placettes sur l'ensemble du site.
 De plus, du fait de l'omniprésence de végétation vasculaire, et de la taille des chambres par rapport à la micro-topographie une telle approche était difficile à mettre en oeuvre.
 
-Les mesures de \coo ont été effectué de mars 2013 à février 2015, avec une fréquence quasiment mensuelle (20 campagnes, pour 24 mois de mesure).
+Les flux de gaz mesurés sont le \coo et le \chh.
+Des tests effectués sur la tourbière ayant montré des émissions de N$_{2}$O nulle, ce gaz n'a pas été étudié.
+Les mesures de \coo ont été effectué de mars 2013 à février 2015, avec une fréquence quasiment mensuelle (20 campagnes, pour 24 mois de mesure). Quand aux mesures de \chh ont été effectuées avec une fréquence moindre (12 campagnes) principalement liée au difficulté de mise en oeuvre de l'instrument SPIRIT (lourd, difficilement transportable dans un milieu tourbeux).
 
-Les mesures de \chh ont été effectuées avec une fréquence moindre principalement liée au difficulté de mise en oeuvre de l'instrument SPIRIT (lourd, difficilement transportable dans un milieu tourbeux).
 
-\subsubsection{Les facteurs contrôlants}
 
-Les mesures manuelle effectuées sont la mesure de la pression atmosphérique, du PAR, des températures du sol à différentes profondeur, de la végétation.
+Les facteurs contrôlant mesurés manuellement sont la pression atmosphérique, du PAR, des températures du sol à différentes profondeur, de la végétation.
 Des prélèvements d'eau ont également été effectué chaque mois, une mesure du pH et de la conductivité dans cette eau a été réalisée sur le terrain après les mesures de flux puis les échantillons ont été congelés avant d'être analysé en terme de concentration de carbone dissous.
-Ces mesures nécessitant d'accéder aux placettes régulièrement, des planches de bois ont été utilisées comme pontons mobiles, la dispersion des placettes sur le site rendant impossible une installation plus permanente.
+Ces mesures nécessitant d'accéder aux placettes régulièrement, des planches de bois ont été utilisées comme pontons mobiles, la dispersion des placettes sur l'ensemble du site rendant impossible une installation plus permanente.
 
 Les mesures automatiquement acquise via une station météo campbell sont la température de l'air, température de la tourbe à \num{-5}, \num{-10}, \num{-20} et \SI{-40}{\centi\metre} profondeur, vitesse et direction du vent, humidité relative de l'air, irradiation solaire, pression atmosphérique.
 
@@ -45,16 +46,19 @@ Les mesures automatiquement acquise via une station météo campbell sont la tem
 
 \subsubsection{Démarche générale}
 
-Afin de calculer le bilan de carbone du site il est nécessaire d'établir des modèles empiriques des flux afin de pourvoir interpoler les données acquises mensuellement sur l'ensemble des deux années de mesure.
+Afin de calculer le bilan de carbone du site il est nécessaire d'établir des modèles des flux afin de pourvoir interpoler les données acquises mensuellement sur l'ensemble des deux années de mesure.
 Pour établir ces modèles empiriques les données acquises ont été moyennées par campagne de mesure.
 Ceci permettant, dans un premier temps, de s'affranchir de la variabilité spatiale des flux pour se concentrer sur la variabilité temporelle.
 Les relations entre flux et facteurs contrôlant ont ensuite été étudiées deux à deux.
 
-Les flux de \coo ont été modélisé en partant de l'équation ENE = PPB - RE, et le bilan a été établi en estimant de façon séparée la PPB et la RE.
-Cette séparation permettant de distinguer si une variation du bilan est liée à l'un ou l'autre des flux ou bien aux deux.
-Les flux en phase gazeuse ont été modélisé en partant d'équation usuellement utilisées et dans lesquelles la température est le facteur contrôlant majeur.
+La RE, et l'ENE sont mesurés directement sur le terrain.
+Cependant afin d'établir le bilan de C tout en gardant une discrimination entre flux d'entré et de sortie la RE et la PPB (obtenue grâce à l'équation PPB = ENE - RE) ont été modélisé séparément.
+%Les flux de \coo ont été modélisé en partant de l'équation ENE = PPB - RE, et le bilan a été établi en estimant de façon séparée la PPB et la RE.
+%Cette séparation permettant de distinguer si une variation du bilan est liée à l'un ou l'autre des flux ou bien aux deux.
+Les flux en phase gazeuse ont été modélisé en partant d'équations usuellement utilisées et dans lesquelles la température est le facteur contrôlant majeur.
 Puis les résidus\footnote{Valeurs moyennes - Valeurs moyennes estimées} de ces modèles de base ont ensuite été étudiés en fonction des facteurs de contrôle restant.
 Dans le cas ou une tendance est visible, le facteur est intégré.
+
 Les modèles ont été comparés avec différents indicateurs, principalement Le R2, la NRMSE et l'AIC.
 Le R$^{2}$ est utilisé comme indicateur de la proportion de la variabilité des données expliqué par le modèle, sa valeur est comprise entre 0 et 1.
 La RMSE et sa normalisation par la moyenne NRMSE sont utilisés comme indicateur de l'écart entre les données mesurées et les données modélisées.
@@ -67,12 +71,15 @@ Cette profondeur, \SI{-5}{\cm}, est régulièrement utilisée car c'est dans la 
 \textbf{production CO2 ? profils ?}
 C'est également à des profondeurs relativement faibles que se situent la majorité des racines \plop qui peuvent contribuer à la respiration du sol \textbf{(de l'écosystème?)} pour 35 à \SI{60}{\percent} \cite{silvola1996,crow2005}.
 
-Après cette phase de calibration, les facteurs de contrôle utilisés dans les modèles ont été interpolés au pas de mesure de la station météo présente sur le site, c'est à dire à l'heure.
+Après cette phase de calibration, les facteurs de contrôle utilisés dans les modèles ont été évalué à l'aide de données indépendantes issues d'une autre expérimentation.
+Cette dernière est également un suivi des même flux de gaz, sur le même site pendant l'année 2014.
+Les méthodes de mesures des flux étant strictement identiques à celles utilisées pour établir le bilan de carbone.
+En revanche le positionnement des placettes est beaucoup plus standard avec 4 placettes dans une station en amont et 4 en aval (plus de détails dans l'annexe \textbf{XXX}).
+On ne parle pas ici de validation car les données utilisées bien qu'indépendante du jeu de données utilisé pour la calibration n'ont pas été acquise suivant un protocole identique, notamment au niveau de la répartition des embases sur le site.
+
+Enfin les facteurs contrôlants ont été interpolés au pas de mesure de la station météo présente sur le site, c'est à dire à l'heure.
 L'interpolation étant soit une simple interpolation linéaire entre les données mensuelles, soit une relation avec les facteurs acquis par la station météorologique.
-À l'aide de ces interpolations et des équations les flux ont ensuite été recalculés sur les 2 années de mesure.
-
-Enfin ces modèles ont été évalués sur des données issues d'une autre expérimentation.On ne parle pas ici de validation car les données utilisées bien qu'indépendante du jeu de données utilisé pour la calibration n'ont pas été acquise suivant un protocole identique, notamment au niveau de la répartition des embases sur le site.
-
+À l'aide de ces interpolations et des équations les flux ont ensuite été recalculés, à l'échelle horaire, sur les 2 années de mesure puis les flux ont été sommés afin de calculer les bilans.
 
 
 \section{Résultats}
