@@ -302,8 +302,8 @@ Les variations de la RE moyenne au cours du temps suivent les variations saisonn
 RE = a*exp(b*T)
 \end{equation}
 
-La température de l'air utilisée dans un modèle exponentiel permet d'expliquer une grande partie, 90 \%, des variations de la respiration de l'écosystème (Figure~\ref{fig:ER_mdl}--a).
-Les résidus de cette équation semble répartis de façon non-biaisée, pas de tendance dans le nuage de point (Figure~\ref{fig:ER_mdl}--b).
+La température de l'air utilisée dans un modèle exponentiel permet d'expliquer une grande partie, 90 \%, des variations de la respiration de l'écosystème (Figure~\ref{fig:ER_mdl_Tair}--a).
+Les résidus de cette équation semble répartis de façon non-biaisée, pas de tendance dans le nuage de point (Figure~\ref{fig:ER_mdl_Tair}--b).
 Une légère tendance, moins claire que pour la PPBsat, est visible entre les résidus et l'indice de végétation.
 Très souvent utilisée, la température à \SI{-5}{\centi\metre} donne des résultats proche mais moins bons notamment avec une hétéroscédasticité des résidus.
 La tendance des résidus avec l'indice de végétation est ici moins marqué encore qu'avec la température de l'air.
@@ -311,9 +311,16 @@ Dans les deux cas, le gain possible en ajoutant un paramètre semble limité et 
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{chap3/ER_mdl}
-\caption{RE modèles avec T5}
-\label{fig:ER_mdl}
+\includegraphics[width=\textwidth]{chap3/mdl_ER_Tair}
+\caption{RE modèles avec Tair}
+\label{fig:ER_mdl_Tair}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/mdl_ER_Tair_IVH}
+\caption{RE modèles avec Tair}
+\label{fig:ER_mdl_TairIVH}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%% ENE
@@ -400,12 +407,12 @@ Pour l'indice de végétation, le bilan a été calculé avec une interpolation 
 \begin{figure}
 \makebox[\linewidth][c]{
 \centering
-\begin{subfigure}{.4\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{chap3/ER_Tair_val}
-  \caption{évalutation RE}
-  \label{fig:sub1}
-\end{subfigure}%
+%\begin{subfigure}{.4\textwidth}
+%  \centering
+%  \includegraphics[width=\linewidth]{chap3/ER_Tair_val}
+%  \caption{évalutation RE}
+%  \label{fig:sub1}
+%\end{subfigure}%
 \begin{subfigure}{.4\textwidth}
   \centering
   \includegraphics[width=\linewidth]{chap3/GPP_TairIVcov_val}
