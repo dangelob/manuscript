@@ -39,7 +39,7 @@ Les mesures manuelle effectuées sont la mesure de la pression atmosphérique, d
 Des prélèvements d'eau ont également été effectué chaque mois, une mesure du pH et de la conductivité dans cette eau a été réalisée sur le terrain après les mesures de flux puis les échantillons ont été congelés avant d'être analysé en terme de concentration de carbone dissous.
 Ces mesures nécessitant d'accéder aux placettes régulièrement, des planches de bois ont été utilisées comme pontons mobiles, la dispersion des placettes sur le site rendant impossible une installation plus permanente.
 
-Les mesures automatiquement acquise via une station météo campbell sont la température de l'air, température de la tourbe à X, X et X profondeur, vitesse et direction du vent, humidité relative de l'air, irradiation solaire, pression atmosphérique.
+Les mesures automatiquement acquise via une station météo campbell sont la température de l'air, température de la tourbe à \num{-5}, \num{-10}, \num{-20} et \SI{-40}{\centi\metre} profondeur, vitesse et direction du vent, humidité relative de l'air, irradiation solaire, pression atmosphérique.
 
 \subsection{Modélisation du bilan de C}
 
@@ -74,131 +74,6 @@ L'interpolation étant soit une simple interpolation linéaire entre les donnée
 Enfin ces modèles ont été évalués sur des données issues d'une autre expérimentation.On ne parle pas ici de validation car les données utilisées bien qu'indépendante du jeu de données utilisé pour la calibration n'ont pas été acquise suivant un protocole identique, notamment au niveau de la répartition des embases sur le site.
 
 
-\subsubsection{La Production Primaire Brute}
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/GPPsat_Tair_mesmod}
-\caption{PPBsat modèles Tair utilisant l'équation~\ref{eq:juneTair}}
-\label{fig:PPBsat_Tair_mdl}
-\end{figure}
-
-L'estimation de la PPB se fait en deux étapes.
-Dans un premier temps on estime le potentiel maximum de photosynthèse à un instant donné dans des conditions de lumière saturante (PPBsat).
-Ce potentiel peut varier avec les conditions environnementales et a été déterminé en utilisant l'équation de \cite{june2004} qui relie la vitesse de transport des électrons photosynthétique à lumière saturante à la température :
-
-\begin{equation}\label{eq:juneTair}
-PPBsat = a * exp(\frac{Tair - b}{c})^2
-\end{equation}
-
-Avec a la vitesse de transport des électrons photosynthétique à lumière saturante, b la température optimale pour ce transport et c la différence de température à laquelle à laquelle PBBsat vaut e$^{-1}$ de sa valeur à la température optimale.
-
-L'utilisation de l'équation de June seule, avec la température de l'air comme variable explicative de la PPBsat, permet d'expliquer 66 \% des variations observées (Figure~\ref{fig:PPB_Tair_mdl}-a).
-Les résidus de ce modèle se répartissent de façon relativement homogène (Figure~\ref{fig:PPB_Tair_mdl}-b).
-Corrélés avec l'indice de végétation IV, ils présentent une tendance linéaire croissante (Figure~\ref{fig:PPB_Tair_mdl}-c), mais ne présentent pas de tendance particulière avec le niveau de la nappe (Figure~\ref{fig:PPB_Tair_mdl}-d)
-Afin de prendre en compte cette tendance linéaire le modèle est adapté :
-
-\begin{equation}\label{eq:juneTairIV}
-PPBsat = (a * IV) * exp(\frac{T - b}{c})^2
-\end{equation}
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/GPPsat_TairIV_mesmod}
-\caption{PPBsat modèles Tair utilisant l'équation~\ref{eq:juneTairIV}}
-\label{fig:PPBsat_TaIV_mdl}
-\end{figure}
-
-Cette nouvelle équation permet d'expliquer une part plus importante des variations de PPBsat (R$^{2}$ = 0,85) et augmente la proximité entre les données mesurées et les données modélisées (La RMSE diminue) (Figure~\ref{fig:PPBsat_TaIV_mdl}).
-Les résidus de cette équation semblent répartis de façon moins homogène que précédemment, avec d'avantage de résidus présent entre \num{-1} et \num{-2} qu'entre \num{1} et 2, ainsi qu'un point de valeur supérieur à \num{4}.
-Le biais reste malgré tout léger au regard de l'amélioration apportée.
-
-À partir de ce potentiel à lumière saturante, la PPB est estimée en prenant en compte la luminosité.
-On utilise l'équation~\ref{eq:PPB_bubier} proposée par \cite{bubier1998} et régulièrement et souvent utilisée \cite{bortoluzzi2006,worrall2009}:
-
-\begin{equation} \label{eq:PPB_bubier}
-PPB = \frac{PPBsat * a * PAR}{PPBsat + a * PAR}
-\end{equation}
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/GPP_mdl_mesmod}
-\caption{PPB modèles Tair}
-\label{fig:PPB_Tair_mdl}
-\end{figure}
-
-La PPB calculée à partir de l'équation~\ref{eq:juneTair} présente des résidus relativement homogène avec cependant d'avantage de points situés entre \num{-2} et \num{-4} qu'entre \num{2} et \num{4} (Figure~\ref{fig:PPB_Tair_mdl}--a,b).
-Une observation similaire peut être faire pour PPB calculé à partir de l'équation~\ref{eq:juneTairIV}, avec cependant des résidus resserrés entre \num{-2} et \num{2} et un point un peu plus extrême(Figure~\ref{fig:PPB_Tair_mdl}--c,d).
-
-\subsubsection{La Respiration de l'Écosystème}
-
-%%%%%%%%%%%%%%%%%%%%% RE
-
-La RE est estimée directement à partir des données acquises moyennées en partant de la température connue pour contrôler une grande partie de ce flux.
-Différents modèles ont été testés parmi les plus souvent utilisés (linéaire, exponentiel, arrhénius).
-
-
-Les variations de la RE moyenne au cours du temps suivent les variations saisonnières de la température.
-
-\begin{equation} \label{eq:RE_T}
-RE = a*exp(b*T)
-\end{equation}
-
-La température de l'air utilisée dans un modèle exponentiel permet d'expliquer une grande partie, 90 \%, des variations de la respiration de l'écosystème (Figure~\ref{fig:ER_mdl}--a).
-Les résidus de cette équation semble répartis de façon non-biaisée, pas de tendance dans le nuage de point (Figure~\ref{fig:ER_mdl}--b).
-Une légère tendance, moins claire que pour la PPBsat, est visible entre les résidus et l'indice de végétation.
-Très souvent utilisée, la température à \SI{-5}{\centi\metre} donne des résultats proche mais moins bons notamment avec une hétéroscédasticité des résidus.
-La tendance des résidus avec l'indice de végétation est ici moins marqué encore qu'avec la température de l'air.
-Dans les deux cas, le gain possible en ajoutant un paramètre semble limité et peu pertinent.
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/ER_mdl}
-\caption{RE modèles avec T5}
-\label{fig:ER_mdl}
-\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%% ENE
-\subsubsection{L'Échange Net de l'Écosystème}
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/NEE_mdl_mesmod}
-\caption{ENE modèle T5 IV}
-\label{fig:ENE_mdl}
-\end{figure}
-
-L'ENE est ensuite modélisé en utilisant l'équation suivante :
-
-\begin{equation}
-ENE = PBB-RE
-\end{equation}
-
-Le résultat de cette équation (Figure~\ref{fig:ENE_mdl}), montre que ce modèle permet d'expliquer une grande partie des variations de l'ENE.
-Les résidus de cette équation sont répartis de manière a peu près homogène.
-
-\subsubsection{Le flux de \chh}
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/CH4_H_mdl_mesmod}
-\caption{CH4 modèle H}
-\label{fig:CH4_mdl}
-\end{figure}
-
-Pas de consensus clair émerge de la littérature quand aux facteurs prépondérant dans le contrôle du \chh.
-La température, peut être utilisée \cite{alm1999,bubier1995}, le niveau de la nappe \cite{bubier1993} ou la végétation \cite{bortoluzzi2006}.
-Avec les données acquises, le recouvrement les herbacées H est le meilleur prédicteur (Figure~\ref{fig:CH4_mdl}).
-le méthane est également corrélé avec les températures, faiblement avec les température de surface puis plus fortement avec les températures du sol à plus forte profondeur.
-Enfin il est anti-corrélé (R=-0.51) avec le niveau de la nappe.
-
-%bortoluzzi veg
-%Alm 1999 T -30 cm
-%Bellisario relation inverse avec WTL (increased flux with lower WTL) T10
-%Bubier 1993a WTL majeur
-%Bubier 1995 Température humidité végétation
-
-\subsubsection{Le COD}
 
 \section{Résultats}
 
@@ -345,6 +220,134 @@ De ce fait aucune relation claire ne se distingue entre les flux et le niveau de
 La PPB et la RE présentent cependant des relations avec la température de l'air, et l'indice de végétation, même si pour ce dernier les tendance sont moins évidentes, particulièrement pour la RE.
 Le \chh quand à lui ne présente pas de relation avec la température de l'air, mais une tendance exponentielle est visible vis à vis de l'indice de végétation.
 \textbf{(\chh et Température dans la tourbe ?)}
+
+\subsection{Sélection des modèles}
+\subsubsection{La Production Primaire Brute}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/GPPsat_Tair_mesmod}
+\caption{PPBsat modèles Tair utilisant l'équation~\ref{eq:juneTair}}
+\label{fig:PPBsat_Tair_mdl}
+\end{figure}
+
+L'estimation de la PPB se fait en deux étapes.
+Dans un premier temps on estime le potentiel maximum de photosynthèse à un instant donné dans des conditions de lumière saturante (PPBsat).
+Ce potentiel peut varier avec les conditions environnementales et a été déterminé en utilisant l'équation de \cite{june2004} qui relie la vitesse de transport des électrons photosynthétique à lumière saturante à la température :
+
+\begin{equation}\label{eq:juneTair}
+PPBsat = a * exp(\frac{Tair - b}{c})^2
+\end{equation}
+
+Avec a la vitesse de transport des électrons photosynthétique à lumière saturante, b la température optimale pour ce transport et c la différence de température à laquelle à laquelle PBBsat vaut e$^{-1}$ de sa valeur à la température optimale.
+
+L'utilisation de l'équation de June seule, avec la température de l'air comme variable explicative de la PPBsat, permet d'expliquer 66 \% des variations observées (Figure~\ref{fig:PPB_Tair_mdl}-a).
+Les résidus de ce modèle se répartissent de façon relativement homogène (Figure~\ref{fig:PPB_Tair_mdl}-b).
+Corrélés avec l'indice de végétation IV, ils présentent une tendance linéaire croissante (Figure~\ref{fig:PPB_Tair_mdl}-c), mais ne présentent pas de tendance particulière avec le niveau de la nappe (Figure~\ref{fig:PPB_Tair_mdl}-d)
+Afin de prendre en compte cette tendance linéaire le modèle est adapté :
+
+\begin{equation}\label{eq:juneTairIV}
+PPBsat = (a * IV) * exp(\frac{T - b}{c})^2
+\end{equation}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/GPPsat_TairIV_mesmod}
+\caption{PPBsat modèles Tair utilisant l'équation~\ref{eq:juneTairIV}}
+\label{fig:PPBsat_TaIV_mdl}
+\end{figure}
+
+Cette nouvelle équation permet d'expliquer une part plus importante des variations de PPBsat (R$^{2}$ = 0,85) et augmente la proximité entre les données mesurées et les données modélisées (La RMSE diminue) (Figure~\ref{fig:PPBsat_TaIV_mdl}).
+Les résidus de cette équation semblent répartis de façon moins homogène que précédemment, avec d'avantage de résidus présent entre \num{-1} et \num{-2} qu'entre \num{1} et 2, ainsi qu'un point de valeur supérieur à \num{4}.
+Le biais reste malgré tout léger au regard de l'amélioration apportée.
+
+À partir de ce potentiel à lumière saturante, la PPB est estimée en prenant en compte la luminosité.
+On utilise l'équation~\ref{eq:PPB_bubier} proposée par \cite{bubier1998} et régulièrement et souvent utilisée \cite{bortoluzzi2006,worrall2009}:
+
+\begin{equation} \label{eq:PPB_bubier}
+PPB = \frac{PPBsat * a * PAR}{PPBsat + a * PAR}
+\end{equation}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/GPP_mdl_mesmod}
+\caption{PPB modèles Tair}
+\label{fig:PPB_Tair_mdl}
+\end{figure}
+
+La PPB calculée à partir de l'équation~\ref{eq:juneTair} présente des résidus relativement homogène avec cependant d'avantage de points situés entre \num{-2} et \num{-4} qu'entre \num{2} et \num{4} (Figure~\ref{fig:PPB_Tair_mdl}--a,b).
+Une observation similaire peut être faire pour PPB calculé à partir de l'équation~\ref{eq:juneTairIV}, avec cependant des résidus resserrés entre \num{-2} et \num{2} et un point un peu plus extrême(Figure~\ref{fig:PPB_Tair_mdl}--c,d).
+
+\subsubsection{La Respiration de l'Écosystème}
+
+%%%%%%%%%%%%%%%%%%%%% RE
+
+La RE est estimée directement à partir des données acquises moyennées en partant de la température connue pour contrôler une grande partie de ce flux.
+Différents modèles ont été testés parmi les plus souvent utilisés (linéaire, exponentiel, arrhénius).
+
+
+Les variations de la RE moyenne au cours du temps suivent les variations saisonnières de la température.
+
+\begin{equation} \label{eq:RE_T}
+RE = a*exp(b*T)
+\end{equation}
+
+La température de l'air utilisée dans un modèle exponentiel permet d'expliquer une grande partie, 90 \%, des variations de la respiration de l'écosystème (Figure~\ref{fig:ER_mdl}--a).
+Les résidus de cette équation semble répartis de façon non-biaisée, pas de tendance dans le nuage de point (Figure~\ref{fig:ER_mdl}--b).
+Une légère tendance, moins claire que pour la PPBsat, est visible entre les résidus et l'indice de végétation.
+Très souvent utilisée, la température à \SI{-5}{\centi\metre} donne des résultats proche mais moins bons notamment avec une hétéroscédasticité des résidus.
+La tendance des résidus avec l'indice de végétation est ici moins marqué encore qu'avec la température de l'air.
+Dans les deux cas, le gain possible en ajoutant un paramètre semble limité et peu pertinent.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/ER_mdl}
+\caption{RE modèles avec T5}
+\label{fig:ER_mdl}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%% ENE
+\subsubsection{L'Échange Net de l'Écosystème}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/NEE_mdl_mesmod}
+\caption{ENE modèle T5 IV}
+\label{fig:ENE_mdl}
+\end{figure}
+
+L'ENE est ensuite modélisé en utilisant l'équation suivante :
+
+\begin{equation}
+ENE = PBB-RE
+\end{equation}
+
+Le résultat de cette équation (Figure~\ref{fig:ENE_mdl}), montre que ce modèle permet d'expliquer une grande partie des variations de l'ENE.
+Les résidus de cette équation sont répartis de manière a peu près homogène.
+
+\subsubsection{Le flux de \chh}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/CH4_H_mdl_mesmod}
+\caption{CH4 modèle H}
+\label{fig:CH4_mdl}
+\end{figure}
+
+Pas de consensus clair émerge de la littérature quand aux facteurs prépondérant dans le contrôle du \chh.
+La température, peut être utilisée \cite{alm1999,bubier1995}, le niveau de la nappe \cite{bubier1993} ou la végétation \cite{bortoluzzi2006}.
+Avec les données acquises, le recouvrement les herbacées H est le meilleur prédicteur (Figure~\ref{fig:CH4_mdl}).
+le méthane est également corrélé avec les températures, faiblement avec les température de surface puis plus fortement avec les températures du sol à plus forte profondeur.
+Enfin il est anti-corrélé (R=-0.51) avec le niveau de la nappe.
+
+%bortoluzzi veg
+%Alm 1999 T -30 cm
+%Bellisario relation inverse avec WTL (increased flux with lower WTL) T10
+%Bubier 1993a WTL majeur
+%Bubier 1995 Température humidité végétation
+
+\subsubsection{Le COD}
+
 
 \subsection{Le bilan de carbone de la tourbière de La Guette à l'échelle de l'écosystème}
 
