@@ -357,11 +357,11 @@ Le \chh quand à lui ne présente pas de relation avec la température de l'air,
 \begin{tabular}{llccccc}\toprule
 
 & par & valeur & se & pval & \SI{-10}{\percent} & +\SI{+10}{\percent} \\ \midrule
-\multicolumn{7}{l}{PPB -- Tair}  \\ [+.5ex]
-& a & 26.23 & 62.07 & & -9.7 & 9.6 	\\
-& b & 53.68 & 61.27 & & 43.7 &-35.1 \\
-& c & 27.21 & 28.56 & &-22.5 & 21.9 \\
-& i &  1.84 &       & & -0.4 &  0.4 \\[+1ex]
+%\multicolumn{7}{l}{PPB -- Tair}  \\ [+.5ex]
+%& a & 26.23 & 62.07 & & -9.7 & 9.6 	\\
+%& b & 53.68 & 61.27 & & 43.7 &-35.1 \\
+%& c & 27.21 & 28.56 & &-22.5 & 21.9 \\
+%& i &  1.84 &       & & -0.4 &  0.4 \\[+1ex]
 \multicolumn{7}{l}{PPB -- Tair IV}  \\ [+.5ex]
 & a & 33.66 & 19.89 & & -9.0 & 8.9 \\
 & b & 42.45 & 22.28 & & 19.3 & -19.9 \\
@@ -370,9 +370,9 @@ Le \chh quand à lui ne présente pas de relation avec la température de l'air,
 \multicolumn{7}{l}{ER -- Tair}  \\ [+.5ex]
 & a & 0.34 & 0.08 &  & -10 & +10 \\
 & b & 0.10 & 0.01  & & -22.6 & +29.9  \\[+1ex]
-\multicolumn{7}{l}{ER -- T5}  \\ [+.5ex]
-& a & 0.51 & 0.12 & & -10 & +10 \\
-& b & 0.12 & 0.01 & & -19.4 & 24.7 \\[+1ex]
+%\multicolumn{7}{l}{ER -- T5}  \\ [+.5ex]
+%& a & 0.51 & 0.12 & & -10 & +10 \\
+%& b & 0.12 & 0.01 & & -19.4 & 24.7 \\[+1ex]
 \multicolumn{7}{l}{CH4 -- IV}  \\ [+.5ex]
 & a & 0.00 & 0.00 & & -10 & +10 \\
 & b & 13.01 & 2.82 & & -43.9 & 79.2 \\[+1ex]
@@ -383,6 +383,24 @@ Le \chh quand à lui ne présente pas de relation avec la température de l'air,
 Afin de calculer le bilan à l'aide des équations XXXX, la température de l'air mesurée au niveau de la station météo à été utilisée.
 Pour l'indice de végétation, le bilan a été calculé avec une interpolation linéaire entre les points.
 
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{chap3/ER_T5_val}
+  \caption{évalutation RE}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{chap3/GPP_TairIVcov_val}
+  \caption{évaluation PPB}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{Évaluation modèles}
+\label{fig:test}
+\end{figure}
+
 
 \begin{table}
 \centering
@@ -390,15 +408,15 @@ Pour l'indice de végétation, le bilan a été calculé avec une interpolation 
 \label{table:BdC}
 \begin{tabular}{lllllll}\toprule
 & année & PBB & RE & CH4 & COD & BCNE \\ \midrule
-mdl 1 & 2013 & 1317.8 & 1332.8 & 17.4 & & \\[+.5ex]
-& 2014 & 1257.7 & 1234.9 & 23.8 & & \\ [+1ex]
-& total & 1287.7 & 1283.9 & 20.6 & &\\[+2ex]
-mdl 2 & 2013 & 1035.2 & 1332.8 & 17.4 & & \\[+.5ex]
-& 2014 & 1212.9 & 1234.9 & 23.8 &  & \\ [+1ex]
-& total & 1124.1 & 1283.9 & 20.6 & &\\[+2ex]
-mdl 3 & 2013 & 1035.2 & 1228.6 & 17.4 & & \\[+.5ex]
-& 2014 & 1212.9 & 1309.6 & 23.8 & & \\ [+1ex]
-& total & 1124.1 & 1269.0 & 20.6 & &\\[+1ex]
+mdl 1 (Tair - Tair - IV) & 2013 & 1317.8 & 1332.8 & 10.1 & & \\[+.5ex]
+                         & 2014 & 1257.7 & 1273.3 & 24.6 & & \\ [+1ex]
+                         & total & 1287.7 & 1283.9 & 17.4 & &\\[+2ex]
+%mdl 2 (Tair IV - Tair - IV) & 2013 & 1035.2 & 1332.8 & 10.1 & & \\[+.5ex]
+%                            & 2014 & 1212.9 & 1273.3 & 24.6 &  & \\ [+1ex]
+%                            & total & 1124.1 & 1283.9 & 17.4 & &\\[+2ex]
+%mdl 3 (Tair IV - T5 - IV) & 2013 & 1035.2 & 1358.8 & 10.1 & & \\[+.5ex]
+%                          & 2014 & 1212.9 & 1273.3 & 24.6 & & \\ [+1ex]
+%                          & total & 1124.1 & 1288.6 & 17.4 & &\\[+1ex]
 \bottomrule
 \end{tabular}
 \end{table}
@@ -482,18 +500,18 @@ Considérant le modèle de PPB prenant en compte la végétation, la sensibilit�
 
 %\subsubsection{pseudo-validation et erreur}
 
-\begin{figure}
-\centering
-\includegraphics[width=.5\textwidth]{chap3/ER_T5_val}
-\caption{Évaluation RE}
-\label{fig:RE_T5_val}
-\end{figure}
-\begin{figure}
-\centering
-\includegraphics[width=.5\textwidth]{chap3/GPP_TairIVcov_val}
-\caption{Évaluation GPP}
-\label{fig:GPP_TairIVcov_val}
-\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[width=.5\textwidth]{chap3/ER_T5_val}
+%\caption{Évaluation RE}
+%\label{fig:RE_T5_val}
+%\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[width=.5\textwidth]{chap3/GPP_TairIVcov_val}
+%\caption{Évaluation GPP}
+%\label{fig:GPP_TairIVcov_val}
+%\end{figure}
 
 \subsection{Variabilité spatiale du bilan}
 
