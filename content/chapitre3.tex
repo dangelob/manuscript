@@ -299,8 +299,8 @@ Cette évaluation montre également une tendance importante à sous-estimer les 
 %\label{fig:PPB_Tair_mdl}
 %\end{figure}
 
-La PPB calculée à partir de l'équation~\ref{eq:juneTair} présente des résidus relativement homogène avec cependant d'avantage de points situés entre \num{-2} et \num{-4} qu'entre \num{2} et \num{4} (Figure~\ref{fig:PPB_Tair_mdl}--a,b).
-Une observation similaire peut être faire pour PPB calculé à partir de l'équation~\ref{eq:juneTairIV}, avec cependant des résidus resserrés entre \num{-2} et \num{2} et un point un peu plus extrême(Figure~\ref{fig:PPB_Tair_mdl}--c,d).
+La PPB calculée à partir de l'équation~\ref{eq:juneTair} présente des résidus relativement homogène avec cependant d'avantage de points situés entre \num{-2} et \num{-4} qu'entre \num{2} et \num{4} (Figure~\ref{fig:mdl_GPP_Tair}--a,b).
+Une observation similaire peut être faire pour PPB calculé à partir de l'équation~\ref{eq:juneTairIV}, avec cependant des résidus resserrés entre \num{-2} et \num{2} et un point un peu plus extrême(Figure~\ref{fig:mdl_GPP_Tair}--c,d).
 
 \subsubsection{La Respiration de l'Écosystème}
 
@@ -313,8 +313,8 @@ L'estimation de la RE s'effectue
 RE = a*exp(b*T)
 \end{equation}
 
-La température de l'air utilisée dans un modèle exponentiel permet d'expliquer une grande partie, 90 \%, des variations de la respiration de l'écosystème avec une erreur standard de \SI{18}{\percent} (Figure~\ref{fig:ER_mdl_Tair}--a).
-Les résidus de cette équation semble répartis de façon non-biaisée, pas de tendance dans le nuage de point (Figure~\ref{fig:ER_mdl_Tair}--b).
+La température de l'air utilisée dans un modèle exponentiel permet d'expliquer une grande partie, 90 \%, des variations de la respiration de l'écosystème avec une erreur standard de \SI{18}{\percent} (Figure~\ref{fig:mdl_ER_Tair}--a).
+Les résidus de cette équation semble répartis de façon non-biaisée, pas de tendance dans le nuage de point (Figure~\ref{fig:mdl_ER_Tair}--b).
 L'évaluation de ce modèles montre une erreur standard de \SI{35}{\percent} avec une tendance à sous-estimer les valeurs mesurées.
 Une légère tendance, moins claire que pour la PPBsat, est visible entre les résidus et l'indice de végétation ainsi qu'avec le recouvrement de la strate herbacée.
 Très souvent utilisée, la température à \SI{-5}{\centi\metre} donne des résultats proche mais moins bons notamment avec une hétéroscédasticité des résidus (\textbf{Fig Annexe ?}).
@@ -641,14 +641,24 @@ En revanche lors de la phase d'évaluation, l'utilisation du recouvrement des he
 
 \subsection{Sensibilité et limitations du bilan}
 
-sensibilité du bilan au variation des paramètres
+Les incertitudes les plus fortes du bilan sont sur les flux de \chh avec une erreur standard de \SI{32}{\percent} lors de la calibration et de \SI{68}{\percent} lors de la validation.
+Cette différence importante montre que l'estimation des flux de \chh à l'aide de l'indice de végétation à permis l'estimation de sa contribution au bilan de carbone de l'écosystème, mais que sont utilisation dans d'autre conditions est fortement limité.
+L'importance faible du \chh dans le bilan de carbone de la tourbière rend ces erreurs moins critique que celles faite lors de l'estimation de la PPB.
+Les incertitudes importantes sur la PPB, sont mise en évidence par les variations fortes des flux interpolés selon l'équation utilisée.
+Elles sont la source des variations observées en terme de bilan.
+L'ajout d'un indice de végétation diminue d'incertitude des paramètre du modèle, mais cet apport semble spécifique à l'étude, n'étant pas reflété par l'évaluation.
+À l'inverse la RE semble relativement bien contrainte, sur les 2 années la différence entre les différentes équations utilisées ne dépassent pas \SI{25}{\gcma}.
 
-limitations
+\textbf{sensibilité du bilan au variation des paramètres}
+
+\textbf{limitations}
+Outre ces aspects ce bilan de carbone est aussi limité par sa représentativité. 
+Ainsi la strate arborée fortement présente dans certaines zones n'est pas directement prise en compte.
+De la même manière une partie restreinte de la tourbière mais néanmoins présente est constitué de touradons dont l'effet n'a pas été pris en compte.\plop (\textbf{biblio effet microtype}).
+
 
 \begin{itemize}
-\item pas d'arbres
-\item pas de zones à gros touradons
-\item pas de cartographie (mais pas grave si les placette sont maj bien représentée par mdl ecos)
+\item pas de cartographie (pas grave si p7 maj bien représentée par mdl ecos)
 \item extrapolation sur d'autres site difficile (cf validation)
 \end{itemize}
 
@@ -659,5 +669,7 @@ Distribution des paramètres
 Pourquoi certaines placette mieux que d'autres
 
 
+\subsection{perspectives}
 
+cartographie ?
 
