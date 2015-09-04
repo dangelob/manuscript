@@ -236,9 +236,9 @@ Le \chh quand à lui ne présente pas de relation avec la température de l'air,
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{chap3/GPPsat_Tair_mesmod}
+\includegraphics[width=\textwidth]{chap3/mdl_GPP_Tair}
 \caption{PPBsat modèles Tair utilisant l'équation~\ref{eq:juneTair}}
-\label{fig:PPBsat_Tair_mdl}
+\label{fig:mdl_GPP_Tair}
 \end{figure}
 
 L'estimation de la PPB se fait en deux étapes.
@@ -262,9 +262,9 @@ PPBsat = (a * IV) * exp(\frac{T - b}{c})^2
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{chap3/GPPsat_TairIV_mesmod}
+\includegraphics[width=\textwidth]{chap3/mdl_GPP_TairIV}
 \caption{PPBsat modèles Tair utilisant l'équation~\ref{eq:juneTairIV}}
-\label{fig:PPBsat_TaIV_mdl}
+\label{fig:mdl_GPP_TairIV}
 \end{figure}
 
 Cette nouvelle équation permet d'expliquer une part plus importante des variations de PPBsat (R$^{2}$ = 0,85) et augmente la proximité entre les données mesurées et les données modélisées (La RMSE diminue) (Figure~\ref{fig:PPBsat_TaIV_mdl}).
@@ -278,12 +278,12 @@ On utilise l'équation~\ref{eq:PPB_bubier} proposée par \cite{bubier1998} et r�
 PPB = \frac{PPBsat * a * PAR}{PPBsat + a * PAR}
 \end{equation}
 
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/GPP_mdl_mesmod}
-\caption{PPB modèles Tair}
-\label{fig:PPB_Tair_mdl}
-\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[width=\textwidth]{chap3/GPP_mdl_mesmod}
+%\caption{PPB modèles Tair}
+%\label{fig:PPB_Tair_mdl}
+%\end{figure}
 
 La PPB calculée à partir de l'équation~\ref{eq:juneTair} présente des résidus relativement homogène avec cependant d'avantage de points situés entre \num{-2} et \num{-4} qu'entre \num{2} et \num{4} (Figure~\ref{fig:PPB_Tair_mdl}--a,b).
 Une observation similaire peut être faire pour PPB calculé à partir de l'équation~\ref{eq:juneTairIV}, avec cependant des résidus resserrés entre \num{-2} et \num{2} et un point un peu plus extrême(Figure~\ref{fig:PPB_Tair_mdl}--c,d).
@@ -324,29 +324,29 @@ Dans les deux cas, le gain possible en ajoutant un paramètre semble limité et 
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%% ENE
-\subsubsection{L'Échange Net de l'Écosystème}
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/NEE_mdl_mesmod}
-\caption{ENE modèle T5 IV}
-\label{fig:ENE_mdl}
-\end{figure}
-
-L'ENE est ensuite modélisé en utilisant l'équation suivante :
-
-\begin{equation}
-ENE = PBB-RE
-\end{equation}
-
-Le résultat de cette équation (Figure~\ref{fig:ENE_mdl}), montre que ce modèle permet d'expliquer une grande partie des variations de l'ENE.
-Les résidus de cette équation sont répartis de manière a peu près homogène.
+%\subsubsection{L'Échange Net de l'Écosystème}
+%
+%\begin{figure}
+%\centering
+%\includegraphics[width=\textwidth]{chap3/NEE_mdl_mesmod}
+%\caption{ENE modèle T5 IV}
+%\label{fig:ENE_mdl}
+%\end{figure}
+%
+%L'ENE est ensuite modélisé en utilisant l'équation suivante :
+%
+%\begin{equation}
+%ENE = PBB-RE
+%\end{equation}
+%
+%Le résultat de cette équation (Figure~\ref{fig:ENE_mdl}), montre que ce modèle permet d'expliquer une grande partie des variations de l'ENE.
+%Les résidus de cette équation sont répartis de manière a peu près homogène.
 
 \subsubsection{Le flux de \chh}
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{chap3/CH4_H_mdl_mesmod}
+\includegraphics[width=\textwidth]{chap3/mdl_CH4_IV}
 \caption{CH4 modèle H}
 \label{fig:CH4_mdl}
 \end{figure}
@@ -404,31 +404,31 @@ Afin de calculer le bilan à l'aide des équations XXXX, la température de l'ai
 Pour l'indice de végétation, le bilan a été calculé avec une interpolation linéaire entre les points.
 
 
-\begin{figure}
-\makebox[\linewidth][c]{
-\centering
+%\begin{figure}
+%\makebox[\linewidth][c]{
+%\centering
+%%\begin{subfigure}{.4\textwidth}
+%%  \centering
+%%  \includegraphics[width=\linewidth]{chap3/ER_Tair_val}
+%%  \caption{évalutation RE}
+%%  \label{fig:sub1}
+%%\end{subfigure}%
+%%\begin{subfigure}{.4\textwidth}
+%%  \centering
+%%  \includegraphics[width=\linewidth]{chap3/GPP_TairIVcov_val}
+%%  \caption{évaluation PPB}
+%%  \label{fig:sub2}
+%%\end{subfigure}%
 %\begin{subfigure}{.4\textwidth}
 %  \centering
-%  \includegraphics[width=\linewidth]{chap3/ER_Tair_val}
-%  \caption{évalutation RE}
-%  \label{fig:sub1}
-%\end{subfigure}%
-\begin{subfigure}{.4\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{chap3/GPP_TairIVcov_val}
-  \caption{évaluation PPB}
-  \label{fig:sub2}
-\end{subfigure}%
-\begin{subfigure}{.4\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{chap3/CH4_IVcov_val}
-  \caption{évaluation CH4}
-  \label{fig:sub3}
-\end{subfigure}
-}
-\caption{Évaluation modèles}
-\label{fig:test}
-\end{figure}
+%  \includegraphics[width=\linewidth]{chap3/CH4_IVcov_val}
+%  \caption{évaluation CH4}
+%  \label{fig:sub3}
+%\end{subfigure}
+%}
+%\caption{Évaluation modèles}
+%\label{fig:test}
+%\end{figure}
 
 
 
