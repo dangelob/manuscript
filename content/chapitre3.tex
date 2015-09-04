@@ -504,14 +504,6 @@ Enfin pour l'ENE, les valeur interpolées suivent les variations saisonnière, m
 \subsubsection{Évaluation du bilan}
 
 %\subsubsection{sensibilité des paramètres}
-
-L'analyse de sensibilité, consistant à faire varier chaque paramètre des modèles de $\pm$\SI{10}{\percent}, montre pour une équation exponentielle simple des valeurs attendues $\pm$\SI{10}{\percent} pour le paramètre a et \num{+29} à \SI{-22}{\percent} pour le b (Figure~\ref{table:mdl_sensitiv}).
-Pour la PPB issue des équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier} le paramètre i à très peu d'effet sur le bilan, \num{0} à \SI{-1}{\percent}.
-Cependant l'effet sur le bilan augmente lorsque la végétation est prise en compte (équation~\ref{eq:juneTair} et \ref{eq:PPB_bubier}) : \num{-8} à \SI{-10}{\percent}.
-À l'inverse, la sensibilité de l'ensemble des autres paramètres (a, b, c) diminue lorsque l'indice de végétation est pris en compte.
-Le paramètre a est l'exception, passant de \num{-10} à \SI{-17}{\percent} pour une baisse de \SI{10}{\percent}.
-Considérant le modèle de PPB prenant en compte la végétation, la sensibilité maximum des différents paramètres du bilan est proche de \SI{30}{\percent}, et similaire pour la PPB et la RE.
-
 \begin{table}
 \centering
 \caption{Sensibilité relative (en \%) du bilan de \coo (ENE) en réponse à une variation de $\pm$\SI{10}{\percent} de chacun des paramètres des modèles.}
@@ -530,6 +522,15 @@ Considérant le modèle de PPB prenant en compte la végétation, la sensibilit�
 \bottomrule
 \end{tabular}
 \end{table}
+
+L'analyse de sensibilité, consistant à faire varier chaque paramètre des modèles de $\pm$\SI{10}{\percent}, montre pour une équation exponentielle simple des valeurs attendues $\pm$\SI{10}{\percent} pour le paramètre a et \num{+29} à \SI{-22}{\percent} pour le b (Figure~\ref{table:mdl_sensitiv}).
+Pour la PPB issue des équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier} le paramètre i à très peu d'effet sur le bilan, \num{0} à \SI{-1}{\percent}.
+Cependant l'effet sur le bilan augmente lorsque la végétation est prise en compte (équation~\ref{eq:juneTair} et \ref{eq:PPB_bubier}) : \num{-8} à \SI{-10}{\percent}.
+À l'inverse, la sensibilité de l'ensemble des autres paramètres (a, b, c) diminue lorsque l'indice de végétation est pris en compte.
+Le paramètre a est l'exception, passant de \num{-10} à \SI{-17}{\percent} pour une baisse de \SI{10}{\percent}.
+Considérant le modèle de PPB prenant en compte la végétation, la sensibilité maximum des différents paramètres du bilan est proche de \SI{30}{\percent}, et similaire pour la PPB et la RE.
+
+
 
 %\begin{table}
 %\centering
@@ -610,11 +611,33 @@ Considérant le modèle de PPB prenant en compte la végétation, la sensibilit�
 
 \subsection{Représentativité du modèle à l'échelle de l'écosystème}
 
-Valeur absolue des flux
+\textbf{Valeur absolue des flux}
 
-Différence entre 2013 et 2014
+Les flux de \coo mesurés sont du même ordre de grandeur que ceux mesurés par \cite{bortoluzzi2006} sur une tourbière jurassienne de montagne quoique systématiquement légèrement supérieurs.
+Les flux de \chh quand à ceux sont un ordre de grandeur en dessous de ceux mesuré à La Guette (\SI{0.03}{\uml} au maximum contre plus de \SI{0.2}{\uml}) (\textbf{comparé moyenne plutôt}).
+Les flux sont moins fort que \cite{gorres2014}, mais plus fort que \cite{lund2015}
+Les flux sont du même ordre de grandeur que \cite{gazovic2013} (\textbf{à détailler})
 
-apport d'un indice de végétation
+En terme de bilan la tourbière étudiée par \cite{bortoluzzi2006} est un puits de carbone en 2004 et en 2005 entre 67 et \SI{183}{\gcma} selon les années et la dominance végétale (Eriophorum vs Sphagnum).
+Hypothèse : cette différence peut s'expliquer par la différence de végétation, la tourbière de La Guette est dominée par la Molinie, et surtout la différence en terme de température moyenne annuelle (\SI{6.6}{\degreeCelsius} contre \SI{10.5}{\degreeCelsius} pour La Guette sur les 2 années de mesure).
+
+La variation de bilan observée selon les équations utilisées sont du même ordre de grandeur que celle obtenues par \cite{worrall2009} quand il compare différentes méthode de calcul de bilan.
+
+Il faut noter que c'est le paramètre b de l'équation~\ref{eq:RE_TH} qui fait varier le bilan le plus sensiblement lorsqu'on lui applique une variation de $\pm$\SI{10}{\percent}.
+Cependant la significativité de ce paramètre est forte (\textbf{et donc ?}).
+
+
+\textbf{Différence entre 2013 et 2014}
+
+\textbf{apport d'un indice de végétation}
+
+L'apport de l'indice de végétation dans l'estimation de la PPB est important lors de la phase de calibration (observation faite également par \cite{bortoluzzi2006}).
+Il permet de diminuer fortement l'incertitude sur les paramètres du modèles, d'augmenter leur significativité et d'améliorer la représentativité des données mesurées.
+Cependant cette amélioration ne semble valoir que pour la série mesuré, en effet lors de l'évaluation sur un jeu de donnée indépendant, l'ajout de l'indice de végétation augmente l'erreur du modèle.
+
+À l'inverse de la PPB, l'intégration de la végétation pour modéliser la RE n'améliore que peu l'estimation de la RE lors de la phase de calibration, la différence entre les valeurs d'erreur standard est de \SI{5}{\percent}.
+En revanche lors de la phase d'évaluation, l'utilisation du recouvrement des herbacées semble améliorer l'estimation de façon plus importante avec une différence de \SI{11}{\percent} entre les valeurs d'erreur standard.
+
 
 \subsection{Sensibilité et limitations du bilan}
 
