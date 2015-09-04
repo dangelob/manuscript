@@ -70,6 +70,9 @@ La température qui semble le plus utilisée est la température du sol à \SI{-
 Cette profondeur, \SI{-5}{\cm}, est régulièrement utilisée car c'est dans la tourbe, proche de la surface qu'est produit la majorité du \coo.
 \textbf{production CO2 ? profils ?}
 C'est également à des profondeurs relativement faibles que se situent la majorité des racines \plop qui peuvent contribuer à la respiration du sol \textbf{(de l'écosystème?)} pour 35 à \SI{60}{\percent} \cite{silvola1996,crow2005}.
+La RE est estimée directement à partir des données acquises moyennées en partant de la température connue pour contrôler une grande partie de ce flux.
+Différents modèles ont été testés parmi les plus souvent utilisés (linéaire, exponentiel, arrhénius).
+
 
 Après cette phase de calibration, les facteurs de contrôle utilisés dans les modèles ont été évalué à l'aide de données indépendantes issues d'une autre expérimentation.
 Cette dernière est également un suivi des même flux de gaz, sur le même site pendant l'année 2014.
@@ -284,6 +287,7 @@ Aucune tendance claire ne se dégage des résidus lorsqu'ils sont mis en relatio
 Comme précédemment, l'erreur standard de la GPP, de \SI{19}{\percent}, est du même ordre de grandeur que celle de PPBsat.
 Pour PPBsat comme pour PPB l'erreur standard diminue donc avec l'ajout de l'indice de végétation lors de la calibration.
 En revanche, l'évalué sur les données de test ce dernier modèle montre une erreur importante (\SI{58}{\percent}), supérieure à celle du modèle ne prenant pas en compte la végétation.
+Cette évaluation montre également une tendance importante à sous-estimer les valeurs mesurées.
 
 
 %\begin{figure}
@@ -300,28 +304,40 @@ Une observation similaire peut être faire pour PPB calculé à partir de l'équ
 
 %%%%%%%%%%%%%%%%%%%%% RE
 
-La RE est estimée directement à partir des données acquises moyennées en partant de la température connue pour contrôler une grande partie de ce flux.
-Différents modèles ont été testés parmi les plus souvent utilisés (linéaire, exponentiel, arrhénius).
 
-
-Les variations de la RE moyenne au cours du temps suivent les variations saisonnières de la température.
+L'estimation de la RE s'effectue
 
 \begin{equation} \label{eq:RE_T}
 RE = a*exp(b*T)
 \end{equation}
 
-La température de l'air utilisée dans un modèle exponentiel permet d'expliquer une grande partie, 90 \%, des variations de la respiration de l'écosystème (Figure~\ref{fig:ER_mdl_Tair}--a).
+La température de l'air utilisée dans un modèle exponentiel permet d'expliquer une grande partie, 90 \%, des variations de la respiration de l'écosystème avec une erreur standard de \SI{18}{\percent} (Figure~\ref{fig:ER_mdl_Tair}--a).
 Les résidus de cette équation semble répartis de façon non-biaisée, pas de tendance dans le nuage de point (Figure~\ref{fig:ER_mdl_Tair}--b).
-Une légère tendance, moins claire que pour la PPBsat, est visible entre les résidus et l'indice de végétation.
-Très souvent utilisée, la température à \SI{-5}{\centi\metre} donne des résultats proche mais moins bons notamment avec une hétéroscédasticité des résidus.
-La tendance des résidus avec l'indice de végétation est ici moins marqué encore qu'avec la température de l'air.
-Dans les deux cas, le gain possible en ajoutant un paramètre semble limité et peu pertinent.
+L'évaluation de ce modèles montre une erreur standard de \SI{35}{\percent} avec une tendance à sous-estimer les valeurs mesurées.
+Une légère tendance, moins claire que pour la PPBsat, est visible entre les résidus et l'indice de végétation ainsi qu'avec le recouvrement de la strate herbacée.
+Très souvent utilisée, la température à \SI{-5}{\centi\metre} donne des résultats proche mais moins bons notamment avec une hétéroscédasticité des résidus (\textbf{Fig Annexe ?}).
+Dans les deux cas, le gain possible en ajoutant un paramètre semble limité.
+On adapte l'équation~\ref{eq:RE_T} pour intégrer le signal de végétation :
+
+\begin{equation} \label{eq:RE_TIV}
+RE = (a*IV + c)*exp(b*T)
+\end{equation}
+
+\begin{equation} \label{eq:RE_TH}
+RE = (a*H + c)*exp(b*T)
+\end{equation}
+
+Les calibrations de ces nouvelles équations sont présentées dans la figure~\ref{fig:mdl_ER_Tair}-a,b et \ref{fig:mdl_ER_Tair}-d,e respectivement.
+Dans les deux cas, l'erreur diminue pour avoisiner \SI{13}{\percent}, avec des résidus qui se répartissent de façon non-biaisée.
+L'évaluation de ces deux équations montre cependant des différences :
+D'un côté l'équation~\ref{eq:RE_TIV} ne permet pas de diminuer l'erreur standard qui vaut \SI{34}{\percent}, et est donc très proche des \SI{35}{\percent} calculé pour l'évaluation du modèle n'intégrant pas la végétation.
+De l'autre l'évaluation de l'équation~\ref{eq:RE_TH} montre une erreur standard plus faible s'établissant à \SI{23}{\percent}.
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{chap3/mdl_ER_Tair}
 \caption{RE modèles avec Tair}
-\label{fig:ER_mdl_Tair}
+\label{fig:mdl_ER_Tair}
 \end{figure}
 
 \begin{figure}
