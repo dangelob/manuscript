@@ -411,12 +411,12 @@ L'évaluation de cette équation montre une tendance à sous-estimer les flux de
 \begin{tabular}{llccccc}\toprule
 
 & par & valeur & se & pval & \SI{-10}{\percent} & +\SI{+10}{\percent} \\ \midrule
-%\multicolumn{7}{l}{PPB -- Tair}  \\ [+.5ex]
-%& a & 26.23 & 62.07 & & -9.7 & 9.6 	\\
-%& b & 53.68 & 61.27 & & 43.7 &-35.1 \\
-%& c & 27.21 & 28.56 & &-22.5 & 21.9 \\
-%& i &  1.84 &       & & -0.4 &  0.4 \\[+1ex]
-\multicolumn{7}{l}{PPB -- Tair IV}  \\ [+.5ex]
+\multicolumn{7}{l}{PPB -- Tair}  \\ [+.5ex]
+& a & 26.23 & 62.07 & & -9.7 & 9.6 	\\
+& b & 53.68 & 61.27 & & 43.7 &-35.1 \\
+& c & 27.21 & 28.56 & &-22.5 & 21.9 \\
+& i &  1.84 &       & & -0.4 &  0.4 \\[+1ex]
+\multicolumn{7}{l}{PPB -- Tair + IV}  \\ [+.5ex]
 & a & 33.66 & 19.89 & & -9.0 & 8.9 \\
 & b & 42.45 & 22.28 & & 19.3 & -19.9 \\
 & c & 25.77 & 15.28 & & -10.1 & 8.6 \\
@@ -424,9 +424,9 @@ L'évaluation de cette équation montre une tendance à sous-estimer les flux de
 \multicolumn{7}{l}{ER -- Tair}  \\ [+.5ex]
 & a & 0.34 & 0.08 &  & -10 & +10 \\
 & b & 0.10 & 0.01  & & -22.6 & +29.9  \\[+1ex]
-%\multicolumn{7}{l}{ER -- T5}  \\ [+.5ex]
-%& a & 0.51 & 0.12 & & -10 & +10 \\
-%& b & 0.12 & 0.01 & & -19.4 & 24.7 \\[+1ex]
+\multicolumn{7}{l}{ER -- Tair + H}  \\ [+.5ex]
+& a & 0.51 & 0.12 & & -10 & +10 \\
+& b & 0.12 & 0.01 & & -19.4 & 24.7 \\[+1ex]
 \multicolumn{7}{l}{CH4 -- IV}  \\ [+.5ex]
 & a & 0.00 & 0.00 & & -10 & +10 \\
 & b & 13.01 & 2.82 & & -43.9 & 79.2 \\[+1ex]
@@ -434,40 +434,14 @@ L'évaluation de cette équation montre une tendance à sous-estimer les flux de
 \end{tabular}
 \end{table}
 
-Afin de calculer le bilan à l'aide des équations XXXX, la température de l'air mesurée au niveau de la station météo à été utilisée.
-Pour l'indice de végétation, le bilan a été calculé avec une interpolation linéaire entre les points.
-
-
-%\begin{figure}
-%\makebox[\linewidth][c]{
-%\centering
-%%\begin{subfigure}{.4\textwidth}
-%%  \centering
-%%  \includegraphics[width=\linewidth]{chap3/ER_Tair_val}
-%%  \caption{évalutation RE}
-%%  \label{fig:sub1}
-%%\end{subfigure}%
-%%\begin{subfigure}{.4\textwidth}
-%%  \centering
-%%  \includegraphics[width=\linewidth]{chap3/GPP_TairIVcov_val}
-%%  \caption{évaluation PPB}
-%%  \label{fig:sub2}
-%%\end{subfigure}%
-%\begin{subfigure}{.4\textwidth}
-%  \centering
-%  \includegraphics[width=\linewidth]{chap3/CH4_IVcov_val}
-%  \caption{évaluation CH4}
-%  \label{fig:sub3}
-%\end{subfigure}
-%}
-%\caption{Évaluation modèles}
-%\label{fig:test}
-%\end{figure}
-
-
-
-
-
+Les flux interpolés à l'heure puis sommés par années sont présentés dans le tableau~\ref{table:flux} pour les différents modèles.
+Sur les deux années, la PPB stocke du carbone pour 1070 à \SI{1290}{\gcma}.
+Dans le détail on observe une différence entre les deux modèles, celui utilisant uniquement la température de l'air (GPP-1) présente un stockage plus important en 2013 qu'en 2014.
+À l'inverse le modèle prenant en compte la végétation (GPP-2) montre une relation inverse avec un stockage plus faible en 2013 par rapport à 2014.
+Cette observation est également valable  pour la RE, la prise en compte de la végétation (ER-2 et ER-3) conduit à une respiration plus forte en 2014.
+Toujours concernant la RE, on observe une grande proximité dans les valeurs des flux interpolés sur les 2 années, quelque soit le modèle, avec un écart maximum de \SI{25}{\gcma}.
+Les flux de \chh entachés d'une erreur importante, sont cependant beaucoup plus faible en valeur absolue que les précédents.
+On y observe malgré tout un flux plus important en 2014 par rapport à 2013.
 
 \begin{figure}
 \centering
@@ -477,25 +451,40 @@ Pour l'indice de végétation, le bilan a été calculé avec une interpolation 
 \end{figure}
 
 
-
 \begin{table}
 \centering
-\caption{Bilan en gCm2an1}
-\label{table:BdC}
-\begin{tabular}{lllllll}\toprule
-& année & PBB & RE & CH4 & COD & BCNE \\ \midrule
-%mdl 1 (Tair - Tair - IV) & 2013 & 1317.8 $\pm$ 266 & 1332.8 $\pm$ 238 & 10.1 $\pm$ 3 & & \\[+.5ex]
-%                         & 2014 & 1257.7 $\pm$  254& 1273.3 $\pm$ 228 & 24.6 $\pm$ 8 & & \\ [+1ex]
-%                         & total & 1287.7 $\pm$ 260& 1283.9 $\pm$ 229 & 17.4 $\pm$ 6& &\\[+2ex]
-mdl 2 (Tair IV - Tair - IV) & 2013 & 1035.2 $\pm$ 209  & 1332.8 $\pm$ 238 & 10.1 $\pm$ 3 & & \\[+.5ex]
-                            & 2014 & 1212.9 $\pm$ 245 & 1273.3 $\pm$ 228  & 24.6 $\pm$ 8 &  & \\ [+1ex]
-                            & total & 1124.1 $\pm$ 227 & 1283.9 $\pm$ 229  & 17.4 $\pm$ 6 & &\\[+2ex]
-%mdl 3 (Tair IV - T5 - IV) & 2013 & 1035.2 & 1358.8 & 10.1 & & \\[+.5ex]
-%                          & 2014 & 1212.9 & 1273.3 & 24.6 & & \\ [+1ex]
-%                          & total & 1124.1 & 1288.6 & 17.4 & &\\[+1ex]
+\caption{Bilan des flux en gCm2an1}
+\label{table:flux}
+\begin{tabular}{llllll}\toprule
+ID & Flux & équation & 2013 & 2014 & moyen \\ \midrule
+GPP-1 & GPP & \ref{eq:juneTair} et \ref{eq:PPB_bubier} & 1322 $\pm$ 410 & 1258 $\pm$ 390 & 1290 $\pm$ 400 \\
+GPP-2 & & \ref{eq:juneTairIV} et \ref{eq:PPB_bubier} & 957 $\pm$ 182 & 1184 $\pm$ 225 & 1070 $\pm$ 203 \\[+1.5ex]
+RE-1 & RE & \ref{eq:RE_T} & 1337 $\pm$ 241 & 1235 $\pm$ 222 & 1286 $\pm$ 231 \\
+RE-2 & & \ref{eq:RE_TIV} & 1232 $\pm$ 160 & 1310 $\pm$ 170 & 1271 $\pm$ 165\\
+RE-3 & & \ref{eq:RE_TH} & 1240 $\pm$ 161 & 1281 $\pm$ 167 & 1261 $\pm$ 164 \\[+1.5ex]
+FCH4 & CH4 & \ref{eq:CH4_H} & 10 $\pm$ 3 & 24 $\pm$ 8 & 17 $\pm$ 5 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+%\begin{table}
+%\centering
+%\caption{Bilan en gCm2an1}
+%\label{table:BdC}
+%\begin{tabular}{lllllll}\toprule
+%& année & PBB & RE & CH4 & COD & BCNE \\ \midrule
+%%mdl 1 (Tair - Tair - IV) & 2013 & 1317.8 $\pm$ 266 & 1332.8 $\pm$ 238 & 10.1 $\pm$ 3 & & \\[+.5ex]
+%%                         & 2014 & 1257.7 $\pm$  254& 1273.3 $\pm$ 228 & 24.6 $\pm$ 8 & & \\ [+1ex]
+%%                         & total & 1287.7 $\pm$ 260& 1283.9 $\pm$ 229 & 17.4 $\pm$ 6& &\\[+2ex]
+%mdl 2 (Tair IV - Tair - IV) & 2013 & 1035.2 $\pm$ 209  & 1332.8 $\pm$ 238 & 10.1 $\pm$ 3 & & \\[+.5ex]
+%                            & 2014 & 1212.9 $\pm$ 245 & 1273.3 $\pm$ 228  & 24.6 $\pm$ 8 &  & \\ [+1ex]
+%                            & total & 1124.1 $\pm$ 227 & 1283.9 $\pm$ 229  & 17.4 $\pm$ 6 & &\\[+2ex]
+%%mdl 3 (Tair IV - T5 - IV) & 2013 & 1035.2 & 1358.8 & 10.1 & & \\[+.5ex]
+%%                          & 2014 & 1212.9 & 1273.3 & 24.6 & & \\ [+1ex]
+%%                          & total & 1124.1 & 1288.6 & 17.4 & &\\[+1ex]
+%\bottomrule
+%\end{tabular}
+%\end{table}
 
 
 
