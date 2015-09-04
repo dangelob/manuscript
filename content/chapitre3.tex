@@ -214,15 +214,14 @@ En 2013 les flux sont moins important qu'en 2014 avec des maximum de \SIlist{0.0
 \end{figure}
 
 %\subsubsection{Le Carbone Organique Dissous (COD)}
-
-\subsubsection{Les relation flux gazeux et facteurs contrôlants}
-
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{chap3/Fl_FC}
 \caption{Relations entre les flux de gaz et une sélection de facteurs contrôlant}
 \label{fig:Fl_FC}
 \end{figure}
+
+\subsubsection{Les relation flux gazeux et facteurs contrôlants}
 
 Comme précisé précédemment, le niveau de la nappe n'a que peu varié pendant les deux années de mesures.
 De ce fait aucune relation claire ne se distingue entre les flux et le niveau de la nappe que ce soit pour le \coo (PPB et RE) ou le \chh (Figure~\ref{fig:Fl_FC}).
@@ -250,14 +249,25 @@ PPBsat = a * exp(\frac{Tair - b}{c})^2
 \end{equation}
 
 Avec a la vitesse de transport des électrons photosynthétique à lumière saturante, b la température optimale pour ce transport et c la différence de température à laquelle à laquelle PBBsat vaut e$^{-1}$ de sa valeur à la température optimale.
+À partir de ce potentiel à lumière saturante, la PPB est estimée en prenant en compte la luminosité.
+On utilise l'équation~\ref{eq:PPB_bubier} proposée par \cite{bubier1998} et régulièrement et souvent utilisée \cite{bortoluzzi2006,worrall2009}:
 
-L'utilisation de l'équation de June seule, avec la température de l'air comme variable explicative de la PPBsat, permet d'expliquer 66 \% des variations observées (Figure~\ref{fig:PPB_Tair_mdl}-a).
-Les résidus de ce modèle se répartissent de façon relativement homogène (Figure~\ref{fig:PPB_Tair_mdl}-b).
-Corrélés avec l'indice de végétation IV, ils présentent une tendance linéaire croissante (Figure~\ref{fig:PPB_Tair_mdl}-c), mais ne présentent pas de tendance particulière avec le niveau de la nappe (Figure~\ref{fig:PPB_Tair_mdl}-d)
-Afin de prendre en compte cette tendance linéaire le modèle est adapté :
+\begin{equation} \label{eq:PPB_bubier}
+PPB = \frac{PPBsat * a * PAR}{PPBsat + a * PAR}
+\end{equation}
+
+L'utilisation de l'équation de June seule, avec la température de l'air comme variable explicative de la PPBsat, permet d'expliquer 66 \% des variations observées avec une erreur standard de l'estimation de \SI{32}{\percent} (Figure~\ref{fig:mdl_GPP_Tair}-a).
+Les résidus de ce modèle se répartissent de façon relativement homogène (Figure~\ref{fig:mdl_GPP_Tair}-b).
+Corrélés avec l'indice de végétation IV, ils présentent une tendance linéaire croissante (Figure~\ref{fig:mdl_GPP_Tair}-c).
+On observe la même tendance avec le recouvrement de la strate herbacée avec une dispersion des points plus importante (Figure~\ref{fig:mdl_GPP_Tair}-d).
+Par contre aucune tendance particulière n'est visible avec le niveau de la nappe (Figure~\ref{fig:mdl_GPP_Tair}-e)
+Le recouvrement des sphaignes (non présenté) ne montre également, aucune tendance avec les résidus de cette équation.
+La PPB calculé à partir de l'équation~\ref{eq:juneTair} montre une erreur standard de \SI{31}{\percent}, du même ordre de grandeur que celle de PPBsat (Figure~\ref{fig:mdl_GPP_Tair}-f) et les résidus se répartissent de façon relativement homogène et non biaisée (Figure~\ref{fig:mdl_GPP_Tair}-g).
+Cependant l'évaluation du modèle sur les données de tests montre une erreur plus forte qui atteint \SI{47}{\percent}(Figure~\ref{fig:mdl_GPP_Tair}-h).
+Afin de prendre en compte cette tendance linéaire le modèle est adapté pour y intégré une fonction linéaire de la végétation :
 
 \begin{equation}\label{eq:juneTairIV}
-PPBsat = (a * IV) * exp(\frac{T - b}{c})^2
+PPBsat = (a * IV + d) * exp(\frac{T - b}{c})^2
 \end{equation}
 
 \begin{figure}
@@ -267,16 +277,14 @@ PPBsat = (a * IV) * exp(\frac{T - b}{c})^2
 \label{fig:mdl_GPP_TairIV}
 \end{figure}
 
-Cette nouvelle équation permet d'expliquer une part plus importante des variations de PPBsat (R$^{2}$ = 0,85) et augmente la proximité entre les données mesurées et les données modélisées (La RMSE diminue) (Figure~\ref{fig:PPBsat_TaIV_mdl}).
+Cette nouvelle équation permet d'expliquer une part plus importante des variations de PPBsat (R$^{2}$ = 0,85) et augmente la proximité entre les données mesurées et les données modélisées : l'erreur standard diminue à \SI{21}{\percent}. (Figure~\ref{fig:mdl_GPP_TairIV}-a).
 Les résidus de cette équation semblent répartis de façon moins homogène que précédemment, avec d'avantage de résidus présent entre \num{-1} et \num{-2} qu'entre \num{1} et 2, ainsi qu'un point de valeur supérieur à \num{4}.
 Le biais reste malgré tout léger au regard de l'amélioration apportée.
+Aucune tendance claire ne se dégage des résidus lorsqu'ils sont mis en relation avec des facteurs contrôlant tel que les recouvrement végétaux, ou le niveau de la nappe.
+Comme précédemment, l'erreur standard de la GPP, de \SI{19}{\percent}, est du même ordre de grandeur que celle de PPBsat.
+Pour PPBsat comme pour PPB l'erreur standard diminue donc avec l'ajout de l'indice de végétation lors de la calibration.
+En revanche, l'évalué sur les données de test ce dernier modèle montre une erreur importante (\SI{58}{\percent}), supérieure à celle du modèle ne prenant pas en compte la végétation.
 
-À partir de ce potentiel à lumière saturante, la PPB est estimée en prenant en compte la luminosité.
-On utilise l'équation~\ref{eq:PPB_bubier} proposée par \cite{bubier1998} et régulièrement et souvent utilisée \cite{bortoluzzi2006,worrall2009}:
-
-\begin{equation} \label{eq:PPB_bubier}
-PPB = \frac{PPBsat * a * PAR}{PPBsat + a * PAR}
-\end{equation}
 
 %\begin{figure}
 %\centering
