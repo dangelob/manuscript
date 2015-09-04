@@ -516,27 +516,47 @@ Considérant le modèle de PPB prenant en compte la végétation, la sensibilit�
 \centering
 \caption{Sensibilité relative (en \%) du bilan de \coo (ENE) en réponse à une variation de $\pm$\SI{10}{\percent} de chacun des paramètres des modèles.}
 \label{table:mdl_sensitiv_BdC}
-\begin{tabular}{llccccccccccc}\toprule
-& \multicolumn{4}{l}{RE} & \multicolumn{4}{l}{GPP} & \multicolumn{4}{l}{\chh} \\ 
-& par & valeur & \SI{-10}{\percent} & +\SI{+10}{\percent} & par & valeur & \SI{-10}{\percent} & +\SI{+10}{\percent} & par & valeur & \SI{-10}{\percent} & +\SI{+10}{\percent} \\ \midrule
-\multicolumn{13}{l}{mdl 1 équation~\ref{eq:RE_T5} et équation~\ref{eq:juneTair} Tair, Tair, H} \\ [+.5ex]
-& a & 0.34 & -766 & 766 & a & 26.23 & 741 & -736 & a & 17.82 & -12.28 & 12.28 \\
-& b & 0.10 & -1730 & 2289 & b & 53.68 & -3358 & 2693 & b & 0.03 & -15.08 & 17.68 \\
-&  &  & & & c & 27.21 & 1725 & -1680 & & & & \\
-&  &  & & & i & 1.84 & 31.56 & -26.92 & & & & \\[+1ex]
-\multicolumn{13}{l}{mdl 2 équation~\ref{eq:RE_T5} et équation~\ref{eq:juneTairIV} Tair, Tair IVcov, H} \\ [+.5ex]
-& a & 0.34 & -71.08 & 71.08 & a & 33.66 & 56.25 & -55.32 & a & 17.82 & -1.14 & 1.14 \\
-& b & 0.10 & -160.59 & 212.51 & b & 42.45 & -119.84 & 123.69 & b & 0.03 & -1.40 & 1.64 \\
-&  &  & & & c & 25.77 & 62.63 & -53.28 & & & & \\
-&  &  & & & i & 0.33 & 6.94 & -6.02 & & & & \\[+1ex]
-\multicolumn{13}{l}{mdl 3 équation~\ref{eq:RE_T5IV} et équation~\ref{eq:juneTairIV} Tair IVcov, Tair IVcov, H} \\ [+.5ex]
-& a & 0.92 & -55.69 & 55.69 & a & 33.66 & 61.31 & -60.31 & a & 17.82 & -1.24 & 1.24 \\
-& b & 0.09 & -149.40 & 189.01 & b & 42.45 & -130.64 & 134.84 & b & 0.03 & -1.53 & 1.79 \\
-& c & 0.14 & -20.89 & 20.89 & c & 25.77 & 68.28 & -58.08 & & & & \\
-&  &  & & & i & 0.33 & 7.57 & -6.56 & & & & \\
+\begin{tabular}{cccccccccc}\toprule
+& \multicolumn{3}{l}{PPB} & \multicolumn{3}{l}{RE} & \multicolumn{3}{l}{\chh} \\ 
+& & \SI{-10}{\percent} & +\SI{+10}{\percent} & & \SI{-10}{\percent} & +\SI{+10}{\percent} & & \SI{-10}{\percent} & +\SI{+10}{\percent} \\ \midrule
+& \multicolumn{3}{l}{PPB-2} & \multicolumn{3}{l}{RE-3} & \multicolumn{3}{l}{FCH4} \\ [+.5ex]
+%\multicolumn{7}{l}{PPB-2, ER-3, FCH4} \\ [+.5ex]
+& a & +\num{67} & \num{-65} & a & \num{-26} & +\num{26} & a & 0 & 0\\
+& b & \num{-89} & +\num{97} & b & \num{-125} & +\num{157} & b & 0 & 0\\
+& c & +\num{45} & \num{-38} & c & \num{-40} & +\num{40} & & &\\
+& d & \num{-16} & +\num{16} & & & & & &\\
+& i & +7.1 & \num{-6.1} & & & & & &\\[+1ex]
+
 \bottomrule
 \end{tabular}
 \end{table}
+
+%\begin{table}
+%\centering
+%\caption{Sensibilité relative (en \%) du bilan de \coo (ENE) en réponse à une variation de $\pm$\SI{10}{\percent} de chacun des paramètres des modèles.}
+%\label{table:mdl_sensitiv_BdC}
+%\begin{tabular}{llccccccccccc}\toprule
+%& \multicolumn{4}{l}{PPB} & \multicolumn{4}{l}{RE} & \multicolumn{4}{l}{\chh} \\ 
+%& par & valeur & \SI{-10}{\percent} & +\SI{+10}{\percent} & par & valeur & \SI{-10}{\percent} & +\SI{+10}{\percent} & par & valeur & \SI{-10}{\percent} & +\SI{+10}{\percent} \\ \midrule
+%\multicolumn{13}{l}{PPB-2, ER-3, FCH4} \\ [+.5ex]
+%& a & 0.34 & -766 & 766 & a & 26.23 & 741 & -736 & a & 17.82 & -12.28 & 12.28 \\
+%& b & 0.10 & -1730 & 2289 & b & 53.68 & -3358 & 2693 & b & 0.03 & -15.08 & 17.68 \\
+%& c &  & & & c & 27.21 & 1725 & -1680 & & & & \\
+%& d &  & & & c & 27.21 & 1725 & -1680 & & & & \\
+%& e &  & & & i & 1.84 & 31.56 & -26.92 & & & & \\[+1ex]
+%%\multicolumn{13}{l}{mdl 2 équation~\ref{eq:RE_T5} et équation~\ref{eq:juneTairIV} Tair, Tair IVcov, H} \\ [+.5ex]
+%%& a & 0.34 & -71.08 & 71.08 & a & 33.66 & 56.25 & -55.32 & a & 17.82 & -1.14 & 1.14 \\
+%%& b & 0.10 & -160.59 & 212.51 & b & 42.45 & -119.84 & 123.69 & b & 0.03 & -1.40 & 1.64 \\
+%%&  &  & & & c & 25.77 & 62.63 & -53.28 & & & & \\
+%%&  &  & & & i & 0.33 & 6.94 & -6.02 & & & & \\[+1ex]
+%%\multicolumn{13}{l}{mdl 3 équation~\ref{eq:RE_T5IV} et équation~\ref{eq:juneTairIV} Tair IVcov, Tair IVcov, H} \\ [+.5ex]
+%%& a & 0.92 & -55.69 & 55.69 & a & 33.66 & 61.31 & -60.31 & a & 17.82 & -1.24 & 1.24 \\
+%%& b & 0.09 & -149.40 & 189.01 & b & 42.45 & -130.64 & 134.84 & b & 0.03 & -1.53 & 1.79 \\
+%%& c & 0.14 & -20.89 & 20.89 & c & 25.77 & 68.28 & -58.08 & & & & \\
+%%&  &  & & & i & 0.33 & 7.57 & -6.56 & & & & \\
+%\bottomrule
+%\end{tabular}
+%\end{table}
 
 
 %\begin{table}
