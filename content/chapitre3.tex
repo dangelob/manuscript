@@ -73,6 +73,8 @@ C'est également à des profondeurs relativement faibles que se situent la major
 La RE est estimée directement à partir des données acquises moyennées en partant de la température connue pour contrôler une grande partie de ce flux.
 Différents modèles ont été testés parmi les plus souvent utilisés (linéaire, exponentiel, arrhénius).
 
+Pas de consensus clair émerge de la littérature quand aux facteurs prépondérant dans le contrôle du \chh.
+La température, peut être utilisée \cite{alm1999,bubier1995}, le niveau de la nappe \cite{bubier1993} ou la végétation \cite{bortoluzzi2006}.
 
 Après cette phase de calibration, les facteurs de contrôle utilisés dans les modèles ont été évalué à l'aide de données indépendantes issues d'une autre expérimentation.
 Cette dernière est également un suivi des même flux de gaz, sur le même site pendant l'année 2014.
@@ -375,11 +377,19 @@ De l'autre l'évaluation de l'équation~\ref{eq:RE_TH} montre une erreur standar
 \label{fig:CH4_mdl}
 \end{figure}
 
-Pas de consensus clair émerge de la littérature quand aux facteurs prépondérant dans le contrôle du \chh.
-La température, peut être utilisée \cite{alm1999,bubier1995}, le niveau de la nappe \cite{bubier1993} ou la végétation \cite{bortoluzzi2006}.
-Avec les données acquises, le recouvrement les herbacées H est le meilleur prédicteur (Figure~\ref{fig:CH4_mdl}).
+Les relations entre les facteurs contrôlant mesurés et le \chh sont moins claires que celles concernant le \coo.
+La corrélation la plus importante semble être liée à la végétation (Figure~\ref{fig:Fl_FC}). 
 le méthane est également corrélé avec les températures, faiblement avec les température de surface puis plus fortement avec les températures du sol à plus forte profondeur.
 Enfin il est anti-corrélé (R=-0.51) avec le niveau de la nappe.
+Les relation \chh et végétation ont donc pu être modélisées avec 
+
+\begin{equation} \label{eq:CH4_H}
+CH_{4} = a*exp(b*IV)
+\end{equation}
+
+Avec les données acquises, l'indice de végétation est le meilleur prédicteur (Figure~\ref{fig:CH4_mdl}), il explique \SI{78}{\percent} de la variabilité du \chh avec une erreur standard de \SI{32}{\percent}.
+Aucune tendance ne semble ce dégager entre les résidus de cette équations et les facteurs contrôlant mesurés.
+L'évaluation de cette équation montre une tendance à sous-estimer les flux de \chh et une erreur standard qui double par rapport à la phase de calibration en atteignant \SI{68}{\percent}.
 
 %bortoluzzi veg
 %Alm 1999 T -30 cm
