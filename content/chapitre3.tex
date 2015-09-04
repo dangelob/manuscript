@@ -411,25 +411,31 @@ L'évaluation de cette équation montre une tendance à sous-estimer les flux de
 \begin{tabular}{llccccc}\toprule
 
 & par & valeur & se & pval & \SI{-10}{\percent} & +\SI{+10}{\percent} \\ \midrule
-\multicolumn{7}{l}{PPB -- Tair}  \\ [+.5ex]
-& a & 26.23 & 62.07 & & -9.7 & 9.6 	\\
-& b & 53.68 & 61.27 & & 43.7 &-35.1 \\
-& c & 27.21 & 28.56 & &-22.5 & 21.9 \\
-& i &  1.84 &       & & -0.4 &  0.4 \\[+1ex]
-\multicolumn{7}{l}{PPB -- Tair + IV}  \\ [+.5ex]
-& a & 33.66 & 19.89 & & -9.0 & 8.9 \\
-& b & 42.45 & 22.28 & & 19.3 & -19.9 \\
-& c & 25.77 & 15.28 & & -10.1 & 8.6 \\
-& i &  0.33 &       & & -1.1 & 1.0 \\[+1ex]
-\multicolumn{7}{l}{ER -- Tair}  \\ [+.5ex]
-& a & 0.34 & 0.08 &  & -10 & +10 \\
-& b & 0.10 & 0.01  & & -22.6 & +29.9  \\[+1ex]
-\multicolumn{7}{l}{ER -- Tair + H}  \\ [+.5ex]
-& a & 0.51 & 0.12 & & -10 & +10 \\
-& b & 0.12 & 0.01 & & -19.4 & 24.7 \\[+1ex]
-\multicolumn{7}{l}{CH4 -- IV}  \\ [+.5ex]
-& a & 0.00 & 0.00 & & -10 & +10 \\
-& b & 13.01 & 2.82 & & -43.9 & 79.2 \\[+1ex]
+\multicolumn{7}{l}{PPB-1 -- équations~\ref{eq:juneTair} et \ref{eq:PPB_bubier}}  \\ [+.5ex]
+& a & 26.23 & 62.07 & 0.68 & -9.7 & 9.6 	\\
+& b & 53.68 & 61.27 & 0.39 & 43.7 &-35.1 \\
+& c & 27.21 & 28.56 & 0.35 &-22.5 & 21.9 \\
+& i &  1.84 & 21.6  & 0.93 & -0.4 &  0.4 \\[+1ex]
+\multicolumn{7}{l}{PPB-2 -- équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier}}  \\ [+.5ex]
+& a & 39.44 & 18.89 & 0.05 & -11.8 & 11.5 \\
+& b & 40.27 & 19.11 & 0.05 & 15.8 & -17.2 \\
+& c & 25.23 & 14.35 & 0.1 & -8.1 & 6.7 \\
+& d & -3.73 & 3.49 & 0.3 & 2.8 & -2.8 \\
+& i &  0.26 & 0.25 & 0.31 & -1.3 & 1.1 \\[+1ex]
+\multicolumn{7}{l}{ER-1 -- équation~\ref{eq:RE_T}}  \\ [+.5ex]
+& a & 0.34 & 0.08 & 0 & -10 & +10 \\
+& b & 0.10 & 0.01 & 0 & -22.6 & +29.9  \\[+1ex]
+\multicolumn{7}{l}{ER-2 -- équation~\ref{eq:RE_TIV}}  \\ [+.5ex]
+& a & 0.92 & 0.34 & 0.02 & -7.3 & +7.3 \\
+& b & 0.09 & 0.01 & 0.00 & -19.5 & 24.7 \\
+& c & 0.14 & 0.09 & 0.14 & 2.7 & -2.7  \\[+1ex]
+\multicolumn{7}{l}{ER-3 -- équation~\ref{eq:RE_TH}}  \\ [+.5ex]
+& a & 0 & 0 & 0.01 & -3.9 & +3.9 \\
+& b & 0.08 & 0.01 & 0 & -18.8 & +23.6 \\
+& c & 0.33 & 0.06 & 0 & -6.1 & 6.1 \\[+1ex]
+\multicolumn{7}{l}{FCH4 -- équation~\ref{eq:CH4_H}}  \\ [+.5ex]
+& a & 0 & 0 & 0.48 & -10 & +10 \\
+& b & 13.01 & 2.82 & 0 & -43.9 & 79.2 \\[+1ex]
 \bottomrule
 \end{tabular}
 \end{table}
@@ -449,6 +455,11 @@ On y observe malgré tout un flux plus important en 2014 par rapport à 2013.
 \caption{Flux de \coo interpolé à partir des équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier} pour la GPP et de l'équation~\ref{eq:RE_T} pour RE.}
 \label{fig:BdC_interp}
 \end{figure}
+
+L'interpolation des flux de PPB montrent une variabilité saisonnière proche de celle mesurée sur le terrain (Figure~\ref{fig:BdC_interp}-a). Le fait 
+Les valeurs les plus forte mesurées ne semblent pas atteinte par de modèle PPB-2, à l'inverse du modèle PPB-1 qui semblent mieux rendre compte de ces valeurs.
+
+Pour la PPB les flux interpolés suivent ceux mesurés sur le terrain
 
 
 \begin{table}
