@@ -481,13 +481,13 @@ PPB-2, RE-3, FCH4 &  \num{-293} & \num{-122} & \num{-208} \\
 \end{table}
 
 Les flux interpolés à l'heure puis sommés par années sont présentés dans le tableau~\ref{table:flux} pour les différents modèles.
-Sur les deux années, la PPB stocke du carbone pour 1070 à \SI{1290}{\gcma}.
+Sur les deux années, selon le modèle utilisé, la PPB stocke du carbone pour 1070 à \SI{1290}{\gcma} pour PPB-2 et PPB-1 respectivement.
 Dans le détail on observe une différence entre les deux modèles, celui utilisant uniquement la température de l'air (GPP-1) présente un stockage plus important en 2013 qu'en 2014.
-À l'inverse le modèle prenant en compte la végétation (GPP-2) montre une relation inverse avec un stockage plus faible en 2013 par rapport à 2014.
-Cette observation est également valable  pour la RE, la prise en compte de la végétation (ER-2 et ER-3) conduit à une respiration plus forte en 2014.
+À l'inverse le modèle prenant en compte la végétation (PPB-2) montre une relation inverse avec un stockage plus faible en 2013 par rapport à 2014.
+Cette observation est également valable  pour la RE, la prise en compte de la végétation (modèles RE-2 et RE-3) conduit à une respiration plus forte en 2014 par rapport à RE-1.
 Toujours concernant la RE, on observe une grande proximité dans les valeurs des flux interpolés sur les 2 années, quelque soit le modèle, avec un écart maximum de \SI{25}{\gcma}.
 Les flux de \chh entachés d'une erreur importante, sont cependant beaucoup plus faible en valeur absolue que les précédents.
-On y observe malgré tout un flux plus important en 2014 par rapport à 2013.
+On y observe malgré tout un flux qui fait plus que doubler en 2014 par rapport à 2013.
 
 \begin{figure}
 \centering
@@ -505,11 +505,15 @@ On y observe malgré tout un flux plus important en 2014 par rapport à 2013.
 
 
 
-L'interpolation des flux de PPB montrent une variabilité saisonnière proche de celle mesurée sur le terrain (Figure~\ref{fig:BdC_GPP_interp}-a). 
-Les valeurs les plus forte mesurées ne semblent pas atteinte par le modèle PPB-2.
-Pour la RE, l'interpolation suit également les variations saisonnière mesurée mensuellement (Figure~\ref{fig:BdC_ER_interp}-b).
+L'interpolation des flux de PPB montrent une variabilité saisonnière proche de celle mesurée sur le terrain (Figure~\ref{fig:BdC_GPP_interp}). 
+Les valeurs les plus forte mesurées ne semblent pas atteinte par le modèle PPB-2 à l'inverse du modèle PPB-1.
+Dans les deux cas les modèles semblent sur-estimer la valeurs de PPB mesurées fin 2014.
+Pour la RE, l'interpolation suit également les variations saisonnière mesurée mensuellement (Figure~\ref{fig:BdC_ER_interp}).
 Les gammes de valeurs mesurées sont très proche des gammes interpolées.
-Enfin pour l'ENE, les valeur interpolées suivent les variations saisonnière, malgré une interpolation qui semble sous-estimer les flux par rapport aux valeurs mesurées (Figure~\ref{fig:BdC_interp}-c).
+L'interpolation des flux de la RE est très proche quelque soit le modèle (Figure~\ref{fig:BdC_ER_interp}) utilisé.
+On observe que l'intégration de la végétation dans les modèles RE-2 et RE-3 diminue la RE maximum modèlisée en 2013 par par rapport au modèle RE-1.
+
+%Enfin pour l'ENE, les valeur interpolées suivent les variations saisonnière, malgré une interpolation qui semble sous-estimer les flux par rapport aux valeurs mesurées (Figure~\ref{fig:BdC_interp}-c).
 
 %\begin{table}
 %\centering
@@ -542,13 +546,31 @@ Enfin pour l'ENE, les valeur interpolées suivent les variations saisonnière, m
 \begin{tabular}{cccccccccc}\toprule
 & \multicolumn{3}{l}{PPB} & \multicolumn{3}{l}{RE} & \multicolumn{3}{l}{\chh} \\ 
 & & \SI{-10}{\percent} & +\SI{+10}{\percent} & & \SI{-10}{\percent} & +\SI{+10}{\percent} & & \SI{-10}{\percent} & +\SI{+10}{\percent} \\ \midrule
+& \multicolumn{3}{l}{PPB-1} & \multicolumn{3}{l}{RE-1} & \multicolumn{3}{l}{FCH4} \\ [+.5ex]
+& a & \num{-3263} & +\num{3243} & a & +\num{3371} & \num{-3371} & a & +\num{0.05} & \num{-0.05}\\
+& b & +\num{14788} & \num{-11859} & b & +\num{7616} & \num{-10078} & b & +\num{0.2} & \num{-0.36}\\
+& c & \num{-7597} & +\num{7398} & & & & & &\\
+& i & +\num{119} & \num{-139} & & & & & &\\[+1ex]
+
+& \multicolumn{3}{l}{PPB-2} & \multicolumn{3}{l}{RE-1} & \multicolumn{3}{l}{FCH4} \\ [+.5ex]
+& a & +\num{59} & \num{-57} & a & \num{-60} & +\num{60} & a & \num{0} & \num{0}\\
+& b & \num{-78} & +\num{85} & b & \num{-135} & +\num{178} & b & \num{0} & +\num{0.01}\\
+& c & +\num{40} & \num{-33} & & & & & &\\
+& d & \num{-14} & +\num{14} & & & & & &\\
+& i & \num{6.22} & \num{-5.40} & & & & & &\\[+1ex]
+
+& \multicolumn{3}{l}{PPB-1} & \multicolumn{3}{l}{RE-3} & \multicolumn{3}{l}{FCH4} \\ [+.5ex]
+& a & \num{-426} & +\num{423} & a & +\num{168} & \num{-168} & a & +\num{0.01} & \num{-0.01}\\
+& b & +\num{1931} & \num{-1548} & b & +\num{813} & \num{-1018} & b & +\num{0.03} & \num{-0.05}\\
+& c & \num{-992} & +\num{966} & c & +\num{263} & \num{-263} & & &\\
+& i & \num{-18} & +\num{15} & & & & & &\\[+1ex]
+
 & \multicolumn{3}{l}{PPB-2} & \multicolumn{3}{l}{RE-3} & \multicolumn{3}{l}{FCH4} \\ [+.5ex]
-%\multicolumn{7}{l}{PPB-2, ER-3, FCH4} \\ [+.5ex]
 & a & +\num{67} & \num{-65} & a & \num{-26} & +\num{26} & a & 0 & 0\\
 & b & \num{-89} & +\num{97} & b & \num{-125} & +\num{157} & b & 0 & 0\\
 & c & +\num{45} & \num{-38} & c & \num{-40} & +\num{40} & & &\\
 & d & \num{-16} & +\num{16} & & & & & &\\
-& i & +7.1 & \num{-6.1} & & & & & &\\[+1ex]
+& i & +\num{7.1} & \num{-6.1} & & & & & &\\[+1ex]
 
 \bottomrule
 \end{tabular}
