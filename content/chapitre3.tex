@@ -458,6 +458,21 @@ FCH4 & CH4 & \ref{eq:CH4_H} & 10 $\pm$ 3 & 24 $\pm$ 8 & 17 $\pm$ 5 \\
 \end{tabular}
 \end{table}
 
+
+\begin{table}
+\centering
+\caption{Bilan des flux en gCm2an1}
+\label{table:bdc}
+\begin{tabular}{llll}\toprule
+combinaison de modèles & 2013 & 2014 & moyen \\ \midrule
+PPB-1, RE-1, FCH4 &  \num{-25} & \num{-2} & \num{-14} \\
+PPB-1, RE-3, FCH4 &  +\num{72} & \num{-48} & +\num{12} \\
+PPB-2, RE-1, FCH4 &  \num{-390} & \num{-75} & \num{-233} \\
+PPB-2, RE-3, FCH4 &  \num{-293} & \num{-122} & \num{-208} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 Les flux interpolés à l'heure puis sommés par années sont présentés dans le tableau~\ref{table:flux} pour les différents modèles.
 Sur les deux années, la PPB stocke du carbone pour 1070 à \SI{1290}{\gcma}.
 Dans le détail on observe une différence entre les deux modèles, celui utilisant uniquement la température de l'air (GPP-1) présente un stockage plus important en 2013 qu'en 2014.
@@ -469,14 +484,23 @@ On y observe malgré tout un flux plus important en 2014 par rapport à 2013.
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{chap3/BdC_interp}
-\caption{Flux de \coo interpolé à partir de PPB-2 et ER-3}
-\label{fig:BdC_interp}
+\includegraphics[width=\textwidth]{chap3/BdC_GPP_interp}
+\caption{Flux de \coo interpolé à partir de PPB-1 et PPB-2}
+\label{fig:BdC_GPP_interp}
 \end{figure}
 
-L'interpolation des flux de PPB montrent une variabilité saisonnière proche de celle mesurée sur le terrain (Figure~\ref{fig:BdC_interp}-a). 
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/BdC_ER_interp}
+\caption{Flux de \coo interpolé à partir de RE-1, RE-2 et RE-3}
+\label{fig:BdC_ER_interp}
+\end{figure}
+
+
+
+L'interpolation des flux de PPB montrent une variabilité saisonnière proche de celle mesurée sur le terrain (Figure~\ref{fig:BdC_GPP_interp}-a). 
 Les valeurs les plus forte mesurées ne semblent pas atteinte par le modèle PPB-2.
-Pour la RE, l'interpolation suit également les variations saisonnière mesurée mensuellement (Figure~\ref{fig:BdC_interp}-b).
+Pour la RE, l'interpolation suit également les variations saisonnière mesurée mensuellement (Figure~\ref{fig:BdC_ER_interp}-b).
 Les gammes de valeurs mesurées sont très proche des gammes interpolées.
 Enfin pour l'ENE, les valeur interpolées suivent les variations saisonnière, malgré une interpolation qui semble sous-estimer les flux par rapport aux valeurs mesurées (Figure~\ref{fig:BdC_interp}-c).
 
