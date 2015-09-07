@@ -619,14 +619,14 @@ Considérant le modèle de PPB prenant en compte la végétation, la sensibilit�
 %aurela 2007 inf \SI{5}{\uml}
 
 % Flux modélisés
-L'estimation des flux, est comprise entre 957 et \SI{1322}{\gcma} selon l'année et le modèle utilisé.
+L'estimation des flux de PPB, est comprise entre 957 et \SI{1322}{\gcma} selon l'année et le modèle utilisé.
 Ces valeurs sont très élevées comparées à des tourbières boréales comme celles étudiées par \cite{trudeau2014} ou encore \cite{peichl2014} dont les valeurs de PPB sont respectivement comprise entre 123 et \SI{131}{\gcma} et entre 203 et \SI{503}{\gcma}.
 Une première hypothèse permettant d'expliquer une telle différence, est la différence entre les températures moyennes sur les sites.
 Ces températures sont bien plus faible pour les sites des études pré-citées que sur la tourbière de La Guette.
 Une seconde hypothèse, qui n'exclue par la première, serait la composition végétale de ces sites. 
 La tourbière de La Guette envahie par une végétation vasculaire, notamment herbacée, est peut être plus proche d'une prairie tourbeuse.
-En effet lorsque la compare à ce type d'écosystèmes les valeurs observées sont plutôt faibles comparées à des prairies tourbeuses.
-\cite{jacobs2007} estime des valeurs de PPB comprises entre 400 et \SI{2000}{\gcma} dans des prairies tourbeuses hollandaise.
+En effet lorsque la compare à ce type d'écosystèmes les valeurs observées sont plutôt proche.
+\cite{jacobs2007} estime des valeurs de PPB comprises entre 400 et \SI{2000}{\gcma} avec une moyenne de \SI{1300}{\gcma} dans des prairies tourbeuses hollandaise.
 Sur des écosystèmes similiaires, au Danemark, \cite{gorres2014} trouve des valeurs de PPB plus importantes encore, entre 1555 et \SI{2590}{\gcma}.
 Il apparait cohérent que la tourbière de La Guette, par sa position géographique, et donc le climat qu'elle subit, mais également par sa problématique d'envahissement important par une végétation vasculaire notamment herbacée, s'approche en terme de flux de site tourbeux utilisés comme prairie.
 %jacobs 2007  sols tourbeux 1300 $\pm$ \SI{100}{\gcma} (grassland)
@@ -643,34 +643,43 @@ Il apparait cohérent que la tourbière de La Guette, par sa position géographi
 L'apport de l'indice de végétation dans l'estimation de la PPB est important lors de la phase de calibration (observation faite également par \cite{bortoluzzi2006}).
 Il permet de diminuer fortement l'incertitude sur les paramètres du modèles, d'augmenter leur significativité et d'améliorer la représentativité des données mesurées.
 Cependant cette amélioration ne semble valoir que pour la série mesuré, en effet lors de l'évaluation sur un jeu de donnée indépendant, l'ajout de l'indice de végétation augmente l'erreur du modèle.
+Dans le détail l'intégration de l'indice de végétation à un effet beaucoup plus important en 2013, avec un flux qui diminue de \SI{365}{\gcma}, qu'en 2014 ou la baisse n'est que de \SI{74}{\gcma}.
 
 % % Incertitudes
-
-
-% % // biblio
-Par rapport à la littérature les flux de la PPB sont important comparé à des tourbières nordiques.
-Mais ils sont faibles par rapport à des grassland peat.
+Le modèle PPB-1 souffre d'une incertitude importante sur l'estimation de ses paramètres.
+Cette incertitude est fortement diminué avec l'intégration (modèle PPB-2) de l'indice de végétation, cependant lorsque évalué sur des données indépendantes l'erreur standard qui lui est associé est plus forte que celle du modèle PPB-1.
+Peu d'études sur des tourbières comparent différents modèles, \cite{worrall2009} en testant deux façons de calculer la PPB observe également une grande variabilité dans les résultats.
 
 \subsubsection{RE}
 
 % Flux mesurés // biblio
-jacobs 2007 RE entre 0 et \SI{13}{\uml} 
-aurela 2007 RE inf \SI{3}{\uml}
+De la même façon que pour la PPB, les flux de la RE sont important si on les comparent à des tourbières boréales et s'approchent davantage des flux mesurés dans les prairies sur sols tourbeux.
+La Re sur la tourbière de La Guette, comprise entre 1232 et \SI{1337}{\gcma} est plus importante que celle observée par \cite{peichl2014,trudeau2014} (pour reprendre les études citées précédemment) qui s'établissent respectivement entre 137 et \SI{443}{\gcma} et 206 et \SI{234}{\gcma}.
+Elles sont en revanche plus faible que celle mesurées par \cite{jacobs2007},entre 500 et \SI{2000}{\gcma}, ou par \cite{gorres2014} : entre 2070 et \SI{3500}{\gcma}. 
 
-% Flux modélisés
-jacobs 2007  sols tourbeux 1520 $\pm$ \SI{30}{\gcma} (moyenne)
-
-jacobs 2007  sols tourbeux entre 500 et \SI{2000}{\gcma}
-
-peichl2014 entre 137 et \SI{443}{\gcma} 1.2 523 mm
-
-trudeau 2014 234-\SI{206}{\gcma} -4.28 ° 738 mm
+%jacobs 2007 RE entre 0 et \SI{13}{\uml} 
+%aurela 2007 RE inf \SI{3}{\uml}
+%
+%% Flux modélisés
+%jacobs 2007  sols tourbeux 1520 $\pm$ \SI{30}{\gcma} (moyenne)
+%
+%jacobs 2007  sols tourbeux entre 500 et \SI{2000}{\gcma}
+%
+%peichl2014 entre 137 et \SI{443}{\gcma} 1.2 523 mm
+%
+%trudeau 2014 234-\SI{206}{\gcma} -4.28 ° 738 mm
 
 % % Apport de la vég
-À l'inverse de la PPB, l'intégration de la végétation pour modéliser la RE n'améliore que peu l'estimation de la RE lors de la phase de calibration, la différence entre les valeurs d'erreur standard est de \SI{5}{\percent}.
+À l'inverse de la PPB, l'intégration de la végétation pour modéliser la RE n'améliore que peu l'estimation de la RE lors de la phase de calibration : la différence entre les valeurs d'erreur standard est de \SI{5}{\percent}.
 En revanche lors de la phase d'évaluation, l'utilisation du recouvrement des herbacées semble améliorer l'estimation de façon plus importante avec une différence de \SI{11}{\percent} entre les valeurs d'erreur standard.
+Contrairement à la PPB la différence apportée par l'intégration de la végétation (RE-2 ou RE-3) est du même ordre de grandeur en 2013 et en 2014.
+Sur les 2 années, l'effet de l'intégration de la végétation est limité avec une différence de \SI{25}{\gcma} au maximum (entre ER-1 et ER-3), soit moins de \SI{2}{\percent} du flux.
+
 
 % % Incertitude
+Les incertitudes sur le flux de la RE sont beaucoup moins importante que celle de la PPB.
+Que ce soit au niveau de l'estimation des paramètres des modèles, à l'exception du paramètre c du modèles RE-2, leur p-value est inférieure à 0.05.
+Ou au niveau de l'erreur calculée lors de la calibration, inférieure à \SI{15}{\percent}, mais également lors de leur évaluation sur des données indépendantes ou elle vaut moins de \SI{25}{\percent} (valeurs du modèles RE-3).
 
 % % // biblio
 
