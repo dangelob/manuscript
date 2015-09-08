@@ -10,7 +10,7 @@
 % Packages base ----------------------------------------------------------------
 \usepackage[T1]{fontenc}			%codage de caractères T1
 \usepackage[utf8]{inputenc}			%caractères accentués
-\usepackage[francais]{babel}		%adaptation de LaTeX au français
+\usepackage[english,francais]{babel}		%adaptation de LaTeX au français
 \usepackage{graphicx}				%inclure des graphiques
 \usepackage[includeheadfoot, hmargin=25mm, vmargin=15mm, bindingoffset=0.5cm]{geometry}
 
@@ -41,10 +41,8 @@ list-units=single               % L'unité ne s'affiche qu'au dernier élément
 \usepackage{amssymb}				% ajoute des symboles
 \usepackage{makeidx}				% Pour l'index
 \usepackage{xspace}					% Permet les espace après macro newcommand
-\usepackage{natbib}
-\usepackage{apalike}				% Formattage de la biblio
-%\usepackage{natbib}
-%\bibliographystyle{stylename}
+\usepackage[authoryear]{natbib}
+\bibliographystyle{apalike-fr}
 \usepackage{setspace}				% Interligne double
 \usepackage{emptypage}				% pre­vents page num­bers and head­ings from ap­pear­ing on empty pages
 \usepackage{booktabs}				% Better tables
@@ -147,7 +145,6 @@ list-units=single               % L'unité ne s'affiche qu'au dernier élément
 % Bibliographie ----------------------------------------------------------------
 \singlespacing
 \bibliography{manuscript}{}
-\bibliographystyle{apalike}
 \addcontentsline{toc}{chapter}{Références bibliographiques}
 \clearpage
 
