@@ -66,15 +66,15 @@ L'AIC (Akaile...) permet de déterminer si l'amélioration d'un modèle suite à
 
 La température a été choisie comme base de départ à la construction des modèles de RE et PPBsat, à la fois car c'est le facteur de contrôle le plus souvent invoqué et à la fois car les corrélations avec les flux étaient les plus forte.
 Concernant la respiration de l'écosystème, les températures utilisées dans la littérature sont variables.
-La température qui semble le plus utilisée est la température du sol à \SI{-5}{\centi\metre}  \cite{ballantyne2014}\plop, même si d'autres, notamment la température de l'air et la température du sol à \SI{-10}{\centi\metre} le sont également régulièrement \cite{bortoluzzi2006,kim1992}.
+La température qui semble le plus utilisée est la température du sol à \SI{-5}{\centi\metre}  \citep{ballantyne2014}\plop, même si d'autres, notamment la température de l'air et la température du sol à \SI{-10}{\centi\metre} le sont également régulièrement \citep{bortoluzzi2006,kim1992}.
 Cette profondeur, \SI{-5}{\cm}, est régulièrement utilisée car c'est dans la tourbe, proche de la surface qu'est produit la majorité du \coo.
 \textbf{production CO2 ? profils ?}
-C'est également à des profondeurs relativement faibles que se situent la majorité des racines \plop qui peuvent contribuer à la respiration du sol \textbf{(de l'écosystème?)} pour 35 à \SI{60}{\percent} \cite{silvola1996,crow2005}.
+C'est également à des profondeurs relativement faibles que se situent la majorité des racines \plop qui peuvent contribuer à la respiration du sol \textbf{(de l'écosystème?)} pour 35 à \SI{60}{\percent} \citep{silvola1996,crow2005}.
 La RE est estimée directement à partir des données acquises moyennées en partant de la température connue pour contrôler une grande partie de ce flux.
 Différents modèles ont été testés parmi les plus souvent utilisés (linéaire, exponentiel, arrhénius).
 
 Pas de consensus clair émerge de la littérature quand aux facteurs prépondérant dans le contrôle du \chh.
-La température, peut être utilisée \cite{alm1999,bubier1995}, le niveau de la nappe \cite{bubier1993} ou la végétation \cite{bortoluzzi2006}.
+La température, peut être utilisée \citep{alm1999,bubier1995}, le niveau de la nappe \citep{bubier1993} ou la végétation \citep{bortoluzzi2006}.
 
 Après cette phase de calibration, les facteurs de contrôle utilisés dans les modèles ont été évalué à l'aide de données indépendantes issues d'une autre expérimentation.
 Cette dernière est également un suivi des même flux de gaz, sur le même site pendant l'année 2014.
@@ -247,7 +247,7 @@ Le \chh quand à lui ne présente pas de relation avec la température de l'air,
 
 L'estimation de la PPB se fait en deux étapes.
 Dans un premier temps on estime le potentiel maximum de photosynthèse à un instant donné dans des conditions de lumière saturante (PPBsat).
-Ce potentiel peut varier avec les conditions environnementales et a été déterminé en utilisant l'équation de \cite{june2004} qui relie la vitesse de transport des électrons photosynthétiques à lumière saturante à la température :
+Ce potentiel peut varier avec les conditions environnementales et a été déterminé en utilisant l'équation de \citep{june2004} qui relie la vitesse de transport des électrons photosynthétiques à lumière saturante à la température :
 
 \begin{equation}\label{eq:juneTair}
 PPBsat = a * exp(\frac{Tair - b}{c})^2
@@ -255,7 +255,7 @@ PPBsat = a * exp(\frac{Tair - b}{c})^2
 
 Avec a la vitesse de transport des électrons photosynthétique à lumière saturante, b la température optimale pour ce transport et c la différence de température à laquelle à laquelle PBBsat vaut e$^{-1}$ de sa valeur à la température optimale.
 À partir de ce potentiel à lumière saturante, la PPB est estimée en prenant en compte la luminosité.
-On utilise l'équation~\ref{eq:PPB_bubier} proposée par \cite{bubier1998} et régulièrement et majoritairement utilisée \cite{bortoluzzi2006,worrall2009}:
+On utilise l'équation~\ref{eq:PPB_bubier} proposée par \citep{bubier1998} et régulièrement et majoritairement utilisée \citep{bortoluzzi2006,worrall2009}:
 
 \begin{equation} \label{eq:PPB_bubier}
 PPB = \frac{PPBsat * a * PAR}{PPBsat + a * PAR}
@@ -699,14 +699,15 @@ Le modèle RE-2, très proche du modèle RE-3 n'a pas été testé.
 
 % Flux modélisés
 L'estimation des flux de PPB, est comprise entre 957 et \SI{1322}{\gcma} selon l'année et le modèle utilisé.
-Ces valeurs sont très élevées comparées à des tourbières boréales comme celles étudiées par \cite{trudeau2014} ou encore \cite{peichl2014} dont les valeurs de PPB sont respectivement comprise entre 123 et \SI{131}{\gcma} et entre 203 et \SI{503}{\gcma}.
+Ces valeurs sont très élevées comparées à des tourbières boréales comme celles étudiées par \citep{trudeau2014} ou encore \citep{peichl2014} dont les valeurs de PPB sont respectivement comprise entre 123 et \SI{131}{\gcma} et entre 203 et \SI{503}{\gcma}.
 Une première hypothèse permettant d'expliquer une telle différence, est la différence entre les températures moyennes sur les sites.
+\SI{-4.3}{\degreeCelsius} et \SI{1.2}{\degreeCelsius} respectivement pour \citet{trudeau2014} et \citet{peichl2014}.
 Ces températures sont bien plus faible pour les sites des études pré-citées que sur la tourbière de La Guette.
 Une seconde hypothèse, qui n'exclue par la première, serait la composition végétale de ces sites. 
 La tourbière de La Guette envahie par une végétation vasculaire, notamment herbacée, est peut être plus proche d'une prairie tourbeuse.
 En effet lorsque la compare à ce type d'écosystèmes les valeurs observées sont plutôt proche.
-\cite{jacobs2007} estime des valeurs de PPB comprises entre 400 et \SI{2000}{\gcma} avec une moyenne de \SI{1300}{\gcma} dans des prairies tourbeuses hollandaise.
-Sur des écosystèmes similiaires, au Danemark, \cite{gorres2014} trouve des valeurs de PPB plus importantes encore, entre 1555 et \SI{2590}{\gcma}.
+\citep{jacobs2007} estime des valeurs de PPB comprises entre 400 et \SI{2000}{\gcma} avec une moyenne de \SI{1300}{\gcma} dans des prairies tourbeuses hollandaise.
+Sur des écosystèmes similiaires, au Danemark, \citep{gorres2014} trouve des valeurs de PPB plus importantes encore, entre 1555 et \SI{2590}{\gcma}.
 Il apparait cohérent que la tourbière de La Guette, par sa position géographique, et donc le climat qu'elle subit, mais également par sa problématique d'envahissement important par une végétation vasculaire notamment herbacée, s'approche en terme de flux de site tourbeux utilisés comme prairie.
 %jacobs 2007  sols tourbeux 1300 $\pm$ \SI{100}{\gcma} (grassland)
 %
@@ -719,7 +720,7 @@ Il apparait cohérent que la tourbière de La Guette, par sa position géographi
 %peichl2014 entre 203 et \SI{503}{\gcma} 1.2°C 523 mm (boreal fen)
 
 % % Apport IV
-L'apport de l'indice de végétation dans l'estimation de la PPB est important lors de la phase de calibration (observation faite également par \cite{bortoluzzi2006}).
+L'apport de l'indice de végétation dans l'estimation de la PPB est important lors de la phase de calibration (observation faite également par \citep{bortoluzzi2006}).
 Il permet de diminuer fortement l'incertitude sur les paramètres du modèles, d'augmenter leur significativité et d'améliorer la représentativité des données mesurées.
 Cependant cette amélioration ne semble valoir que pour la série mesuré, en effet lors de l'évaluation sur un jeu de donnée indépendant, l'ajout de l'indice de végétation augmente l'erreur du modèle.
 Dans le détail l'intégration de l'indice de végétation à un effet beaucoup plus important en 2013, avec un flux qui diminue de \SI{365}{\gcma}, qu'en 2014 ou la baisse n'est que de \SI{74}{\gcma}.
@@ -727,14 +728,14 @@ Dans le détail l'intégration de l'indice de végétation à un effet beaucoup 
 % % Incertitudes
 Le modèle PPB-1 souffre d'une incertitude importante sur l'estimation de ses paramètres.
 Cette incertitude est fortement diminué avec l'intégration (modèle PPB-2) de l'indice de végétation, cependant lorsque évalué sur des données indépendantes l'erreur standard qui lui est associé est plus forte que celle du modèle PPB-1.
-Peu d'études sur des tourbières comparent différents modèles, \cite{worrall2009} en testant deux façons de calculer la PPB observe également une grande variabilité dans les résultats.
+Peu d'études sur des tourbières comparent différents modèles, \citep{worrall2009} en testant deux façons de calculer la PPB observe également une grande variabilité dans les résultats.
 
 \subsubsection{RE}
 
 % Flux mesurés // biblio
 De la même façon que pour la PPB, les flux de la RE sont important si on les comparent à des tourbières boréales et s'approchent davantage des flux mesurés dans les prairies sur sols tourbeux.
-La Re sur la tourbière de La Guette, comprise entre 1232 et \SI{1337}{\gcma} est plus importante que celle observée par \cite{peichl2014,trudeau2014} (pour reprendre les études citées précédemment) qui s'établissent respectivement entre 137 et \SI{443}{\gcma} et 206 et \SI{234}{\gcma}.
-Elles sont en revanche plus faible que celle mesurées par \cite{jacobs2007},entre 500 et \SI{2000}{\gcma}, ou par \cite{gorres2014} : entre 2070 et \SI{3500}{\gcma}. 
+La Re sur la tourbière de La Guette, comprise entre 1232 et \SI{1337}{\gcma} est plus importante que celle observée par \citep{peichl2014,trudeau2014} (pour reprendre les études citées précédemment) qui s'établissent respectivement entre 137 et \SI{443}{\gcma} et 206 et \SI{234}{\gcma}.
+Elles sont en revanche plus faible que celle mesurées par \citep{jacobs2007},entre 500 et \SI{2000}{\gcma}, ou par \citep{gorres2014} : entre 2070 et \SI{3500}{\gcma}. 
 
 %jacobs 2007 RE entre 0 et \SI{13}{\uml} 
 %aurela 2007 RE inf \SI{3}{\uml}
@@ -774,12 +775,12 @@ Ou au niveau de l'erreur calculée lors de la calibration, inférieure à \SI{15
 
 % Variations observées des bilans et importance relative des flux
 
-La variation de bilan observée selon les équations utilisées sont du même ordre de grandeur que celle obtenues par \cite{worrall2009} quand il compare différentes méthode de calcul de bilan.
+La variation de bilan observée selon les équations utilisées sont du même ordre de grandeur que celle obtenues par \citep{worrall2009} quand il compare différentes méthode de calcul de bilan.
 
 
 % Valeurs comparées à la biblio
 
-En terme de bilan la tourbière étudiée par \cite{bortoluzzi2006} est un puits de carbone en 2004 et en 2005 entre 67 et \SI{183}{\gcma} selon les années et la dominance végétale (Eriophorum vs Sphagnum).
+En terme de bilan la tourbière étudiée par \citep{bortoluzzi2006} est un puits de carbone en 2004 et en 2005 entre 67 et \SI{183}{\gcma} selon les années et la dominance végétale (Eriophorum vs Sphagnum).
 Hypothèse : cette différence peut s'expliquer par la différence de végétation, la tourbière de La Guette est dominée par la Molinie, et surtout la différence en terme de température moyenne annuelle (\SI{6.6}{\degreeCelsius} contre \SI{10.5}{\degreeCelsius} pour La Guette sur les 2 années de mesure).
 
 % Incertitude/Sensibilité
@@ -789,10 +790,10 @@ Hypothèse : cette différence peut s'expliquer par la différence de végétati
 
 %\textbf{Valeur absolue des flux}
 %
-%Les flux de \coo mesurés sont du même ordre de grandeur que ceux mesurés par \cite{bortoluzzi2006} sur une tourbière jurassienne de montagne quoique systématiquement légèrement supérieurs.
+%Les flux de \coo mesurés sont du même ordre de grandeur que ceux mesurés par \citep{bortoluzzi2006} sur une tourbière jurassienne de montagne quoique systématiquement légèrement supérieurs.
 %Les flux de \chh quand à ceux sont un ordre de grandeur en dessous de ceux mesuré à La Guette (\SI{0.03}{\uml} au maximum contre plus de \SI{0.2}{\uml}) (\textbf{comparé moyenne plutôt}).
-%Les flux sont moins fort que \cite{gorres2014}, mais plus fort que \cite{lund2015}
-%Les flux sont du même ordre de grandeur que \cite{gazovic2013} (\textbf{à détailler})
+%Les flux sont moins fort que \citep{gorres2014}, mais plus fort que \citep{lund2015}
+%Les flux sont du même ordre de grandeur que \citep{gazovic2013} (\textbf{à détailler})
 %
 %Il faut noter que c'est le paramètre b de l'équation~\ref{eq:RE_TH} qui fait varier le bilan le plus sensiblement lorsqu'on lui applique une variation de $\pm$\SI{10}{\percent}.
 %Cependant la significativité de ce paramètre est forte (\textbf{et donc ?}).
