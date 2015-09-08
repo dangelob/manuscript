@@ -698,6 +698,7 @@ Le modèle RE-2, très proche du modèle RE-3 n'a pas été testé.
 %aurela 2007 inf \SI{5}{\uml}
 
 % Flux modélisés
+
 L'estimation des flux de PPB, est comprise entre 957 et \SI{1322}{\gcma} selon l'année et le modèle utilisé.
 Ces valeurs sont très élevées comparées à des tourbières boréales comme celles étudiées par \citep{trudeau2014} ou encore \citep{peichl2014} dont les valeurs de PPB sont respectivement comprise entre 123 et \SI{131}{\gcma} et entre 203 et \SI{503}{\gcma}.
 Une première hypothèse permettant d'expliquer une telle différence, est la différence entre les températures moyennes sur les sites.
@@ -720,15 +721,26 @@ Il apparait cohérent que la tourbière de La Guette, par sa position géographi
 %peichl2014 entre 203 et \SI{503}{\gcma} 1.2°C 523 mm (boreal fen)
 
 % % Apport IV
-L'apport de l'indice de végétation dans l'estimation de la PPB est important lors de la phase de calibration (observation faite également par \citep{bortoluzzi2006}).
+Le modèle PPB-1 souffre d'une incertitude importante sur l'estimation de ses paramètres.
+L'apport de l'indice de végétation dans l'estimation de la PPB est important lors de la phase de calibration.
 Il permet de diminuer fortement l'incertitude sur les paramètres du modèles, d'augmenter leur significativité et d'améliorer la représentativité des données mesurées.
-Cependant cette amélioration ne semble valoir que pour la série mesuré, en effet lors de l'évaluation sur un jeu de donnée indépendant, l'ajout de l'indice de végétation augmente l'erreur du modèle.
+L'intégration de la végétation aux modèles d'estimation de la PPB est rarement réalisé \citep{bortoluzzi2006,gorres2014}, probablement à cause de la difficulté à prendre en compte ce signal aux sources multiples.
+Malgré cette amélioration lors de la calibration, lorsqu'il est évalué sur un jeu de données indépendante, le modèle PPB-2 à une erreur standard plus importante que celle du modèle PPB-1.
+L'apport de cet indice dans l'estimation de la PPB n'est donc pas généralisable.
+Bien que rarement faite à cause de la rareté des données, l'évaluation des modèles est cependant d'un intérêt majeur afin de confirmer ou d'infirmer l'apport de l'ajout d'un prédicteur à un modèle, particulièrement si l'on souhaite l'extrapoler.
+
+%% différences entre les modèles
+Les différences observées selon la façon d'estimer la PPB peuvent paraître importante, néanmoins elles sont du même ordre de grandeur que celle rencontré par \citet{worrall2009} qui compare différentes façon de modéliser des flux de gaz avec des équations différentes (et non pas juste des variations sur un type de modèle).
+Ces différences sont également liées à l'importance des flux qui font que, surtout dans le cas de modèles exponentiels, de faibles variations peuvent avoir des effets importants comme en témoigne l'analyse de sensibilité des paramètres du modèle (Tableau~\ref{table:mdl_sensitiv_BdC}).
+
+%% Discuter la différence 2013-2014 ?
+\textbf{Discussion 2013-2014 ?}
 Dans le détail l'intégration de l'indice de végétation à un effet beaucoup plus important en 2013, avec un flux qui diminue de \SI{365}{\gcma}, qu'en 2014 ou la baisse n'est que de \SI{74}{\gcma}.
 
 % % Incertitudes
-Le modèle PPB-1 souffre d'une incertitude importante sur l'estimation de ses paramètres.
-Cette incertitude est fortement diminué avec l'intégration (modèle PPB-2) de l'indice de végétation, cependant lorsque évalué sur des données indépendantes l'erreur standard qui lui est associé est plus forte que celle du modèle PPB-1.
-Peu d'études sur des tourbières comparent différents modèles, \citep{worrall2009} en testant deux façons de calculer la PPB observe également une grande variabilité dans les résultats.
+%Le modèle PPB-1 souffre d'une incertitude importante sur l'estimation de ses paramètres.
+%Cette incertitude est fortement diminué avec l'intégration (modèle PPB-2) de l'indice de végétation, cependant lorsque évalué sur des données indépendantes l'erreur standard qui lui est associé est plus forte que celle du modèle PPB-1.
+%Peu d'études sur des tourbières comparent différents modèles, \citep{worrall2009} en testant deux façons de calculer la PPB observe également une grande variabilité dans les résultats.
 
 \subsubsection{RE}
 
