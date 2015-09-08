@@ -446,7 +446,7 @@ Les détails de l'estimation des paramètres de l'équation~\ref{eq:CH4_H} est v
 
 \subsection{Le bilan de carbone de la tourbière de La Guette à l'échelle de l'écosystème}
 
-\subsubsection{Bilan (param et valeur)}
+%\subsubsection{Bilan (param et valeur)}
 
 \begin{figure}
 \centering
@@ -508,12 +508,23 @@ L'estimation du \chh semble rendre compte dans les grandes lignes de la différe
 
 Les flux interpolés à l'heure puis sommés par années sont présentés dans le tableau~\ref{table:flux} pour les différents modèles.
 Sur les deux années, selon le modèle utilisé, la PPB stocke du carbone pour 1070 à \SI{1290}{\gcma} pour PPB-2 et PPB-1 respectivement.
-Dans le détail on observe une différence entre les deux modèles, celui utilisant uniquement la température de l'air (PPB-1) présente un stockage plus important en 2013 qu'en 2014.
-À l'inverse le modèle prenant en compte la végétation (PPB-2) montre une relation inverse avec un stockage plus faible en 2013 par rapport à 2014.
-Cette observation est également valable  pour la RE, la prise en compte de la végétation (modèles RE-2 et RE-3) conduit à une respiration plus forte en 2014 par rapport à RE-1.
-Toujours concernant la RE, on observe une grande proximité dans les valeurs des flux interpolés sur les 2 années, quelque soit le modèle, avec un écart maximum de \SI{25}{\gcma}.
-Les flux de \chh entachés d'une erreur importante, sont cependant beaucoup plus faible en valeur absolue que les précédents.
+Dans le détail on observe une différence entre les deux modèles : 
+Celui utilisant uniquement la température de l'air (PPB-1) présente un stockage plus important en 2013 qu'en 2014.
+Tandis que le modèle prenant en compte la végétation (PPB-2) stocke moins de carbone en 2013 par rapport à 2014.
+L'intégration de la végétation minimise également l'erreur standard de l'estimation, la divisant approximativement par deux.
+
+La différence de comportement, entre les années de mesures, liée à l'intégration de la végétation est également visible sur l'estimation de la RE.
+La prise en compte de la végétation (modèles RE-2 et RE-3) conduit à une respiration plus forte en 2014 qu'en 2013 à l'inverse de RE-1.
+La différence entre l'estimation de la RE en 2013 et en 2014 diminue avec l'intégration de la végétation.
+Elle passe de 102 pour RE-1 à 78 puis 41 pour RE-2 et RE-3.
+Malgré ces différences, on observe une grande proximité dans les valeurs des flux interpolés sur les 2 années, quelque soit le modèle, avec un écart maximum de \SI{25}{\gcma}.
+
+Les flux de \chh entachés d'une erreur importante, sont cependant beaucoup plus faible en valeur absolue que ceux de la PPB ou de la RE.
 On y observe malgré tout un flux qui fait plus que doubler en 2014 par rapport à 2013.
+
+Les bilans issus des différentes combinaisons (à l'exception de RE-3, très proche de RE-2) de modèles sont présentés dans le tableau~\ref{table:bdc} et varient de \SI{-233}{\gcma} à +\SI{12}{\gcma} stocké dans la tourbière.
+L'intégration de la végétation dans la modélisation de PPB fait baisser les bilans de carbone dans le négatif au delà de \SI{-200}{\gcma}, avec une différence entre les bilans de \SI{220}{\gcma} environ.
+Cette différence sur les bilans est bien moindre, environ \SI{26}{\gcma} entre les modèles de RE qui intègrent et ceux qui n’intègrent pas la végétation.
 
 \begin{table}
 \centering
