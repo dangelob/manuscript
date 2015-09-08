@@ -288,7 +288,7 @@ Les résidus de cette équation semblent répartis de façon moins homogène que
 On observe notamment un resserrement des points autour de zéro à l'exception d'un point de valeur supérieur à \num{4}.
 Le biais reste malgré tout léger au regard de l'amélioration apportée.
 Aucune tendance claire ne se dégage des résidus lorsqu'ils sont mis en relation avec des facteurs contrôlant tel que les recouvrements végétaux (sphaignes, herbacées), ou le niveau de la nappe (Figure~\ref{fig:mdl_GPP_TairIV}-c,d,e).
-Comme précédemment, l'erreur standard de la GPP, de \SI{19}{\percent}, est du même ordre de grandeur que celle de PPBsat.
+Comme précédemment, l'erreur standard de la PPB, de \SI{19}{\percent}, est du même ordre de grandeur que celle de PPBsat.
 Pour PPBsat comme pour PPB l'erreur standard diminue donc avec l'ajout de l'indice de végétation lors de la calibration.
 En revanche, l'évaluation sur les données de test de ce dernier modèle montre une erreur importante (\SI{58}{\percent}), supérieure à celle du modèle ne prenant pas en compte la végétation.
 Cette évaluation montre également une tendance importante à sous-estimer les valeurs mesurées.
@@ -505,9 +505,10 @@ L'estimation du \chh semble rendre compte dans les grandes lignes de la différe
 %\end{tabular}
 %\end{table}
 
+
 Les flux interpolés à l'heure puis sommés par années sont présentés dans le tableau~\ref{table:flux} pour les différents modèles.
 Sur les deux années, selon le modèle utilisé, la PPB stocke du carbone pour 1070 à \SI{1290}{\gcma} pour PPB-2 et PPB-1 respectivement.
-Dans le détail on observe une différence entre les deux modèles, celui utilisant uniquement la température de l'air (GPP-1) présente un stockage plus important en 2013 qu'en 2014.
+Dans le détail on observe une différence entre les deux modèles, celui utilisant uniquement la température de l'air (PPB-1) présente un stockage plus important en 2013 qu'en 2014.
 À l'inverse le modèle prenant en compte la végétation (PPB-2) montre une relation inverse avec un stockage plus faible en 2013 par rapport à 2014.
 Cette observation est également valable  pour la RE, la prise en compte de la végétation (modèles RE-2 et RE-3) conduit à une respiration plus forte en 2014 par rapport à RE-1.
 Toujours concernant la RE, on observe une grande proximité dans les valeurs des flux interpolés sur les 2 années, quelque soit le modèle, avec un écart maximum de \SI{25}{\gcma}.
@@ -520,8 +521,8 @@ On y observe malgré tout un flux qui fait plus que doubler en 2014 par rapport 
 \label{table:flux}
 \begin{tabular}{llllll}\toprule
 ID & Flux & équation & 2013 & 2014 & moyen \\ \midrule
-GPP-1 & GPP & \ref{eq:juneTair} et \ref{eq:PPB_bubier} & 1322 $\pm$ 410 & 1258 $\pm$ 390 & 1290 $\pm$ 400 \\
-GPP-2 & & \ref{eq:juneTairIV} et \ref{eq:PPB_bubier} & 957 $\pm$ 182 & 1184 $\pm$ 225 & 1070 $\pm$ 203 \\[+1.5ex]
+PPB-1 & PPB & \ref{eq:juneTair} et \ref{eq:PPB_bubier} & 1322 $\pm$ 410 & 1258 $\pm$ 390 & 1290 $\pm$ 400 \\
+PPB-2 & & \ref{eq:juneTairIV} et \ref{eq:PPB_bubier} & 957 $\pm$ 182 & 1184 $\pm$ 225 & 1070 $\pm$ 203 \\[+1.5ex]
 RE-1 & RE & \ref{eq:RE_T} & 1337 $\pm$ 241 & 1235 $\pm$ 222 & 1286 $\pm$ 231 \\
 RE-2 & & \ref{eq:RE_TIV} & 1232 $\pm$ 160 & 1310 $\pm$ 170 & 1271 $\pm$ 165\\
 RE-3 & & \ref{eq:RE_TH} & 1240 $\pm$ 161 & 1281 $\pm$ 167 & 1261 $\pm$ 164 \\[+1.5ex]
