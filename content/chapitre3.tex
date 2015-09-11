@@ -51,7 +51,7 @@ Les mesures automatiquement acquise via une station météo campbell sont la tem
 
 \subsection{Modélisation du bilan de C}
 
-\subsubsection{Démarche générale}
+\subsubsection{Estimation du bilan et variabilité temporelle}
 
 Afin de calculer le bilan de carbone du site il est nécessaire d'établir des modèles des flux afin de pourvoir interpoler les données acquises mensuellement sur l'ensemble des deux années de mesure.
 Pour établir ces modèles empiriques les données acquises ont été moyennées par campagne de mesure.
@@ -92,6 +92,26 @@ On ne parle pas ici de validation car les données utilisées bien qu'indépenda
 Enfin les facteurs contrôlants ont été interpolés au pas de mesure de la station météo présente sur le site, c'est-à-dire à l'heure.
 L'interpolation étant soit une simple interpolation linéaire entre les données mensuelles, soit une relation avec les facteurs acquis par la station météorologique.
 À l'aide de ces interpolations et des équations les flux ont ensuite été recalculés, à l'échelle horaire, sur les 2 années de mesure puis les flux ont été sommés afin de calculer les bilans.
+
+\subsubsection{Étude de la variabilité spatiale}
+
+Deux approches ont été testées afin de caractériser la variabilité spatiale des flux et du bilan.
+La première consiste à calibrer par placette les modèles sélectionnés lors de la modélisation à l'échelle de l'écosystème.
+Cette opération permet ainsi calculer des flux par placette et éventuellement un bilan.
+L'inconvénient de cette méthode étant le faible nombre de points permettant la calibration des modèles conduisant éventuellement à une forte erreur sur l'estimation des paramètres voire à la non convergence des modèles.
+La seconde approche permet de palier en partie à ce souci en faisant des groupes de placette.
+Ces ensembles de placette ont été fait en regroupant les placettes ayant la composition végétale la plus proche.
+Ce choix se justifie par le fait que la végétation joue un rôle important tout en étant délicate à prendre en compte.
+La température, plus facile à mesurer et le niveau de la nappe, qui n'a que peu varié, semblait des choix moins pertinent. 
+Le partitionnement à été faite via une classification hiérarchique et quatre groupes ont été déterminés (Figure~\ref{fig:tree}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{chap3/tree}
+\caption{Partitionnement des placettes en fonction de leur similarité en termes de composition végétale (pourcentage des strates muscinales, herbacées et arbustives)}
+\label{fig:tree}
+\end{figure}
+
 
 
 \section{Résultats}
