@@ -144,14 +144,19 @@ list-units=single               % L'unité ne s'affiche qu'au dernier élément
 
 % Bibliographie ----------------------------------------------------------------
 \singlespacing
-\bibliography{manuscript}{}
+\bibliography{manuscript,manual}{}
 \addcontentsline{toc}{chapter}{Références bibliographiques}
 \clearpage
+
 
 % Index ------------------------------------------------------------------------
 \phantomsection % Permet "d'accrocher" hyperref
 \addcontentsline{toc}{chapter}{Index}
 \printindex
+
+% Annexes ----------------------------------------------------------------------
+\appendix
+\include{content/annexe1}
 
 % 4e de couverture -------------------------------------------------------------
 \include{front_back_pages/backcover}
