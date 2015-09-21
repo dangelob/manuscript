@@ -20,3 +20,23 @@
 \DeclareSIUnit{\gcm}{\gram C m^{-2}}
 % année
 \DeclareSIUnit\year{an}
+
+% Environnemment Définition
+\definecolor{coulcitation}{RGB}{222,222,222}%
+
+\newsavebox{\boiteremarque}
+\newenvironment{pdef}{%
+% clause begin
+\begin{lrbox}{\boiteremarque}% début mise en boîte
+\begin{minipage}{.85\textwidth}}{%
+\setlength{\parindent}{10pt}%
+% clause end
+\end{minipage}
+\end{lrbox}% fin mise en boîte
+% production de la boîte encadrée
+\begin{center}
+%\fbox{\usebox{\boiteremarque}}
+\setlength{\fboxsep}{10pt}%
+\colorbox{coulcitation}{\usebox{\boiteremarque}}
+\end{center}}
+
