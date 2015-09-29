@@ -40,7 +40,8 @@ La surface de la tourbière a été divisée selon une grille de 20 mailles et u
 La taille de la maille a été ajustée de manière à avoir vingt 20 carrés sur la surface de la tourbière.
 Cette méthode permet de conserver un échantillonnage aléatoire tout en étant assuré d'avoir une représentativité homogène du site. 
 Les placettes, délimitées par des piquets, occupaient une surface de \SI{4}{\square\metre} (2$\times$\SI{2}{\metre}), à l'intérieur de laquelle ont été installé de façon permanente un piézomètre et une embase permettant la mesure des flux de gaz (Les embases sont décrites dans le chapitre~\ref{ch:ch2}, partie~\ref{subsec:ss_mes_co2}).
-Usuellement les placettes sont séparées en groupes micro-topographique (Figure~\ref{fig:microtopo}), avec des embases positionnées sur les buttes (\textit{hummock}), les trous (\textit{hollows}) et les zones d'eau libre (\textit{pool}) \citep{Alm1997,waddington2000}.
+Usuellement les placettes sont séparées en groupes micro-topographiques (Figure~\ref{fig:microtopo}), avec des embases positionnées sur les buttes (\textit{hummock}), les trous (\textit{hollows}) et les zones d'eau libre (\textit{pool}) \citep{Alm1997,waddington2000}.
+Ou encore selon différent traitements, réhabilité/non réhabilité, exploité/non exploité, manipulé/non manipulé \citep{bortoluzzi2006,strack2013}.
 Ceci a l'avantage de permettre une distinction fine des capacités sources/puits mais a l'inconvénient du placement proche des embases les unes des autres limitant la représentativité spatiale des mesures.
 Elles peuvent également être séparées en zone dans la tourbière, haut-marais \textit{versus} bas-marais, ou réhabilité \textit{versus} non-réhabilité.
 Afin de gagner en représentativité spatiale, la taille du site le permettant, il a été décidé de positionner des placettes sur l'ensemble du site.
@@ -98,12 +99,25 @@ La température, \citep{alm1999,bubier1995}, le niveau de la nappe \citep{bubier
 Après la phase de calibration, les facteurs de contrôle utilisés dans les modèles ont été évalués à l'aide de données indépendantes issues d'une autre expérimentation réalisée sur le même site en 2014.
 %Cette dernière est également un suivi des mêmes flux de gaz, sur le même site pendant l'année 2014.
 Les méthodes de mesures des flux sont strictement identiques à celles utilisées pour établir le bilan de carbone.
-En revanche le positionnement des placettes est beaucoup plus standard avec 4 placettes dans une station en amont et 4 en aval de la tourbière de La Guette (plus de détails dans l'annexe \textbf{XXX}).
+En revanche le positionnement des placettes est beaucoup plus classique : proches les unes des autres, et avec différents traitements.
+Afin de pouvoir les comparer, seule les placettes de contrôles, (n'ayant donc subie aucune manipulation) de cette expérimentation seront utilisées soit 4 placettes dans une station en amont et 4 en aval de la tourbière de La Guette (plus de détails dans l'annexe~\ref{sec:carbiodiv}).
 Le terme d'évaluation est préféré à celui de validation car le nouveau jeu de données utilisé bien qu'indépendant de celui utilisé pour la calibration n'a pas été acquis de manière strictement identique, notamment au niveau de la répartition des embases sur le site.
 
 Enfin les facteurs contrôlants ont été interpolés au pas de mesure de la station météo présente sur le site, c'est-à-dire à l'heure.
-L'interpolation étant soit une simple interpolation linéaire entre les données mensuelles, soit une relation avec les facteurs acquis par la station météorologique.
-À l'aide de ces interpolations et des équations les flux ont ensuite été recalculés, à l'échelle horaire, sur les 2 années de mesure puis les flux ont été sommés afin de calculer les bilans.
+Pour des données dont l'acquisition est manuelle uniquement, comme la végétation, une interpolation linéaire est faite entre les points de mesures.
+Pour les données acquises à la fois automatiquement par la station météorologique et manuellement, comme la température de l'air ou de la tourbe, l'interpolation est faite à partir de la relation entre les mesures continues et ponctuelles.
+Les flux sont ensuite recalculés (en \si{\micro\mole\per\square\meter\per\hour}) à l'échelle horaire sur les deux années de mesure puis sommés afin d'estimer les bilans de carbone.
+Ces bilans sont par la suite exprimés en \si{\gram C m^{-2}} par période de temps (souvent l'année).
+
+%L'interpolation étant soit une simple interpolation linéaire entre les données mensuelles, soit une relation avec les facteurs acquis par la station météorologique.
+%À l'aide de ces interpolations et des équations les flux ont ensuite été recalculés, à l'échelle horaire, sur les 2 années de mesure puis les flux ont été sommés afin de calculer les bilans.
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/ref_resid}
+\caption{Cas idéaux de distribution des résidus (source ?)}
+\label{fig:ref_resid}
+\end{figure}
+
 
 \subsubsection{Étude de la variabilité spatiale}
 
@@ -140,7 +154,7 @@ Le partitionnement à été faite via une classification hiérarchique et quatre
 \end{figure}
 
 L'évolution du niveau de la nappe des 20 placettes est marquée par un étiage d'une vingtaine de centimètres en moyenne en 2013 et l'absence d'un étiage net en 2014 (Figure~\ref{fig:WTL_mean_evolution}).
-Le niveau de la nappe moyen se situe à \SI{-10}{\cm}
+Le niveau de la nappe moyen ne descend pas sous la barre des \SI{-10}{\cm} avec \num{-9.2(76)} et \SI{-7.1(48)}{\centi\metre} respectivement pour 2013 et 2014.
 % ne descendant que rarement sous la barre des \SI{-10}{\cm}.
 Ces observations sont cohérentes avec les mesures haute fréquence (Figure~\ref{fig:WTL}), et confirment l'étiage particulièrement haut de ces 2 années vis-à-vis des précédentes.
 
@@ -241,7 +255,7 @@ En 2014 la RE atteint, comme la PPB, son maximum plus tôt, en juin à \SI{7.83(
 La moyenne annuelle de RE en 2013 est de \SI{4.27(316)}{\uml}, ce qui est légèrement supérieure à celle de 2014 : \SI{3.63(256)}{\uml}(Figure~\ref{fig:ER_evolution_avg}).
 
 Concernant l'ENE (bilan des flux de \coo entrant et sortant), elle augmente en 2013 jusque \SI{5.19(451)}{\uml}, avec un maximum en juin, avant de diminuer jusqu'à la fin de l'année.
-Cependant, cette baisse est moins homogène que celle des deux flux précédents, avec notamment une augmentation de l'ENE entre juillet et août 2013.
+Cependant, cette baisse est moins uniforme que celle des deux flux précédents, avec notamment une augmentation de l'ENE entre juillet et août 2013.
 Ceci étant, il faut également noter les valeurs importantes de la déviation standard particulièrement en juin et en août.
 En 2014, l'ENE maximum est atteinte en juillet avec \SI{5.79(277)}{\uml} avant qu'elle ne décroisse.
 Cette baisse est cependant plus homogène qu'en 2013.
@@ -745,7 +759,7 @@ Le modèle RE-2, très proche du modèle RE-3 n'a pas été testé.
 
 La classification hiérarchique a permis de distinguer 4 groupes de végétation (Figure~\ref{fig:distrib_grpveg}).
 Dans le premier groupe, la strate muscinale est majoritaire avec un recouvrement moyen de \SI{91}{\percent}, moins de \num{35} et \SI{15}{\percent} de recouvrement pour les herbacées et les arbustes respectivement.
-Le deuxième groupe est le plus homogène avec un recouvrement moyen des strates muscinales et arbustives de \num{63} \SI{58}{\percent} chacune.
+Le deuxième groupe est le plus homogène avec un recouvrement moyen des strates muscinales et arbustives de \num{63} et \SI{58}{\percent} chacune.
 C'est également le groupe ou il y a de moins d'herbacées avec un recouvrement de \SI{24}{\percent}.
 La strate herbacée est majoritaire dans le troisième groupe avec un recouvrement moyen de \SI{63}{\percent}, la strate arbustive y est peu présence (\SI{19}{\percent} en moyenne) et la strate muscinale y est pour ainsi dire absente (\SI{1}{\percent}).
 La strate muscinale est également absente, ou presque, dans le groupe quatre (\SI{1}{\percent}).
