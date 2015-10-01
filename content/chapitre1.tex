@@ -461,15 +461,26 @@ Avant de stocker et de conserver du carbone, le faut le capturer.
 Ce transfert du carbone de l'atmosphère à la tourbe se fait sous la forme de \coo, assimilé lors de la photosynthèse.
 Principalement par les végétaux supérieurs, et éventuellement, bien que dans de moindre proportions, par des algues, des lichens ou des bactéries photosynthétiques \cite{girard2011}.
 On peut écrire la réaction de photosynthèse de la façon suivante : 
+
 $$\begin{aligned}
 CO_{2} + H_{2}O + photons &\rightarrow CH_{2}O + O_{2}\\
 \end{aligned} $$
-Ce flux est généralement appelé \textbf{Production Primaire Brute} (PPB), \textit{Gross Primary Production}, (\textit{GPP}) en anglais (Figure~\ref{fig:ges_flux}).
-Dans ce document l'abréviation PPB et le mot photosynthèse seront employés de façon inter-changeable.
-Les tourbières sont des écosystèmes dont la production primaire est estimée à environ \SI{500}{\gcm} \citep{francez2000}. 
-Si la photosynthèse est le processus majeur d'assimilation du \coo, il existe d'autres voies métaboliques permettant la capture du \coo de l'atmosphère.\index{photosynthèse}
-Ainsi les micro-organismes chemolithotrophes (\textbf{expliciter}) sont capables d'assimiler le \coo en utilisant l'énergie issue de l'oxydation de composés inorganiques.
 
+Si la photosynthèse est le processus majeur d'assimilation du \coo, il existe d'autres voies métaboliques permettant la capture du \coo de l'atmosphère.\index{photosynthèse}
+Ainsi les micro-organismes chemolithotrophes (\textbf{expliciter}) sont capables d'assimiler le \coo en utilisant l'énergie issue de l'oxydation de composés inorganiques, ce que l'on appelle la chimiosynthèse.
+
+On défini donc la \textbf{Production Primaire Brute} (PPB), \textit{Gross Primary Production}, (\textit{GPP}) en anglais
+comme :
+
+\begin{pdef}
+\textsc{Production Primaire Brute (PPB)} :
+
+%\hfill{\textit{Gross Primary Production (GPP)}}\\
+Quantité de carbone extraite de l'atmosphère et transformée en matières organiques par l'écosystème principalement par photosynthèse.
+Ce flux est exprimé en moles de carbone par unité de surface et de temps (\si{\uml}).
+\end{pdef}
+
+Les tourbières sont des écosystèmes dont la production primaire est estimée à environ \SI{500}{\gcm} \citep{francez2000}. 
 Les voies métaboliques permettant l'assimilation du \coo sont plutôt bien connues et le fait que les substrats de départ de varient pas a permis une compréhension relativement fine du processus \citep{farquhar1980}.
 Cependant une fois assimilé par la végétation le devenir du carbone est moins direct.
 À plus long terme, et après son assimilation par la plante, le carbone est stocké principalement à travers la partie non décomposée des litières végétales.
@@ -491,8 +502,19 @@ Les principales sources de \coo, sont représentées dans la figure~\ref{fig:ges
 La ou plutôt les respirations sont généralement séparées en deux.
 D'un côté la respiration végétale, que ce soit celle de feuilles, des tiges, des racines et que l'on appelle la \textbf{respiration autotrophe}.
 De l'autre rassemblé sous le vocable de \textbf{respiration hétérotrophe}, la respiration de la rhizosphère, liée à l'émission d'exsudats par les racines, la décomposition des litières et des matières organiques, la respiration de la faune et l'oxydation du \chh par les organismes méthanotrophes.
-On appelle \textbf{Respiration de l'Écosystème} (RE) l'ensemble des respirations autotrophe et hétérotrophe, en incluant à la fois ses composantes aérienne et souterraine.\index{respiration!de l'écosystème}
-On la distingue de la respiration du sol qui est définie comme l'ensemble des respirations de la colonne de sol, à l'exclusion de la partie aérienne.\index{respiration!du sol}
+L'ensemble de ces respirations est défini comme : 
+\begin{pdef}
+\textsc{Respiration de l'Écosystème (RE)} :
+
+%\hfill{\textit{Gross Primary Production (GPP)}}\\
+Quantité de carbone émise sous forme de \coo par l'écosystème dans l'atmosphère. 
+Elle englobe la respiration autotrophe et hétérotrophe en incluant ses composantes aériennes et souterraines.
+Ce flux est exprimé en moles de carbone par unité de surface et de temps (\si{\uml}).
+\end{pdef}
+\index{respiration!de l'écosystème}
+On distingue la respiration de l'écosystème de celle du sol en définissant la respiration du sol (RS) comme l'ensemble des respirations de la colonne de sol, à l'exclusion de la partie aérienne \citep{luo20063}.\index{respiration!du sol}
+Cependant, dans la littérature la respiration du sol semble parfois être considérée comme équivalente à la respiration de l'écosystème, ou du moins cette terminologie est parfois utilisée de façon synonyme à la respiration de l'écosystème \citep{raich1992}.
+Les études discriminant RS et RE montre ainsi que dans des sols tourbeux RS compte pour plus de \SI{60}{\percent} de RE \cite{lohila2003}
 %
 %Une autre source de \coo est l'oxydation du \chh lors de sa migration des zones anoxiques aux zones oxiques de la colonne de tourbe.
 %Enfin dans les zones anaérobie, le \coo peut être produit par fermentation (respiration anaérobie).
@@ -524,22 +546,37 @@ $$
 CH_{4} \rightarrow CH_{3}OH \rightarrow HCHO \rightarrow HCOOH \rightarrow CO_{2} \\
 $$
 
+On défini le flux de \chh comme : 
+\begin{pdef}
+\textsc{Flux de \chh (\fchh)} :
+
+%\hfill{\textit{Gross Primary Production (GPP)}}\\
+Quantité de carbone émise sous forme de \chh par l'écosystème dans l'atmosphère, suite au bilan des processus de création et de destruction de la molécule.
+Ce flux est exprimé en moles de carbone par unité de surface et de temps (\si{\uml}).
+\end{pdef}
+
+%Sa variabilité est donc fonction des conditions environnementales, des communautés (principalement microbiennes et végétales) impliqués 
+
+\subsubsection{Conventions}
+
+Dans ce document les flux (RE, PPB et \fchh) sont exprimés en valeur absolue afin de faciliter leur étude.
+Les bilans seront établis en prenant l'écosystème comme référence : les flux RE et \fchh seront comptés négativement et la PPB sera comptée positivement.
+Ainsi on défini 
+\begin{pdef}
+\textsc{l'Échange Net de l'Écosystème (ENE)} :
+
+%\hfill{\textit{Gross Primary Production (GPP)}}\\
+Bilan de la quantité de \coo émise par l'écosystème : ENE=PPB$-$RE.
+Ce flux est exprimé en moles de carbone par unité de surface et de temps (\si{\uml}).
+\end{pdef}
+Ce terme correspond, au référentiel près, au \textit{Net Ecosystem Exchange} anglais, qui prend l'atmosphère comme référence\footnote{Attention cependant, certain papiers changent la convention} (ENE=$-$NEE) \citep{chapin2006}.
+
+Par la suite l'abréviation PPB et le mot photosynthèse seront employés de façon inter-changeable de même que RE et respiration.
+
 
 Le flux de carbone de l'atmosphère à l'écosystème à pour source quasiment unique la réaction de photosynthèse des plantes.
 La variabilité de ce flux vient donc de la composition des communautés végétales et de leurs sensibilités aux conditions environnementales.
 À l'inverse, le flux de carbone de l'écosystème vers l'atmosphère est multi-source avec un nombre important de réactions de respirations et de fermentations.
-%Sa variabilité est donc fonction des conditions environnementales, des communautés (principalement microbiennes et végétales) impliqués 
-
-
-
-%\subsubsection{storage ?}
-%
-%Le carbone assimilé par photosynthèse, utilisé par la plante puis évacué que se soit sous forme d'exudats racinaire ou de matériels morts, de litière, va en partie se dégrader.
-%Continum de dégradation avec des matières organiques de plus en plus récalcitrantes avec la profondeur.
-%
-%La vitesse de stockage au cours du temps ?
-%
-%L'accumulation de matières organiques et donc de carbone dans les tourbières est donc fonction de la prépondérance relative de ces flux entre l'écosystème et l'atmosphère.
 
 \subsection{Les facteurs majeurs contrôlant les flux}
 
