@@ -268,7 +268,7 @@ Les tourbières sont le siège d'une biodiversité importante et spécifique.
 Ainsi les Sphaignes, qui sont des bryophytes, (des mousses) sont caractéristiques des écosystèmes tourbeux.
 Ce sont des espèces dites ingénieures, capables de modifier l'environnement dans lequel elles vivent afin de l'adapter à leurs besoins.
 Les sphaignes sont ainsi capable d'abaisser le pH, de capter des nutriments et de les séquestrer et ce même quand elles n'en ont pas besoin afin d'empêcher d'autres espèces notamment vasculaire d'en profiter.
-Plus précisément, le fait que les sphaignes captent les nutriments via leur capitulum leur permet de les intercepter avant qu'ils ne soient captés par d'éventuelles racines positionnées plus bas \citep{malmer1994a,svensson1995}.
+Plus précisément, le fait que les sphaignes captent les nutriments via leur capitulum leur permet de les intercepter avant qu'ils ne soient captés par d'éventuelles racines positionnées plus bas \citep{malmer1994,svensson1995}.
 Les sphaignes, comme de nombreuse mousses ont des litières relativement récalcitrantes\footnote{il est d'usage de parler de litières récalcitrantes sans plus de précision. Il s'agit en fait de litières difficilement dégradables} \citep{hobbie1996,liu2000}.
 La vitesse de décomposition relative entre les différentes espèces de sphaignes est mal connue \citep{cornelissen2007}.
 Des différences ont été observées entre espèces pour les parties jeunes de la plante, mais la différence est moindre pour les parties plus anciennes \citep{limpens2003}.
@@ -406,6 +406,9 @@ Afin de mieux cerner le devenir de ce carbone, l'étude de ces écosystèmes, de
 
 \section{Flux de gaz à effet de serre et facteurs contrôlants}
 
+Cette partie s'attache à décrire les GES et leurs liens avec les tourbières, les flux de carbone et des processus qui y sont liés, puis facteurs contrôlants ces flux à l'échelle des processus jusqu'aux individus et communautées (nécessaire afin de pouvoir appréhender correctement ces flux à des échelles plus large), les facteurs contrôlant à l'échelle de l'écosystème (colonne de tourbe, site complet) et enfin les bilans de carbone.
+
+
 \subsection{GES et Tourbières}
 
 Dans l'atmosphère le carbone est principalement présent dans l'atmosphère sous forme de dioxide de carbone (\coo) et de méthane (\chh).
@@ -433,6 +436,7 @@ Les tourbières de l'hémisphère nord comptent pour \SI{46}{\tera\gram\per\year
 
 À l'échelle globale, le stockage de C par les tourbières, prenant en compte à la fois le \coo et le \chh, est estimé à \SI{70}{\tera\gram\per\year} \citep{clymo1998}.
 \subsection{Les flux entre l'atmosphère et les tourbières}
+
 
 \subsubsection{De l'atmosphère à l'écosystème}
 %\subsection{Assimilation du carbone atmosphérique}
@@ -496,6 +500,12 @@ Cette réaction à lieu majoritairement dans la troposphère.
 
 Les sources de carbone émises par les tourbières vers l'atmosphère sont multiples.
 D'abord différents gaz peuvent être émis, notamment le \coo et le \chh, éventuellement du N\textsubscript{2}O, et certains d'entre eux peuvent avoir plusieurs sources.
+Au niveau cellulaire, la respiration peut être écrite sous la forme :
+
+$$\begin{aligned}\label{eq:respi}
+C_{6}H_{12}O_{6} + 6O_{2} &\rightarrow 6CO_{2} + 6H_{2}O \\
+\end{aligned} $$
+
 
 Le \coo est émis dans l'atmosphère à travers différents processus, la respiration aérobie (le plus gros contributeur), les respirations anaérobies ou fermentations (e.g. du glucose, de l'acétate), ou encore l'oxydation du méthane.
 Les principales sources de \coo, sont représentées dans la figure~\ref{fig:ges_flux}.
@@ -531,6 +541,7 @@ Cette production primaire n'est pas particulière élevée \plop et c'est en fai
 L'accumulation moyenne estimée dans les tourbières boréales est de \SI{30}{\gcm}. Le taux d'accumulation varie en fonction des espèces végétales présentes (\plop), le niveau d'eau (\plop), ... (??)
 
 Conséquence du niveau de nappe élevé des tourbières, le développement d'une zone anoxique importante dans la colonne de sol favorise la production de \chh.
+Il est produit par des Archaea méthanogènes, des organismes anaérobies vivants sous le niveau de la nappe.
 En moyenne des flux de \chh mesurés dans les tourbières s'étendent de 0 à plus \SI{0.96}{\uml}, avec généralement des flux compris entre \num{0.0048} et \SI{0.077}{\uml} \citep{blodau2002}.
 Le \chh est principalement produit à partir d'acétate (CH\textsubscript{3}COOH) ou de dihydrogène (H\textsubscript{2}), ces deux composés étant dérivés de la décomposition préalable de matières organiques \citep{lai2009}.
 
@@ -539,7 +550,7 @@ CH_{3}COOH  &\rightarrow CH_{4} + CO_{2}\\
 4H_{2} + CO_{2} &\rightarrow CH_{4} + 2H_{2}O\\
 \end{aligned} $$
 Le \chh produit est transporté dans l'atmosphère par diffusion, ébullition ou à travers certaines plantes \citep{joabsson1999,colmer2003}.
-Pendant ce transport le \chh peut être oxydé par des organismes méthanotrophes.
+Pendant ce transport le \chh peut être oxydé par des organismes méthanotrophes. \textbf{(Détailler dégradation \chh)}
 Cette transformation produit tour à tour différents composés (méthanol, formaldéhyde, formate) aboutissant à la production de \coo \citep{whalen2005}.
 
 $$
@@ -578,46 +589,47 @@ Le flux de carbone de l'atmosphère à l'écosystème à pour source quasiment u
 La variabilité de ce flux vient donc de la composition des communautés végétales et de leurs sensibilités aux conditions environnementales.
 À l'inverse, le flux de carbone de l'écosystème vers l'atmosphère est multi-source avec un nombre important de réactions de respirations et de fermentations.
 
-\subsection{Les facteurs majeurs contrôlant les flux}
+\subsection{Les facteurs majeurs contrôlant les processus ?(flux)}
 
 
-Les facteurs qui contrôlent ces flux de carbone sont globalement connus : la température, le niveau de la nappe et la végétation.
-%La température
-L'augmentation de la vitesse de réaction de nombreuses réactions biochimiques avec la température est connue depuis longtemps.
+Les facteurs majeurs qui contrôlent ces flux de carbone sont globalement connus.
+Comme bon nombre de réactions biochimiques les vitesses de réaction des processus décrit précédemment sont fonction de la température.
+Cette relation est connue depuis longtemps.
 Elle a été mise en évidence par un chimiste suédois en 1889 : Svante August Arrhenius sur la base de travaux réalisés par un autre chimiste, néerlandais, Jacobus Henricus Van't Hoff.
-Depuis, de nombreuses mesures de terrain confirment cette relation \plop.
-La photosynthèse et l'ensemble des respirations sont donc contrôlées, au moins en partie, par la température.
-%L'hydrologie
-L'hydrologie est un autre facteur contrôlant majeur.
-Le niveau de la nappe, défini ici comme la distance entre la surface du sol de l'écosystème et le toit de l'aquifer/l'eau libre/la zone saturée, sépare la colonne de tourbe en une zone oxique, et une zone anoxique.
-L'épaisseur relative de ces deux zones va influer sur la production du \coo et du \chh.
-Le \coo est majoritairement produit dans la zone oxique, à l'inverse du \chh produit dans la zone anoxique.
-%DELOCALISATION ?
-%La zone anoxique permet aux organismes anaérobies de se développer, notamment les Archaea\footnote{micro-organismes unicellulaires procaryotes} méthanogènes.
-%L'activité de ces organisme est la plus importante juste sous la surface de l'eau, là ou ils trouvent, en plus de l'anoxie, des matières organiques de qualité (faiblement décomposées).
-%La zone aérobie permet la respiration aérobie (\textbf{aérobie vs oxique}) des micro-organismes, des racines et de la faune.
-%C'est donc dans cette zone qu'est produit la majorité du \coo.
-%Lors de son transport de la zone anoxique vers la surface, le \chh passe par la zone oxique et y est en partie oxydé en \coo.
-%(organismes méthanotrophes)
-Le niveau de la nappe contraint également la teneur en eau du sol et la hauteur de la frange capillaire qui va influer, via un accès plus ou moins facile à l'eau, sur la végétation \citep{laiho2006}.
-%La végétation
-La végétation est également un facteur important.
-D'abord car elle exerce une influence directe sur les flux, avec d'un côté la photosynthèse et de l'autre la respiration des plantes vivantes.
-La composition des communautés végétales va également influer sur le potentiel photosynthétique de l'écosystème, qui peut varier selon le végétal considéré \citep{moore2002}.
-De façon plus indirecte, le type de végétation joue sur la vitesse de décomposition des litières.
-La végétation peut également stimuler la respiration des micro-organismes présent dans la rhizosphère\footnote{zone du sol impacté par les racines} via la libération d'exsudats racinaires \citep{moore2002}.
-Enfin certaines plantes vasculaires, adaptées aux conditions de saturations en eau, peuvent faciliter l'échange de gaz entre l'atmosphère et l'écosystème grâce à un espace intercellulaire agrandit, l'Aerenchyme.
+Le niveau de la nappe, interface entre un monde oxique et un monde anoxique, et la teneur en eau du sol vont également jouer sur ces flux.
+La végétation également que ce soit de façon directe ou indirecte.
 
 
-%DELOCALISATION ?
-%En effet certaines plantes présentes dans ces milieux humides ont développées un Aerenchyme, un espace intercellulaire agrandit permettant le transport d'oxygène des parties aériennes de la plantes aux parties submergées.
-%Le transport peut également se faire dans l'autre sens et permettant par exemple le transport du \coo ou du \chh dans l'atmosphère.
-%Ce passage au travers de la plante permet également au \chh d'éviter d'être oxydé avant d'atteindre l'atmosphère.
-Cependant la sensibilité des flux à ces facteurs ne fait pas consensus et peut varier selon les conditions environnementales ou l'échelle de temps ou d'espace considérée.
-Par la suite nous considérons les processus à l'échelle d'une colonne de sol ou d'un écosystème
-
-\subsubsection{Facteurs contrôlant la production primaire brute}
+\subsubsection{la photosynthèse}
 \index{production primaire brute!contrôle}
+
+\begin{figure}
+\centering
+\includegraphics[width=.5\textwidth]{chap1/PAR_photo}
+\caption{todo, modifié d'après \citet{long1993}}
+\label{fig:PAR_photo}
+\end{figure}
+
+À l'échelle d'un végétal, la quantité de carbone assimilable par la photosynthèse est fonction de la quantité de lumière reçue \citep{long1993}.
+La quantité de carbone assimilée augmente d'abord de façon linéaire avec le rayonnement, avant d'être limitée par la régénération d'une enzyme, la Rubisco\footnote{ribulose-1,5-bisphosphate carboxylase/oxygénase}, nécessaire à la fixation du \coo (Figure~\ref{fig:PAR_photo}).
+Les limitations de l'assimilation, que ce soit la pente initiale de la partie linéaire, ou l'assimilation maximale, varient de façon importante en fonction de l'espèce considérée \citep{wullschleger1993}.
+La régénération de la Rubisco, qui limite la photosynthèse, est contrainte par la capacité de transport des électrons.
+La vitesse de ce transport est liée à la température et est traditionnellement décrit par une équation d'arrhenius modifiée, relativement complexe, ou par une équation simplifiée \citep{farquhar1980,june2004}.
+
+\textbf{Teneur en eau vs plante}
+Le niveau de la nappe contraint également la teneur en eau du sol et la hauteur de la frange capillaire.
+Cette dernière atteint généralement la surface tant que le niveau de la nappe ne descend pas en dessous de \num{30} à \SI{40}{\centi\metre} \citep{laiho2006}.
+La hauteur du niveau d'eau va influer sur le bien-être des différentes commuautées végétales.
+Un niveau d'eau important risque de diminuer l'accès de la végétation vasculaire à l'oxygène par leur racines et aux substrats tandis qu'il sera propice au développement de sphaignes.
+À l'inverse un niveau d'eau faible risque de faciliter le développement de certains végétaux vasculaires au détriment des bryophytes \plop.
+
+À l'échelle de communautés végétales, des groupes de végétaux, la productivité primaire varie.
+Les bryophytes n'ont pas la même productivité primaire que les graminées ou que les arbustes.
+En plus de ces différences entre groupes de végétaux, il existe également des différences de productivité pour un même groupe selon le type de tourbière \citetext{\citealp{moore2002} dans \citealp{rydin2013b}}.
+Alors que dans les tourbières de haut-marais, les sphaignes et les arbustes ont une productivité importante, les herbacées et graminées ont une productivité beaucoup plus faible.
+À l'inverse ce sont les herbes et les graminées qui ont la plus forte productivité dans les tourbières de bas-marais pauvres.
+Elles sont suivie par les sphaignes puis les arbustes.
+Au sein même de ces groupes la productivité peut varier de façon importante, c'est ce que montrent \citet{gunnarsson2005} avec les sphaignes, dont la productivité, selon l'espèce et les conditions dans lesquelles elle vit, varie fortement (Figure~\ref{fig:prod_sphagnum}).
 
 \begin{figure}
 \centering
@@ -626,13 +638,54 @@ Par la suite nous considérons les processus à l'échelle d'une colonne de sol 
 \label{fig:prod_sphagnum}
 \end{figure}
 
-Le premier facteur contrôlant la PPB est la végétation et notamment la composition végétale des communautés présentes.
-Les bryophytes n'ont pas la même productivité primaire que les graminées ou que les arbustes.
-En plus de ces différences entre groupes de végétaux, il existe également des différences de productivité pour un même groupe selon le type de tourbière \citetext{\citealp{moore2002} dans \citealp{rydin2013b}} .
-Alors que dans les tourbières de haut-marais, les sphaignes et les arbustes ont une productivité importante, les herbacées et graminées ont une productivité beaucoup plus faible.
-À l'inverse ce sont les herbes et les graminées qui ont la plus forte productivité dans les tourbières de bas-marais pauvres.
-Elles sont suivie par les sphaignes puis les arbustes.
-Au sein même de ces groupes la productivité peut varier de façon importante, c'est ce que montrent \citet{gunnarsson2005} avec les sphaignes, dont la productivité, selon l'espèce et les conditions dans lesquelles elle vit, varie fortement (Figure~\ref{fig:prod_sphagnum}).
+Compétitions inter-espèces ?
+
+\subsubsection{La RE}
+\index{respiration!de l'écosystème!contrôle}
+
+La respiration, au sens de la réaction biochimique telle que  décrite par l'équation~\ref{eq:respi} est catalysée par la température.
+Cette réaction est limitée par la quantité de substrat et la présence d'oxygène.
+Dans les tourbières la limitation en substrat n'a de sens que vis-à-vis de communautés spécifiques.
+Les substrats facilement utilisable, typiquement les sucres peuvent devenir limitant \plop.
+Mais l'accès à l'oxygène rendu difficile par les hauteurs élevées du niveau de la nappe est prépondérant.
+La qualité du substrat (la facilité qu'il aura à être dégradé) va donc jouer sur la vitesse de respiration)
+Par ailleurs, la photosynthèse en libérant des substrat, les exsudats racinaires, permet influe également sur la respiration.
+
+\textbf{Partionnement de la RE}
+
+\subsubsection{Le \chh}
+
+La production du \chh, par des Archaea méthanogènes principalement à partir d'H2 et d'acétate, est contrôlée par la disponibilité de ces substrats \citep{segers1998}.
+L'ajout de substrats à destination des méthanogènes (acétate, glucose, éthanol) tend à augmenter les émissions de \chh \cite{coles2002}.
+Le niveau de la nappe est un autre facteur contrôlant les flux de \chh.
+Généralement plus le niveau est important plus la zone potentiel de production du \chh est importante et plus les émissions sont fortes \citep{pelletier2007}.
+Par contre une augmentation du niveau de la nappe au dessus de la surface peut conduire à une diminution des émissions de \chh (bubier1995,sundh1995 dans lai2009)
+Les flux sont d'autant plus forte en présence de végétation \citep{pelletier2007}. 
+Enfin la température joue généralement un rôle important, augmentant la vitesse de production et pouvant faciliter son transport par ébullition ou via la végétation \citep{lai2009}.
+
+
+\subsection{Facteurs contrôlant les flux à l'échelle de la colonne de tourbe/de l'écosystème}
+
+\subsubsection{la température}
+
+De nombreuses études ont mis en évidence une corrélation positive entre la respiration et la température \citep{singh1977,raich1992,luo2006}.
+Cependant la diversité cumulée des processus, communautés et des conditions environnementales qui joue sur la respiration, font qu'aucune équation ne fait réellement consensus.
+Malgré tout, la majorité d'entre-elles décrivent une augmentation exponentielle de la respiration avec la température.
+Ainsi dans les tourbières, des études de terrain ont montré que dans des conditions plus chaude, mais également plus sèche étant donné que ces deux conditions sont difficilement séparable sur le terrain, la RE a tendance à augmenter  \citep{aurela2007,cai2010,ward2013}.
+Des études à base de mésocosmes\footnote{définition méso} prélevés sur le terrain ont également montrées la relation entre les variation de RE et celle de la température\citep{updegraff2001,weedon2013}.
+
+
+La modélisation de ce flux se fait donc généralement en utilisant la température que se soit celle de l'air \citep{bortoluzzi2006} ou celle du sol à différentes profondeurs : \SI{-5}{\centi\metre} \citep{gorres2014,ballantyne2014}, \SI{-10}{\centi\metre} \cite{kim1992,zhu2015}.
+Le niveau de la nappe est parfois prit en compte \citep{strack2013,munir2015}, plus rarement la végétation \citep{bortoluzzi2006,karki2015}.
+
+\subsubsection{le niveau de la nappe}
+
+Le niveau de nappe, conditionnant l'accès à l'oxygène, joue également un rôle important.
+Un niveau qui diminue se traduit généralement pas une hausse de la RE que ce soit à long terme \citep{strack2006,ballantyne2014} ou à plus court terme \citep{aerts1997}.
+
+Le niveau de la nappe et la température semblent être les facteurs prépondérant du contrôle des flux de méthane
+
+\subsubsection{température et niveau de nappe ?}
 
 L'effet d'une variation du niveau de la nappe et de la température, jouant sur la végétation va également jouer sur la PPB.
 Distinguer ces deux facteurs n'est pas anodin, la majorité des études réalisées sur le terrain montre les effets des deux facteurs combinés.
@@ -648,32 +701,6 @@ Ces dernières voient leur productivité diminuer dans la tourbière de haut-mar
 Ces dispositifs, ressemblent à des serres ouvertes et permettent de réchauffer une zone de la tourbière.
 Ils montrent que dans les zones sans manipulation du niveau de la nappe, le réchauffement des OTC, augmente la PPB.
 
-\subsubsection{Facteurs contrôlant la respiration de l'écosystème}
-\index{respiration!de l'écosystème!contrôle}
-
-De nombreuses études ont mis en évidence une corrélation positive entre la respiration et la température \citep{singh1977,raich1992,luo2006}.
-Cependant la diversité cumulée des processus, communautés et des conditions environnementales qui joue sur la respiration, font qu'aucune équation ne fait réellement consensus.
-Malgré tout, la majorité d'entre-elles décrivent une augmentation exponentielle de la respiration avec la température.
-Ainsi des études de terrain ont montré que dans des conditions plus chaude, mais également plus sèche étant donné que ces deux conditions sont difficilement séparable sur le terrain, la RE a tendance à augmenter.
-De façon plus importante que la PPB \citet{cai2010} ou ...
-Des études à base de mésocosmes\footnote{définition méso} prélevés sur le terrain ont pu montré que la respiration de l'écosystème est contrôlée presque exclusivement par la température du sol \citep{updegraff2001}.
-
-La modélisation de ce flux se fait donc généralement en utilisant la température que se soit celle de l'air \citep{bortoluzzi2006} ou celle du sol à différentes profondeurs \citep{gorres2014,zhu2015}.
-
-Le niveau de nappe, conditionnant l'accès à l'oxygène, joue également un rôle important.
-Un niveau qui diminue se traduit généralement pas une hausse de la RE que ce soit à long terme \citep{strack2006,ballantyne2014} ou à plus court terme \plop.
-
-%Stratck2006 \\
-%Augmentation de la respiration suite à un abaissement du niveau de l'eau (8ans plus tôt).
-%
-%Ballantyne2014 \\
-%dans une expérimentation in-situ, montre une respiration de l'écosystème plus importante quand le niveau de la nappe est bas que lorsque le niveau de la nappe est haut.
-%L'expérimentation se fait sur un site dont l'abaissement de la nappe est effectif depuis longtemps (80 ans plus tôt)
-%Même résultat que strack, donc effet présent même sur le long terme.
-
-
-
-\subsubsection{Facteurs contrôlant l'ENE}
 \index{echange net de l'ecosystem@échange net de l'écosystème!contrôle}
 On défini l'Échange Net de l'Écosystème (ENE) comme la différence entre la Photosynthèse Primaire Brute (PPB) et la Respiration de l'écosystème (RE).
 Les facteurs contrôlants l'ENE sont donc les mêmes que ceux qui contrôlent ces 2 flux.
@@ -687,12 +714,17 @@ Enfin certain voient un effet à la fois de l'augmentation de la respiration et 
 
 Également un article de \citet{ballantyne2014} qui lui ne note pas d'effet d'une baisse du niveau de la nappe sur l'ENE car l'augmentation de la respiration est compensée par une augmentation de la photosynthèse.
 
-\subsubsection{Facteurs contrôlant les flux de méthane}
+\subsubsection{la végétation}
 
-Le niveau de la nappe et la température semblent être les facteurs prépondérant du contrôle des flux de méthane
-%\subsubsection{L'hydrologie dans les tourbières et l'effet sur les flux}
+La végétation est également un facteur important.
+D'abord car elle exerce une influence directe sur les flux, avec d'un côté la photosynthèse et de l'autre la respiration des plantes vivantes.
+La composition des communautés végétales va également influer sur le potentiel photosynthétique de l'écosystème, qui peut varier selon le végétal considéré \citep{moore2002}.
+De façon plus indirecte, le type de végétation joue sur la vitesse de décomposition des litières.
+La végétation peut également stimuler la respiration des micro-organismes présent dans la rhizosphère\footnote{zone du sol impacté par les racines} via la libération d'exsudats racinaires \citep{moore2002}.
+Enfin certaines plantes vasculaires, adaptées aux conditions de saturations en eau, peuvent faciliter l'échange de gaz entre l'atmosphère et l'écosystème grâce à un espace intercellulaire agrandit, l'Aerenchyme.
 
-%\subsubsection{La végétation dans les tourbières et l'effet sur les flux}
+Cependant la sensibilité des flux à ces facteurs ne fait pas consensus et peut varier selon les conditions environnementales ou l'échelle de temps ou d'espace considérée.
+Par la suite nous considérons les processus à l'échelle d'une colonne de sol ou d'un écosystème
 
 
 La prépondérance relative des ces différents flux, contrôlée par les conditions environnementale, va donc impacter le fonctionnement des tourbières. 
