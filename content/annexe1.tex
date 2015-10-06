@@ -88,8 +88,28 @@ En conséquence en 2014 ces deux espèces ont fait l'objet de comptage exhaustif
 \end{figure}
 
 
-\section{CARBIODIV}
+\section{Le projet \textsc{carbiodiv}}
 \label{sec:carbiodiv}
+
+Ce projet vise à restaurer l'hydrologie de la tourbière de La Guette et de suivre les effets de cette restauration sur les flux de carbone et la biodiversité.
+Ce projet implique donc des laboratoires scientifiques (ISTO, LPC2E) une cellule de recherche et développement de l'Université d'Orléans (CETRAHE), des associations (SNE, CERCOPE, LIN'Eco), et une entreprise (Environnement41).
+
 
 \section{package m70r}
 \label{sec:pckg_m70r}
+
+\begin{figure}
+\centering
+\includegraphics[width=.8\textwidth, frame]{annexes/m70r_diagplot}
+\caption{Planche de graphes permettant le diagnostique des mesures de flux de \coo}
+\label{fig:m70r_diagplot}
+\end{figure}
+
+Ce package contient une série de fonctions à utiliser avec le language R et qui permettent de traiter les fichiers *.m70 issue des sondes Vaisala.
+
+\begin{itemize}
+\item Générer des planches de graphes pour diagnostiquer les flux (Figure~\ref{fig:m70r_diagplot})
+\item De comparer l'effet du retrait de certains points. La figure~\ref{fig:m70r_diagplot} montre ainsi une mesure pour laquelle l'assimilation de \coo par photosynthèse est tellement forte qu'elle semble être stoppée abruptement au delà d'un certain seuil.
+\item De conserver les changement effectués dans un fichier séparé du fichier source, qui reste donc intact.
+\item De calculer les flux net.
+\end{itemize}
