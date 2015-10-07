@@ -200,22 +200,27 @@ Ce travail est présenté dans l'annexe~\ref{sec:pckg_m70r}.
 \end{figure}
 
 Les mesures de \chh ont été réalisée avec une chambre aux caractéristiques similaires à celles utilisées pour les mesures de \coo à l'exception de l'interface avec l'analyseur.
-La méthode de la chambre dynamique fermée a été utilisée pour réaliser ces mesures, elle diffère donc légèrement de celle utilisée pour le \coo puisqu'elle nécessite la mise en oeuvre d'un système de pompe pour transporter le gaz jusqu'à l'analyseur.
-Les mesures de concentration en \chh ont été réalisée à l'aide du SPIRIT (Figure~\ref{fig:SPIRIT}).
+En effet la taille de ce dernier ne permettait pas de l'insérer directement dans la chambre comme l'analyseur de \coo.
+La méthode de la chambre dynamique fermée a donc été utilisée pour réaliser ces mesures, elle diffère donc légèrement de celle utilisée pour le \coo puisqu'elle nécessite la mise en oeuvre d'un système de pompe pour transporter le gaz jusqu'à l'analyseur.
+%Les mesures de concentration en \chh ont été réalisée à l'aide du SPIRIT 
+L'instrument utilisé pour analyser la concentration en \chh est le SPIRIT (SPectromètre Infra Rouge In-situ Troposphérique) (Figure~\ref{fig:SPIRIT}).
 
-C'est un SPectrometre Infra Rouge In-situ Troposphérique développé par le LPC2E.
-La spectrométrie infra-rouge se base sur la mesure de l'absorption d'un rayonnement infrarouge par des molécules conduisant
+Le SPIRIT est un spectromètre infra-rouge développé par le LPC2E.
+La spectrométrie infra-rouge se base sur la mesure de l'absorption d'un rayonnement infrarouge par des molécules.
+Pour une molécule, cette absorption est variable selon les longueurs d'ondes permettant de la caractériser, son intensité étant fonction de la concentration (Loi de Beer-Lambert)
 Cet instrument profite de l'expertise acquise par le laboratoire dans le domaine de la métrologie infra-rouge, notamment avec le développement de son ancêtre le SPIRALE (SPectroscopie Infra Rouge par Absoption de Lasers Embarqués).
 Plus petit et plus léger (\SI{100}{\kilo\gram}), le SPIRIT a été développé en différentes versions, fonction des usages.
 Il existe actuellement une version sol et une version avion de l'appareil.
 Les capacités du SPIRIT sont principalement liées à deux éléments.
 Premièrement l'invention d'une cellule à réflexion multiple par le LPC2E \citep{robert2007}, permettant d'adapter facilement la longueur du parcours optique en fonction de la concentration des gaz à mesurer.
 Deuxièmement l'utilisation de lasers à cascades quantique (QCL), dont la puissance permet d'augmenter le nombre de réflexion et la sensibilité des mesures d'absorption.
-Les QCL installés émettent séquentiellement dans le moyen infra-rouge (\num{2.5} à \SI{25}{\micro\metre}) (Choix dicté par l'absorbance à ces longueur d'onde d'un grand nombre d'espèce d'intérêt et l'intensité importante des raies d'absorption.) et dans une fenêtre spécifique aux espèces que l'ont souhaite mesurer.
-Après son émission, le laser est divisé en deux
+Les QCL installés émettent séquentiellement dans le moyen infra-rouge (\num{2.5} à \SI{25}{\micro\metre}), dans une gamme spécifique aux espèces que l'ont souhaite mesurer.
+Ce choix est dicté par l'absorbance à ces longueurs d'ondes d'un grand nombre d'espèces d'intérêt et l'intensité importante de leurs raies d'absorption.
+Après son émission, le laser est divisé en deux : 
 La première partie traverse une cellule de référence, contenant un gaz de concentration connue.
 La seconde partie travers une cellule de mesure, contenant le gaz à mesurer.
 Les deux parties du laser débouchent finalement sur les détecteurs.
+Le spectre d'absorption est divisé par le spectre de référence, ce qui permet conserver uniquement le signal lié à l'absorption moléculaire. Ce spectre est ensuite comparé à un spectre simulé afin de déterminer les concentrations en gaz.
 Le fonctionnement détaillé du SPIRIT-sol est décrit dans \cite{guimbaud2011}.
 
 %C'est un SPectrometre Infra Rouge In-situ Troposphérique (son premier objectif étant d'être emporté lors de campagne avion ou ballon ? pour mesurer le \chh de la troposphère.).
