@@ -141,9 +141,10 @@ Then the peat was crushed and C, H, N and S analyses were performed with an elem
 %PPI = Abs_{550} \times 100
 %\end{equation}
 
-\section{Résultats}
 
-\subsection{Température de l'air et variabilité de RE}
+\section{Results}
+
+\subsection{Air temperature and ER variability}
 
 Mean surface air temperatures were about 14-15\,\textdegree C for all sites, except for LGT which was 20.8 $\pm$ 7.4\,\textdegree C, (Figure~\ref{fig:er_tair_tpeat} -- H).
 The lowest mean temperature and amplitude were found at BDZ: 14.4 $\pm$ 3.3\,\textdegree C (Figure~\ref{fig:er_tair_tpeat} -- E).
@@ -171,8 +172,8 @@ In BDZ and LGT, ER mean values were 3.12 $\pm$ 0.92 and 4.10 $\pm$ 1.15\,\textmu
 \label{fig:er_tair_tpeat}
 \end{figure}
 
-
-\subsection{Synchronisation RE et température du sol}
+\subsection{ER and soil temperature synchronisation}
+%\subsection{Synchronisation RE et température du sol}
 
 Figure~\ref{fig:er_tair_tpeat} shows that the deeper the temperature was measured, the greater the shift with respect to ER.
 Taking this shift into account by synchronising soil temperatures with ER led to a significant positive linear correlation between the temperature measurement depth and the synchronisation time-delay (all sites pooled, R$^2$=0.94, p$<$0.001; Figure~\ref{fig:lag_depth}).
@@ -192,7 +193,8 @@ BDZ always had the lowest time-delay, but like LDM, the values were close to tho
 \label{fig:lag_depth}
 \end{figure}
 
-\subsection{Équations utilisées}
+\subsection{Model implementation}
+%\subsection{Équations utilisées}
 
 For both types of model (using non-synchronised and synchronised data), the differences between the 3 tested models were very small. 
 The greatest differences, in R$^{2}$ values, were 0.07 and 0.05 for non-synchronised and synchronised data respectively, whereas differences in NRMSE maximum values were 1.28 and 1.14 (Table~\ref{table:mod_R2_RMSE}).
@@ -204,45 +206,47 @@ This will allow the comparison of the results of our study to others.
 \begin{table}
 \centering
 \caption{R$^{2}$ and NRMSE profile with depth for models using non-synchronised and synchronised data and for the three equations (linear: lin, exponential: exp, arrhenius: arr).}
+\hspace*{-1cm}
 \begin{tabular}{lllllllllllll}
 \hline
 & \multicolumn{6}{l}{Non-synchronised} & \multicolumn{6}{l}{Synchronised} \\
- & lin &  & exp &  & arr & & lin &  & exp &  & arr &  \\[-1ex] 
-depth & R$^{2}$ & NRMSE & R$^{2}$ & NRMSE & R$^{2}$ & NRMSE & R$^{2}$ & NRMSE & R$^{2}$ & NRMSE & R$^{2}$ & NRMSE \\ 
+ & lin &  & exp &  & arr & & lin &  & exp &  & arr &  \\[-.5ex] 
+depth & R$^{2}$ & \textsc{nrmse} & R$^{2}$ & \textsc{nrmse} & R$^{2}$ & \textsc{nrmse} & R$^{2}$ & \textsc{nrmse} & R$^{2}$ & \textsc{nrmse} & R$^{2}$ & \textsc{nrmse} \\ 
 \hline
-\multicolumn{2}{l}{Bernadouze} & & & & & & & & & & & \\[-1ex]
-0 & 0.22 & 25.88 & 0.19 & 26.09 & 0.19 & 26.09 & 0.22 & 25.88 & 0.19 & 26.09 & 0.19 & 26.09\\[-1ex] 
--5 & 0.23 & 25.66 & 0.20 & 25.89 & 0.20 & 25.89 & 0.27 & 25.18 & 0.24 & 25.40 & 0.24 & 25.40\\[-1ex] 
--10 & 0.02 & 28.92 & 0.03 & 29.26 & 0.03 & 29.26 & 0.23 & 25.72 & 0.22 & 25.90 & 0.22 & 25.91\\[-1ex] 
--20 & 0.04 & 28.64 & 0.03 & 28.98 & 0.03 & 28.98 & 0.13 & 27.79 & 0.13 & 28.16 & 0.13 & 28.15\\[-1ex] 
+\multicolumn{2}{l}{Bernadouze} & & & & & & & & & & & \\[-.5ex]
+0 & 0.22 & 25.88 & 0.19 & 26.09 & 0.19 & 26.09 & 0.22 & 25.88 & 0.19 & 26.09 & 0.19 & 26.09\\
+-5 & 0.23 & 25.66 & 0.20 & 25.89 & 0.20 & 25.89 & 0.27 & 25.18 & 0.24 & 25.40 & 0.24 & 25.40\\
+-10 & 0.02 & 28.92 & 0.03 & 29.26 & 0.03 & 29.26 & 0.23 & 25.72 & 0.22 & 25.90 & 0.22 & 25.91\\
+-20 & 0.04 & 28.64 & 0.03 & 28.98 & 0.03 & 28.98 & 0.13 & 27.79 & 0.13 & 28.16 & 0.13 & 28.15\\
 -30 & 0.02 & 28.93 & 0.02 & 29.28 & 0.02 & 29.28 & 0.05 & 29.54 & 0.05 & 29.92 & 0.05 & 29.92\\
-\multicolumn{2}{l}{Frasne} & & & & & & & & & & & \\[-1ex]
-0 & 0.66 & 27.58 & 0.63 & 26.74 & 0.63 & 26.96 & 0.66 & 27.58 & 0.63 & 26.74 & 0.63 & 26.96\\[-1ex]
--5 & 0.19 & 42.34 & 0.21 & 43.00 & 0.21 & 43.01 & 0.68 & 26.34 & 0.68 & 25.02 & 0.68 & 25.06\\[-1ex] 
--10 & 0.01 & 46.73 & 0.00 & 48.01 & 0.00 & 48.01 & 0.59 & 29.98 & 0.60 & 29.20 & 0.60 & 29.22\\[-1ex] 
--20 & 0.34 & 38.29 & 0.27 & 38.78 & 0.27 & 38.77 & 0.34 & 38.05 & 0.36 & 39.17 & 0.36 & 39.16\\[-1ex] 
+\multicolumn{2}{l}{Frasne} & & & & & & & & & & & \\[-.5ex]
+0 & 0.66 & 27.58 & 0.63 & 26.74 & 0.63 & 26.96 & 0.66 & 27.58 & 0.63 & 26.74 & 0.63 & 26.96\\
+-5 & 0.19 & 42.34 & 0.21 & 43.00 & 0.21 & 43.01 & 0.68 & 26.34 & 0.68 & 25.02 & 0.68 & 25.06\\
+-10 & 0.01 & 46.73 & 0.00 & 48.01 & 0.00 & 48.01 & 0.59 & 29.98 & 0.60 & 29.20 & 0.60 & 29.22\\
+-20 & 0.34 & 38.29 & 0.27 & 38.78 & 0.27 & 38.77 & 0.34 & 38.05 & 0.36 & 39.17 & 0.36 & 39.16\\
 -30 & 0.03 & 46.30 & 0.03 & 47.47 & 0.03 & 47.47 & 0.18 & 43.66 & 0.19 & 44.75 & 0.19 & 44.74\\
-\multicolumn{2}{l}{Landemarais} & & & & & & & & & & & \\[-1ex]
-0 & 0.29 & 38.55 & 0.32 & 39.31 & 0.32 & 39.24 & 0.29 & 38.55 & 0.32 & 39.31 & 0.32 & 39.24\\[-1ex] 
--5 & 0.03 & 45.18 & 0.04 & 46.06 & 0.04 & 46.07 & 0.21 & 40.63 & 0.25 & 41.58 & 0.25 & 41.57\\[-1ex] 
--10 & 0.05 & 44.53 & 0.04 & 45.45 & 0.04 & 45.45 & 0.13 & 42.65 & 0.16 & 43.71 & 0.16 & 43.7\\[-1ex] 
--20 & 0.09 & 43.75 & 0.08 & 44.55 & 0.08 & 44.55 & 0.09 & 43.83 & 0.12 & 44.97 & 0.12 & 44.97\\[-1ex] 
+\multicolumn{2}{l}{Landemarais} & & & & & & & & & & & \\[-.5ex]
+0 & 0.29 & 38.55 & 0.32 & 39.31 & 0.32 & 39.24 & 0.29 & 38.55 & 0.32 & 39.31 & 0.32 & 39.24\\
+-5 & 0.03 & 45.18 & 0.04 & 46.06 & 0.04 & 46.07 & 0.21 & 40.63 & 0.25 & 41.58 & 0.25 & 41.57\\
+-10 & 0.05 & 44.53 & 0.04 & 45.45 & 0.04 & 45.45 & 0.13 & 42.65 & 0.16 & 43.71 & 0.16 & 43.7\\
+-20 & 0.09 & 43.75 & 0.08 & 44.55 & 0.08 & 44.55 & 0.09 & 43.83 & 0.12 & 44.97 & 0.12 & 44.97\\
 -30 & 0.03 & 45.09 & 0.02 & 46.07 & 0.02 & 46.07 & 0.13 & 44.94 & 0.12 & 46.02 & 0.12 & NA\\
-\multicolumn{2}{l}{La Guette} & & & & & & & & & & & \\[-1ex]
-0 & 0.61 & 17.44 & 0.56 & 17.30 & 0.56 & 17.34 & 0.61 & 17.44 & 0.56 & 17.30 & 0.56 & 17.34\\[-1ex] 
--5 & 0.31 & 23.27 & 0.29 & 23.24 & 0.28 & 23.26 & 0.63 & 16.83 & 0.59 & 16.49 & 0.58 & 16.51\\[-1ex] 
--10 & 0.08 & 26.89 & 0.07 & 27.09 & 0.07 & 27.10 & 0.61 & 17.21 & 0.57 & 16.84 & 0.57 & 16.85\\[-1ex] 
--20 & 0.30 & 23.41 & 0.27 & 23.30 & 0.27 & 23.30 & 0.54 & 18.93 & 0.51 & 19.01 & 0.51 & 19.01\\[-1ex] 
+\multicolumn{2}{l}{La Guette} & & & & & & & & & & & \\[-.5ex]
+0 & 0.61 & 17.44 & 0.56 & 17.30 & 0.56 & 17.34 & 0.61 & 17.44 & 0.56 & 17.30 & 0.56 & 17.34\\
+-5 & 0.31 & 23.27 & 0.29 & 23.24 & 0.28 & 23.26 & 0.63 & 16.83 & 0.59 & 16.49 & 0.58 & 16.51\\
+-10 & 0.08 & 26.89 & 0.07 & 27.09 & 0.07 & 27.10 & 0.61 & 17.21 & 0.57 & 16.84 & 0.57 & 16.85\\
+-20 & 0.30 & 23.41 & 0.27 & 23.30 & 0.27 & 23.30 & 0.54 & 18.93 & 0.51 & 19.01 & 0.51 & 19.01\\
 -30 & 0.12 & 26.25 & 0.11 & 26.37 & 0.11 & 26.37 & 0.39 & 22.18 & 0.36 & 22.26 & 0.36 & 22.26\\
 \hline
 \end{tabular} 
+\hspace*{-1cm}
 %\belowtable{} % Table Footnotes\\
 \label{table:mod_R2_RMSE}
 \end{table}
 %\restoregeometry
 
-\subsection{Relation entre RE et la température}
-
+%\subsection{Relation entre RE et la température}
+\subsection{ER and temperature relationship}
 
 The relationship between air temperature and ER, using the exponential model, was better in LGT and FRN (R$^{2}$ $>$\,0.55) than in LDM and LDM (R$^{2}$ $<$\,0.35) (Table~\ref{table:mod_R2_RMSE}).
 %For both linear and exponential model (\textbf{FIG4 and 5}), the relationship between air temperature and ER was better in LGT and FRN (R$^{2}$ ($>$\,0.6)) \textbf{(FL: LG < 0.6)} than in LDM and LDM (R$^{2}$ <\,0.4).
@@ -269,7 +273,8 @@ For the most part, the synchronisation of data led to higher R$^{2}$ and NRMSE v
 \label{fig:models_comparison}
 \end{figure}
 
-\subsection{Évolution du Q10}
+%\subsection{Évolution du Q10}
+\subsection{Q$_{10}$ evolution}
 
 The Q$_{10}$ stood between 0 and 2.5 for non-synchronised data with a maximum at -5 cm depth.
 Average values were 1.4, 2.4 and 1.3, at the surface, -5 and -10 cm depth respectively (Figure~\ref{fig:oneT_Q10}).
@@ -289,8 +294,8 @@ Below this depth, Q$_{10}$ estimated with both methods either decreased downward
 \end{figure}
 %\textbf{CG: Mentionner ce qu'est une valeur réaliste du Q10 (entre 1.5 et 2.5 si je me souviens bien, en s'appuyant sur des références), texte mieux dit en dessous}
 
-\subsection{Différence entre mesures de jour et de nuit}
-
+%\subsection{Différence entre mesures de jour et de nuit}
+\subsection{Daytime and nighttime differences}
 
 
 For BDZ and LDM sites no significant differences were found between daytime and nighttime data no matter which model was used, whereas differences were found for FRN and LGT (Figure~\ref{fig:diff_JN}). 
@@ -309,7 +314,8 @@ Note that, for LGT, the model using air temperature had a daytime slope that was
 \label{fig:diff_JN}
 \end{figure}
 
-\subsection{Caractérisation de la tourbe}
+%\subsection{Caractérisation de la tourbe}
+\subsection{Peat characterisation}
 
 %Peat from LGT was the most decomposed among the studied sites as shown by the increasing PPI with depth, with a maximum, above 90, in the 20-25 cm section (Table~\ref{table:phychi}).
 %By contrast, the least decomposed peat was from FRN with a PPI inferior to 4 at any depth.
@@ -320,49 +326,53 @@ C content was mainly between 40 and 50 \%, except at the deeper levels in LDM an
 \centering
 \caption{Peat chemical properties as a function of depth in cm: content (\%) N, C, H, S, the total, retention and effective porosity, $\Phi_{T}$, $\Phi_{R}$, $\Phi_{E}$ respectively in $m^{3}.m^{-3}$, solid peat volumic fraction in $m^{3}.m^{-3}$ and the bulk density (Bd) in $g.cm^{-3}$.} 
 \begin{tabular}{llllllllll}
-\hline
+\toprule
 % & & & & & & & \multicolumn{3}{c}{Porosity} & \\
 %level (cm) & N (\%)& C (\%)& H (\%)& S (\%)& PPI & $\Phi_{T}$ & $\Phi_{R}$ & $\Phi_{E}$ & solid & Bd \\
 level  & N & C & H & S & $\Phi_{T}$ & $\Phi_{R}$ & $\Phi_{E}$ & solid & Bd \\
 %(cm) & (\%) & (\%)& (\%)& (\%)&  & $m^{3}.m^{-3}$ & porosity & porosity & & density\\
-\hline
-\multicolumn{2}{l}{Bernadouze} & & & & & & & & \\[-1ex] 
-0--5 & 1.76 & 41.84 & 6.05 & 0.05   & 0.99 & 0.47 & 0.52 & 0.01 & 0.03 \\[-1ex] 
-5--10 & 1.99 & 43.99 & 6.18 & 0.07 & 0.97 & 0.78 & 0.19 & 0.03 & 0.06 \\[-1ex] 
-10--15 & 2.28 & 45.38 & 6.35 & 0.1 & 0.96 & 0.92 & 0.04 & 0.04 & 0.10 \\[-1ex] 
-15--20 & 2.92 & 44.95 & 6.23 & 0.23 & 0.95 & 0.82 & 0.13 & 0.05 & 0.11 \\[-1ex] 
-20--25 & 3.14 & 39.01 & 5.31 & 0.23 & 0.93 & 0.90 & 0.04 & 0.07 & 0.16 \\[-1ex] 
+\midrule
+\multicolumn{2}{l}{Bernadouze} & & & & & & & & \\[-.5ex] 
+0--5 & 1.76 & 41.84 & 6.05 & 0.05   & 0.99 & 0.47 & 0.52 & 0.01 & 0.03 \\
+5--10 & 1.99 & 43.99 & 6.18 & 0.07 & 0.97 & 0.78 & 0.19 & 0.03 & 0.06 \\
+10--15 & 2.28 & 45.38 & 6.35 & 0.10 & 0.96 & 0.92 & 0.04 & 0.04 & 0.10 \\ 
+15--20 & 2.92 & 44.95 & 6.23 & 0.23 & 0.95 & 0.82 & 0.13 & 0.05 & 0.11 \\ 
+20--25 & 3.14 & 39.01 & 5.31 & 0.23 & 0.93 & 0.90 & 0.04 & 0.07 & 0.16 \\
 25--30 & 2.50 & 31.15 & 4.28 & 0.13 & 0.89 & 0.86 & 0.03 & 0.11 & 0.24 \\
-\multicolumn{2}{l}{Frasne} & & & &  & & & & \\[-1ex] 
-0--5 & 1.73 & 43.67 & 6.24 & 0.00 & 0.99 & 0.40 & 0.58 & 0.01 & 0.03 \\[-1ex] 
-5--10 & 1.55 & 43.35 & 5.97 & 0.00 & 0.98 & 0.59 & 0.40 & 0.02 & 0.03 \\[-1ex] 
-10--15 & 1.69 & 43.49 & 6.17 & 0.00 & 0.98 & 0.89 & 0.09 & 0.02 & 0.05 \\[-1ex] 
-15--20 & 1.63 & 43.06 & 5.97 & 0.00 & 0.98 & 0.89 & 0.09 & 0.02 & 0.05 \\[-1ex] 
-20--25 & 1.30 & 43.68 & 6.29 & 0.05 & 0.98 & 0.93 & 0.04 & 0.02 & 0.05 \\[-1ex] 
+\multicolumn{2}{l}{Frasne} & & & &  & & & & \\[-.5ex] 
+0--5 & 1.73 & 43.67 & 6.24 & 0.00 & 0.99 & 0.40 & 0.58 & 0.01 & 0.03 \\ 
+5--10 & 1.55 & 43.35 & 5.97 & 0.00 & 0.98 & 0.59 & 0.40 & 0.02 & 0.03 \\
+10--15 & 1.69 & 43.49 & 6.17 & 0.00 & 0.98 & 0.89 & 0.09 & 0.02 & 0.05 \\
+15--20 & 1.63 & 43.06 & 5.97 & 0.00 & 0.98 & 0.89 & 0.09 & 0.02 & 0.05 \\
+20--25 & 1.30 & 43.68 & 6.29 & 0.05 & 0.98 & 0.93 & 0.04 & 0.02 & 0.05 \\ 
 25--30 & 1.48 & 43.44 & 6.21 & 0.03 & 0.98 & 0.87 & 0.11 & 0.02 & 0.05 \\
-\multicolumn{2}{l}{Landemarais} & & & & & & & & \\[-1ex] 
-0--5 & 1.36 & 45.63 & 5.69 & 0.25 & 0.97 & 0.62 & 0.35 & 0.03 & 0.07 \\[-1ex] 
-5--10 & 3.08 & 47.37 & 5.37 & 0.09 & 0.95 & 0.74 & 0.21 & 0.05 & 0.11 \\[-1ex] 
-10--15 & 2.73 & 48.34 & 5.63 & 0.10 & 0.94 & 0.94 & 0.00 & 0.06 & 0.13 \\[-1ex] 
-15--20 & 2.54 & 48.67 & 5.64 & 0.30 & 0.96 & 0.81 & 0.15 & 0.04 & 0.10 \\[-1ex] 
-20--25 & 2.08 & 46.99 & 5.80 & 0.23 & 0.97 & 0.89 & 0.08 & 0.03 & 0.07 \\[-1ex] 
+\multicolumn{2}{l}{Landemarais} & & & & & & & & \\[-.5ex] 
+0--5 & 1.36 & 45.63 & 5.69 & 0.25 & 0.97 & 0.62 & 0.35 & 0.03 & 0.07 \\
+5--10 & 3.08 & 47.37 & 5.37 & 0.09 & 0.95 & 0.74 & 0.21 & 0.05 & 0.11 \\
+10--15 & 2.73 & 48.34 & 5.63 & 0.10 & 0.94 & 0.94 & 0.00 & 0.06 & 0.13 \\
+15--20 & 2.54 & 48.67 & 5.64 & 0.30 & 0.96 & 0.81 & 0.15 & 0.04 & 0.10 \\
+20--25 & 2.08 & 46.99 & 5.80 & 0.23 & 0.97 & 0.89 & 0.08 & 0.03 & 0.07 \\
 25--30 & 1.57 & 45.65 & 6.23 & 0.21 & 0.97 & 0.89 & 0.08 & 0.03 & 0.07 \\
-\multicolumn{2}{l}{La Guette} & & & & & & & & \\[-1ex] 
-0--5 & 1.55 & 38.33 & 5.23 & 0.05 & 0.97 & 0.61 & 0.36 & 0.03 & 0.05 \\[-1ex] 
-5--10 & 2.35 & 41.31 & 4.66 & 0.20 & 0.93 & 0.83 & 0.10 & 0.07 & 0.08 \\[-1ex] 
-10--15 & 2.34 & 43.81 & 5.72 & 0.18 & 0.91 & 0.89 & 0.02 & 0.09 & 0.10 \\[-1ex] 
-15--20 & 1.99 & 43.17 & 5.45 & 0.10 & 0.89 & 0.87 & 0.01 & 0.11 & 0.13 \\[-1ex] 
-20--25 & 1.90 & 37.91 & 4.83 & 0.05 & 0.88 & 0.83 & 0.05 & 0.12 & 0.15 \\[-1ex] 
+\multicolumn{2}{l}{La Guette} & & & & & & & & \\[-.5ex] 
+0--5 & 1.55 & 38.33 & 5.23 & 0.05 & 0.97 & 0.61 & 0.36 & 0.03 & 0.05 \\
+5--10 & 2.35 & 41.31 & 4.66 & 0.20 & 0.93 & 0.83 & 0.10 & 0.07 & 0.08 \\
+10--15 & 2.34 & 43.81 & 5.72 & 0.18 & 0.91 & 0.89 & 0.02 & 0.09 & 0.10 \\
+15--20 & 1.99 & 43.17 & 5.45 & 0.10 & 0.89 & 0.87 & 0.01 & 0.11 & 0.13 \\
+20--25 & 1.90 & 37.91 & 4.83 & 0.05 & 0.88 & 0.83 & 0.05 & 0.12 & 0.15 \\ 
 25--30 & 1.32 & 18.95 & 2.32 & 0.01 & 0.79 & 0.76 & 0.03 & 0.21 & 0.28 \\
-\hline
+\bottomrule
 \end{tabular}
 %\belowtable{} % Table Footnotes
 \label{table:phychi}
 \end{table}
 
+%\section{Discussion}
+%
+%\subsection{Différence de RE entre les différents sites}
 \section{Discussion}
 
-\subsection{Différence de RE entre les différents sites}
+\subsection{ER differences between sites}
+
 
 The ER fluxes calculated in the 4 sites were in the same order of magnitude as those of peatlands found in the literature.
 \citet{bortoluzzi2006}, for instance, found ER values ranging from 2 to 5\, during the same period as this study, i.e. July to October 2004.
@@ -381,7 +391,8 @@ clearly in FRN, LGT and to a lesser extent in LDM, but barely perceivable in BDZ
 At this depth the temperature and the ER signal phases are opposed making the non-synchronised models better at representing ER than at -10 or -30 centimetres but with a reverse relationship.
 The ER fluxes thus show different behaviours either in their amplitude or in their homogeneity
 
-\subsection{Temps de latence entre température et RE}
+%\subsection{Temps de latence entre température et RE}
+\subsection{Time-delay between temperature and ER}
 
 Time-delays between soil temperatures and ER occur in \textit{Sphagnum}-dominated peatlands.
 They occur even close to the soil surface and increase with depth.
@@ -398,8 +409,8 @@ This was confirmed by thermal conductivity measurements conducted on the peat co
 %Overall even with sites with different behaviour in term of ER fluxes the time-delays are similar in all sites
 Overall, it should be noted that the time-delays were similar in all the studied sites despite their variability in terms of ER fluxes.
 
-\subsection{La synchronisation entre RE et la température améliore la représentation de la sensibilité de RE à la température}
-
+%\subsection{La synchronisation entre RE et la température améliore la représentation de la sensibilité de RE à la température}
+\subsection{Synchronising ER and temperature improves ER sensitivity to temperature representation}
 
 In spite of the importance of lags between physical phenomenona and biological activities \citep{vargas2010}, few studies have addressed the effect of time-delays between soil temperature and global biological activity (ER) at the daily timescale.
 At this scale, we showed in peatlands that using synchronised data improved the representation of the temperature sensitivity of ER.
@@ -414,8 +425,8 @@ Such a phase inversion was found deeper, at -30 cm by \citet{pavelka2007}, due t
 Finally in our study these models, using synchronised -5 cm depth temperature, show slightly higher R$^2$ and lower NRMSE values than those using surface air temperature.
 %Our results showed that in most cases, soil temperature is a better predictor than air temperature and should be used instead.
 
-\subsection{Différence entre mesure de RE faite le jour et la nuit}
-
+%\subsection{Différence entre mesure de RE faite le jour et la nuit}
+\subsection{Differences between daytime and nighttime ER measurements}
 
 The significant differences observed between daytime and nighttime measurements corroborate other studies in which these differences were found using chamber techniques \citep{juszczak2012,darenova2014}.
 The fact that some sites show significant differences (FRN and LGT) and not others (BDZ and LDM) seems to be linked to the variability between plots and temperature amplitude.
@@ -426,7 +437,8 @@ This was also corroborated by a test done on LGT where we calculated the day and
 As a result the significance increased from p\,$<$\,0.05 to p\,$<$\,0.01 for the synchronised model using -5 cm depth temperature and the differences observed in the model using air temperature were no longer significant any more (p\,$>$\,0.05).
 
 
-\subsection{La sensibilité du Q10 à la profondeur de la température et à la synchronisation}
+%\subsection{La sensibilité du Q10 à la profondeur de la température et à la synchronisation}
+\subsection{Q$_{10}$ sensitivity to temperature depth and synchronisation}
 
 In shallow layers ($\leq$ 10 cm), the Q$_{10}$ values calculated with non-synchronised data in the ranges that are usually reported, i.e. between 1.3 to 3.3 \citep{raich1992}.
 At deeper levels in the peat profile ($\geq$ 10 cm), they reach 0 as the relationship between ER and the temperature weakens, and is not compensated by a long term evolution.
@@ -449,3 +461,6 @@ Even if the automated chamber technique is increasingly used, it cannot be easil
 In contrast, temperature measurements at different depths are easy to conduct, robust to harsh conditions and can be powered by a small solar panel.
 A calibration campaign with human manipulated closed chambers could be carried out to assess ER variability at different timescales.
 Coupling temperature profile and punctual ER measurements and then using synchronised data in models may be a good alternative in sites where automated chambers are not easily implantable.
+
+\section*{Acknowledgements}
+The work was funded as part of the Peatland National Observatory Service (Service national d'observation Tourbi\`eres, certified by the CNRS/INSU) as the four studied sites are part of this Service. The authors are also indebted to the site managers for permitting access to the studied peatlands. We also acknowledge support from Labex VOLTAIRE (ANR-10-LABX-100-01). Finally we would like to thank Elizabeth Rowley-Jolivet for corrections to the manuscript.
