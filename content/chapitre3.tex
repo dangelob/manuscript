@@ -760,11 +760,11 @@ Le modèle RE-2, très proche du modèle RE-3 n'a pas été testé.
 \end{figure}
 
 La classification hiérarchique a permis de distinguer 4 groupes de végétation (Figure~\ref{fig:distrib_grpveg}).
-Dans le premier groupe, la strate muscinale est majoritaire avec un recouvrement moyen de \SI{91}{\percent}, moins de \num{35} et \SI{15}{\percent} de recouvrement pour les herbacées et les arbustes respectivement.
-Le deuxième groupe est le plus homogène avec un recouvrement moyen des strates muscinales et arbustives de \num{63} et \SI{58}{\percent} chacune.
+Dans le groupe Mousse, la strate muscinale est majoritaire avec un recouvrement moyen de \SI{91}{\percent}, moins de \num{35} et \SI{15}{\percent} de recouvrement pour les herbacées et les arbustes respectivement.
+Le groupe Mix est le plus homogène avec un recouvrement moyen des strates muscinales et arbustives de \num{63} et \SI{58}{\percent} chacune.
 C'est également le groupe ou il y a de moins d'herbacées avec un recouvrement de \SI{24}{\percent}.
-La strate herbacée est majoritaire dans le troisième groupe avec un recouvrement moyen de \SI{63}{\percent}, la strate arbustive y est peu présence (\SI{19}{\percent} en moyenne) et la strate muscinale y est pour ainsi dire absente (\SI{1}{\percent}).
-La strate muscinale est également absente, ou presque, dans le groupe quatre (\SI{1}{\percent}).
+La strate herbacée est majoritaire dans le Herbe avec un recouvrement moyen de \SI{63}{\percent}, la strate arbustive y est peu présence (\SI{19}{\percent} en moyenne) et la strate muscinale y est pour ainsi dire absente (\SI{1}{\percent}).
+La strate muscinale est également absente, ou presque, dans le groupe Arbuste (\SI{1}{\percent}).
 Groupe dans lequel la strate arbustive est majoritaire avec de \SI{65}{\percent} de recouvrement moyen, et la strate herbacée avec \SI{33}{\percent}.
 
 \begin{figure}
@@ -776,16 +776,16 @@ Groupe dans lequel la strate arbustive est majoritaire avec de \SI{65}{\percent}
 
 
 Les bilans de \coo calculés par groupe de végétations sont présentés dans le tableau~\ref{table:bdc_grp}.
-On constante que du point de vue de l'ENE les groupes 1 et 2 sont relativement proche, et que le groupe 3 est du même ordre de grandeur bien qu'avec une ENE un peu moins négative.
-Le groupe 3 est le seul groupe présentant une ENE positive, du même ordre de grandeur que les précédentes en valeur absolue.
-Dans le détail, la RE est la plus forte, supérieure à \SI{1200}{\gcma}, dans les groupes 2 et 4.
-Elle est plus faible dans les groupes 1 et 3 (environ \SI{1000}{\gcma}).
-Pour la PPB, la valeur la plus faible est dans le groupe 1 et la plus forte dans le groupe 3 avec plus de \SI{1300}{\gcma}, soit une différence de plus de \SI{600}{\gcma}.
-Les groupes 2 et 4 sont relativement proches avec des valeurs intermédiaires avoisinant \SI{1000}{\gcma}.
+On constante que du point de vue de l'ENE les groupes Mousse et Mix sont relativement proche, et que le groupe Arbuste est du même ordre de grandeur bien qu'avec une ENE un peu plus élevée.
+Le groupe Herbe est le seul groupe présentant une ENE positive, du même ordre de grandeur que les précédentes en valeur absolue.
+Dans le détail, la RE est la plus forte, supérieure à \SI{1200}{\gcma}, dans les groupes Mix et Arbuste.
+Elle est plus faible dans les groupes Mousse et Herbe (environ \SI{1000}{\gcma}).
+Pour la PPB, la valeur la plus faible est dans le groupe Mousse et la plus forte dans le groupe Herbe avec plus de \SI{1300}{\gcma}, soit une différence de plus de \SI{600}{\gcma}.
+Les groupes Mix et Arbuste sont relativement proches avec des valeurs intermédiaires avoisinant \SI{1000}{\gcma}.
 
 \begin{table}
 \centering
-\caption{Bilan des flux de \coo en gCm2an1, en utilisant PPB-2 et RE-3}
+\caption{Bilan des flux de \coo en \si{\gcma}, en utilisant PPB-2 et RE-3}
 \label{table:bdc_grp}
 \begin{tabular}{llll}\toprule
 groupe & PPB-2 & RE-3 & ENE \\ \midrule
@@ -797,7 +797,15 @@ Arbuste &  \num{1002} & \num{1262} & \num{-260} \\
 \end{tabular}
 \end{table}
 
-\subsubsection{Modélisation par placette}
+\subsubsection{Calibration par placette}
+
+Les modèles RE-1, RE-3 et PPB-2 ont pu être calibré par placette.
+Pour l'ensemble de ces modèles on constate une forte hausse de la NRMSE (Figure~\ref{fig:loc_ER} et \ref{fig:loc_GPP}).
+Concernant la RE, les modèles RE-1 et RE-3 ont des valeurs de NRMSE relativement proche d'environ \SI{50}{\percent}, avec deux outliers pour RE-1 et un pour RE-3 (Figure~\ref{fig:loc_ER}).
+Les paramètres varient dans des gammes similaires pour les deux modèles.
+Ces gammes sont larges et bien supérieure à \SI{10}{\percent}.
+Concernant la PPB, le modèle PPB-2 a également une NRMSE importante, variant entre 40 et \SI{100}{\percent} avec un outlier.
+Les valeurs des paramètres varient également de façon importante (Figure~\ref{fig:loc_GPP}).
 
 \subsubsection{Corrélation avec facteurs contrôlant}
 
