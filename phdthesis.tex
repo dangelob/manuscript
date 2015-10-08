@@ -49,6 +49,8 @@ list-units=single               % L'unité ne s'affiche qu'au dernier élément
 \usepackage{titlesec}				% Formattage des section
 \usepackage{xcolor}					% Définition de couleur
 
+\usepackage{ifthen}
+
 \usepackage[colorlinks = true, allcolors=blue]{hyperref}
 \usepackage[french]{minitoc}		% Add chapter toc (load after hyperref)
 
@@ -58,6 +60,7 @@ list-units=single               % L'unité ne s'affiche qu'au dernier élément
 
 % temporary setup/package ------------------------------------------------------
 %\geometry{showframe=true}
+%\usepackage{showframe}
 %\usepackage[textwidth=60pt,textsize=footnotesize]{todonotes}
 \usepackage{lineno}					% Numéro de lignes
 
@@ -68,7 +71,7 @@ list-units=single               % L'unité ne s'affiche qu'au dernier élément
 \mtcsetrules{minitoc}{off}			% retire les lignes horizontale des minitoc
 
 %\setlength{\marginparwidth}{60pt}	% taille marge (todo ?)
-\setlength{\headheight}{20pt}		% taille header 28pt apparemment bien pour fancyhdr
+%\setlength{\headheight}{20pt}		% taille header 28pt apparemment bien pour fancyhdr
 
 % set up path to graphs
 \graphicspath{ {images/} }
@@ -118,7 +121,9 @@ list-units=single               % L'unité ne s'affiche qu'au dernier élément
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
 \doublespacing
+
 \pagestyle{mainmatter}					% mainmatter page style
+
 % Ces commandes permettent de modifier le texte renvoyé aux headers
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}

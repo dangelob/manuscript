@@ -58,3 +58,22 @@
 %           minus 2pt means that TeX can shrink it by at most 2pt
 %       This is one example of the concept of, 'glue', in TeX
 %
+
+% Onglets ----------------------------------------------------------------------
+\DeclareFixedFont{\ongletfont}{T1}{pag}{b}{n}{16pt}
+%\newlength{\ongletwidth}
+%\newlength{\ongletheight}
+%\setlength{\ongletheight}{32pt}
+%\setlength{\ongletwidth}{.96cm}
+%
+%\newcommand{\b@iteonglet}{%
+%	\colorbox[gray]{.7}{% une boîte avec un fond gris contenant
+%	% la boîte paragraphe de largeur et hauteur fixée :
+%	\parbox[t][\ongletheight][s]{\ongletwidth}{%
+%		\vfill%
+%		\centering%
+%		% on applique un effet miroir selon la parité de la page
+%		\ifthenelse{\isodd{\value{page}}}{%
+%		\ongletfont\thechapter}{%
+%		\reflectbox{\ongletfont\thechapter}}%
+%\vfill}}}
