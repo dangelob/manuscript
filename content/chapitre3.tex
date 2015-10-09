@@ -159,6 +159,25 @@ Cette classification est généralement représentée par un dendrogramme, elle 
 \end{figure}
 
 
+\subsection{Estimation de l'erreur associée aux flux et aux bilans}
+
+Pour chaque flux, l'erreur sur le bilan annuel est calculé en multipliant ce flux par l'erreur quadratique normalisée, calculée lors de la calibration.
+Pour les bilans, l'erreur associée est calculée comme la somme des erreurs associées aux flux composant le bilan.
+Chacune de ces erreur étant pondérée par leur importance relative par rapport à la somme, en valeur absolue des flux \citep{waddington2000}.
+
+\begin{equation}
+E_{(bilan)} = (\chi_{PPB} \times NRMSE_{PPB}) + (\chi_{RE} \times NRMSE_{RE}) (\chi_{\fchh} \times NRMSE_{\fchh})
+\end{equation}
+
+Avec : 
+\begin{itemize}
+\item $E_{(bilan)}$ l'erreur associée au bilan
+\item $\chi_{flux}$ la fraction du flux par rapport à la somme en valeurs absolue de tous les flux compris dans le bilan
+\item $NRMSE_{flux}$ l'erreur quadratique associée au flux
+\end{itemize}
+
+Ces erreurs ne sont qu'une part de l'erreur totale qui devrait être associée à ces flux. Elle ne considère par exemple pas les erreurs aléatoires et systématiques liées aux mesures.
+
 
 \section{Résultats}
 
