@@ -129,7 +129,7 @@ Deux approches ont été testées afin de caractériser la variabilité spatiale
 La première consiste à calibrer par placette les modèles sélectionnés lors de la modélisation à l'échelle de l'écosystème.
 Cette opération permet ainsi calculer des flux par placette et éventuellement un bilan.
 L'inconvénient de cette méthode étant le faible nombre de points permettant la calibration des modèles conduisant éventuellement à une forte erreur sur l'estimation des paramètres voire à la non convergence des modèles.
-La seconde approche permet de palier en partie à ce souci en faisant des groupes de placette.
+La seconde approche permet de palier en partie à ce souci en calibrant les modèles à partir de groupes de placettes.
 Ces ensembles de placette ont été fait en regroupant les placettes ayant la composition végétale la plus proche.
 Ce choix se justifie par le fait que la végétation joue un rôle important tout en étant délicate à prendre en compte.
 La température, plus facile à mesurer et le niveau de la nappe, qui n'a que peu varié, semblait des choix moins pertinent. 
@@ -746,7 +746,7 @@ Le modèle RE-2, très proche du modèle RE-3 n'a pas été testé.
 
 \subsection{Variabilité spatiale du bilan}
 
-\subsubsection{Représentativité locale}
+\subsubsection{Calibration par groupe de placette}
 
 
 
@@ -764,13 +764,13 @@ Le modèle RE-2, très proche du modèle RE-3 n'a pas été testé.
 \label{fig:loc_GPP}
 \end{figure}
 
-La classification hiérarchique a permis de distinguer 4 groupes de végétation (Figure~\ref{fig:distrib_grpveg}).
+La classification hiérarchique a permis de distinguer 4 groupes de végétation (Figure~\ref{fig:tree}).
 Dans le groupe Mousse, la strate muscinale est majoritaire avec un recouvrement moyen de \SI{91}{\percent}, moins de \num{35} et \SI{15}{\percent} de recouvrement pour les herbacées et les arbustes respectivement.
 Le groupe Mix est le plus homogène avec un recouvrement moyen des strates muscinales et arbustives de \num{63} et \SI{58}{\percent} chacune.
 C'est également le groupe ou il y a de moins d'herbacées avec un recouvrement de \SI{24}{\percent}.
 La strate herbacée est majoritaire dans le Herbe avec un recouvrement moyen de \SI{63}{\percent}, la strate arbustive y est peu présence (\SI{19}{\percent} en moyenne) et la strate muscinale y est pour ainsi dire absente (\SI{1}{\percent}).
 La strate muscinale est également absente, ou presque, dans le groupe Arbuste (\SI{1}{\percent}).
-Groupe dans lequel la strate arbustive est majoritaire avec de \SI{65}{\percent} de recouvrement moyen, et la strate herbacée avec \SI{33}{\percent}.
+Groupe dans lequel la strate arbustive est majoritaire avec de \SI{65}{\percent} de recouvrement moyen, et la strate herbacée avec \SI{33}{\percent} (Figure~\ref{fig:distrib_grpveg}).
 
 \begin{figure}
 \centering
@@ -863,7 +863,7 @@ Ces différences sont également liées à l'importance des flux qui font que, s
 
 %% Discuter la différence 2013-2014 ?
 \textbf{Discussion 2013-2014 ?}
-Dans le détail l'intégration de l'indice de végétation à un effet beaucoup plus important en 2013, avec un flux qui diminue de \SI{365}{\gcma}, qu'en 2014 ou la baisse n'est que de \SI{74}{\gcma}.
+L'intégration de l'indice de végétation à un effet beaucoup plus important en 2013, avec un flux qui diminue de \SI{365}{\gcma}, qu'en 2014 ou la baisse n'est que de \SI{74}{\gcma}.
 
 % % Incertitudes
 %Le modèle PPB-1 souffre d'une incertitude importante sur l'estimation de ses paramètres.
