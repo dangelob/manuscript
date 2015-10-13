@@ -826,17 +826,65 @@ Elle est plus faible dans les groupes Mousse et Herbe (environ \SI{1000}{\gcma})
 Pour la PPB, la valeur la plus faible est dans le groupe Mousse et la plus forte dans le groupe Herbe avec plus de \SI{1300}{\gcma}, soit une différence de plus de \SI{600}{\gcma}.
 Les groupes Mix et Arbuste sont relativement proches avec des valeurs intermédiaires avoisinant \SI{1000}{\gcma}.
 
+%\begin{table}
+%\centering
+%\caption{Bilan des flux de \coo en \si{\gcma}, en utilisant PPB-2 et RE-3}
+%\label{table:bdc_grp}
+%\begin{tabular}{llll}\toprule
+%groupe & PPB-2 & RE-3 & ENE \\ \midrule
+%Mousse &  \num{714} & \num{1023} & \num{-308} \\
+%Mix &  \num{1045} & \num{1385} & \num{-340} \\
+%Herbe &  \num{1323} & \num{1057} & \num{266} \\
+%Arbuste &  \num{1002} & \num{1262} & \num{-260} \\
+%\bottomrule
+%\end{tabular}
+%\end{table}
+
+\begin{table}
+\centering
+\caption{Bilan des flux de \coo en \si{\gcma} interpolés par groupe de végétation avec les modèles RE-1 et RE-3 pour la respiration et les modèles PPB-1 et PPB-2 pour la photosynthèse. (Le modèle RE-2, très proche de RE-3 n'a pas été inclus)}
+\label{table:flux_grp}
+\begin{tabular}{lllllll}\toprule
+& \multicolumn{3}{c}{RE} &  \multicolumn{3}{c}{PPB} \\ \cmidrule(lr){2-4} \cmidrule(lr){5-7} 
+groupe & valeur & R\textsuperscript{2} & NRMSE & valeur & R\textsuperscript{2} & NRMSE\\ \midrule
+& \multicolumn{3}{l}{RE-1} &  \multicolumn{3}{l}{PPB-1} \\
+Mousse &  \num{975} & \num{0.22} & \num{66.48} & \num{886} & \num{0.42} & \num{56.54} \\
+Mix &  \num{1365} & \num{0.58} & \num{49.09} & \num{1065} & \num{0.56} & \num{43.70}  \\
+Herbe &  \num{1453} & \num{0.56} & \num{50.93}  & \num{1056} & \num{0.42} & \num{64.66} \\
+Arbuste &  \num{1237} & \num{0.49} & \num{47.02} & \num{895} & \num{0.31} & \num{58.86}  \\ [+1ex]
+& \multicolumn{3}{l}{RE-3} &  \multicolumn{3}{l}{PPB-2} \\
+Mousse &  \num{1023} & \num{0.68} & \num{42.91} & \num{808} & \num{0.58} & \num{47.92} \\
+Mix &  \num{1393} & \num{0.58} & \num{48.88} & \num{876} & \num{0.65} & \num{38.93}  \\
+Herbe &  \num{1115} & \num{0.72} & \num{40.84}  & \num{1277} & \num{0.65} & \num{50.30} \\
+Arbuste &  \num{1274} & \num{0.53} & \num{45.25} & \num{953} & \num{0.46} & \num{52.14}  \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \begin{table}
 \centering
 \caption{Bilan des flux de \coo en \si{\gcma}, en utilisant PPB-2 et RE-3}
 \label{table:bdc_grp}
-\begin{tabular}{llll}\toprule
-groupe & PPB-2 & RE-3 & ENE \\ \midrule
-Mousse &  \num{714} & \num{1023} & \num{-308} \\
-Mix &  \num{1045} & \num{1385} & \num{-340} \\
-Herbe &  \num{1323} & \num{1057} & \num{266} \\
-Arbuste &  \num{1002} & \num{1262} & \num{-260} \\
-\bottomrule
+\begin{tabular}{llllll}  \cmidrule[0.08em](r){1-5}%\toprule
+
+année & Mousse & Mix & Herbe & Arbuste & \\ \cmidrule(r){1-5} %\midrule
+\multicolumn{6}{l}{PPB-1, RE-1} \\
+2013 &  \num{-147} & \num{-321} & \num{-436} & \num{-368} & \num{-15}\\
+2014 &  \num{-32} & \num{-280} & \num{-357} & \num{-314} & +\num{23} \\
+2 années &  \num{-90} & \num{-300} & \num{-397} & \num{-341} & +\num{4}\\[+1ex]
+\multicolumn{6}{l}{PPB-1, RE-3} \\
+2013 &  \num{-136} & \num{-342} & \num{-2} & \num{-344} & +\num{82} \\
+2014 &  \num{-139} & \num{-315} & \num{-116} & \num{-413} & \num{-23} \\
+2 années &  \num{-138} & \num{-328} & \num{-59} & \num{-378} & +\num{29} \\[+1ex]
+\multicolumn{6}{l}{PPB-2, RE-1} \\
+2013 &  \num{-274} & \num{-596} & \num{-356} & \num{-403} & \num{-380} \\
+2014 &  \num{-61} & \num{-383} & +\num{5} & \num{-165}& \num{-51} \\
+2 années &  \num{-168} & \num{-489} & \num{-175} & \num{-284} & \num{-216} \\[+1ex]
+\multicolumn{6}{l}{PPB-2, RE-3} \\
+2013 &  \num{-263} & \num{-616} & +\num{79} & \num{-378} & \num{-283} \\
+2014 &  \num{-168} & \num{-418} & +\num{245} & \num{-263} & \num{-97} \\
+2 années &  \num{-216} & \num{-517} & +\num{162} & \num{-321} & \num{-191}\\[+1ex]
+\cmidrule[0.08em](r){1-5} %\bottomrule
 \end{tabular}
 \end{table}
 
