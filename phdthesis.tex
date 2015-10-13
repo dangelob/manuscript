@@ -4,7 +4,12 @@
 % bibtex
 % makeindex -s perso_index.ist "phdthesis".idx
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% commandes pour passer le validateur cines : 
+% 	gs -DSAFER -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dEmbedAllFonts=true -sOutputFile=outputFile.pdf -f inputFile.pdf
+% n'augmente pas la taille du fichier
+% Alternative : 
+% 	pdftk phdthesis.pdf output FichierCorrect.pdf
+% (augmente fortement la taille du fichier)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[a4paper,12pt, twoside]{book}
 % Packages base ----------------------------------------------------------------
@@ -74,7 +79,8 @@ list-units=single               % L'unité ne s'affiche qu'au dernier élément
 %\setlength{\headheight}{20pt}		% taille header 28pt apparemment bien pour fancyhdr
 
 % set up path to graphs
-\graphicspath{ {images/} }
+%\graphicspath{ {images/} }
+\graphicspath{{./images/}}
 
 % partie à compiler 
 %\includeonly{content/chapitre1, content/introduction}
