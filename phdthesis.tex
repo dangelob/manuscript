@@ -55,7 +55,8 @@ list-units=single               % L'unité ne s'affiche qu'au dernier élément
 \usepackage{array}				% Rotation des tableaux
 \usepackage{titlesec}				% Formattage des section
 \usepackage{xcolor}					% Définition de couleur
-\usepackage{float}
+\usepackage{float}					% Positionnement des flottants
+\usepackage{wrapfig}				% Texte autour des figures
 
 %Options: Sonny ?, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup ?
 \usepackage[Glenn]{fncychap}
@@ -105,6 +106,9 @@ list-units=single               % L'unité ne s'affiche qu'au dernier élément
 %\renewcommand{\figurename}{Nom de figure}
 \renewcommand{\listfigurename}{Liste des figures}%
 %\renewcommand{\listtablename}{Nouveau nom}%
+
+% Proportion d'une page qui peut être un float
+\renewcommand{\topfraction}{.80}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Frontmatter

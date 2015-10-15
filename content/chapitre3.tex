@@ -368,7 +368,8 @@ les moyennes de l'ENE en 2013 et 2014 sont très proche et sont respectivement d
 Les flux de \chh comme ceux du \coo montre une variabilité saisonnière importante.
 Cependant les flux de \chh mesurés sont un ordre de grandeur en dessous de ceux mesurés pour le \coo (Figure~\ref{fig:CH4_evolution_avg}).
 À l'inverse de ce dernier, l'importance des flux de \chh mesurés en 2013 et 2014 est différente.
-En 2013 les flux sont moins importants qu'en 2014 avec des maximum de \num{0.078} et \SI{0.196}{\uml} respectivement.
+En 2013 les flux sont moins importants qu'en 2014 avec \num{0.04(003)} contre \SI{0.10(008)}{\uml} et avec des maximum de \num{0.078} et \SI{0.196}{\uml} respectivement.
+
 
 \begin{figure}
 \centering
@@ -378,14 +379,16 @@ En 2013 les flux sont moins importants qu'en 2014 avec des maximum de \num{0.078
 \end{figure}
 
 %\subsubsection{Le Carbone Organique Dissous (COD)}
+
+
+\subsubsection{Les relations flux gazeux et facteurs contrôlant}
+
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{chap3/Fl_FC}
 \caption{Relations entre les flux de gaz et une sélection de facteurs contrôlant}
 \label{fig:Fl_FC}
 \end{figure}
-
-\subsubsection{Les relations flux gazeux et facteurs contrôlant}
 
 Comme précisé précédemment, le niveau de la nappe n'a que peu varié pendant les deux années de mesures.
 De ce fait aucune relation claire ne se distingue entre les flux et le niveau de la nappe que ce soit pour le \coo (PPB et RE) ou le \chh (Figure~\ref{fig:Fl_FC}).
@@ -397,12 +400,6 @@ Le \chh quant à lui ne présente pas de relation avec la température de l'air,
 
 \subsubsection{La Production Primaire Brute}
 
-\begin{figure}
-\centering
-\includegraphics[width=1.15\textwidth, center]{chap3/mdl_GPP_Tair}
-\caption{PPBsat modèles Tair utilisant l'équation~\ref{eq:juneTair}}
-\label{fig:mdl_GPP_Tair}
-\end{figure}
 
 L'estimation de la PPB se fait en deux étapes.
 Dans un premier temps on estime le potentiel maximum de photosynthèse à un instant donné dans des conditions de lumière saturante (PPBsat).
@@ -425,6 +422,13 @@ On utilise l'équation~\ref{eq:PPB_bubier} proposée par \citep{bubier1998} et r
 \begin{equation} \label{eq:PPB_bubier}
 PPB = \frac{PPBsat * a * PAR}{PPBsat + a * PAR}
 \end{equation}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.15\textwidth, center]{chap3/mdl_GPP_Tair}
+\caption{PPBsat modèles Tair utilisant l'équation~\ref{eq:juneTair}}
+\label{fig:mdl_GPP_Tair}
+\end{figure}
 
 L'utilisation de l'équation de June seule, avec la température de l'air comme variable explicative de la PPBsat, permet d'expliquer 66 \% des variations observées avec une erreur standard de l'estimation de \SI{32}{\percent} (Figure~\ref{fig:mdl_GPP_Tair}-a).
 Les résidus de ce modèle se répartissent de façon relativement homogène et non biaisée (Figure~\ref{fig:mdl_GPP_Tair}-b).
@@ -474,7 +478,13 @@ Dans la suite du texte le modèle permettant d'estimer la PPB à partir des équ
 \subsubsection{La Respiration de l'Écosystème}
 
 %%%%%%%%%%%%%%%%%%%%% RE
-
+\begin{figure}[p]
+\centering
+\includegraphics[width=1.05\textwidth, center]{chap3/mdl_ER_Tair}
+\caption{\label{fig:mdl_ER_Tair}RE modèles avec Tair}
+\includegraphics[width=1.05\textwidth, center]{chap3/mdl_ER_Tair_IVH}
+\caption{\label{fig:ER_mdl_TairIVH}RE modèles avec Tair}
+\end{figure}
 
 L'estimation de la RE s'effectue avec l'équation :
 
@@ -506,19 +516,21 @@ De l'autre l'évaluation de l'équation~\ref{eq:RE_TH} montre une erreur standar
 Les paramètres des différentes équations sont présentés dans le tableau~\ref{table:mdl_par}, les modèles RE-1, RE-2, et RE-3 correspondent respectivement aux équations~\ref{eq:RE_T}, \ref{eq:RE_TIV} et \ref{eq:RE_TH}.
 À l'inverse de la PPB les paramètres des modèles de la RE ont, à l'exception du paramètre c du modèle RE-2, une significativité importante et une erreur standard faible.
 
-\begin{figure}
-\centering
-\includegraphics[width=1.05\textwidth, center]{chap3/mdl_ER_Tair}
-\caption{RE modèles avec Tair}
-\label{fig:mdl_ER_Tair}
-\end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=1.05\textwidth, center]{chap3/mdl_ER_Tair_IVH}
-\caption{RE modèles avec Tair}
-\label{fig:ER_mdl_TairIVH}
-\end{figure}
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=1.05\textwidth, center]{chap3/mdl_ER_Tair}
+%\caption{RE modèles avec Tair}
+%\label{fig:mdl_ER_Tair}
+%\end{figure}
+%
+%\begin{figure}
+%\centering
+%\includegraphics[width=1.05\textwidth, center]{chap3/mdl_ER_Tair_IVH}
+%\caption{RE modèles avec Tair}
+%\label{fig:ER_mdl_TairIVH}
+%\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%% ENE
 %\subsubsection{L'Échange Net de l'Écosystème}
@@ -541,18 +553,31 @@ Les paramètres des différentes équations sont présentés dans le tableau~\re
 
 \subsubsection{Le flux de \chh}
 
-\begin{figure}
+\begin{wrapfigure}{r}{0.5\textwidth}
 \centering
-\includegraphics[width=1.15\textwidth, center]{chap3/mdl_CH4_IV}
-\caption{CH4 modèle H}
-\label{fig:CH4_mdl}
-\end{figure}
+\vspace{-40pt}
+\includegraphics[width=.5\textwidth]{chap3/CH4_T_exp}
+\caption{Évolution du R\textsuperscript{2} de l'équation $F_{CH_{4}} = a*exp(b*Temp\acute{e}rature)$ avec la profondeur. La ligne de tirets gris représente la surface du sol. La zone bleu claire représente la gamme des niveau moyen relevés sur le site et la zone bleu foncé le niveau moyen pour l'année 2013 et 2014.}
+\label{fig:CH4_T}
+\end{wrapfigure}
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=.5\textwidth, center]{chap3/CH4_T_exp}
+%\caption{Évolution du R\textsuperscript{2} de l'équation $F_{CH_{4}} = a*exp(b*Temp\acute{e}rature)$ avec la profondeur. La ligne de tirets gris représente la surface du sol. La zone bleu claire représente la gamme des niveau moyen relevés sur le site et la zone bleu foncé le niveau moyen pour l'année 2013 et 2014.}
+%\label{fig:CH4_T}
+%\end{figure}
 
 Les relations entre les facteurs contrôlant mesurés et le \chh sont moins claires que celles concernant le \coo.
-La corrélation la plus importante est liée à la végétation (R\textsuperscript{2} = \textbf{XX},Figure~\ref{fig:Fl_FC}). 
-le \chh est également corrélé avec les températures, faiblement avec les températures de surface, mais de manière plus importante avec les températures du sol à plus forte profondeur (R\textsuperscript{2} = \textbf{XX},Figure~\ref{fig:Fl_FC}).
-Enfin il est anti-corrélé (R=-0.51) avec le niveau de la nappe.
-Les relations \chh et végétation ont donc pu être modélisées avec 
+La corrélation la plus importante est liée à la végétation (Figure~\ref{fig:Fl_FC}).
+Le \chh ne montre pas de tendance à augmenter de façon exponentielle avec la température de l'air.
+Cependant cette relation se renforce d'autant plus que l'on utilise des températures mesurées à forte profondeur (Figure~\ref{fig:CH4_T}).
+Souvent utilisée les températures proches du niveau de nappe on des R\textsuperscript{2} inférieur à \num{0.50}.
+Au delà, les R\textsuperscript{2} sont supérieurs à \num{0.50}, mais l'ensemble des placettes n'est plus représenté, certaines placettes n'ayant pas une épaisseur de tourbe supérieure ou égale à \SI{30}{\centi\metre}.
+Le \chh ne montre pas de relation particulière avec le niveau de la nappe.
+%le \chh est également corrélé avec les températures, faiblement avec les températures de surface, mais de manière plus importante avec les températures du sol à plus forte profondeur (R\textsuperscript{2} = \textbf{XX},Figure~\ref{fig:Fl_FC}).
+%Enfin il est anti-corrélé (R=-0.51) avec le niveau de la nappe.
+Les relations \chh et végétation ont donc été modélisées avec 
 
 \begin{equation} \label{eq:CH4_H}
 F_{CH_{4}} = a*exp(b*IV)
@@ -563,6 +588,12 @@ Aucune tendance ne semble se dégager entre les résidus de cette équations et 
 L'évaluation de cette équation montre une tendance à sous-estimer les flux de \chh et une erreur standard qui double par rapport à la phase de calibration en atteignant \SI{68}{\percent}.
 Les détails de l'estimation des paramètres de l'équation~\ref{eq:CH4_H} est visible dans le tableau~\ref{table:mdl_par} sous le nom FCH4.
 
+\begin{figure}
+\centering
+\includegraphics[width=1.15\textwidth, center]{chap3/mdl_CH4_IV}
+\caption{CH4 modèle H}
+\label{fig:CH4_mdl}
+\end{figure}
 %bortoluzzi veg
 %Alm 1999 T -30 cm
 %Bellisario relation inverse avec WTL (increased flux with lower WTL) T10
@@ -615,21 +646,21 @@ Les détails de l'estimation des paramètres de l'équation~\ref{eq:CH4_H} est v
 
 \begin{figure}
 \centering
-\includegraphics[width=1.15\textwidth, center]{chap3/BdC_GPP_interp}
+\includegraphics[width=1\textwidth, center]{chap3/BdC_GPP_interp}
 \caption{Flux de \coo interpolé à l'heure à partir de PPB-1 (en haut) et PPB-2 (en bas). Les points rouges représentent les moyennes des mesures mensuelles et leur déviation standard}
 \label{fig:BdC_GPP_interp}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=1.15\textwidth, center]{chap3/BdC_ER_interp}
+\includegraphics[width=1\textwidth, center]{chap3/BdC_ER_interp}
 \caption{Flux de \coo interpolé à l'heure à partir de RE-1 (en haut), RE-2 (au milieu) et RE-3 (en bas). Les points rouges représentent les moyennes des mesures mensuelles et leur déviation standard}
 \label{fig:BdC_ER_interp}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=1.15\textwidth, center]{chap3/CH4_BdCitp_IVcov}
+\includegraphics[width=1\textwidth, center]{chap3/CH4_BdCitp_IVcov}
 \caption{Flux de \coo interpolé à partir de FCH4. Les points violets représentent les moyennes des mesures mensuelles et leur déviation standard}
 \label{fig:BdC_CH4_interp}
 \end{figure}
@@ -851,6 +882,47 @@ Le modèle RE-2, très proche du modèle RE-3 n'a pas été testé.
 
 
 
+La classification hiérarchique a permis de distinguer 4 groupes de végétation (Figure~\ref{fig:tree}).
+Dans le groupe Mousse, la strate muscinale est majoritaire avec un recouvrement moyen de \SI{91}{\percent}, moins de \num{35} et \SI{15}{\percent} de recouvrement pour les herbacées et les arbustes respectivement.
+Le groupe Mix est le plus homogène avec un recouvrement moyen des strates muscinales et arbustives de \num{63} et \SI{58}{\percent} chacune.
+C'est également le groupe ou il y a de moins d'herbacées avec un recouvrement de \SI{24}{\percent}.
+La strate herbacée est majoritaire dans le Herbe avec un recouvrement moyen de \SI{63}{\percent}, la strate arbustive y est peu présence (\SI{19}{\percent} en moyenne) et la strate muscinale y est pour ainsi dire absente (\SI{1}{\percent}).
+La strate muscinale est également absente, ou presque, dans le groupe Arbuste (\SI{1}{\percent}).
+Groupe dans lequel la strate arbustive est majoritaire avec de \SI{65}{\percent} de recouvrement moyen, et la strate herbacée avec \SI{33}{\percent} (Figure~\ref{fig:distrib_grpveg}).
+Les flux, calculés à partir des même équations que celles utilisées à l'échelle de l'écosystème entier, ont des erreurs plus importante : de \num{41} à \SI{66}{\percent} pour RE-1 et RE-2 et de \num{39} à \SI{65}{\percent} pour PPB-1 et PPB-2 (Tableau~\ref{table:flux_grp}).
+Pour la RE les flux sont du même ordre de grandeur que ceux calculés avec l'ensemble des placettes, que ce soit pour RE-1 ou RE-2.
+Le groupe Mousse a, pour les deux modèles, un flux annuel plus faible que le flux calculé à l'échelle de l'écosystème.
+Le groupe Arbuste est, quant à lui, le plus proche des flux « écosystèmes » tandis que le groupe Mix est au dessus.
+L'estimation de la RE du groupe Herbe est supérieure a celle estimée à l'échelle de l'écosystème pour RE-1 et inférieure pour RE-3.
+La RE du groupe Mousse est inférieur aux autres groupes que ce soit pour RE-1 ou RE-3. 
+Entre RE-1 et RE-3 les estimations du groupe Herbe diminue de façon importante (\num{-338}) alors qu'elles sont relativement similaire ($\pm$\num{50}) pour les autres groupes.
+Pour la PPB, les estimations de PPB-1 sont systématiquement inférieures à celles réalisées à l'échelle de l'écosystème.
+Pour PPB-2 seul le groupe Herbe à une estimation supérieure.
+Les différences entre PPB-1 et PPB-2 sont plus importantes que celles observées pour RE, même si la plus grande différence (\num{221}) est observée pour le même groupe, le groupe Herbe.
+Le groupe Mix cependant une différence du même ordre de grandeur (\num{189}), tandis que pour les deux autres groupes cette différence est plus faible (78 et 58 respectivement pour les groupes Mousse et Arbuste).
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/distrib_grpveg}
+\caption{Recouvrement végétal moyen par strate (en \si{\percent}) des 4 groupes, les groupes sont nommés en fonction de la végétation majoritaire. Les barres d'erreur représente la déviation standard.}
+\label{fig:distrib_grpveg}
+\end{figure}
+
+En terme de bilan de \coo, les groupes Arbuste et Mousse sont ceux qui sont le moins impactés par le choix des modèles (Tableau~\ref{table:bdc_grp}).
+Quand la végétation n'est pas prise en compte pour l'estimation de la RE (modèle RE-1), le groupe Mousse est celui dont le bilan est le moins négatif.
+Quand la végétation est prise en compte (modèle RE-3) c'est le groupe Herbe qui perd le moins de carbone (PPB-1, RE-3) voire qui en stocke (PPB-2, RE-3).
+Les groupes Mix et Arbustes ont des valeurs de bilan généralement proche quand la végétation n'est pas prise en compte dans l'estimation de la PPB.
+%Les bilans de \coo calculés par groupe de végétations sont présentés dans le tableau~\ref{table:bdc_grp}.
+%On constante que du point de vue de l'ENE les groupes Mousse et Mix sont relativement proche, et que le groupe Arbuste est du même ordre de grandeur bien qu'avec une ENE un peu plus élevée.
+%Le groupe Herbe est le seul groupe présentant une ENE positive, du même ordre de grandeur que les précédentes en valeur absolue.
+%Dans le détail, la RE est la plus forte, supérieure à \SI{1200}{\gcma}, dans les groupes Mix et Arbuste.
+%Elle est plus faible dans les groupes Mousse et Herbe (environ \SI{1000}{\gcma}).
+%Pour la PPB, la valeur la plus faible est dans le groupe Mousse et la plus forte dans le groupe Herbe avec plus de \SI{1300}{\gcma}, soit une différence de plus de \SI{600}{\gcma}.
+%Les groupes Mix et Arbuste sont relativement proches avec des valeurs intermédiaires avoisinant \SI{1000}{\gcma}.
+
+
+
+
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{chap3/loc_ER}
@@ -864,31 +936,6 @@ Le modèle RE-2, très proche du modèle RE-3 n'a pas été testé.
 \caption{Distribution de l'erreur standard par placette (en gris) et des paramètres du modèle PPB-2 (en noir)}
 \label{fig:loc_GPP}
 \end{figure}
-
-La classification hiérarchique a permis de distinguer 4 groupes de végétation (Figure~\ref{fig:tree}).
-Dans le groupe Mousse, la strate muscinale est majoritaire avec un recouvrement moyen de \SI{91}{\percent}, moins de \num{35} et \SI{15}{\percent} de recouvrement pour les herbacées et les arbustes respectivement.
-Le groupe Mix est le plus homogène avec un recouvrement moyen des strates muscinales et arbustives de \num{63} et \SI{58}{\percent} chacune.
-C'est également le groupe ou il y a de moins d'herbacées avec un recouvrement de \SI{24}{\percent}.
-La strate herbacée est majoritaire dans le Herbe avec un recouvrement moyen de \SI{63}{\percent}, la strate arbustive y est peu présence (\SI{19}{\percent} en moyenne) et la strate muscinale y est pour ainsi dire absente (\SI{1}{\percent}).
-La strate muscinale est également absente, ou presque, dans le groupe Arbuste (\SI{1}{\percent}).
-Groupe dans lequel la strate arbustive est majoritaire avec de \SI{65}{\percent} de recouvrement moyen, et la strate herbacée avec \SI{33}{\percent} (Figure~\ref{fig:distrib_grpveg}).
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/distrib_grpveg}
-\caption{Recouvrement végétal moyen par strate (en \si{\percent}) des 4 groupes, les groupes sont nommés en fonction de la végétation majoritaire. Les barres d'erreur représente la déviation standard.}
-\label{fig:distrib_grpveg}
-\end{figure}
-
-
-Les bilans de \coo calculés par groupe de végétations sont présentés dans le tableau~\ref{table:bdc_grp}.
-On constante que du point de vue de l'ENE les groupes Mousse et Mix sont relativement proche, et que le groupe Arbuste est du même ordre de grandeur bien qu'avec une ENE un peu plus élevée.
-Le groupe Herbe est le seul groupe présentant une ENE positive, du même ordre de grandeur que les précédentes en valeur absolue.
-Dans le détail, la RE est la plus forte, supérieure à \SI{1200}{\gcma}, dans les groupes Mix et Arbuste.
-Elle est plus faible dans les groupes Mousse et Herbe (environ \SI{1000}{\gcma}).
-Pour la PPB, la valeur la plus faible est dans le groupe Mousse et la plus forte dans le groupe Herbe avec plus de \SI{1300}{\gcma}, soit une différence de plus de \SI{600}{\gcma}.
-Les groupes Mix et Arbuste sont relativement proches avec des valeurs intermédiaires avoisinant \SI{1000}{\gcma}.
-
 %\begin{table}
 %\centering
 %\caption{Bilan des flux de \coo en \si{\gcma}, en utilisant PPB-2 et RE-3}
@@ -924,30 +971,55 @@ Arbuste &  \num{1274} & \num{0.53} & \num{45.25} & \num{953} & \num{0.46} & \num
 \end{tabular}
 \end{table}
 
+%\begin{table}
+%\centering
+%\caption{Bilan des flux de \coo en \si{\gcma}, en utilisant PPB-2 et RE-3}
+%\label{table:bdc_grp}
+%\begin{tabular}{llllll}  \cmidrule[0.08em](r){1-5}%\toprule
+%année & Mousse & Mix & Herbe & Arbuste & \\ \cmidrule(r){1-5} %\midrule
+%\multicolumn{6}{l}{PPB-1, RE-1} \\
+%%2013 &  \num{-147} & \num{-321} & \num{-436} & \num{-368} & \num{-15}\\
+%%2014 &  \num{-32} & \num{-280} & \num{-357} & \num{-314} & +\num{23} \\
+%2 années &  \num{-90} & \num{-300} & \num{-397} & \num{-341} & +\num{4}\\[+1ex]
+%\multicolumn{6}{l}{PPB-1, RE-3} \\
+%%2013 &  \num{-136} & \num{-342} & \num{-2} & \num{-344} & +\num{82} \\
+%%2014 &  \num{-139} & \num{-315} & \num{-116} & \num{-413} & \num{-23} \\
+%2 années &  \num{-138} & \num{-328} & \num{-59} & \num{-378} & +\num{29} \\[+1ex]
+%\multicolumn{6}{l}{PPB-2, RE-1} \\
+%%2013 &  \num{-274} & \num{-596} & \num{-356} & \num{-403} & \num{-380} \\
+%%2014 &  \num{-61} & \num{-383} & +\num{5} & \num{-165}& \num{-51} \\
+%2 années &  \num{-168} & \num{-489} & \num{-175} & \num{-284} & \num{-216} \\[+1ex]
+%\multicolumn{6}{l}{PPB-2, RE-3} \\
+%%2013 &  \num{-263} & \num{-616} & +\num{79} & \num{-378} & \num{-283} \\
+%%2014 &  \num{-168} & \num{-418} & +\num{245} & \num{-263} & \num{-97} \\
+%2 années &  \num{-216} & \num{-517} & +\num{162} & \num{-321} & \num{-191}\\[+1ex]
+%\cmidrule[0.08em](r){1-5} %\bottomrule
+%\end{tabular}
+%\end{table}
+
 \begin{table}
 \centering
-\caption{Bilan des flux de \coo en \si{\gcma}, en utilisant PPB-2 et RE-3}
+\caption{Bilan de \coo par groupe de végétation (en \si{\gcma}) avec différentes combinaison de modèles. La dernière colonne représente de bilan de \coo à l'échelle de l'écosystème.}
 \label{table:bdc_grp}
-\begin{tabular}{llllll}  \cmidrule[0.08em](r){1-5}%\toprule
-
-année & Mousse & Mix & Herbe & Arbuste & \\ \cmidrule(r){1-5} %\midrule
-\multicolumn{6}{l}{PPB-1, RE-1} \\
-2013 &  \num{-147} & \num{-321} & \num{-436} & \num{-368} & \num{-15}\\
-2014 &  \num{-32} & \num{-280} & \num{-357} & \num{-314} & +\num{23} \\
-2 années &  \num{-90} & \num{-300} & \num{-397} & \num{-341} & +\num{4}\\[+1ex]
-\multicolumn{6}{l}{PPB-1, RE-3} \\
-2013 &  \num{-136} & \num{-342} & \num{-2} & \num{-344} & +\num{82} \\
-2014 &  \num{-139} & \num{-315} & \num{-116} & \num{-413} & \num{-23} \\
-2 années &  \num{-138} & \num{-328} & \num{-59} & \num{-378} & +\num{29} \\[+1ex]
-\multicolumn{6}{l}{PPB-2, RE-1} \\
-2013 &  \num{-274} & \num{-596} & \num{-356} & \num{-403} & \num{-380} \\
-2014 &  \num{-61} & \num{-383} & +\num{5} & \num{-165}& \num{-51} \\
-2 années &  \num{-168} & \num{-489} & \num{-175} & \num{-284} & \num{-216} \\[+1ex]
-\multicolumn{6}{l}{PPB-2, RE-3} \\
-2013 &  \num{-263} & \num{-616} & +\num{79} & \num{-378} & \num{-283} \\
-2014 &  \num{-168} & \num{-418} & +\num{245} & \num{-263} & \num{-97} \\
-2 années &  \num{-216} & \num{-517} & +\num{162} & \num{-321} & \num{-191}\\[+1ex]
-\cmidrule[0.08em](r){1-5} %\bottomrule
+\begin{tabular}{llllll}  \toprule
+Modèles & Mousse & Mix & Herbe & Arbuste & Écosystème  \\ \midrule
+%\multicolumn{6}{l}{PPB-1, RE-1} \\
+%2013 &  \num{-147} & \num{-321} & \num{-436} & \num{-368} & \num{-15}\\
+%2014 &  \num{-32} & \num{-280} & \num{-357} & \num{-314} & +\num{23} \\
+PPB-1, RE-1 &  \num{-90} & \num{-300} & \num{-397} & \num{-341} & +\num{4}\\[+1ex]
+%\multicolumn{6}{l}{PPB-1, RE-3} \\
+%2013 &  \num{-136} & \num{-342} & \num{-2} & \num{-344} & +\num{82} \\
+%2014 &  \num{-139} & \num{-315} & \num{-116} & \num{-413} & \num{-23} \\
+PPB-1, RE-3 &  \num{-138} & \num{-328} & \num{-59} & \num{-378} & +\num{29} \\[+1ex]
+%\multicolumn{6}{l}{PPB-2, RE-1} \\
+%2013 &  \num{-274} & \num{-596} & \num{-356} & \num{-403} & \num{-380} \\
+%2014 &  \num{-61} & \num{-383} & +\num{5} & \num{-165}& \num{-51} \\
+PPB-2, RE-1 &  \num{-168} & \num{-489} & \num{-175} & \num{-284} & \num{-216} \\[+1ex]
+%\multicolumn{6}{l}{PPB-2, RE-3} \\
+%2013 &  \num{-263} & \num{-616} & +\num{79} & \num{-378} & \num{-283} \\
+%2014 &  \num{-168} & \num{-418} & +\num{245} & \num{-263} & \num{-97} \\
+PPB-2, RE-3 &  \num{-216} & \num{-517} & +\num{162} & \num{-321} & \num{-191}\\[+1ex]
+\bottomrule
 \end{tabular}
 \end{table}
 
