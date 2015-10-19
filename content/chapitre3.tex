@@ -1049,6 +1049,12 @@ Les valeurs des paramètres varient également de façon importante (Figure~\ref
 
 \section{Discussion}
 
+La discussion de ce chapitre, s'articule autour de quatre parties.
+La première concerne les modèles calibrés à l'échelle de l'écosystème, leurs différences leurs qualités respectives.
+La seconde détaille les différents flux estimés par ces modèles.
+Le(s) bilan(s) de carbone issu(s) de ces flux sont exposés dans la troisième partie.
+Enfin la quatrième discute des éléments concernant la variabilité spatiale des flux.
+
 \subsection{Modèles à l'échelle de l'écosystème}
 
 \subsubsection{PPB}
@@ -1056,38 +1062,50 @@ Les valeurs des paramètres varient également de façon importante (Figure~\ref
 %\noindent
 %\textit{Estimation de la PPB}
 
-% % Apport IV
-Le modèle PPB-1 a une incertitude importante sur l'estimation de ses paramètres.
-L'apport de l'indice de végétation dans l'estimation de la PPB est important lors de la phase de calibration.
-Il permet de diminuer l'incertitude sur les paramètres du modèles, d'augmenter leur significativité et d'améliorer la représentativité des données mesurées.
-L'intégration de la végétation aux modèles d'estimation de la PPB est rarement réalisé \citep{bortoluzzi2006a,gorres2014}, probablement à cause de la difficulté à prendre en compte ce signal.
-La diversité des espèces végétales rend difficile la mise en place de protocole de suivi non-destructif généralisable à un grand nombre d'espèces.
-Malgré cette amélioration lors de la calibration, lorsqu'il est évalué sur un jeu de données indépendant, le modèle PPB-2 à une erreur standard plus importante que celle du modèle PPB-1.
-De plus après interpolation le modèle PPB-2 ne semble pas pouvoir représenter les valeurs maximum de PPB mesurée.
-L'apport de cet indice dans l'estimation de la PPB n'est donc pas généralisable.
-Bien que rarement faite à cause de la rareté des données, l'évaluation des modèles est cependant d'un intérêt fort afin de confirmer ou d'infirmer l'apport de l'ajout d'un prédicteur à un modèle, particulièrement si l'on souhaite l'extrapoler.
+À l'inverse du modèle PPB-2, le modèle PPB-1 ne prend pas en compte de façon directe la végétation.
+L'estimation des paramètres de PPB-1 conduit à une incertitude forte : supérieure à \SI{60}{\percent} pour les paramètres $a$ et $b$ et à \SI{20}{\percent} pour les paramètres $c$ et $i$ (Tableau~\ref{table:mdl_par}).
+Cette incertitude diminue pour PPB-2 avec l'intégration de l'IV, passant sous les \SI{20}{\percent} pour l'ensemble des paramètres.
+Ces paramètres sont dans la gamme de ceux rapportés par \citet{june2004} : entre \num{23} et \SI{296.5}{\umle} pour la vitesse de transport des électrons photosynthétique à lumière saturante, entre \num{28.4} et \SI{55.7}{\degreeCelsius} pour la température optimale du transport et entre \num{13.9} et \SI{30.2}{\degreeCelsius} pour la différence de température à laquelle PPBsat vaut e\textsuperscript{-1}.
+Lors de la phase de calibration, l'intégration de l'IV augmente la significativité des estimations et la représentativité des données mesurées.
 
-%% différences entre les modèles
-Les différences observées selon la façon d'estimer la PPB peuvent paraître importante, néanmoins elles sont du même ordre de grandeur que celle rencontré par \citet{worrall2009} qui compare différentes façons de modéliser des flux de gaz avec des équations différentes (et non pas juste des variations sur un type de modèle).
-Ces différences sont également liées à la valeur élevée des flux qui font que, surtout dans le cas de modèles exponentiels, de faibles variations peuvent avoir des effets importants comme en témoigne l'analyse de sensibilité des paramètres du modèle (Tableau~\ref{table:mdl_sensitiv_BdC}).
-
-%% Discuter la différence 2013-2014 ?
-%\textbf{Discussion 2013-2014 ?}
-L'intégration de l'indice de végétation à un effet beaucoup plus important en 2013, avec un flux qui diminue de \SI{365}{\gcma}, qu'en 2014 ou la baisse n'est que de \SI{74}{\gcma}.
+Lors de l'évaluation cependant, l'augmentation de l'erreur du modèle PPB-2, intégrant l'IV, est supérieure et dépasse (en valeur absolue) celle du modèle PPB-1. l'apport de l'IV dans l'estimation de la PPB n'est donc pas généralisable.
+Par ailleurs, l'intégration de l'indice de végétation à un effet beaucoup plus important en 2013, avec un flux qui diminue de \SI{365}{\gcma}, qu'en 2014 ou la baisse n'est que de \SI{74}{\gcma}.
 La prise en compte de la végétation, si elle améliore les incertitudes statistiques du modèles, semblent sous-estimer la PPB.
 En effet le modèle PPB-2 ne rend pas compte des valeurs les plus élevées qui ont été mesurées (Figure~\ref{fig:BdC_GPP_interp}--B).
 Par ailleurs l'évaluation du modèle PPB-1 renvoie un erreur plus faible que celle du modèle PPB-2.
 
-L'ordre de grandeur des flux semble cohérent pour la PPB. La différence nette observée entre les modèles PPB-1 et PPB-2 est probablement liée à une sous-estimation des flux par ce dernier.
+%
+%Après interpolation la différence nette observée entre les modèles PPB-1 et PPB-2 est probablement liée à une sous-estimation des flux par ce dernier.
+
+Les différences observées selon la façon d'estimer la PPB peuvent paraître importante, néanmoins elles sont du même ordre de grandeur que celle rencontré par \citet{worrall2009} qui compare différentes façons de modéliser des flux de gaz avec des équations différentes (et non pas juste des variations sur un type de modèle).
+Ces différences sont également liées à la valeur élevée des flux qui font que, surtout dans le cas de modèles exponentiels, de faibles variations peuvent avoir des effets importants comme en témoigne l'analyse de sensibilité des paramètres du modèle (Tableau~\ref{table:mdl_sensitiv_BdC}).
+
+L'intégration de la végétation aux modèles d'estimation de la PPB est rarement réalisé \citep{bortoluzzi2006a,gorres2014}, probablement à cause de la difficulté à prendre en compte ce signal.
+La diversité des espèces végétales rend difficile la mise en place de protocole de suivi non-destructif généralisable à un grand nombre d'espèces.
+
+% % Apport IV
+%Le modèle PPB-1 a une incertitude importante sur l'estimation de ses paramètres.
+%L'apport de l'indice de végétation dans l'estimation de la PPB est important lors de la phase de calibration.
+%Il permet de diminuer l'incertitude sur les paramètres du modèles, d'augmenter leur significativité et d'améliorer la représentativité des données mesurées.
+%
+%Malgré cette amélioration lors de la calibration, lorsqu'il est évalué sur un jeu de données indépendant, le modèle PPB-2 à une erreur standard plus importante que celle du modèle PPB-1.
+%De plus après interpolation le modèle PPB-2 ne semble pas pouvoir représenter les valeurs maximum de PPB mesurée.
+%L'apport de cet indice dans l'estimation de la PPB n'est donc pas généralisable.
+%Bien que rarement faite à cause de la rareté des données, l'évaluation des modèles est cependant d'un intérêt fort afin de confirmer ou d'infirmer l'apport de l'ajout d'un prédicteur à un modèle, particulièrement si l'on souhaite l'extrapoler.
+
+%% différences entre les modèles
+
+%% Discuter la différence 2013-2014 ?
+%\textbf{Discussion 2013-2014 ?}
 
 %\noindent
 %\textit{Estimation de la RE}
 \subsubsection{RE}
 
-À l'inverse de la PPB, l'intégration de la végétation pour modéliser la RE n'améliore que peu l'estimation de la RE lors de la phase de calibration : la différence entre les valeurs d'erreur standard est de \SI{5}{\percent}.
+À l'inverse de la PPB, l'intégration de la végétation pour modéliser la RE n'améliore que peu l'estimation de la RE lors de la phase de calibration : la différence entre les valeurs d'erreur standard est de \SI{5}{\percent} (Figures~\ref{fig:mdl_ER_Tair} et \ref{fig:ER_mdl_TairIVH}).
 En revanche lors de la phase d'évaluation, l'utilisation du recouvrement des herbacées semble améliorer l'estimation de façon plus importante avec une différence de \SI{11}{\percent} entre les valeurs d'erreur standard.
 Contrairement à la PPB la différence apportée par l'intégration de la végétation (RE-2 ou RE-3) est du même ordre de grandeur en 2013 et en 2014.
-Sur les 2 années, l'effet de l'intégration de la végétation est limité avec une différence de \SI{25}{\gcma} au maximum (entre ER-1 et ER-3), soit moins de \SI{2}{\percent} du flux.
+Sur les 2 années, l'effet de l'intégration de la végétation est limité avec une différence de \SI{25}{\gcma} au maximum (entre RE-1 et RE-3), soit moins de \SI{2}{\percent} du flux.
 Encore une fois l'intérêt de l'évaluation est mis en avant puisqu'il permet de distinguer des modèles très proche lors de la calibration.
 
 % % Incertitude
