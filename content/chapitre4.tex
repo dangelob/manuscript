@@ -55,9 +55,9 @@ On attend donc qu'une baisse du niveau de la nappe une augmentation des flux de 
 L'étude des cycles de dessiccation/ré-humectation est effectuée sur des mésocosmes, prélevés à la tourbière de La Guette et installés en extérieur.
 Cette méthode à l'inconvénient de ne pas permettre un contrôle fort des variables expérimentales comme les apports d'eau eau ou la température.
 Cependant elle permet de maintenir les échantillons dans des conditions les plus proche de celles présentes in-situ et notamment la présence d'un cycle journalière que ce soit pour les températures et le rayonnement solaire.
-L'expérimentation a été réalisée durant l'été 2013 avec un seul cycle relativement long, on s'y référera par la suite comme l'expérimentation A.
+L'expérimentation a été réalisée durant l'été 2013 avec un seul cycle relativement long, on s'y référera par la suite comme l'expérimentation A\footnote{Je tiens ici à remercier Zi Yin stagiaire de l'Université de Fudan en Chine, qui s'est occupée d'une grande partie de l'acquisition de données de \coo et des facteurs contrôlant et Paul Gaudry stagiaire de l'Université d'Orléans qui s'est occupé de faire les mesures de méthane}.
 L'expérimentation a été renouvelée l'été 2014 avec trois cycles, plus courts.
-On appellera cette seconde expérimentation, l'expérimentation B.
+On appellera cette seconde expérimentation, l'expérimentation B\footnote{Comme pour la première expérimentation il me faut ici remercier Tianyi Ji, un autre stagiaire de l'Université de Fudan en Chine pour s'être occupé de l'acquisition des données \coo, Sarah Williams pour avoir réalisé les mesures de \chh et Franck Le Moing pour avoir géré la station météo.}.
 
 \subsection{Expérimentation A}
 Six mésocosmes ont été prélevés le 12 avril 2013, sur la tourbière de La Guette.
@@ -69,6 +69,8 @@ Trois mésocosmes tirés au sort servent de contrôle, et trois vont subir un cy
 À partir du 2 mai 2013 les précipitations ont été interceptées à l'aide d'abri bâchés installable en cas de pluie et la nuit.
 Ces interceptions ont été faites jusqu'au 17 juillet dans les 3 mésocosmes traités pour simuler une sécheresse.
 À cette date de l'eau est ajouté aux mésocosmes, que ce soit les contrôles ou les traitements, pour simuler de fortes précipitations (Tableau~\ref{table:recap_DR}).
+Cette eau est une eau créée artificiellement, à partir d'un mélange l'eau dé-ionisée, de sulfate de sodium, de nitrate d'ammonium, de chlorures de potassium, de calcium, de magnésium et de sodium pour reproduire la composition d'une eau de pluie.
+La réhumectation s'est étalée sur quatre jours à raison d'un ajout de \SI{1.16}{\litre} d'eau par jour et par mésocosme reproduisant ainsi un événement pluvieux enregistré sur la tourbière de La Guette (\SI{81.8}{\milli\metre} sur cinq jours)
 
 \subsection{Expérimentation B}
 Le 17 avril 2014, six nouveaux mésocosmes ont été prélevés sur la tourbières de La Guette et installés près du laboratoire, en suivant le même protocole que pour l'expérimentation A.
@@ -76,8 +78,10 @@ Une station météo a été installée à côté des mésocosmes afin de mesurer
 La pluviométrie devait également être enregistrée mais une panne de pluviomètre a empêchée l'acquisition de cette variable.
 Cette station permettait également l'enregistrement des températures mesurées par des sondes (T107) installées à \num{-5}, \num{-10}, et \SI{-20}{\centi\metre}.
 Les conditions météorologiques moins ensoleillée qu'en 2013 et l'objectif de suivre plusieurs cycles de dessiccation/réhumectation ont nécessité la mise en place d'un abaissement manuel du niveau de la nappe.
-Pendant les phases d'assèchement les niveaux de nappes des placettes traitées étaient donc abaissés en moyenne de \SI{2.5}{\centi\metre} par jour.
+Pendant les phases d'assèchement les niveaux de nappes des placettes traitées étaient donc abaissés en moyenne de \SI{2}{\centi\metre} par jour, une intensité permettant de simuler plusieurs cycles.
 La durée des différents cycles est présentée dans le tableau~\ref{table:recap_DR}.
+Pendant les phases de réhumectation, de l'eau de pluie collectée à proximité des mésocosmes, est versée dans le mésocosme jusqu'à ce que le niveau d'eau atteigne la limite haute de l'embase. 
+
 %Le premier cycle de dessiccation/réhumectation dura du 30 juin au 6 juillet pour la phase de dessiccation est du 7 au 16 juillet pour la phase de réhumectation.
 %Le deuxième cycle dura du 17 au 28 juillet et du 29 juillet au 3 aout, 
 %Enfin le dernier cycle fut mesuré du 4 au 11 aout pour la dessiccation et du 12 au 14 aout pour la réhumectation (Tableau~\ref{table:recap_DR}).
@@ -98,8 +102,8 @@ La durée des différents cycles est présentée dans le tableau~\ref{table:reca
  & code phase & dates \\ \midrule
 \multicolumn{3}{l}{Expérimentation A (2013)} \\
  & EQ & 12 avril -- 31 mai \\ [+.5ex]
- & D1 & 1 juin -- 17 juillet  \\
- & R1 & 17 juillet -- 9 août  \\ [+1ex]
+ & D1 & 1 juin -- 16 juillet  \\
+ & R1 & 17 -- 20 juillet\\ [+1ex]
 \multicolumn{3}{l}{Expérimentation B (2014)} \\
  & EQ & 17 avril -- 29 juin \\ [+.5ex]
  & D1 & 30 juin -- 6 juillet \\
@@ -398,7 +402,7 @@ La température de l'air varient entre 8 et \SI{33}{\degreeCelsius}, elle à ten
 \includegraphics[width=\textwidth]{chap4/expB_res_ch4}
 \end{minipage}
 \hspace*{-2cm}
-\caption{...}
+\caption{Relation entre les résidus d'équation du type $Flux=a*exp(b*Température) $ reliant les flux de RE (A et B) et de \chh (C et D) au niveau de la nappe. La température de l'air est utilisée pour la RE des deux expérimentation (A et B), la température de la tourbe à \SI{-10}{\centi\metre} est utilisée pour l'expérimentation A et celle de la tourbe à \SI{-5}{\centi\metre} pour l'expérimentation B}
 \label{fig:HM_res}
 \end{figure}
 
@@ -410,8 +414,8 @@ La relation inverse est visible, pour les deux expérimentations, entre la RE et
 La PPB ne montre aucune tendance quelle que soit l'expérimentation.
 On peut noter que les valeurs de PPB les plus faibles correspondent aux niveaux de nappe les plus élevés(Figure~\ref{fig:hm_wtl}--E,F).
 Pour le méthane, que ce soit pour l'expérimentation A ou B, aucune tendance ne semble se dégager vis à vis du niveau de la nappe (Figure~\ref{fig:hm_wtl}--A,B).
-Afin de séparer les effets de la température et ceux du niveau de la nappe, les résidus des équations $RE=a*exp(b*Tair)$ pour la RE et $\chh=a*exp(b*Tair)$ pour le \chh ont été mis en relation avec le niveau de la nappe (Figure~\ref{fig:HM_res}).
-La relation entre les résidus de la RE et le niveau de la nappe est moins clair une fois l'effet de la température retiré (Figure~\ref{fig:HM_res}, comparée à Figure~\ref{fig:hm_wtl--C}).
+Afin de séparer les effets de la température et ceux du niveau de la nappe, les résidus des équations reliant les flux à la température ont été étudiés pour la RE, qui semble contrôler en grande majorité les flux de \coo et le \chh (Figure~\ref{fig:HM_res}).
+La relation entre les résidus de la RE et le niveau de la nappe est moins clair une fois l'effet de la température retiré (Figure~\ref{fig:HM_res}, comparée à Figure~\ref{fig:hm_wtl}--C).
 Malgré tout on peut observer une tendance à la hausse des résidus entre 0 et \SI{-18}{\centi\metre} pour les deux groupes de l'expérimentation A, puis une cassure, et à nouveau une tendance à la hausse pour le groupe Dessiccation.
 Une tendance à augmenter des résidus de la RE quand le niveau de nappe diminue est également visible pour le groupe Dessiccation de l'expérimentation B (Figure~\ref{fig:HM_res}--B).
 Cette hausse semble cependant s'amortir rapidement au delà de \SI{-10}{\centi\metre}.
@@ -425,28 +429,18 @@ Pour l'expérimentation A, il est difficile d'observer une tendance claire même
 %CH4
 \subsubsection{\chh}
 
-Les flux moyen de \chh mesurés dans les mésocosmes des deux expérimentations font partie des valeurs hautes mesurées sur le terrain.
-Certaines campagnes dépassent nettement, en faisant plus que doubler, le maximum de \SI{0.2}{\uml} mesuré en 2014 sur la tourbière de La Guette.
+Les flux moyen de \chh mesurés dans les mésocosmes des deux expérimentations font partie des valeurs hautes mesurées sur la tourbière de La Guette.
+Certaines campagnes dépassent nettement le maximum de \SI{0.2}{\uml} mesuré directement sur le site en 2014.
+Ces valeurs sont dans la tranche haute des valeurs rapportées par la littérature, \citet{blodau2002} montrent ainsi que les flux de \chh varient généralement entre \num{0.004} et \SI{0.14}{\uml}.
+Malgré tout ces valeurs restent cohérentes avec celles observées par \citet{lai2014} sur une tourbière canadienne (\num{0}--\SI{0.56}{\uml}) ou par \citet{gogo2011a} sur la tourbière de La Guette avec des valeurs comprises entre \num{0.03} et \SI{0.4}{\uml}
 
-\subsubsection{RE}
+\subsubsection{\coo}
 
 Pour le \coo les flux sont généralement dans la gamme des valeurs mesurées sur la tourbière de La Guette.
 Pour l'expérimentation A, l'ENE moyen est plus faible que celui mesuré sur le terrain la même année : \num{0.81} contre \SI{2.85}{\uml}.
 Pour l'expérimentation B en revanche l'ENE moyen vaut \SI{2.71}{\uml} ce qui est relativement proche de celui mesuré sur le terrain : \SI{2.93}{\uml}.
-%À l'exception de la forte hausse, fin juin, début juillet, du groupe contrôle, les valeurs de méthane sont comprise entre 0 et \SI{0.3}{\uml}.
-%Ces valeurs sont un peu plus élevée, mais du même ordre de grandeur que celles mesurées sur le terrain.
-%
-%Les émissions de \chh mesuré lors de l'expérimentation B sont du même ordre de grandeur, entre 0 et \SI{0.3}{\uml}, que celles mesurées \textit{in-situ}, sur la tourbière de La Guette.
-%
-%% RE
-%Les valeurs de RE mesurées sont dans la gamme de celles mesurées sur le terrain, avec cependant des maximums moins importants.
-%
-%Les valeurs RE mesurées sur les mésocomes sont plus faible que celle relevées directement sur la tourbière de La Guette avec un maximum moyen à 5 contre \SI{8}{\uml} mesuré sur le site.
-
-% PPB
-\subsubsection{PPB}
-
 Comme pour la RE, les flux de PPB sont du même ordre de grandeur que ceux mesurés sur le terrain, mais dans la gamme basse : les maximas moyens mesurés dans les mésocosmes sont d'environ \num{7.5} pour des valeurs de \SI{13}{\uml} mesuré directement sur la tourbière.
+Ces valeurs restent cohérentes avec la littérature \citep{bortoluzzi2006a} \plop.
 
 
 Les flux de RE et de PPB sont moins fort que les flux mesurés sur le terrain mais restent dans leur gamme de valeurs.
