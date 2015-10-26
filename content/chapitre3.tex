@@ -24,17 +24,17 @@ Estimer ces variations est donc nécessaire afin de préciser dans quelle mesure
 
 \section{Procédure expérimentale et analytique}
 
-Les méthodes de chambre étant détaillées dans la partie~\ref{sec:clsd_chbr_method}, celle-ci contient la description de la stratégie d'échantillonnage et le détail des méthodes de mesure.
+Cette partie contient la description de la stratégie d'échantillonnage et le détail des méthodes de mesure, les méthodes de chambre étant détaillées dans la partie~\ref{sec:clsd_chbr_method}.
 Elle explicite également le calcul de variables élaborées utilisées par la suite, détaille le principe permettant l'estimation du bilan de carbone du site à l'échelle saisonnière et décrit la stratégie d'étude de la variabilité spatiale.
 Enfin elle précise comment sont fait les calculs des erreurs associées aux flux et bilans.
 
-\subsection{Méthodes de mesures}
+\subsection{Design expérimental}
 
 En juin 2011, 20 placettes ont été installées\footnote{je remercie ici Sébastien Gogo pour avoir installé ces placettes sur le terrain avant même mon arrivée.} selon un échantillonnage aléatoire stratifié:
 La surface de la tourbière a été divisée selon une grille de 20 mailles et un point choisi aléatoirement dans chaque maille localise chaque placette (Figure~\ref{fig:carteVS}).
 La taille de la maille a été ajustée de manière à avoir vingt 20 carrés sur la surface de la tourbière.
 Cette méthode permet de conserver un échantillonnage aléatoire tout en étant assuré d'avoir une représentativité spatiale du site homogène. 
-Les placettes, délimitées par des piquets, occupaient une surface de \SI{4}{\square\metre} (2$\times$\SI{2}{\metre}).
+Les placettes, délimitées par des piquets, occupent une surface de \SI{4}{\square\metre} (2$\times$\SI{2}{\metre}).
 Usuellement les placettes sont séparées en groupes micro-topographiques (Figure~\ref{fig:microtopo}), avec des embases positionnées sur les buttes (\textit{hummock}), les trous (\textit{hollows}) et les zones d'eau libre (\textit{pool}) \citep{Alm1997,waddington2000}.
 Ou encore selon différent traitements, réhabilité/non réhabilité, exploité/non exploité, manipulé/non manipulé \citep{bortoluzzi2006a,strack2013}.
 Ceci a l'avantage de permettre une distinction fine des capacités sources/puits mais a l'inconvénient du placement proche des embases les unes des autres limitant la représentativité spatiale des mesures.
@@ -57,7 +57,7 @@ Les mesures des flux de \coo et de \chh ont été effectuées en utilisant les m
 %De plus, du fait de l'omniprésence de végétation vasculaire, et de la taille des chambres par rapport à la micro-topographie une telle approche était difficile à mettre en oeuvre.
 
 Les flux de \coo et de \chh ont été mesurés et étudiés.
-Par contre, suite à des tests effectués sur la tourbière montrant des émissions nulles de N$_{2}$O, ce gaz n'a pas été étudié.
+Par contre, suite à des tests préliminaires effectués sur la tourbière montrant des émissions très faibles de N$_{2}$O, ce gaz n'a pas été étudié.
 Les mesures de \coo ont été effectuées de mars 2013 à février 2015, avec une fréquence quasiment mensuelle (20 campagnes, pour 24 mois de mesures). Les mesures de \chh ont été effectuées avec une fréquence et sur un nombre d'embases inférieur (12 campagnes, 5 embases).
 Ceci a été déterminé par la difficulté de déploiement \textit{in-situ} de l'instrument SPIRIT.
 Il est lourd, difficilement transportable dans un milieu tourbeux et nécessite entre chaque déplacement un temps de mise en marche/arrêt important : plus de \SI{30}{\minute}.
@@ -74,7 +74,7 @@ Des prélèvements d'eau ont été effectués chaque mois pour mesurer le pH et 
 Les échantillons ont été congelés pour la mesure ultérieure de la concentration en carbone organique dissout.
 L'ensemble de ces mesures nécessitant d'accéder aux placettes régulièrement, des planches de bois ont été utilisées comme pontons mobiles pour limiter les perturbations. La dispersion des placettes sur l'ensemble du site a rendu impossible une installation plus permanente.
 
-Les mesures automatiquement acquise via une station météo Campbell\textsuperscript{\textregistered} sont la température de l'air, température de la tourbe à \num{-5}, \num{-10}, \num{-20} et \SI{-40}{\centi\metre} de profondeur, vitesse et direction du vent, humidité relative de l'air, rayonnement solaire, pression atmosphérique.
+Les mesures automatiquement acquises via la station météo installée sur le site depuis 2010 sont la température de l'air, la température de la tourbe à \num{-5}, \num{-10}, \num{-20} et \SI{-40}{\centi\metre} de profondeur, la vitesse et la direction du vent, l'humidité relative de l'air, le rayonnement solaire, et la pression atmosphérique.
 
 \subsection{Variables élaborées utilisées}
 
@@ -111,8 +111,7 @@ La chronique ainsi reconstituée permettant ensuite d'estimer les quantités de 
 
 Pour estimer le bilan de carbone du site il est donc nécessaire d'établir des modèles reliant des flux mesurés ponctuellement avec des variables explicatives mesurées à haute fréquence (par exemple entre la respiration de l'écosystème et la température de l'air).
 %Ces relations empiriques permettront d'interpoler les données acquises mensuellement sur l'ensemble des deux années de mesure et de reconstituer ainsi une chronique de flux dont l'intégration dans le temps permettra d'estimer une quantité de carbone sur l'année.
-Pour établir ces modèles empiriques les données acquises ont été moyennées par campagne de mesure.
-Ceci permettant, dans un premier temps, de s'affranchir de la variabilité spatiale des flux pour se concentrer sur la variabilité temporelle.
+Pour établir ces modèles empiriques les données acquises ont été moyennées par campagne de mesure ; ceci permettant, dans un premier temps, de s'affranchir de la variabilité spatiale des flux et ne considérer que la variabilité temporelle.
 Les relations entre flux et facteurs contrôlant ont ensuite été étudiées deux à deux, notamment en réalisant une analyse en composante principale (ACP).
 Cette analyse permet de déterminer quels sont les relations entre les variables et plus particulièrement quelles sont celles qui influent le plus sur les flux de GES.
 Le nombre de données acquises pour le \coo et le \chh étant différent, une ACP a été réalisée pour chacun de ses gaz.
@@ -141,8 +140,10 @@ L'AIC permet de déterminer la pertinence de l'ajout d'un paramètre sur la repr
 \setlength{\parindent}{-10pt}%
 %\singlespacing
 \onehalfspacing
-\textbf{Remarque :} La RE, et l'ENE sont mesurés directement sur le terrain.
-Cependant afin d'établir le bilan de carbone tout en gardant une discrimination entre les flux entrants et sortants de l'écosystème la RE et la PPB (obtenue grâce à l'équation PPB = ENE - RE) ont été estimés séparément.
+\textbf{Remarque :} La RE, et l'ENE sont des flux mesurés directement sur le terrain à l'inverse de la PPB.
+Cette dernière est déduite des deux flux précédents en utilisant l'équation $PPB = ENE - RE$.
+Elle sera néanmoins appelée PPB mesurée, par opposition aux flux modélisés.
+Afin d'établir le bilan de carbone tout en gardant une discrimination entre les flux entrants et sortants de l'écosystème la RE et la PPB ont été estimés séparément.
 \end{minipage}
 \end{center}
 % \vspace{\belowdisplayskip}
@@ -158,10 +159,9 @@ Cependant afin d'établir le bilan de carbone tout en gardant une discrimination
 %La RMSE et sa normalisation par la moyenne NRMSE sont utilisés comme indicateur de l'écart entre les données mesurées et les données modélisées.
 %L'AIC permet de déterminer la pertinence de l'ajout d'un paramètre sur la représentation des données par le modèle.
 
-La température a été choisie comme base de départ à la construction des modèles de RE et PPBsat, à la fois car c'est le facteur de contrôle le plus souvent invoqué et à la fois car les corrélations avec les flux étaient les plus forte.
-Concernant la respiration de l'écosystème, les températures utilisées dans la littérature sont variables.
-La température la plus utilisée est la température du sol à \SI{-5}{\centi\metre}  \citep{ballantyne2014}.
-La température de l'air et la température du sol à \SI{-10}{\centi\metre} sont aussi régulièrement utilisées \citep{bortoluzzi2006a,kim1992}.
+La température a été choisie comme base de départ à la construction des modèles de RE et PPBsat, car (i) c'est le facteur de contrôle le plus souvent invoqué et (ii) les corrélations avec les flux étaient les plus forte.
+Concernant la respiration de l'écosystème, les températures utilisées dans la littérature sont variables : la température la plus utilisée est la température du sol à \SI{-5}{\centi\metre}  \citep{ballantyne2014}.
+D'autres auteurs utilisent aussi la température de l'air et la température du sol à \SI{-10}{\centi\metre} \citep{bortoluzzi2006a,kim1992}.
 Cette profondeur, \SI{-5}{\cm}, est régulièrement utilisée car c'est dans la tourbe, proche de la surface que la respiration du sol est la plus importante.
 \plop %\textbf{production CO2 ? profils ?}
 C'est également à des profondeurs relativement faibles que se situent la majorité des racines \plop.
@@ -169,21 +169,22 @@ La respiration liée aux racines (autotrophe et hétérotrophe stimulée par les
 La RE est estimée directement à partir des données acquises moyennées en partant de la température connue pour contrôler une grande partie de ce flux.
 Les modèles les plus fréquemment utilisés (linéaire, exponentiel, arrhénius) ont été testés.
 
-Pas de consensus émerge de la littérature quant aux facteurs contrôlant les émissions de \chh.
-La température, \citep{alm1999,bubier1995b}, le niveau de la nappe \citep{bubier1993} et/ou la végétation \citep{bortoluzzi2006a} peuvent être utilisés isolement ou conjointement.
+Il ne semble pas émerger de consensus dans la littérature quant aux facteurs contrôlant les émissions de \chh.
+Différents facteurs sont utilisés comme la température, \citep{alm1999,bubier1995b}, le niveau de la nappe \citep{bubier1993} ou encore la végétation \citep{bortoluzzi2006a}.
+Ces facteurs peuvent être utilisés seuls ou conjointement.
 
 \subsubsection{Évaluation/validation}
 
-Après la phase de calibration, les facteurs de contrôle utilisés dans les modèles ont été évalués à l'aide de données indépendantes issues d'une autre expérimentation réalisée sur le même site en 2014.
+Après la phase de calibration, les facteurs de contrôle utilisés dans les modèles ont été évalués à l'aide de données indépendantes acquises dans le cadre d'un suivi expérimental mis en place dans le même site en 2014.
 %Cette dernière est également un suivi des mêmes flux de gaz, sur le même site pendant l'année 2014.
-Les méthodes de mesures des flux sont strictement identiques à celles utilisées pour établir le bilan de carbone.
+Les méthodes de mesures des flux de \coo et de \chh sont strictement identiques à celles utilisées pour établir le bilan de carbone.
 En revanche le positionnement des placettes est beaucoup plus classique : proches les unes des autres, et avec différents traitements.
 Afin de pouvoir les comparer, seule les placettes de contrôles, (n'ayant donc subie aucune manipulation) de cette expérimentation seront utilisées soit 4 placettes dans une station en amont et 4 en aval de la tourbière de La Guette (plus de détails dans l'annexe~\ref{sec:carbiodiv}).
-Le terme d'évaluation est préféré à celui de validation car le nouveau jeu de données utilisé, bien qu'indépendant de celui utilisé pour la calibration, n'a pas été acquis de manière strictement identique, notamment au niveau de la répartition des embases sur le site.
+Le terme d'évaluation est ici préféré à celui de validation car le nouveau jeu de données utilisé, bien qu'indépendant de celui utilisé pour la calibration, n'a pas été acquis de manière strictement identique, notamment au niveau de la répartition des embases sur le site.
 
 \subsubsection{Interpolation}
 
-Enfin les facteurs contrôlants ont été interpolés au pas de mesure de la station météo présente sur le site, c'est-à-dire à l'heure.
+Enfin les facteurs contrôlants ont été interpolés à une fréquence horaire identique à celle de la station météo présente sur le site:
 Pour des données dont l'acquisition est manuelle uniquement, comme la végétation, une interpolation linéaire est faite entre les points de mesures.
 Pour les données acquises à la fois automatiquement par la station météorologique et manuellement, comme la température de l'air ou de la tourbe, l'interpolation est faite à partir de la relation entre les mesures continues et ponctuelles.
 Les flux sont ensuite recalculés (en \si{\micro\mole\per\square\meter\per\hour}) à l'échelle horaire sur les deux années de mesure puis sommés afin d'estimer les bilans de carbone.
@@ -239,21 +240,21 @@ Ces erreurs ne sont qu'une part de l'erreur totale qui devrait être associée �
 
 \section{Résultats}
 
-\subsection{Cinétique des facteurs contrôlant et des flux sur la tourbière de La Guette}
+\subsection{Cinétique des facteurs contrôlant et des flux de GES}
 
-\subsubsection{Les Facteurs contrôlant}
+\subsubsection{Facteurs contrôlant}
 
 \begin{figure}
 \centering
 \includegraphics[width=1.15\textwidth, center]{chap3/WTL_mean_evolution}
-\caption{Évolution du niveau de la nappe moyen des 20 embases mesuré pendant la période de mesure (mars 2013 -- février 2015). Les valeurs correspondent à la distance entre le niveau de nappe et la surface du sol.}
+\caption{Évolution du niveau moyen de la nappe mesuré dans les 20 placettes entre mars 2013 et février 2015. Les valeurs correspondent à la distance entre le niveau de nappe et la surface du sol (en cm).}
 \label{fig:WTL_mean_evolution}
 \end{figure}
 
-L'évolution du niveau de la nappe des 20 placettes est marquée par un étiage d'une vingtaine de centimètres en moyenne en 2013 et l'absence d'un étiage net en 2014 (Figure~\ref{fig:WTL_mean_evolution}).
-Le niveau de la nappe moyen ne descend pas sous la barre des \SI{-10}{\cm} avec \num{-9.2(76)} et \SI{-7.1(48)}{\centi\metre} respectivement pour 2013 et 2014.
+L'évolution du niveau de la nappe d'eau mesuré manuellement dans les 20 placettes est marquée par un étiage d'une vingtaine de centimètres en moyenne en 2013 et l'absence d'un étiage net en 2014 (Figure~\ref{fig:WTL_mean_evolution}).
+Le niveau de la nappe moyen ne descend pas en dessous de \SI{-10}{\cm} avec \num{-9.2(76)} et \SI{-7.1(48)}{\centi\metre} respectivement pour 2013 et 2014.
 % ne descendant que rarement sous la barre des \SI{-10}{\cm}.
-Ces observations sont cohérentes avec les mesures haute fréquence (Figure~\ref{fig:WTL}), et confirment l'étiage particulièrement haut de ces 2 années vis-à-vis des précédentes.
+Ces observations sont cohérentes avec les mesures acquises automatiquement et à plus haute fréquence (Figure~\ref{fig:WTL}), et confirment l'étiage particulièrement important de ces deux années par rapport aux précédentes.
 
 \begin{figure}
 \centering
@@ -270,13 +271,13 @@ L'indice de végétation est également légèrement plus important en 2014, pro
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth, center]{chap3/T_mean_evolution}
-\caption{Évolution des températures de l'air (Tair) et du sol à \SIlist{-5;-30;-50;-100}{\centi\metre} (T5, T30, T50 et T100 respectivement) moyenne mesurée lors des campagnes de terrain de mars 2013 à février 2015}
+\caption{Évolution moyenne des températures de l'air (Tair) et du sol à \SIlist{-5;-30;-50;-100}{\centi\metre} (T5, T30, T50 et T100 respectivement) mesurée dans les 20 placettes entre mars 2013 et février 2015}
 \label{fig:T_mean_evolution}
 \end{figure}
 
-La température de l'air mesurée manuellement montre une variabilité saisonnière cohérente avec celle mesurées par la station météo. 
+La température de l'air mesurée manuellement dans les 20 placettes montre une variabilité saisonnière cohérente avec celle mesurée par la station météo. 
 %bien que les valeurs semblent systématiquement supérieures.
-La variabilité saisonnière de la température est également visible dans le sol avec cependant un amortissement et une diminution de la variabilité avec la profondeur (figure~\ref{fig:T_mean_evolution})
+La variabilité saisonnière de la température est également visible quand elle est mesurée dans le sol avec cependant un amortissement et une diminution de la variabilité avec la profondeur (figure~\ref{fig:T_mean_evolution})
 %chiffres ?
 
 \begin{figure}
@@ -298,10 +299,10 @@ La variabilité saisonnière de la température est également visible dans le s
 %\label{fig:pH_mean_evolution}
 %\end{figure}
 
-La conductivité moyenne mesurée sur le site varie entre \SIlist{35;55}{\usml} (figure~\ref{fig:wtr_phychim}--A).
-En moyenne le pH mesuré sur la tourbière de La Guette est compris entre 4 et 5 (figure~\ref{fig:wtr_phychim}--B).
+La conductivité moyenne mesurée dans l'eau des piézomètres des 20 placettes sur le site varie entre \num{35} et \SI{55}{\usml} (figure~\ref{fig:wtr_phychim}--A).
+En moyenne les valeurs de pH mesurées dans les placettes sont comprises entre 4 et 5 (figure~\ref{fig:wtr_phychim}--B).
 Ces valeurs sont cohérentes avec la classification en \textit{poor-fen} du site .
-La concentration en carbone organique dissout présente dans l'eau de la tourbière est compris en moyenne entre \num{10} et \SI{30}{\milli\gram\per\liter} (figure~\ref{fig:wtr_phychim}--C).
+Les concentrations en carbone organique dissout des eaux prélevées dans les piézomètres sont comprises en moyenne entre \num{10} et \SI{30}{\milli\gram\per\liter} (figure~\ref{fig:wtr_phychim}--C).
 
 
 %\begin{figure}
@@ -321,79 +322,59 @@ La concentration en carbone organique dissout présente dans l'eau de la tourbi�
 
 %\subsection{Évolution générale des flux de C sur la tourbière de La Guette}
 
-\subsubsection{Les flux de carbone}
+\subsubsection{Flux de carbone}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=1\textwidth, center]{chap3/GPP_evolution_avg}
 	\includegraphics[width=1\textwidth, center]{chap3/ER_evolution_avg}
 	\includegraphics[width=1\textwidth, center]{chap3/NEE_evolution_avg}
-%	\begin{subfigure}[t]{\textwidth}
-%		\centering
-%		\includegraphics[width=\textwidth]{chap3/GPP_evolution_avg}
-%		\caption{Production primaire brute}
-%		\label{fig:GPP_evolution_avg}
-%	\end{subfigure}%
-%	
-%	\begin{subfigure}[t]{\textwidth}
-%		\centering
-%		\includegraphics[width=\textwidth]{chap3/ER_evolution_avg}
-%		\caption{Respiration de l'écosystème}
-%		\label{fig:ER_evolution_avg}
-%	\end{subfigure}
-%	
-%	\begin{subfigure}[t]{\textwidth}
-%		\centering
-%		\includegraphics[width=\textwidth]{chap3/NEE_evolution_avg}
-%		\caption{Échange net de l'écosystème}
-%		\label{fig:NEE_evolution_avg}
-%	\end{subfigure}
-\caption{Cinétique du niveau de la PPB (A), de la RE (B) et de l'ENE (C) pendant la période de mesure. Moyenne des 20 embases de mars 2013 à février 2015.}
+\caption{Cinétique des flux de \coo moyen mesurés sur les 20 placettes entre mars 2013 et février 2015. Avec la PPB (A), la RE (B) et l'ENE (C) ; les barres d'erreur représentent la déviation standard.}
 \label{fig:flux_evolution_avg}
 \end{figure}
 
 %\subsubsection{PBB}
-L'ensemble des mesures de \coo s'étendent de mars 2013 à février 2015.
+Comme pour les facteurs contrôlant des mesures de \coo ont été effectuées de mars 2013 à février 2015.
 Cependant de novembre 2013 à février 2014 les mesures ont été interrompue suite à des problèmes techniques.
-Les deux saisons de végétation, ont pu être mesurées dans leur ensemble, permettant d'avoir un jeu de données représentatif sur le fonctionnement de l'écosystème.
+Malgré tout les deux saisons de végétation, ont pu être mesurées dans leur ensemble, permettant d'avoir un jeu de données représentatif sur le fonctionnement de l'écosystème.
 
 En 2013, les valeurs de la PPB (flux de \coo entrant dans l'écosystème) augmentent au printemps et une partie de l'été avec un maximum de \SI{12.80(491)}{\uml} atteint fin juillet, avant de diminuer à partir d'août (Figure~\ref{fig:flux_evolution_avg}--A).
-En 2014 la PPB maximale est atteinte en juin (\SI{13.16(470)}{\uml}), soit environ un mois plus tôt que l'année précédente.
-Puis pendant l'été et l'automne les valeurs décroissent jusqu'à être proche de 0.
-En moyenne les valeurs de la PPB sont de \SI{7.12(519)}{\uml} en 2013 et de \SI{6.56(472)}{\uml} en 2014 (Figure~\ref{fig:flux_evolution_avg}--A).
+En 2014 la PPB maximale est atteinte fin juin (\SI{13.16(470)}{\uml}), soit environ un mois plus tôt que l'année précédente.
+Pendant la deuxième partie de l'été et l'automne les valeurs décroissent jusqu'à être proches de 0.
+En moyenne les valeurs de la PPB sont de \SI{7.12(519)}{\uml} en 2013 et de \SI{6.56(472)}{\uml} en 2014.
 
 La RE (flux de \coo sortant de l'écosystème) en 2013 augmente pendant le printemps et une partie de l'été (Figure~\ref{fig:flux_evolution_avg}--B).
 Elle atteint un maximum de \SI{9.43(348)}{\uml} en juillet avant de diminuer.
-En 2014 la RE atteint, comme la PPB, son maximum plus tôt, en juin à \SI{7.83(255)}{\uml} avant de décroître jusqu'en hiver pour approcher des valeurs nulles.
-La moyenne annuelle de RE en 2013 est de \SI{4.27(316)}{\uml}, ce qui est légèrement supérieure à celle de 2014 : \SI{3.63(256)}{\uml}(Figure~\ref{fig:flux_evolution_avg}--B).
+En 2014 la RE atteint, comme la PPB, son maximum plus tôt, en juin avec une valeur moyenne de \SI{7.83(255)}{\uml} avant de décroître en automne et en hiver ou elle approche de valeurs nulles.
+Les valeurs moyennes de RE sont de \SI{4.27(316)}{\uml} en 2013, ce qui est légèrement supérieure à celle de 2014 : \SI{3.63(256)}{\uml}.
 
-Concernant l'ENE (bilan des flux de \coo entrant et sortant), elle augmente en 2013 jusque \SI{5.19(451)}{\uml}, avec un maximum en juin, avant de diminuer jusqu'à la fin de l'année.
+En 2013 les valeurs de l'ENE (bilan des flux de \coo entrant et sortant) montrent un maximum en juin, atteignant \SI{5.19(451)}{\uml} puis elles diminuent jusqu'à la fin de l'année.
+%Elles augmentent jusqu'à atteindre \SI{5.19(451)}{\uml}
+%Concernant l'ENE (bilan des flux de \coo entrant et sortant), elle augmente en 2013 jusque \SI{5.19(451)}{\uml}, avec un maximum en juin, avant de diminuer jusqu'à la fin de l'année.
 Cependant, cette baisse est moins uniforme que celle des deux flux précédents, avec notamment une augmentation de l'ENE entre juillet et août 2013.
 Ceci étant, il faut également noter les valeurs importantes de la déviation standard particulièrement en juin et en août.
-En 2014, l'ENE maximum est atteinte en juillet avec \SI{5.79(277)}{\uml} avant qu'elle ne décroisse.
-Cette baisse est cependant plus homogène qu'en 2013.
-les moyennes de l'ENE en 2013 et 2014 sont très proche et sont respectivement de \SI{2.85(305)}{\uml} et \SI{2.93(277)}{\uml} (Figure~\ref{fig:flux_evolution_avg}--C).
+En 2014, l'ENE maximum est atteinte en juillet avec \SI{5.79(277)}{\uml} (Figure~\ref{fig:flux_evolution_avg}--C).
+%Cette baisse est cependant plus homogène qu'en 2013.
+les valeurs moyennes annuelles de l'ENE sont très proches et sont de \SI{2.85(305)}{\uml} pour 2013 et \SI{2.93(277)}{\uml} pour 2014.
 À noter également que pour l'ensemble des flux, la déviation standard augmente avec les valeurs mesurées.
 
 %\subsubsection{Le \chh}
 
-Les flux de \chh comme ceux du \coo montre une variabilité saisonnière importante.
-Cependant les flux de \chh mesurés sont un ordre de grandeur en dessous de ceux mesurés pour le \coo (Figure~\ref{fig:CH4_evolution_avg}).
-À l'inverse de ce dernier, l'importance des flux de \chh mesurés en 2013 et 2014 est différente.
-En 2013 les flux sont moins importants qu'en 2014 avec \num{0.04(003)} contre \SI{0.10(008)}{\uml} et avec des maximum de \num{0.078} et \SI{0.196}{\uml} respectivement.
-
+Les flux de \chh, comme ceux du \coo, montrent une variabilité saisonnière importante, même si les flux de \chh mesurés sont un ordre de grandeur en dessous de ceux mesurés pour le \coo (Figure~\ref{fig:CH4_evolution_avg}).
+À l'inverse de ce dernier, les flux de \chh mesurés en 2013 sont nettement inférieurs à ceux mesurés en 2014 avec une moyenne de \num{0.04(003)} et de \SI{0.10(008)}{\uml} respectivement.
+Les valeurs moyennes maximales atteignent \num{0.078} en 2013 et \SI{0.196}{\uml} en 2014
 
 \begin{figure}
 \centering
 \includegraphics[width=1.15\textwidth, center]{chap3/CH4_evolution_avg}
-\caption{Évolution des flux de méthane moyen (N ?) pendant la période de mesure (mars 2013 -- février 2015)}
+\caption{Évolution des flux de méthane moyen sur cinq placettes entre mars 2013 et février 2015. les barres d'erreur représentent la déviation standard.}
 \label{fig:CH4_evolution_avg}
 \end{figure}
 
 %\subsubsection{Le Carbone Organique Dissous (COD)}
 
 
-\subsubsection{Les relations flux gazeux et facteurs contrôlant}
+\subsubsection{Relations entre flux gazeux et facteurs contrôlant}
 
 \begin{figure}
 \centering
@@ -402,20 +383,20 @@ En 2013 les flux sont moins importants qu'en 2014 avec \num{0.04(003)} contre \S
 \label{fig:Fl_FC}
 \end{figure}
 
-Comme précisé précédemment, le niveau de la nappe n'a que peu varié pendant les deux années de mesures.
-De ce fait aucune relation claire ne se distingue entre les flux et le niveau de la nappe que ce soit pour le \coo (PPB et RE) ou le \chh (Figure~\ref{fig:Fl_FC}).
+Comme précisé précédemment, le niveau de la nappe d'eau à très peu varié pendant les deux années de mesures : principalement d'août à octobre 2013.
+De ce fait aucune relation claire n'est identifiable entre les flux et le niveau de la nappe que ce soit pour le \coo (PPB et RE) ou le \chh (Figure~\ref{fig:Fl_FC}).
 La PPB et la RE présentent cependant des relations avec la température de l'air, et l'indice de végétation, même si pour ce dernier les tendances sont moins claires, particulièrement pour la RE (Figure~\ref{fig:Fl_FC}).
-Le \chh quant à lui ne présente pas de relation avec la température de l'air, mais une tendance exponentielle est visible vis-à-vis de l'indice de végétation (Figure~\ref{fig:Fl_FC}).
+Le \chh ne montre pas de relation avec la température de l'air, mais une tendance exponentielle est visible vis-à-vis de l'indice de végétation (Figure~\ref{fig:Fl_FC}).
 \textbf{(\chh et Température dans la tourbe ?)}
 
 \subsection{Sélection des modèles}
 
-\subsubsection{La Production Primaire Brute}
+\subsubsection{Production primaire brute}
 
 
 L'estimation de la PPB se fait en deux étapes.
 Dans un premier temps on estime le potentiel maximum de photosynthèse à un instant donné dans des conditions de lumière saturante (PPBsat).
-Ce potentiel peut varier avec les conditions environnementales et a été déterminé en utilisant l'équation de \citep{june2004} qui relie la vitesse de transport des électrons photosynthétiques à lumière saturante à la température :
+Ce potentiel peut varier avec les conditions environnementales et a été déterminé en utilisant une équation qui relie la vitesse de transport des électrons photosynthétiques à lumière saturante à la température \citep{june2004} :
 
 \begin{equation}\label{eq:juneTair}
 PPBsat = a * exp(\frac{Tair - b}{c})^2
@@ -423,22 +404,22 @@ PPBsat = a * exp(\frac{Tair - b}{c})^2
 
 Avec :
 \begin{itemize}
-\item $a$ la vitesse de transport des électrons photosynthétique à lumière saturante
-\item $b$ la température optimale pour ce transport
-\item $c$ la différence de température à laquelle à laquelle PBBsat vaut e$^{-1}$ de sa valeur à la température optimale
+\item $a$ : vitesse de transport des électrons photosynthétique à lumière saturante (\si{\uml})
+\item $b$ : température optimale pour ce transport (\si{\degreeCelsius})
+\item $c$ : différence de température à laquelle à laquelle PBBsat vaut e$^{-1}$ de sa valeur à la température optimale (\si{\degreeCelsius})
 \end{itemize}
 
 À partir de ce potentiel à lumière saturante, la PPB est estimée en prenant en compte la luminosité.
-On utilise l'équation~\ref{eq:PPB_bubier} proposée par \citep{bubier1998} et régulièrement et majoritairement utilisée \citep{bortoluzzi2006a,worrall2009}:
+On a utilisé l'équation~\ref{eq:PPB_bubier} proposée par \citep{bubier1998} et utilisée par de nombreux auteurs \citep{bortoluzzi2006a,worrall2009}:
 
 \begin{equation} \label{eq:PPB_bubier}
-PPB = \frac{PPBsat * a * PAR}{PPBsat + a * PAR}
+PPB = \frac{PPBsat * i * PAR}{PPBsat + i * PAR}
 \end{equation}
 
 \begin{figure}
 \centering
 \includegraphics[width=1.15\textwidth, center]{chap3/mdl_GPP_Tair}
-\caption{PPBsat modèles Tair utilisant l'équation~\ref{eq:juneTair}}
+\caption{Résultats de la calibration de la PPB. En haut la PPBsat (équation~\ref{eq:juneTair} avec la représentativité du modèle et la distribution des résidus (graphes a et b). Au milieu les tendances entre les résidus de cette équation et l'indice de végétation, le pourcentage de recouvrement de la strate herbacée et le niveau de la nappe (graphes c, d et e). Et en bas la PPB (équation~\ref{eq:PPB_bubier}), sa représentativité et la distribution des résidus de l'équation (graphes f et g) et l'évaluation sur un jeu de données indépendant (graphe h).}
 \label{fig:mdl_GPP_Tair}
 \end{figure}
 
@@ -446,12 +427,12 @@ L'utilisation de l'équation de June seule, avec la température de l'air comme 
 Les résidus de ce modèle se répartissent de façon relativement homogène et non biaisée (Figure~\ref{fig:mdl_GPP_Tair}-b).
 Corrélés avec l'indice de végétation IV, ils présentent une tendance linéaire croissante (Figure~\ref{fig:mdl_GPP_Tair}-c).
 On observe la même tendance avec le recouvrement de la strate herbacée avec une dispersion des points plus importante (Figure~\ref{fig:mdl_GPP_Tair}-d).
-Par contre aucune tendance particulière n'est visible vis-à-vis du niveau de la nappe (Figure~\ref{fig:mdl_GPP_Tair}-e)
-Le recouvrement des sphaignes (non présenté) ne montre également, aucune tendance avec les résidus de cette équation.
+Par contre aucune relation n'est visible avec le niveau de la nappe d'eau (Figure~\ref{fig:mdl_GPP_Tair}-e)
+Le pourcentage de recouvrement des sphaignes (non présenté) ne montre également, aucune tendance avec les résidus de cette équation.
 La PPB calculée à partir de l'équation~\ref{eq:juneTair} montre une erreur standard de \SI{31}{\percent}, du même ordre de grandeur que celle de PPBsat (Figure~\ref{fig:mdl_GPP_Tair}-f) et les résidus se répartissent de façon relativement homogène et non biaisée (Figure~\ref{fig:mdl_GPP_Tair}-g).
 Cependant l'évaluation du modèle sur les données de tests montre une erreur standard de l'estimation plus forte qui atteint \SI{47}{\percent}(Figure~\ref{fig:mdl_GPP_Tair}-h).
 Par ailleurs une forte incertitude est présente concernant l'estimation des paramètres qui ont tous une erreur standard importante, parfois plus importante que la valeur du paramètre, et une faible significativité (Tableau~\ref{table:mdl_par}).
-Afin de prendre en compte la tendance linéaire entre les résidus et l'indice de végétation (IV) le modèle est adapté pour y intégré une fonction linéaire de la végétation :
+Afin de prendre en compte la tendance linéaire entre les résidus et l'indice de végétation (IV) nous savons adapté le modèle, à la manière de \citet{bortoluzzi2006a}, pour y intégré une fonction linéaire de la végétation :
 
 \begin{equation}\label{eq:juneTairIV}
 PPBsat = (a * IV + d) * exp(\frac{T - b}{c})^2
@@ -460,21 +441,22 @@ PPBsat = (a * IV + d) * exp(\frac{T - b}{c})^2
 \begin{figure}
 \centering
 \includegraphics[width=1.15\textwidth, center]{chap3/mdl_GPP_TairIV}
-\caption{PPBsat modèles Tair utilisant l'équation~\ref{eq:juneTairIV}}
+\caption{Résultats de la calibration de la PPB en prenant en compte la végétation. En haut la PPBsat (équation~\ref{eq:juneTairIV} avec la représentativité du modèle et la distribution des résidus (graphes a et b). Au milieu les tendances entre les résidus de cette équation et l'indice de végétation, le pourcentage de recouvrement de la strate herbacée et le niveau de la nappe (graphes c, d et e). Et en bas la PPB (équation~\ref{eq:PPB_bubier}), sa représentativité et la distribution des résidus de l'équation (graphes f et g) et l'évaluation sur un jeu de données indépendant (graphe h).}
 \label{fig:mdl_GPP_TairIV}
 \end{figure}
 
 Cette nouvelle équation permet d'expliquer une part plus importante des variations de PPBsat (R$^{2}$ = 0,85) et augmente la proximité entre les données mesurées et les données modélisées : l'erreur standard diminue à \SI{21}{\percent}. (Figure~\ref{fig:mdl_GPP_TairIV}-a).
 Les résidus de cette équation semblent répartis de façon moins homogène que précédemment.
-On observe notamment un resserrement des points autour de zéro à l'exception d'un point de valeur supérieur à \num{4}.
-Le biais reste malgré tout léger au regard de l'amélioration apportée.
-Aucune tendance claire ne se dégage des résidus lorsqu'ils sont mis en relation avec des facteurs contrôlant tel que les recouvrements végétaux (sphaignes, herbacées), ou le niveau de la nappe (Figure~\ref{fig:mdl_GPP_TairIV}-c,d,e).
-Comme précédemment, l'erreur standard de la PPB, de \SI{19}{\percent}, est du même ordre de grandeur que celle de PPBsat.
-Pour PPBsat comme pour PPB l'erreur standard diminue avec l'ajout de l'indice de végétation lors de la calibration.
-En revanche, l'évaluation sur les données de test de ce dernier modèle montre une erreur importante (\SI{58}{\percent}), supérieure à celle du modèle ne prenant pas en compte la végétation.
+Avec notamment un resserrement des points autour de zéro à l'exception d'un point de valeur supérieur à \num{4}.
+Le biais reste malgré tout faible au regard de l'amélioration apportée.
+Aucune tendance claire ne se dégage des résidus lorsqu'ils sont mis en relation avec des facteurs contrôlant tels que les recouvrements végétaux (que ce soit celui des sphaignes ou des herbacées), ou le niveau de la nappe d'eau (Figure~\ref{fig:mdl_GPP_TairIV}--c,d,e).
+Comme précédemment, l'erreur standard de la PPB, de \SI{19}{\percent}, est du même ordre de grandeur que celle de PPBsat (Figure~\ref{fig:mdl_GPP_TairIV}--f).
+Pour PPBsat comme pour PPB l'erreur standard diminue avec la prise en compte de l'indice de végétation lors de la calibration.
+En revanche, l'évaluation sur les données de test de ce dernier modèle montre une erreur importante (\SI{58}{\percent}), supérieure à celle du modèle ne prenant pas en compte la végétation (Figure~\ref{fig:mdl_GPP_TairIV}--h).
 Cette évaluation montre également une tendance importante à sous-estimer les valeurs mesurées.
 Néanmoins ce modèle intégrant la végétation permet de diminuer de façon importante l'erreur standard associée à l'estimation des paramètres de l'équation.
-Dans la suite du texte le modèle permettant d'estimer la PPB à partir des équations~\ref{eq:juneTair} et \ref{eq:PPB_bubier} sera nommé PPB-1 et celui utilisant les équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier} sera nommée PPB-2.
+
+Dans la suite du texte le modèle permettant d'estimer la PPB à partir des équations~\ref{eq:juneTair} et \ref{eq:PPB_bubier} sera nommé \textbf{PPB-1} et celui utilisant les équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier} sera nommée \textbf{PPB-2}.
 
 
 %\begin{figure}
@@ -487,15 +469,15 @@ Dans la suite du texte le modèle permettant d'estimer la PPB à partir des équ
 %La PPB calculée à partir de l'équation~\ref{eq:juneTair} présente des résidus relativement homogène avec cependant d'avantage de points situés entre \num{-2} et \num{-4} qu'entre \num{2} et \num{4} (Figure~\ref{fig:mdl_GPP_Tair}--a,b).
 %Une observation similaire peut être faire pour PPB calculé à partir de l'équation~\ref{eq:juneTairIV}, avec cependant des résidus resserrés entre \num{-2} et \num{2} et un point un peu plus extrême(Figure~\ref{fig:mdl_GPP_Tair}--c,d).
 
-\subsubsection{La Respiration de l'Écosystème}
+\subsubsection{Respiration de l'écosystème}
 
-%%%%%%%%%%%%%%%%%%%%% RE
-\begin{figure}[p]
+\begin{figure}[]
 \centering
 \includegraphics[width=1.05\textwidth, center]{chap3/mdl_ER_Tair}
-\caption{\label{fig:mdl_ER_Tair}RE modèles avec Tair}
+\caption{\label{fig:mdl_ER_Tair}
+Calibration de la RE utilisant l'équation~\ref{eq:RE_T}. En haut la représentativité du modèle et la distribution des résidus (graphes a et b), ainsi que son évaluation sur un jeu de données indépendant (graphe c). En bas les tendances entre les résidus de cette équation et l'indice de végétation, le pourcentage de recouvrement de la strate herbacée et le niveau de la nappe (graphes c, d et e).}
 \includegraphics[width=1.05\textwidth, center]{chap3/mdl_ER_Tair_IVH}
-\caption{\label{fig:ER_mdl_TairIVH}RE modèles avec Tair}
+\caption{\label{fig:ER_mdl_TairIVH}Calibration de la RE prenant en compte la végétation en utilisant l'équation~\ref{eq:RE_TIV}, en haut, et l'équation~\ref{eq:RE_TH} en bas. Avec la représentativité des modèles et la distribution de leurs résidus (graphes a et b pour le premier et d et e pour le second), ainsi que leur évaluation sur un jeu de données indépendant (graphe c et f).}
 \end{figure}
 
 L'estimation de la RE s'effectue avec l'équation :
@@ -505,16 +487,18 @@ RE = a*exp(b*T)
 \end{equation}
 
 La température de l'air utilisée dans un modèle exponentiel permet d'expliquer \SI{90}{\percent} des variations de la respiration de l'écosystème avec une erreur standard de \SI{18}{\percent} (Figure~\ref{fig:mdl_ER_Tair}--a).
-Les résidus de cette équation semblent répartis de façon non-biaisée, pas de tendance dans le nuage de point (Figure~\ref{fig:mdl_ER_Tair}--b).
-L'évaluation de ce modèle montre une erreur standard de \SI{35}{\percent} avec une tendance à sous-estimer les valeurs mesurées.
-Une légère tendance, moins claire que pour la PPBsat, est visible entre les résidus et l'indice de végétation ainsi qu'avec le recouvrement de la strate herbacée.
+Les résidus de cette équation sont répartis de façon non-biaisée (Figure~\ref{fig:mdl_ER_Tair}--b).
+L'évaluation de ce modèle montre une erreur standard de \SI{35}{\percent} avec une tendance à sous-estimer les valeurs mesurées (Figure~\ref{fig:mdl_ER_Tair}--c).
+Une légère tendance, moins claire que pour la PPBsat, est visible entre les résidus et l'indice de végétation ainsi qu'avec le recouvrement de la strate herbacée (Figure~\ref{fig:mdl_ER_Tair}--d,e) mais pas avec le niveau de la nappe (Figure~\ref{fig:mdl_ER_Tair}--f).
 Très souvent utilisée, la température à \SI{-5}{\centi\metre} donne des résultats proche mais moins bons notamment avec une hétéroscédasticité des résidus (\textbf{Fig Annexe ?} nope : M\&M).
 %Dans les deux cas, le gain possible en ajoutant un paramètre semble limité.
-On adapte l'équation~\ref{eq:RE_T} pour intégrer le signal de végétation :
+On adapte l'équation~\ref{eq:RE_T} pour intégrer le signal de végétation de deux façon, avec l'IV :
 
 \begin{equation} \label{eq:RE_TIV}
 RE = (a*IV + c)*exp(b*T)
 \end{equation}
+
+Et avec le seul pourcentage de recouvrement des herbacées (RSH) qui contrôle en grande partie l'IV (Figure~\ref{fig:veg_evol})
 
 \begin{equation} \label{eq:RE_TH}
 RE = (a*H + c)*exp(b*T)
@@ -523,9 +507,9 @@ RE = (a*H + c)*exp(b*T)
 Les calibrations de ces nouvelles équations sont présentées dans la figure~\ref{fig:mdl_ER_Tair}-a,b et \ref{fig:mdl_ER_Tair}-d,e respectivement.
 Dans les deux cas, l'erreur diminue pour avoisiner \SI{13}{\percent}, avec des résidus qui se répartissent de façon non-biaisée.
 L'évaluation de ces deux équations montre cependant des différences :
-D'un côté l'équation~\ref{eq:RE_TIV} ne permet pas de diminuer l'erreur standard qui vaut \SI{34}{\percent}, et est donc très proche des \SI{35}{\percent} calculé pour l'évaluation du modèle n'intégrant pas la végétation.
-De l'autre l'évaluation de l'équation~\ref{eq:RE_TH} montre une erreur standard plus faible s'établissant à \SI{23}{\percent}.
-Les paramètres des différentes équations sont présentés dans le tableau~\ref{table:mdl_par}, les modèles RE-1, RE-2, et RE-3 correspondent respectivement aux équations~\ref{eq:RE_T}, \ref{eq:RE_TIV} et \ref{eq:RE_TH}.
+D'une part l'équation~\ref{eq:RE_TIV} ne permet pas de diminuer l'erreur standard (\SI{34}{\percent}) et est très proche des \SI{35}{\percent} calculé pour l'évaluation du modèle n'intégrant pas la végétation.
+D'autre part l'évaluation de l'équation~\ref{eq:RE_TH} montre une erreur standard plus faible s'établissant à \SI{23}{\percent}.
+Les paramètres des différentes équations sont présentés dans le tableau~\ref{table:mdl_par} ; les modèles \textbf{RE-1}, \textbf{RE-2}, et \textbf{RE-3} correspondent respectivement aux équations~\ref{eq:RE_T}, \ref{eq:RE_TIV} et \ref{eq:RE_TH}.
 À l'inverse de la PPB les paramètres des modèles de la RE ont, à l'exception du paramètre c du modèle RE-2, une significativité importante et une erreur standard faible.
 
 
@@ -563,7 +547,7 @@ Les paramètres des différentes équations sont présentés dans le tableau~\re
 %Le résultat de cette équation (Figure~\ref{fig:ENE_mdl}), montre que ce modèle permet d'expliquer une grande partie des variations de l'ENE.
 %Les résidus de cette équation sont répartis de manière a peu près homogène.
 
-\subsubsection{Le flux de \chh}
+\subsubsection{Flux de \chh}
 
 \begin{wrapfigure}{r}[35pt]{0.55\textwidth}
 \centering
@@ -580,30 +564,31 @@ Les paramètres des différentes équations sont présentés dans le tableau~\re
 %\label{fig:CH4_T}
 %\end{figure}
 
-Les relations entre les facteurs contrôlant mesurés et le \chh sont moins claires que celles concernant le \coo.
+Les relations entre les facteurs contrôlant mesurés et les flux de \chh sont moins claires que celles concernant le \coo.
 La corrélation la plus importante est liée à la végétation (Figure~\ref{fig:Fl_FC}).
-Le \chh ne montre pas de tendance à augmenter de façon exponentielle avec la température de l'air.
+Les flux de \chh ne montre pas de tendance à augmenter de façon exponentielle avec la température de l'air.
 Cependant cette relation se renforce d'autant plus que l'on utilise des températures mesurées à forte profondeur (Figure~\ref{fig:CH4_T}).
 Souvent utilisée les températures proches du niveau de nappe on des R\textsuperscript{2} inférieur à \num{0.50}.
 Au delà, les R\textsuperscript{2} sont supérieurs à \num{0.50}, mais l'ensemble des placettes n'est plus représenté, certaines placettes n'ayant pas une épaisseur de tourbe supérieure ou égale à \SI{30}{\centi\metre}.
 Le \chh ne montre pas de relation particulière avec le niveau de la nappe.
 %le \chh est également corrélé avec les températures, faiblement avec les températures de surface, mais de manière plus importante avec les températures du sol à plus forte profondeur (R\textsuperscript{2} = \textbf{XX},Figure~\ref{fig:Fl_FC}).
 %Enfin il est anti-corrélé (R=-0.51) avec le niveau de la nappe.
-Les relations \chh et végétation ont donc été modélisées avec :
+%Les relations \chh et végétation ont donc été modélisées avec :
+Les relations entre les flux de \chh et la végétation étant les plus significatives, elles ont été modélisées avec l'équation suivante :
 
 \begin{equation} \label{eq:CH4_H}
 F_{CH_{4}} = a*exp(b*IV)
 \end{equation}
 
-Avec les données acquises, l'indice de végétation est le meilleur prédicteur (Figure~\ref{fig:CH4_mdl}), il explique \SI{78}{\percent} de la variabilité du \chh avec une erreur standard de \SI{32}{\percent}.
-Aucune tendance ne semble se dégager entre les résidus de cette équations et les facteurs contrôlant mesurés.
-L'évaluation de cette équation montre une tendance à sous-estimer les flux de \chh et une erreur standard qui double par rapport à la phase de calibration en atteignant \SI{68}{\percent}.
+Avec les données acquises, l'indice de végétation est le meilleur prédicteur (Figure~\ref{fig:CH4_mdl}), car il explique \SI{78}{\percent} de la variabilité des flux \chh avec une erreur standard de \SI{32}{\percent} (Figure~\ref{fig:CH4_mdl}--a).
+Aucune tendance ne semble se dégager entre les résidus de cette équation et les facteurs contrôlant mesurés (Figure~\ref{fig:CH4_mdl}--d,e,f).
+L'évaluation de cette équation montre une tendance à sous-estimer les flux de \chh et une erreur standard qui double par rapport à la phase de calibration en atteignant \SI{68}{\percent} (Figure~\ref{fig:CH4_mdl}--c).
 Les détails de l'estimation des paramètres de l'équation~\ref{eq:CH4_H} est visible dans le tableau~\ref{table:mdl_par} sous le nom FCH4.
 
 \begin{figure}
 \centering
 \includegraphics[width=1.15\textwidth, center]{chap3/mdl_CH4_IV}
-\caption{CH4 modèle H}
+\caption{Calibration des flux de \chh avec la végétation en utilisant l'équation~\ref{eq:CH4_H}. Avec la représentativité des modèles et la distribution des résidus de l'équation (graphes a et b), l'évaluation sur un jeu de données indépendant (graphe c) et les tendances des résidus de l'équation avec le niveau de la nappe la température du sol à \num{-20} et \SI{-40}{\centi\metre} (graphe d, e et f).}
 \label{fig:CH4_mdl}
 \end{figure}
 %bortoluzzi veg
@@ -649,10 +634,10 @@ Les détails de l'estimation des paramètres de l'équation~\ref{eq:CH4_H} est v
 \end{table}
 
 
-\subsubsection{Le COD}
+\subsubsection{Carbone organique dissout}
 
 
-\subsection{Le bilan de carbone de la tourbière de La Guette à l'échelle de l'écosystème}
+\subsection{Le bilan de carbone à l'échelle de l'écosystème}
 
 %\subsubsection{Bilan (param et valeur)}
 
@@ -679,18 +664,18 @@ Les détails de l'estimation des paramètres de l'équation~\ref{eq:CH4_H} est v
 
 
 
-L'interpolation des flux de PPB montrent une variabilité saisonnière proche de celle mesurée sur le terrain (Figure~\ref{fig:BdC_GPP_interp}). 
-Les valeurs mesurées les plus grandes (partie supérieure de la barre rouge sur la figure~\ref{fig:BdC_GPP_interp}) ne semblent pas atteinte par le modèle PPB-2 à l'inverse du modèle PPB-1 (courbes noires sur la figure~\ref{fig:BdC_GPP_interp}).
+Les interpolations des flux de PPB montrent une variabilité saisonnière proche de celle mesurée sur le terrain (Figure~\ref{fig:BdC_GPP_interp}). 
+Les valeurs mesurées les plus grandes (partie supérieure de la barre rouge sur la figure~\ref{fig:BdC_GPP_interp}) ne semblent pas être reproduite par le modèle PPB-2 à l'inverse du modèle PPB-1 (courbes noires sur la figure~\ref{fig:BdC_GPP_interp}).
 Dans les deux cas les modèles semblent sur-estimer la valeur de PPB mesurées fin 2014.
 
-Pour la RE, l'interpolation suit également les variations saisonnières mesurées mensuellement (Figure~\ref{fig:BdC_ER_interp}).
+Pour la RE, l'interpolation reproduit également les variations saisonnières mesurées (Figure~\ref{fig:BdC_ER_interp}).
 Les gammes de valeurs mesurées sont très proche des gammes interpolées :
 les valeurs interpolées fluctuent dans les limites des barres d'erreurs.
-L'interpolation des flux de la RE est très proche quel que soit le modèle utilisé (Figure~\ref{fig:BdC_ER_interp}).
-L'intégration de la végétation dans les modèles RE-2 et RE-3 diminue la RE maximum modélisée en 2013 par rapport au modèle RE-1.
+L'interpolation des flux de la RE est très proches quel que soit le modèle utilisé (Figure~\ref{fig:BdC_ER_interp}).
+L'intégration de la végétation dans les modèles RE-2 et RE-3 diminue les valeurs maximum de la RE modélisée en 2013 par rapport au modèle RE-1.
 
 Les flux de \chh interpolés (Figure~\ref{fig:BdC_CH4_interp}), suivent également une cyclicité saisonnière.
-L'estimation du \chh semble rendre compte dans les grandes lignes de la différence de flux mesurée entre 2013 et 2014.
+Dans l'ensemble l'estimation du \chh semble rendre compte de la différence de flux mesuré en 2013 et en 2014.
 
 
 %Enfin pour l'ENE, les valeur interpolées suivent les variations saisonnière, malgré une interpolation qui semble sous-estimer les flux par rapport aux valeurs mesurées (Figure~\ref{fig:BdC_interp}-c).
@@ -715,14 +700,13 @@ L'estimation du \chh semble rendre compte dans les grandes lignes de la différe
 %\end{table}
 
 
-Les flux interpolés à l'heure puis sommés par années sont présentés dans le tableau~\ref{table:flux} pour les différents modèles.
+Les flux interpolés à une fréquence horaire puis sommés par année sont présentés dans le tableau~\ref{table:flux} pour les différents modèles utilisés.
 Sur les deux années, selon le modèle utilisé, le flux total entrant via la PPB est estimé à 1070 et \SI{1290}{\gcma} pour PPB-2 et PPB-1 respectivement.
-Dans le détail on observe une différence entre les deux modèles : 
-Celui utilisant uniquement la température de l'air (PPB-1) présente un stockage plus important en 2013 qu'en 2014.
-Tandis que le modèle prenant en compte la végétation (PPB-2) stocke moins de carbone en 2013 qu'en 2014.
+On observe une différence entre les deux modèles : 
+celui utilisant uniquement la température de l'air (PPB-1) présente un stockage plus important en 2013 qu'en 2014, tandis que le modèle prenant en compte la végétation (PPB-2) stocke moins de carbone en 2013 qu'en 2014.
 L'intégration de la végétation minimise également l'erreur standard de l'estimation, la divisant approximativement par deux.
 
-La différence de comportement, entre les années de mesures, liée à l'intégration de la végétation est également visible sur l'estimation de la RE.
+La différence de comportement, entre les années de mesures, liée à l'intégration de la végétation est également visible dans l'estimation de la RE.
 La prise en compte de la végétation (modèles RE-2 et RE-3) conduit à une respiration plus forte en 2014 qu'en 2013 à l'inverse de RE-1.
 La différence entre l'estimation de la RE en 2013 et en 2014 diminue avec l'intégration de la végétation.
 Elle passe de 102 pour RE-1 à 78 puis 41 pour RE-2 et RE-3.
