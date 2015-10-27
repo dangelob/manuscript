@@ -97,7 +97,7 @@ Avec :
 Le niveau de nappe est composé de deux mesures, l'une du haut du piézomètre jusqu'au niveau de la nappe et l'autre du haut du pièzomètre jusqu'à la surface du sol. 
 Par la suite, et en l'absence de précisions, le niveau de nappe se réfère à la différence entre ces deux mesures et donc à la distance entre la surface du sol et le niveau de la nappe (Négative sous la surface du sol et inversement).
 
-\subsection{Variabilité saisonnière du bilan de C}
+\subsection{Variabilité saisonnière du bilan de C gazeux}
 
 L'estimation du bilan de carbone se fait en trois étapes.
 La première consiste à établir des relations empiriques entre les flux et un ou plusieurs facteurs contrôlant.
@@ -193,7 +193,26 @@ Ces bilans sont par la suite exprimés en \si{\gram C m^{-2}} par période de te
 %L'interpolation étant soit une simple interpolation linéaire entre les données mensuelles, soit une relation avec les facteurs acquis par la station météorologique.
 %À l'aide de ces interpolations et des équations les flux ont ensuite été recalculés, à l'échelle horaire, sur les 2 années de mesure puis les flux ont été sommés afin de calculer les bilans.
 
+\subsection{Estimation des flux de carbone organique dissout}
 
+Le flux de COD entrant dans la tourbière est estimé à partir des précipitations et de leur concentration en COD.
+La concentration en COD dans les eaux de pluie est généralement comprise entre \num{0.5} et \SI{2.5}{\milli\gram\per\litre}(\citep{sigg2014}).
+Le flux de COD sortant est calculé à partir du modèle de \citet{binet2013} permettant d'estimer une quantité d'eau sortant à l'exutoire du bassin versant de l'écosystème et des concentrations en COD mesurées pendant les deux années de mesure.
+%Une mesure ponctuelle de la concentration en DOC de l'eau de pluie du site l'a estimé à \SI{0.34}{\mgl}.
+
+\begin{equation}
+\label{eq:COD}
+F_{COD} = \overbrace{(P\times[COD]_{P})}^{C entrant}-\overbrace{(D\times[COD]_{E})}^{C sortant}
+\end{equation}
+
+Avec :
+\begin{itemize}
+\item $F_{COD}$ : le flux de COD
+\item $P$ : Les précipitations en \si{\litre\per\square\metre}
+\item $[COD]_{P}$ : La concentration en COD des précipitations (fixé à \SI{1}{\mgl})
+\item $D$ : La décharge en eau du système à l'exutoire (quantité d'eau qui sort du bassin versant en \si{\litre})
+\item $[COD]_{E}$ : La concentration en COD de l'eau à l'exutoire 
+\end{itemize}
 
 \subsection{Variabilité spatiale des flux et du bilan de carbone}
 
@@ -389,7 +408,7 @@ La PPB et la RE présentent cependant des relations avec la température de l'ai
 Le \chh ne montre pas de relation avec la température de l'air, mais une tendance exponentielle est visible vis-à-vis de l'indice de végétation (Figure~\ref{fig:Fl_FC}).
 \textbf{(\chh et Température dans la tourbe ?)}
 
-\subsection{Sélection des modèles}
+\subsection{Estimation des flux}
 
 \subsubsection{Production primaire brute}
 
@@ -636,6 +655,17 @@ Les détails de l'estimation des paramètres de l'équation~\ref{eq:CH4_H} est v
 
 \subsubsection{Carbone organique dissout}
 
+La quantité de COD sortant de la tourbière est estimée à \SI{8}{\gcma} en 2013 et \SI{16}{\gcma} en 2014 (Tableau~\ref{table:flux}).
+Les concentrations en COD mesurées à l'exutoire sont très proche pour les deux années \num{18.6} et \SI{18.3}{\mgl} respectivement.
+Par contre la quantité d'eau sortant de l'écosystème est plus importante en 2014 avec un export aux alentours de \SI{1000}{\cubic\metre} par jour entre octobre 2014 et février 2015 (Figure~\ref{fig:discharge}).
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth, center]{chap3/discharge}
+\caption{Quantité d'eau quittant le bassin versant de la tourbière, modifié d'après \citet{binet2013}.}
+\label{fig:discharge}
+\end{figure}
+
 
 \subsection{Le bilan de carbone à l'échelle de l'écosystème}
 
@@ -731,7 +761,8 @@ PPB-2 & & \ref{eq:juneTairIV} et \ref{eq:PPB_bubier} & 957 $\pm$ 182 & 1184 $\pm
 RE-1 & RE & \ref{eq:RE_T} & 1337 $\pm$ 241 & 1235 $\pm$ 222 & 1286 $\pm$ 231 \\
 RE-2 & & \ref{eq:RE_TIV} & 1232 $\pm$ 160 & 1310 $\pm$ 170 & 1271 $\pm$ 165\\
 RE-3 & & \ref{eq:RE_TH} & 1240 $\pm$ 161 & 1281 $\pm$ 167 & 1261 $\pm$ 164 \\[+1.5ex]
-FCH4 & CH4 & \ref{eq:CH4_H} & 10 $\pm$ 3 & 24 $\pm$ 8 & 17 $\pm$ 5 \\
+FCH4 & CH4 & \ref{eq:CH4_H} & 10 $\pm$ 3 & 24 $\pm$ 8 & 17 $\pm$ 5 \\[+1.5ex]
+FCOD & COD & \ref{eq:COD} & 9  & 16 & 12 \\
 \bottomrule
 \end{tabular}
 \end{table}
