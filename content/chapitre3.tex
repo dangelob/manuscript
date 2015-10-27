@@ -30,8 +30,8 @@ Enfin elle précise comment sont fait les calculs des erreurs associées aux flu
 
 \subsection{Design expérimental}
 
-En juin 2011, 20 placettes ont été installées\footnote{je remercie ici Sébastien Gogo pour avoir installé ces placettes sur le terrain avant même mon arrivée.} selon un échantillonnage aléatoire stratifié:
-La surface de la tourbière a été divisée selon une grille de 20 mailles et un point choisi aléatoirement dans chaque maille localise chaque placette (Figure~\ref{fig:carteVS}).
+En juin 2011, 20 placettes ont été installées selon un échantillonnage aléatoire stratifié:
+La surface de la tourbière active (\SI{13}{\hectare}) a été divisée selon une grille de 20 mailles et un point choisi aléatoirement dans chaque maille localise chaque placette (Figure~\ref{fig:carteVS}).
 La taille de la maille a été ajustée de manière à avoir vingt 20 carrés sur la surface de la tourbière.
 Cette méthode permet de conserver un échantillonnage aléatoire tout en étant assuré d'avoir une représentativité spatiale du site homogène. 
 Les placettes, délimitées par des piquets, occupent une surface de \SI{4}{\square\metre} (2$\times$\SI{2}{\metre}).
@@ -56,7 +56,7 @@ Les mesures des flux de \coo et de \chh ont été effectuées en utilisant les m
 
 %De plus, du fait de l'omniprésence de végétation vasculaire, et de la taille des chambres par rapport à la micro-topographie une telle approche était difficile à mettre en oeuvre.
 
-Les flux de \coo et de \chh ont été mesurés et étudiés.
+Les flux de \coo et de \chh ont été mesurés et étudiés (Tableau~\ref{table:ls_var}).
 Par contre, suite à des tests préliminaires effectués sur la tourbière montrant des émissions très faibles de N$_{2}$O, ce gaz n'a pas été étudié.
 Les mesures de \coo ont été effectuées de mars 2013 à février 2015, avec une fréquence quasiment mensuelle (20 campagnes, pour 24 mois de mesures). Les mesures de \chh ont été effectuées avec une fréquence et sur un nombre d'embases inférieur (12 campagnes, 5 embases).
 Ceci a été déterminé par la difficulté de déploiement \textit{in-situ} de l'instrument SPIRIT.
@@ -66,12 +66,51 @@ Les mesures se sont donc limitées aux placettes accessibles depuis le ponton (F
 
 \subsubsection{Mesures des facteurs contrôlant}
 
-Les facteurs contrôlant mesurés manuellement sont la pression atmosphérique, le rayonnement photosynthétique actif (\textit{photosyntheticaly active radiation}, PAR), les températures du sol à différentes profondeurs, la végétation (pourcentage de recouvrement), le niveau de la nappe d'eau.
+
+\begin{table}
+\centering
+\caption{Liste des variables acquises. Les données acquises manuellement le sont sur les 20 placettes, tandis que les données acquises automatiquement le sont ponctuellement (station météorologique).F}
+\label{table:ls_var}
+\begin{tabular}{llll}
+\toprule
+& variable & type d'acquisition & fréquence \\
+\midrule
+\multicolumn{4}{l}{Flux} \\ [+.5ex]
+& \coo & manuelle & mensuelle \\
+& \chh & manuelle & mensuelle \\[+1ex]
+\multicolumn{4}{l}{Physique} \\ [+.5ex]
+& température air & manuelle & mensuelle \\
+& température sol & manuelle & mensuelle \\
+& température air & automatique & horaire \\
+& température sol & automatique & horaire \\[+1ex]
+\multicolumn{4}{l}{Hydrologie} \\ [+.5ex]
+& niveau de nappe & manuelle & mensuelle \\
+& niveau de nappe & automatique & horaire \\
+& conductivité & manuelle & mensuelle \\
+& pH & manuelle & mensuelle \\
+& COD & manuelle & mensuelle \\
+& teneur en eau & manuelle & mensuelle \\[+1ex]
+\multicolumn{4}{l}{Végétation} \\ [+.5ex]
+& recouvrement (sphaignes, herbacées, éricacées) & manuelle & mensuelle \\[+1ex]
+\multicolumn{4}{l}{Météorologie} \\ [+.5ex]
+& pluviométrie & automatique & horaire \\
+& pression atmosphérique & automatique & horaire \\
+& humidité de l'air & automatique & horaire \\
+& rayonnement solaire & automatique & horaire \\
+& vent (vitesse et direction) & automatique & horaire \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+Les facteurs contrôlant mesurés manuellement sont la pression atmosphérique, le rayonnement photosynthétique actif (\textit{photosyntheticaly active radiation}, PAR), les températures du sol à différentes profondeurs, la végétation (pourcentage de recouvrement), le niveau de la nappe d'eau (Tableau~\ref{table:ls_var}).
 La pression atmosphérique est mesurée au début et à la fin des mesures de flux.
 Le PAR est mesuré au début et à la fin des mesures de l'ENE.
 Le recouvrement de végétation est estimé à l’œil.
 Des prélèvements d'eau ont été effectués chaque mois pour mesurer le pH et la conductivité (mesures effectuées sur le terrain après les mesures de flux).
-Les échantillons ont été congelés pour la mesure ultérieure de la concentration en carbone organique dissout.
+Les échantillons d'eau prélevés dans les 20 placettes ont été congelés pour la mesure ultérieure de la concentration en carbone organique dissout.
+D'autres échantillons d'eau prélevés à l'exutoire de la tourbière ont été prélevés, pour ces derniers aucun traitement de congélation n'a été effectué et la concentration en COD a été mesurée moins de 24 heures après le prélèvement.
+Les analyses de COD ont été faite en utilisant la technique dite NPOC (\textit{Non Purgeable Organic Carbon}) dans laquelle le carbone présent dans l'échantillon est transformé en \coo par l'ajout d'un acide (\textbf{À vérifier}).
 L'ensemble de ces mesures nécessitant d'accéder aux placettes régulièrement, des planches de bois ont été utilisées comme pontons mobiles pour limiter les perturbations. La dispersion des placettes sur l'ensemble du site a rendu impossible une installation plus permanente.
 
 Les mesures automatiquement acquises via la station météo installée sur le site depuis 2010 sont la température de l'air, la température de la tourbe à \num{-5}, \num{-10}, \num{-20} et \SI{-40}{\centi\metre} de profondeur, la vitesse et la direction du vent, l'humidité relative de l'air, le rayonnement solaire, et la pression atmosphérique.
@@ -122,7 +161,7 @@ Le R$^{2}$ est utilisé comme indicateur de la proportion de la variabilité des
 La RMSE et sa normalisation par la moyenne NRMSE sont utilisés comme indicateur de l'écart entre les données mesurées et les données modélisées.
 Les résidus\footnote{Les résidus sont défini comme la différence entre les valeurs mesurées et estimées.} sont également étudiés dans le but d'éviter un biais ou une hétéroscédasticité\footnote{On parle d'homoscédasticité lorsque la variance de l'erreur d'une variable est constante, et l'hétéroscédasticité lorsque qu'elle ne l'est pas} dans les données (Figure~\ref{fig:ref_resid}).
 
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{chap3/ref_resid}
 \caption{Cas idéaux de distribution des résidus. Modifié d'après source inconnue, repris de : \url{https://danieljhocking.wordpress.com/2011/07/18/model-validation-interpreting-residual-plots/}}
@@ -395,10 +434,10 @@ Les valeurs moyennes maximales atteignent \num{0.078} en 2013 et \SI{0.196}{\uml
 
 \subsubsection{Relations entre flux gazeux et facteurs contrôlant}
 
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{chap3/Fl_FC}
-\caption{Relations entre les flux de gaz et une sélection de facteurs contrôlant}
+\caption{Relations entre les flux de gaz (exprimés en \si{\uml}) et une sélection de facteurs contrôlant : l'indice de végétation à droite (IV, sans unité), le niveau de la nappe d'eau au milieu (cm) et la température de l'air (Tair en \si{\degreeCelsius})}
 \label{fig:Fl_FC}
 \end{figure}
 
@@ -435,7 +474,7 @@ On a utilisé l'équation~\ref{eq:PPB_bubier} proposée par \citep{bubier1998} e
 PPB = \frac{PPBsat * i * PAR}{PPBsat + i * PAR}
 \end{equation}
 
-\begin{figure}
+\begin{figure} %[!htb]
 \centering
 \includegraphics[width=1.15\textwidth, center]{chap3/mdl_GPP_Tair}
 \caption{Résultats de la calibration de la PPB. En haut la PPBsat (équation~\ref{eq:juneTair} avec la représentativité du modèle et la distribution des résidus (graphes a et b). Au milieu les tendances entre les résidus de cette équation et l'indice de végétation, le pourcentage de recouvrement de la strate herbacée et le niveau de la nappe (graphes c, d et e). Et en bas la PPB (équation~\ref{eq:PPB_bubier}), sa représentativité et la distribution des résidus de l'équation (graphes f et g) et l'évaluation sur un jeu de données indépendant (graphe h).}
@@ -457,7 +496,7 @@ Afin de prendre en compte la tendance linéaire entre les résidus et l'indice d
 PPBsat = (a * IV + d) * exp(\frac{T - b}{c})^2
 \end{equation}
 
-\begin{figure}
+\begin{figure} %[!htb]
 \centering
 \includegraphics[width=1.15\textwidth, center]{chap3/mdl_GPP_TairIV}
 \caption{Résultats de la calibration de la PPB en prenant en compte la végétation. En haut la PPBsat (équation~\ref{eq:juneTairIV} avec la représentativité du modèle et la distribution des résidus (graphes a et b). Au milieu les tendances entre les résidus de cette équation et l'indice de végétation, le pourcentage de recouvrement de la strate herbacée et le niveau de la nappe (graphes c, d et e). Et en bas la PPB (équation~\ref{eq:PPB_bubier}), sa représentativité et la distribution des résidus de l'équation (graphes f et g) et l'évaluation sur un jeu de données indépendant (graphe h).}
@@ -490,7 +529,7 @@ Dans la suite du texte le modèle permettant d'estimer la PPB à partir des équ
 
 \subsubsection{Respiration de l'écosystème}
 
-\begin{figure}[]
+\begin{figure} %[!htb]
 \centering
 \includegraphics[width=1.05\textwidth, center]{chap3/mdl_ER_Tair}
 \caption{\label{fig:mdl_ER_Tair}
@@ -572,7 +611,7 @@ Les paramètres des différentes équations sont présentés dans le tableau~\re
 \centering
 \vspace{-40pt}
 \includegraphics[width=.5\textwidth]{chap3/CH4_T_exp}
-\caption{Évolution du R\textsuperscript{2} de l'équation $F_{CH_{4}} = a*exp(b*Temp\acute{e}rature)$ avec la profondeur. La ligne de tirets gris représente la surface du sol. La zone bleu claire représente la gamme des niveau moyen relevés sur le site et la zone bleu foncé le niveau moyen pour l'année 2013 et 2014.}
+\caption{Évolution du R\textsuperscript{2} de l'équation $F_{CH_{4}} = a\times exp(b\times Temp\acute{e}rature)$ avec la profondeur. La ligne de tirets gris représente la surface du sol. La zone bleu claire représente la gamme des niveau moyen relevés sur le site et la zone bleu foncé le niveau moyen pour l'année 2013 et 2014.}
 \label{fig:CH4_T}
 \end{wrapfigure}
 
