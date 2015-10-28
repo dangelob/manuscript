@@ -860,6 +860,26 @@ L'analyse de sensibilité, consistant à faire varier chaque paramètre des mod�
 Le modèle RE-2, très proche du modèle RE-3 n'a pas été testé.
 \textbf{Attente du COD, les valeurs du tableau sont fausse pour le moment}
 
+
+\subsubsection{Représentativité locale}
+
+En recalculant la NRMSE individuelle de chaque placette, il est possible d'avoir une indication sur la représentativité locale des modèles calibrés à l'échelle de l'écosystème (Figure~\ref{fig:repr_loc}).
+PPB-1 et PPB-2 ont une distribution des valeurs de NRMSE relativement similaire, même si légèrement plus forte pour PPB-2.
+le modèle RE-3 présente des valeurs plus faibles et une distribution plus homogène de la NRMSE que RE-1, avec davantage de placette en dessous de \SI{50}{\percent}.
+Que ce soit pour la PPB ou la RE, la placette n°5 est systématiquement celle ayant l'erreur la plus forte.
+
+\begin{figure}
+\centering
+\includegraphics[width=.45\textwidth]{chap3/eco_to_loc_nrmse_PPB1}
+\includegraphics[width=.45\textwidth]{chap3/eco_to_loc_nrmse_RE1}\\
+\includegraphics[width=.45\textwidth]{chap3/eco_to_loc_nrmse_PPB2}
+\includegraphics[width=.45\textwidth]{chap3/eco_to_loc_nrmse_RE3}
+\caption{Distribution des valeurs de la NRMSE recalculée par placette à partir des modèles calibrés à l'échelle de l'écosystème}
+\label{fig:repr_loc}
+\end{figure}
+
+
+
 %, montre pour une équation exponentielle simple des valeurs attendues $\pm$\SI{10}{\percent} pour le paramètre a et \num{+29} à \SI{-22}{\percent} pour le b (Figure~\ref{table:mdl_sensitiv}).
 %Pour la PPB issue des équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier} le paramètre i à très peu d'effet sur le bilan, \num{0} à \SI{-1}{\percent}.
 %Cependant l'effet sur le bilan augmente lorsque la végétation est prise en compte (équation~\ref{eq:juneTair} et \ref{eq:PPB_bubier}) : \num{-8} à \SI{-10}{\percent}.
@@ -1085,7 +1105,8 @@ PPB-2, RE-3 &  \num{-216} & \num{-517} & +\num{162} & \num{-321} & \num{-191}\\[
 
 \subsubsection{Calibration par placette}
 
-Les modèles RE-1, RE-3 et PPB-2 ont pu être calibré par placette.
+Les modèles RE-1, RE-3 ont pu être calibré pour l'ensemble des 20 placettes et le modèle PPB-2 pour 17 d'entre elles.
+Le modèle RE-2, proche de RE-3 n'a pas été calibré quant au modèle PPB-1 sa calibration par placette ne converge pas pour un grand nombre d'entre elles, il a donc été laissé de côté.
 Pour l'ensemble de ces modèles on constate une forte hausse de la NRMSE (Figure~\ref{fig:loc_ER} et \ref{fig:loc_GPP}).
 Concernant la RE, les modèles RE-1 et RE-3 ont des valeurs de NRMSE relativement proche d'environ \SI{50}{\percent}, avec deux outliers pour RE-1 et un pour RE-3 (Figure~\ref{fig:loc_ER}).
 Les paramètres varient dans des gammes similaires pour les deux modèles.
