@@ -37,7 +37,8 @@ Cette méthode permet de conserver un échantillonnage aléatoire tout en étant
 Les placettes, délimitées par des piquets, occupent une surface de \SI{4}{\square\metre} (2$\times$\SI{2}{\metre}).
 Usuellement les placettes sont séparées en groupes micro-topographiques (Figure~\ref{fig:microtopo}), avec des embases positionnées sur les buttes (\textit{hummock}), les trous (\textit{hollows}) et les zones d'eau libre (\textit{pool}) \citep{Alm1997,waddington2000}.
 Ou encore selon différent traitements, réhabilité/non réhabilité, exploité/non exploité, manipulé/non manipulé \citep{bortoluzzi2006a,strack2013}.
-Ceci a l'avantage de permettre une distinction fine des capacités sources/puits mais a l'inconvénient du placement proche des embases les unes des autres limitant la représentativité spatiale des mesures.
+Cette méthodologie présente l'avantage de permettre une distinction fine des capacités sources/puits entre ces traitements, cependant elle implique généralement un placement des embases proches les unes des autres au sein d'un même traitement, limitant la représentativité spatiale des mesures.
+%Ceci a l'avantage de permettre une distinction fine des capacités sources/puits mais a l'inconvénient du placement proche des embases les unes des autres limitant la représentativité spatiale des mesures.
 Elles peuvent également être séparées en zone dans la tourbière, haut-marais \textit{versus} bas-marais, ou réhabilité \textit{versus} non-réhabilité.
 Afin de gagner en représentativité spatiale, la taille du site le permettant, il a donc été décidé de positionner des placettes sur l'ensemble du site.
 Sur ces placettes ont été réalisées un certain nombre de mesure de \textbf{flux de gaz} et de \textbf{facteurs contrôlant}.
@@ -154,7 +155,7 @@ Pour estimer le bilan de carbone du site il est donc nécessaire d'établir des 
 Pour établir ces modèles empiriques les données acquises ont été moyennées par campagne de mesure ; ceci permettant, dans un premier temps, de s'affranchir de la variabilité spatiale des flux et ne considérer que la variabilité temporelle.
 Les relations entre flux et facteurs contrôlant ont ensuite été étudiées deux à deux, notamment en réalisant une analyse en composante principale (ACP).
 Cette analyse permet de déterminer quels sont les relations entre les variables et plus particulièrement quelles sont celles qui influent le plus sur les flux de GES.
-Le nombre de données acquises pour le \coo et le \chh étant différent, une ACP a été réalisée pour chacun de ses gaz.
+Le nombre de données acquises pour le \coo et le \chh étant différent, une ACP a été réalisée pour chacun de ses gaz (Annexe~\ref{sec:acp}).
 Une fois le facteur de contrôle prépondérant d'un gaz établi, grâce à l'ACP et à la littérature, une relation empirique est établie entre les deux.
 La forme de cette relation et la littérature conditionne ensuite les équations testées.
 Elles sont évaluées à l'aide du coefficient de détermination (R\textsuperscript{2}) et de la racine carré de l'erreur quadratique normalisée (\textit{Normalised Root Mean Square Error}, NRMSE).
@@ -199,10 +200,10 @@ Afin d'établir le bilan de carbone tout en gardant une discrimination entre les
 %La RMSE et sa normalisation par la moyenne NRMSE sont utilisés comme indicateur de l'écart entre les données mesurées et les données modélisées.
 %L'AIC permet de déterminer la pertinence de l'ajout d'un paramètre sur la représentation des données par le modèle.
 
-La température a été choisie comme base de départ à la construction des modèles de RE et PPBsat, car (i) c'est le facteur de contrôle le plus souvent invoqué et (ii) les corrélations avec les flux étaient les plus forte.
+La température a été choisie comme base de départ à la construction des modèles de RE et PPB, car (i) c'est le facteur de contrôle le plus souvent invoqué et (ii) les corrélations avec les flux étaient les plus forte.
 Concernant la respiration de l'écosystème, les températures utilisées dans la littérature sont variables : la température la plus utilisée est la température du sol à \SI{-5}{\centi\metre}  \citep{ballantyne2014}.
 D'autres auteurs utilisent aussi la température de l'air et la température du sol à \SI{-10}{\centi\metre} \citep{bortoluzzi2006a,kim1992}.
-Cette profondeur, \SI{-5}{\cm}, est régulièrement utilisée car c'est dans la tourbe, proche de la surface que la respiration du sol est la plus importante.
+L'utilisation de ces profondeurs sont justifiées par le fait que dans la tourbe, la respiration du sol est la plus importante au dessus du niveau de l'eau et donc en surface.
 \plop %\textbf{production CO2 ? profils ?}
 C'est également à des profondeurs relativement faibles que se situent la majorité des racines \plop.
 La respiration liée aux racines (autotrophe et hétérotrophe stimulée par les exsudats racinaires) peut contribuer à la respiration de l'écosystème pour 35 à \SI{60}{\percent} \citep{silvola1996,crow2005}.
@@ -344,7 +345,7 @@ La variabilité saisonnière de la température est également visible quand ell
 \includegraphics[width=1\textwidth, center]{chap3/cond_mean_evolution}
 \includegraphics[width=1\textwidth, center]{chap3/pH_mean_evolution}
 \includegraphics[width=1\textwidth, center]{chap3/NPOC_mean_evolution}
-\caption{Cinétique de la conductivité (A), du pH (B) et du carbone organique dissout (C) pendant la période de mesure (mars 2013 -- février 2015)}
+\caption{Cinétique des moyennes de la conductivité (A), du pH (B) et du carbone organique dissout (C) mesurés dans l'eau des piézomètres entre mars 2013 et février 2015.}
 \label{fig:wtr_phychim}
 \end{figure}
 
@@ -518,15 +519,41 @@ Néanmoins ce modèle intégrant la végétation permet de diminuer de façon im
 Dans la suite du texte le modèle permettant d'estimer la PPB à partir des équations~\ref{eq:juneTair} et \ref{eq:PPB_bubier} sera nommé \textbf{PPB-1} et celui utilisant les équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier} sera nommée \textbf{PPB-2}.
 
 
-%\begin{figure}
-%\centering
-%\includegraphics[width=\textwidth]{chap3/GPP_mdl_mesmod}
-%\caption{PPB modèles Tair}
-%\label{fig:PPB_Tair_mdl}
-%\end{figure}
+\begin{table}
+\centering
+\caption{Valeur des paramètres des équations utilisées pour modéliser les flux et sensibilité relative (en \%) des flux en réponse à une variation de $\pm$\SI{10}{\percent} de chacun des paramètres des modèles.}
+\label{table:mdl_par}
+\begin{tabular}{llccccc}\toprule
 
-%La PPB calculée à partir de l'équation~\ref{eq:juneTair} présente des résidus relativement homogène avec cependant d'avantage de points situés entre \num{-2} et \num{-4} qu'entre \num{2} et \num{4} (Figure~\ref{fig:mdl_GPP_Tair}--a,b).
-%Une observation similaire peut être faire pour PPB calculé à partir de l'équation~\ref{eq:juneTairIV}, avec cependant des résidus resserrés entre \num{-2} et \num{2} et un point un peu plus extrême(Figure~\ref{fig:mdl_GPP_Tair}--c,d).
+& par & valeur & se & pval & \SI{-10}{\percent} & +\SI{+10}{\percent} \\ \midrule
+\multicolumn{7}{l}{PPB-1 -- équations~\ref{eq:juneTair} et \ref{eq:PPB_bubier}}  \\ [+.5ex]
+& a & 26.23 & 62.07 & 0.68 & -9.7 & +9.6 	\\
+& b & 53.68 & 61.27 & 0.39 & +43.7 &-35.1 \\
+& c & 27.21 & 28.56 & 0.35 &-22.5 & +21.9 \\
+& i &  1.84 & 21.6  & 0.93 & -0.4 &  +0.4 \\[+1ex]
+\multicolumn{7}{l}{PPB-2 -- équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier}}  \\ [+.5ex]
+& a & 39.44 & 18.89 & 0.05 & -11.8 & +11.5 \\
+& b & 40.27 & 19.11 & 0.05 & +15.8 & -17.2 \\
+& c & 25.23 & 14.35 & 0.1 & -8.1 & +6.7 \\
+& d & -3.73 & 3.49 & 0.3 & +2.8 & -2.8 \\
+& i &  0.26 & 0.25 & 0.31 & -1.3 & +1.1 \\[+1ex]
+\multicolumn{7}{l}{RE-1 -- équation~\ref{eq:RE_T}}  \\ [+.5ex]
+& a & 0.34 & 0.08 & 0 & -10 & +10 \\
+& b & 0.10 & 0.01 & 0 & -22.6 & +29.9  \\[+1ex]
+\multicolumn{7}{l}{RE-2 -- équation~\ref{eq:RE_TIV}}  \\ [+.5ex]
+& a & 0.92 & 0.34 & 0.02 & -7.3 & +7.3 \\
+& b & 0.09 & 0.01 & 0.00 & -19.5 & 24.7 \\
+& c & 0.14 & 0.09 & 0.14 & +2.7 & -2.7  \\[+1ex]
+\multicolumn{7}{l}{RE-3 -- équation~\ref{eq:RE_TH}}  \\ [+.5ex]
+& a & 0 & 0 & 0.01 & -3.9 & +3.9 \\
+& b & 0.08 & 0.01 & 0 & -18.8 & +23.6 \\
+& c & 0.33 & 0.06 & 0 & -6.1 & +6.1 \\[+1ex]
+\multicolumn{7}{l}{FCH4 -- équation~\ref{eq:CH4_H}}  \\ [+.5ex]
+& a & 0 & 0 & 0.48 & -10 & +10 \\
+& b & 13.01 & 2.82 & 0 & -43.9 & +79.2 \\[+1ex]
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsubsection{Respiration de l'écosystème}
 
@@ -569,7 +596,7 @@ L'évaluation de ces deux équations montre cependant des différences :
 D'une part l'équation~\ref{eq:RE_TIV} ne permet pas de diminuer l'erreur standard (\SI{34}{\percent}) et est très proche des \SI{35}{\percent} calculé pour l'évaluation du modèle n'intégrant pas la végétation.
 D'autre part l'évaluation de l'équation~\ref{eq:RE_TH} montre une erreur standard plus faible s'établissant à \SI{23}{\percent}.
 Les paramètres des différentes équations sont présentés dans le tableau~\ref{table:mdl_par} ; les modèles \textbf{RE-1}, \textbf{RE-2}, et \textbf{RE-3} correspondent respectivement aux équations~\ref{eq:RE_T}, \ref{eq:RE_TIV} et \ref{eq:RE_TH}.
-À l'inverse de la PPB les paramètres des modèles de la RE ont, à l'exception du paramètre c du modèle RE-2, une significativité importante et une erreur standard faible.
+À l'inverse de la PPB les paramètres des modèles de la RE ont, à l'exception du paramètre c du modèle RE-2, une significativité importante et une erreur standard faible (Tableau~\ref{table:mdl_par}).
 
 
 
@@ -656,41 +683,7 @@ Les détails de l'estimation des paramètres de l'équation~\ref{eq:CH4_H} est v
 %Bubier 1993a WTL majeur
 %Bubier 1995 Température humidité végétation
 
-\begin{table}
-\centering
-\caption{Valeur des paramètres des équations utilisées pour modéliser les flux et sensibilité relative (en \%) des flux en réponse à une variation de $\pm$\SI{10}{\percent} de chacun des paramètres des modèles.}
-\label{table:mdl_par}
-\begin{tabular}{llccccc}\toprule
 
-& par & valeur & se & pval & \SI{-10}{\percent} & +\SI{+10}{\percent} \\ \midrule
-\multicolumn{7}{l}{PPB-1 -- équations~\ref{eq:juneTair} et \ref{eq:PPB_bubier}}  \\ [+.5ex]
-& a & 26.23 & 62.07 & 0.68 & -9.7 & +9.6 	\\
-& b & 53.68 & 61.27 & 0.39 & +43.7 &-35.1 \\
-& c & 27.21 & 28.56 & 0.35 &-22.5 & +21.9 \\
-& i &  1.84 & 21.6  & 0.93 & -0.4 &  +0.4 \\[+1ex]
-\multicolumn{7}{l}{PPB-2 -- équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier}}  \\ [+.5ex]
-& a & 39.44 & 18.89 & 0.05 & -11.8 & +11.5 \\
-& b & 40.27 & 19.11 & 0.05 & +15.8 & -17.2 \\
-& c & 25.23 & 14.35 & 0.1 & -8.1 & +6.7 \\
-& d & -3.73 & 3.49 & 0.3 & +2.8 & -2.8 \\
-& i &  0.26 & 0.25 & 0.31 & -1.3 & +1.1 \\[+1ex]
-\multicolumn{7}{l}{RE-1 -- équation~\ref{eq:RE_T}}  \\ [+.5ex]
-& a & 0.34 & 0.08 & 0 & -10 & +10 \\
-& b & 0.10 & 0.01 & 0 & -22.6 & +29.9  \\[+1ex]
-\multicolumn{7}{l}{RE-2 -- équation~\ref{eq:RE_TIV}}  \\ [+.5ex]
-& a & 0.92 & 0.34 & 0.02 & -7.3 & +7.3 \\
-& b & 0.09 & 0.01 & 0.00 & -19.5 & 24.7 \\
-& c & 0.14 & 0.09 & 0.14 & +2.7 & -2.7  \\[+1ex]
-\multicolumn{7}{l}{RE-3 -- équation~\ref{eq:RE_TH}}  \\ [+.5ex]
-& a & 0 & 0 & 0.01 & -3.9 & +3.9 \\
-& b & 0.08 & 0.01 & 0 & -18.8 & +23.6 \\
-& c & 0.33 & 0.06 & 0 & -6.1 & +6.1 \\[+1ex]
-\multicolumn{7}{l}{FCH4 -- équation~\ref{eq:CH4_H}}  \\ [+.5ex]
-& a & 0 & 0 & 0.48 & -10 & +10 \\
-& b & 13.01 & 2.82 & 0 & -43.9 & +79.2 \\[+1ex]
-\bottomrule
-\end{tabular}
-\end{table}
 
 
 \subsubsection{Carbone organique dissout}
@@ -802,7 +795,7 @@ RE-1 & RE & \ref{eq:RE_T} & 1337 $\pm$ 241 & 1235 $\pm$ 222 & 1286 $\pm$ 231 \\
 RE-2 & & \ref{eq:RE_TIV} & 1232 $\pm$ 160 & 1310 $\pm$ 170 & 1271 $\pm$ 165\\
 RE-3 & & \ref{eq:RE_TH} & 1240 $\pm$ 161 & 1281 $\pm$ 167 & 1261 $\pm$ 164 \\[+1.5ex]
 FCH4 & CH4 & \ref{eq:CH4_H} & 10 $\pm$ 3 & 24 $\pm$ 8 & 17 $\pm$ 5 \\[+1.5ex]
-FCOD & COD & \ref{eq:COD} & 9  & 16 & 12 \\
+FCOD & COD & \ref{eq:COD} & 8 $\pm$ 1  & 16 $\pm$ 1 & 12 $\pm$ 1 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -953,7 +946,7 @@ La classification hiérarchique a permis de distinguer 4 groupes de végétation
 Dans le groupe Mousse, la strate muscinale est majoritaire avec un recouvrement moyen de \SI{91}{\percent}, moins de \num{35} et \SI{15}{\percent} de recouvrement pour les herbacées et les arbustes respectivement.
 Le groupe Mix est le plus homogène avec un recouvrement moyen des strates muscinales et arbustives de \num{63} et \SI{58}{\percent} chacune.
 C'est également le groupe ou il y a de moins d'herbacées avec un recouvrement de \SI{24}{\percent}.
-La strate herbacée est majoritaire dans le Herbe avec un recouvrement moyen de \SI{63}{\percent}, la strate arbustive y est peu présence (\SI{19}{\percent} en moyenne) et la strate muscinale y est pour ainsi dire absente (\SI{1}{\percent}).
+Dans le groupe herbe, la strate herbacée est majoritaire avec un pourcentage de recouvrement moyen de \SI{63}{\percent}, la strate arbustive est moins présente (\SI{19}{\percent} en moyenne) et la strate muscinale est absente (\SI{1}{\percent}).
 La strate muscinale est également absente, ou presque, dans le groupe Arbuste (\SI{1}{\percent}).
 Groupe dans lequel la strate arbustive est majoritaire avec de \SI{65}{\percent} de recouvrement moyen, et la strate herbacée avec \SI{33}{\percent} (Figure~\ref{fig:distrib_grpveg}).
 Les flux, calculés à partir des même équations que celles utilisées à l'échelle de l'écosystème entier, ont des erreurs plus importante : de \num{41} à \SI{66}{\percent} pour RE-1 et RE-2 et de \num{39} à \SI{65}{\percent} pour PPB-1 et PPB-2 (Tableau~\ref{table:flux_grp}).
