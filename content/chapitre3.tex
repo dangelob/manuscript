@@ -704,7 +704,7 @@ Par contre la quantité d'eau sortant de l'écosystème est plus importante en 2
 
 %\subsubsection{Bilan (param et valeur)}
 
-\begin{figure}
+\begin{figure}[!hbt]
 \centering
 \includegraphics[width=1\textwidth, center]{chap3/BdC_GPP_interp}
 \caption{Flux de \coo interpolé à l'heure à partir de PPB-1 (en haut) et PPB-2 (en bas). Les points rouges représentent les moyennes des mesures mensuelles et leur déviation standard}
@@ -741,46 +741,7 @@ Les flux de \chh interpolés (Figure~\ref{fig:BdC_CH4_interp}), suivent égaleme
 Dans l'ensemble l'estimation du \chh semble rendre compte de la différence de flux mesuré en 2013 et en 2014.
 
 
-%Enfin pour l'ENE, les valeur interpolées suivent les variations saisonnière, malgré une interpolation qui semble sous-estimer les flux par rapport aux valeurs mesurées (Figure~\ref{fig:BdC_interp}-c).
 
-%\begin{table}
-%\centering
-%\caption{Bilan en gCm2an1}
-%\label{table:BdC}
-%\begin{tabular}{lllllll}\toprule
-%& année & PBB & RE & CH4 & COD & BCNE \\ \midrule
-%%mdl 1 (Tair - Tair - IV) & 2013 & 1317.8 $\pm$ 266 & 1332.8 $\pm$ 238 & 10.1 $\pm$ 3 & & \\[+.5ex]
-%%                         & 2014 & 1257.7 $\pm$  254& 1273.3 $\pm$ 228 & 24.6 $\pm$ 8 & & \\ [+1ex]
-%%                         & total & 1287.7 $\pm$ 260& 1283.9 $\pm$ 229 & 17.4 $\pm$ 6& &\\[+2ex]
-%mdl 2 (Tair IV - Tair - IV) & 2013 & 1035.2 $\pm$ 209  & 1332.8 $\pm$ 238 & 10.1 $\pm$ 3 & & \\[+.5ex]
-%                            & 2014 & 1212.9 $\pm$ 245 & 1273.3 $\pm$ 228  & 24.6 $\pm$ 8 &  & \\ [+1ex]
-%                            & total & 1124.1 $\pm$ 227 & 1283.9 $\pm$ 229  & 17.4 $\pm$ 6 & &\\[+2ex]
-%%mdl 3 (Tair IV - T5 - IV) & 2013 & 1035.2 & 1358.8 & 10.1 & & \\[+.5ex]
-%%                          & 2014 & 1212.9 & 1273.3 & 24.6 & & \\ [+1ex]
-%%                          & total & 1124.1 & 1288.6 & 17.4 & &\\[+1ex]
-%\bottomrule
-%\end{tabular}
-%\end{table}
-
-
-Les flux interpolés à une fréquence horaire puis sommés par année sont présentés dans le tableau~\ref{table:flux} pour les différents modèles utilisés.
-Sur les deux années, selon le modèle utilisé, le flux total entrant via la PPB est estimé à 1070 et \SI{1290}{\gcma} pour PPB-2 et PPB-1 respectivement.
-On observe une différence entre les deux modèles : 
-celui utilisant uniquement la température de l'air (PPB-1) présente un stockage plus important en 2013 qu'en 2014, tandis que le modèle prenant en compte la végétation (PPB-2) stocke moins de carbone en 2013 qu'en 2014.
-L'intégration de la végétation minimise également l'erreur standard de l'estimation, la divisant approximativement par deux.
-
-La différence de comportement, entre les années de mesures, liée à l'intégration de la végétation est également visible dans l'estimation de la RE.
-La prise en compte de la végétation (modèles RE-2 et RE-3) conduit à une respiration plus forte en 2014 qu'en 2013 à l'inverse de RE-1.
-La différence entre l'estimation de la RE en 2013 et en 2014 diminue avec l'intégration de la végétation.
-Elle passe de 102 pour RE-1 à 78 puis 41 pour RE-2 et RE-3.
-Malgré ces différences, on observe une grande proximité dans les valeurs des flux interpolés sur les 2 années, quel  que soit le modèle, avec un écart maximum de \SI{25}{\gcma}.
-
-Les flux de \chh estimés ont une erreur importante et sont beaucoup plus faible que les flux de la PPB ou de la RE.
-Le flux de \chh est au moins deux fois plus important en 2014 qu'en 2013.
-%On y observe malgré tout un flux qui fait plus que doubler en 2014 par rapport à 2013.
-
-Les bilans issus des différentes combinaisons de modèles (à l'exception de RE-3, non présenté car très proche de RE-2) varient de \SI{-233}{\gcma} à +\SI{12}{\gcma} stocké dans la tourbière (tableau~\ref{table:bdc}).
-L'intégration de la végétation dans la modélisation de PPB fait baisser les bilans de carbone dans le négatif (système source) au-delà de \SI{-200}{\gcma}, avec une différence entre les bilans de \SI{220}{\gcma} environ.
 La différence sur les bilans quand les modèles de RE utilisent ou non la végétation est moindre : environ \SI{26}{\gcma} (tableau~\ref{table:bdc}).
 
 \begin{table}
@@ -807,13 +768,33 @@ FCOD & COD & \ref{eq:COD} & 8 $\pm$ 1  & 16 $\pm$ 1 & 12 $\pm$ 1 \\
 \label{table:bdc}
 \begin{tabular}{llll}\toprule
 combinaison de modèles & 2013 & 2014 & moyen \\ \midrule
-PPB-1, RE-1, FCH4 &  \num{-25(6)} & \num{-2(0)} & \num{-14(4)} \\
-PPB-1, RE-3, FCH4 &  +\num{72(16)} & \num{-48(11)} & +\num{12(3)} \\
-PPB-2, RE-1, FCH4 &  \num{-390(70)} & \num{-75(14)} & \num{-233(44)} \\
-PPB-2, RE-3, FCH4 &  \num{-293(47)} & \num{-122(20)} & \num{-208(33)} \\
+PPB-1, RE-1, FCH4 &  \num{-33(6)} & \num{-18(0)} & \num{-26(4)} \\
+PPB-1, RE-3, FCH4 &  +\num{64(16)} & \num{-64(11)} & +\num{0(3)} \\
+PPB-2, RE-1, FCH4 &  \num{-398(70)} & \num{-91(14)} & \num{-245(44)} \\
+PPB-2, RE-3, FCH4 &  \num{-301(47)} & \num{-138(20)} & \num{-220(33)} \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+Les flux interpolés à une fréquence horaire puis sommés par année sont présentés dans le tableau~\ref{table:flux} pour les différents modèles utilisés.
+Sur les deux années, selon le modèle utilisé, le flux total entrant via la PPB est estimé à 1070 et \SI{1290}{\gcma} pour PPB-2 et PPB-1 respectivement.
+On observe une différence entre les deux modèles : 
+celui utilisant uniquement la température de l'air (PPB-1) présente un stockage plus important en 2013 qu'en 2014, tandis que le modèle prenant en compte la végétation (PPB-2) stocke moins de carbone en 2013 qu'en 2014.
+L'intégration de la végétation minimise également l'erreur standard de l'estimation, la divisant approximativement par deux.
+
+La différence de comportement, entre les années de mesures, liée à l'intégration de la végétation est également visible dans l'estimation de la RE.
+La prise en compte de la végétation (modèles RE-2 et RE-3) conduit à une respiration plus forte en 2014 qu'en 2013 à l'inverse de RE-1.
+La différence entre l'estimation de la RE en 2013 et en 2014 diminue avec l'intégration de la végétation.
+Elle passe de 102 pour RE-1 à 78 puis 41 pour RE-2 et RE-3.
+Malgré ces différences, on observe une grande proximité dans les valeurs des flux interpolés sur les 2 années, quel  que soit le modèle, avec un écart maximum de \SI{25}{\gcma}.
+
+Les flux de \chh estimés ont une erreur importante et sont beaucoup plus faible que les flux de la PPB ou de la RE.
+Le flux de \chh est au moins deux fois plus important en 2014 qu'en 2013.
+%On y observe malgré tout un flux qui fait plus que doubler en 2014 par rapport à 2013.
+
+Les bilans issus des différentes combinaisons de modèles (à l'exception de RE-3, non présenté car très proche de RE-2) varient de \SI{-233}{\gcma} à +\SI{12}{\gcma} stocké dans la tourbière (tableau~\ref{table:bdc}).
+L'intégration de la végétation dans la modélisation de PPB fait baisser les bilans de carbone dans le négatif (système source) au-delà de \SI{-200}{\gcma}, avec une différence entre les bilans de \SI{220}{\gcma} environ.
+
 
 
 \subsubsection{Évaluation du bilan}
@@ -861,7 +842,7 @@ Le modèle RE-2, très proche du modèle RE-3 n'a pas été testé.
 \textbf{Attente du COD, les valeurs du tableau sont fausse pour le moment}
 
 
-\subsubsection{Représentativité locale}
+\subsubsection{Représentativité locale du bilan de \coo}
 
 En recalculant la NRMSE individuelle de chaque placette, il est possible d'avoir une indication sur la représentativité locale des modèles calibrés à l'échelle de l'écosystème (Figure~\ref{fig:repr_loc}).
 PPB-1 et PPB-2 ont une distribution des valeurs de NRMSE relativement similaire, même si légèrement plus forte pour PPB-2.
@@ -1003,19 +984,6 @@ Les groupes Mix et Arbustes ont des valeurs de bilan généralement proche quand
 
 
 
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chap3/loc_ER}
-\caption{Distribution de l'erreur standard (en gris) par placette et des paramètres des modèles RE-1 et RE-3 (en noir)}
-\label{fig:loc_ER}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1.15\textwidth, center]{chap3/loc_GPP}
-\caption{Distribution de l'erreur standard par placette (en gris) et des paramètres du modèle PPB-2 (en noir)}
-\label{fig:loc_GPP}
-\end{figure}
 %\begin{table}
 %\centering
 %\caption{Bilan des flux de \coo en \si{\gcma}, en utilisant PPB-2 et RE-3}
@@ -1105,14 +1073,35 @@ PPB-2, RE-3 &  \num{-216} & \num{-517} & +\num{162} & \num{-321} & \num{-191}\\[
 
 \subsubsection{Calibration par placette}
 
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chap3/loc_ER}
+\caption{Distribution de l'erreur standard (en gris) et des paramètres des modèles RE-1 et RE-3 (en noir) par placette (N=20)}
+\label{fig:loc_ER}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.15\textwidth, center]{chap3/loc_GPP}
+\caption{Distribution de l'erreur standard (en gris) et des paramètres du modèle PPB-2 (en noir) par placette (N=17)}
+\label{fig:loc_GPP}
+\end{figure}
+
 Les modèles RE-1, RE-3 ont pu être calibré pour l'ensemble des 20 placettes et le modèle PPB-2 pour 17 d'entre elles.
-Le modèle RE-2, proche de RE-3 n'a pas été calibré quant au modèle PPB-1 sa calibration par placette ne converge pas pour un grand nombre d'entre elles, il a donc été laissé de côté.
-Pour l'ensemble de ces modèles on constate une forte hausse de la NRMSE (Figure~\ref{fig:loc_ER} et \ref{fig:loc_GPP}).
-Concernant la RE, les modèles RE-1 et RE-3 ont des valeurs de NRMSE relativement proche d'environ \SI{50}{\percent}, avec deux outliers pour RE-1 et un pour RE-3 (Figure~\ref{fig:loc_ER}).
-Les paramètres varient dans des gammes similaires pour les deux modèles.
-Ces gammes sont larges et bien supérieure à \SI{10}{\percent}.
-Concernant la PPB, le modèle PPB-2 a également une NRMSE importante, variant entre 40 et \SI{100}{\percent} avec un outlier.
-Les valeurs des paramètres varient également de façon importante (Figure~\ref{fig:loc_GPP}).
+Le modèle RE-2, proche de RE-3 n'a pas été calibré quant au modèle PPB-1 sa calibration par placette ne convergeant pas pour la moitié d'entre elles, il a été laissé de côté.
+Pour les modèles RE-1 et RE-3 on constate des valeurs de NRMSE généralement plus forte que celles obtenues à l'échelle de l'écosystème : 18 et \SI{13}{\percent} respectivement (Figure~\ref{fig:mdl_ER_Tair}--a et \ref{fig:ER_mdl_TairIVH}--d et \ref{fig:loc_ER}).
+Cette tendance est également visible pour le modèle PPB-2 pour lequel la NRMSE vaut \SI{19}{\percent} à l'échelle de l'écosystème ce qui correspond à la limite basse des valeurs issue de la calibration par placette (Figure~\ref{fig:mdl_GPP_TairIV}--f et \ref{fig:loc_GPP})
+Il faut noter que le faible nombre de points rend l'estimation des paramètres limitée en terme de significativité.
+%Pour l'ensemble de ces modèles on constate une hausse de la NRMSE (Figure~\ref{fig:loc_ER} et \ref{fig:loc_GPP}), mais également une diminution très importante de la significativité .
+Les paramètres varient dans des gammes similaires pour RE-1 et RE-3 entre 0 et \num{1.1} pour a (RE-1) et a+c (RE-3) et entre \num{0.04} et \num{0.11} pour le paramètre b.
+Les paramètres du modèle PPB-2 varient de façon importante, entre \num{-6.1} et \num{66} pour a, entre \num{23.9} et \num{90.4} pour b, entre \num{6.2} et \num{60.0} pour c et \num{-10.7} et \num{27.1} pour d.
+Que ce soit pour la RE ou la PPB , les gammes de paramètres sont larges et bien supérieure à \SI{10}{\percent} (analyse de sensibilité) mais cohérentes par rapport à celles obtenues à l'échelle de l'écosystème.
+%Concernant la RE, les modèles RE-1 et RE-3 ont des valeurs de NRMSE relativement proche d'environ \SI{50}{\percent}, avec deux outliers pour RE-1 et un pour RE-3 (Figure~\ref{fig:loc_ER}).
+%Les paramètres varient dans des gammes similaires pour les deux modèles.
+
+%Concernant la PPB, le modèle PPB-2 a également une NRMSE importante, variant entre 40 et \SI{100}{\percent} avec un outlier.
+%Les valeurs des paramètres varient également de façon importante (Figure~\ref{fig:loc_GPP}).
 
 %\subsubsection{Corrélation avec facteurs contrôlant}
 
@@ -1298,6 +1287,13 @@ Ce constat est également cohérent avec les observations de terrain, qui montre
 
 Pour résumer, il est probable que la tourbière de La Guette fonctionne actuellement plutôt comme une légère source de carbone.
 
+
+
+Si l'on excepte la placette n°5, les estimations de la RE à l'échelle de l'écosystème permettent de représenter les placettes avec une erreur comprise entre 20 et \SI{100}{\percent} pour RE-1 et entre 20 et \SI{80}{\percent} pour RE-3.
+La majorité des placettes à une erreur d'environ \SI{55}{\percent} pour RE-1 et d'environ \SI{40}{\percent} pour RE-3 (Figure~\ref{fig:repr_loc}, RE-1 et RE-3).
+Ces observations permettent de soutenir l'intérêt d'inclure l'indice de végétation dans la modélisation de la RE.
+Pour la PPB, toujours à l'exception de la placette n°5, les estimation à l'échelle de l'écosystème permettent de représenter les placettes avec une erreur comprise entre 20 et \SI{90}{\percent} pour PPB-1 et entre 30 et \SI{100}{\percent} pour PPB-2.
+La majorité des placettes ayant une erreur d'environ \SI{50}{\percent} pour les deux modèles, avant autant (7) de placettes ayant une erreur inférieure à \SI{50}{\percent} que de placette (13) ayant une erreur supérieure.
 % Variations observées des bilans et importance relative des flux
 
 %La variation de bilan observée selon les équations utilisées sont du même ordre de grandeur que celle obtenues par \citep{worrall2009} quand il compare différentes méthode de calcul de bilan.
@@ -1383,12 +1379,12 @@ Mais également car la présence d'un Aérenchyme permet à la molinie et à la 
 Pour la RE, ce sont les groupes 3 et 4 qui ont les flux estimés les plus importants avec une différence d'environ \SI{200}{\gcma} avec les deux autres groupes.
 Malgré leurs différences, le groupe 2 possède une strate muscinale importante alors qu'elle est absente dans le groupe 3, ils ont en commun d'avoir une strate arbustive importante.
 
-\subsection{Représentativité locale du modèle}
+%\subsection{Représentativité locale du modèle}
+%
+%
+%Si l'on excepte la placette n°5, les estimations de la RE à l'échelle de l'écosystème permettent de représenter les placettes avec une erreur comprise entre 20 et \SI{100}{\percent} pour RE-1 et entre 20 et \SI{80}{\percent} pour RE-3.
+%La majorité des placettes à une erreur d'environ \SI{55}{\percent} pour RE-1 et d'environ \SI{40}{\percent} pour RE-3 (Figure~\ref{fig:repr_loc}, RE-1 et RE-3).
+%Ces observations permettent de soutenir l'intérêt d'inclure l'indice de végétation dans la modélisation de la RE.
+%Pour la PPB, toujours à l'exception de la placette n°5, les estimation à l'échelle de l'écosystème permettent de représenter les placettes avec une erreur comprise entre 20 et \SI{90}{\percent} pour PPB-1 et entre 30 et \SI{100}{\percent} pour PPB-2.
+%La majorité des placettes ayant une erreur d'environ \SI{50}{\percent} pour les deux modèles, avant autant (7) de placettes ayant une erreur inférieure à \SI{50}{\percent} que de placette (13) ayant une erreur supérieure.
 
-Distribution des paramètres
-
-Pourquoi certaines placette mieux que d'autres
-
-Concernant la respiration la représentativité locale des modèles calibrés à l'échelle de l'écosystème semble plus homogène pour le modèle RE-3 que pour le modèle RE-1.
-
-Une telle comparaison entre PPB-1 et PPB-2 n'a pas été possible car vu le faible nombre de données et la qualité relative des modèles PPB par rapport aux modèles RE, peu de modèles sont parvenus à converger pour PPB-1 (11 sur 20 placettes) et pour PPB-2 (17 sur 20 placettes).
