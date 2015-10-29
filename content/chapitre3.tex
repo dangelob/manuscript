@@ -864,6 +864,10 @@ PPB-1 et PPB-2 ont une distribution des valeurs de NRMSE relativement similaire,
 le modèle RE-3 présente des valeurs plus faibles et une distribution plus homogène de la NRMSE que RE-1, avec davantage de placette en dessous de \SI{50}{\percent}.
 Que ce soit pour la PPB ou la RE, la placette n°5 est systématiquement une NRMSE significativement plus élevée que les autres.
 
+représenter les placettes de façon individuelle avec une NRMSE comprise entre 20 et \SI{100}{\percent} pour RE-1 et entre 20 et \SI{80}{\percent} pour RE-3.
+La majorité des placettes à une NRMSE d'environ \SI{55}{\percent} pour RE-1 et d'environ \SI{40}{\percent} pour RE-3 (Figure~\ref{fig:repr_loc}, RE-1 et RE-3).
+Pour la PPB, toujours à l'exception de la placette n°5, les estimation à l'échelle de l'écosystème permettent de représenter les placettes avec une NRMSE comprise entre 20 et \SI{90}{\percent} pour PPB-1 et entre 30 et \SI{100}{\percent} pour PPB-2.
+
 \begin{figure}
 \centering
 \includegraphics[width=.45\textwidth]{chap3/eco_to_loc_nrmse_PPB1}
@@ -1119,9 +1123,9 @@ Que ce soit pour la RE ou la PPB , les gammes de paramètres sont larges et bien
 
 \begin{figure}
 \centering
-\includegraphics[width=.32\textwidth]{chap3/BdC_p7_PPB2}
-\includegraphics[width=.32\textwidth]{chap3/BdC_p7_RE1}
-\includegraphics[width=.32\textwidth]{chap3/BdC_p7_RE3}
+\includegraphics[width=1.15\textwidth, center]{chap3/distrib_flux_p7}
+%\includegraphics[width=.32\textwidth]{chap3/BdC_p7_RE1}
+%\includegraphics[width=.32\textwidth]{chap3/BdC_p7_RE3}
 \caption{Distribution des flux estimés par placette en \si{gcma} pour le modèle PPB-2 (à gauche), RE-1 (au milieu) et RE-3 (à droite)}
 \label{fig:distrib_fl_p7}
 \end{figure}
@@ -1270,6 +1274,19 @@ Comme pour la PPB, la température moyenne annuelle et la composition végétale
 %La Re sur la tourbière de La Guette, comprise entre 1232 et \SI{1337}{\gcma} est plus importante que celle observée par \citet{peichl2014,trudeau2014} (pour reprendre les études citées précédemment) qui s'établissent respectivement entre 137 et \SI{443}{\gcma} et 206 et \SI{234}{\gcma}.
 %Elles sont en revanche plus faible que celle mesurées par \citep{jacobs2007}, entre 500 et \SI{2000}{\gcma}, ou par \citep{gorres2014} : entre 2070 et \SI{3500}{\gcma}. 
 
+
+\subsubsection{Représentativité locale des flux de \coo}
+
+Si l'on excepte la placette n°5, les modèles de la RE calibrés à l'échelle de l'écosystème permettent de représenter les placettes avec une NRMSE plus faible pour RE-3 par rapport à RE-1 : les pics des distributions sont autour de 40 et \SI{55}{\percent} respectivement (Figure~\ref{fig:repr_loc}).
+Ces observations permettent de soutenir l'intérêt d'inclure l'indice de végétation dans la modélisation de la RE.
+
+Pour la PPB (et toujours en excluant la placette n°5) la différence entre les deux modèles est moins forte (Figure~\ref{fig:repr_loc}).
+La majorité des placettes ayant une NRMSE d'environ \SI{50}{\percent} pour les deux modèles, avant autant (7) de placettes ayant une NRMSE inférieure à \SI{50}{\percent} que de placette (13) ayant une NRMSE supérieure.
+Il ne semble par y avoir de différences significatives dans la représentativité locale des modèles PPB-1 et PPB-2.
+
+
+
+
 %\noindent
 %\textit{Le flux de \chh}
 \subsubsection{\fchh}
@@ -1303,7 +1320,6 @@ Le doublement du flux de COD observé en 2014 par rapport à 2013 est lié à un
 Dans le même temps le niveau de nappe moyen mesuré en 2014 est légèrement supérieur à celui mesuré en 2013 et les précipitations sont du même ordre de grandeur (Figure~\ref{fig:WTL} et \ref{fig:pluvio}).
 Ces observations permettent de faire l'hypothèse que l'année 2013 a permis à la tourbière de reconstituer une partie de son stock d'eau perdu lors des années précédentes plus sèches.
 
-
 \subsection{Estimations du bilan net de l'écosystème à l'échelle de la tourbière de La Guette}
 
 \begin{figure}
@@ -1315,14 +1331,14 @@ Ces observations permettent de faire l'hypothèse que l'année 2013 a permis à 
 
 \subsubsection{Puits ou source ?}
 
-Quel que soit le bilan considéré, la tourbière de La Guette est soit à l'équilibre soit une source de carbone.
+En moyenne sur les deux années et selon les estimations des flux, la tourbière de La Guette est soit à l'équilibre soit une source de carbone.
 Les quantités de carbone émises dans l'atmosphère sont comprises entre 0 et \SI{245}{\gcma} (Tableau~\ref{table:bdc}).
 Ces différences sont principalement liées à l'estimation de la PPB, les bilans calculés à l'aide du modèle PPB-2 estiment une source de carbone supérieure à \SI{200}{\gcma}.
 %Selon le bilan considéré, la tourbière de La Guette stocke de faible quantité de C de l'ordre d'une dizaine de grammes par mètre carré, ou émet du carbone dans l'atmosphère de l'ordre de \num{14} à de \SI{233}{\gcma}.
 Ces valeurs, si on les compare à celle mesurées dans des prairies tourbeuses, ne sont pas aberrante en valeur absolue (Figure~\ref{fig:bib_vs_necb}).
 Elles restent cependant sujettes à caution.
-En effet il est probable que le modèle PPB-2 sous-estime la PPB et donc sur-estime les pertes de carbone par la tourbière.
-Les estimations utilisant PPB-1 sont plus proches les unes des autres et semblent indiquer que la tourbière est une légère source de carbone ou s'approche d'un équilibre.
+En effet il est probable que le modèle PPB-2 sous-estime la PPB et donc sur-estime les pertes de carbone par la tourbière (Figure~\ref{fig:BdC_GPP_interp}).
+Les estimations utilisant PPB-1 semblent indiquer que la tourbière est une légère source de carbone ou s'approche d'un équilibre.
 Ce constat est également cohérent avec les observations de terrain, qui montre un niveau de nappe particulièrement élevé pendant les deux années de mesure en comparaison avec les précédentes.
 
 Pour résumer, il est probable que la tourbière de La Guette fonctionne actuellement plutôt comme une légère source de carbone.
@@ -1341,19 +1357,13 @@ Ces observations sont cohérentes avec d'autres études comme \citet{bortoluzzi2
 Malgré tout si le \chh ne semble pas jouer un rôle majeur sur le bilan de carbone de la tourbière de La Guette, il faut cependant considérer le fait que seul le flux diffusif de \chh a pu être mesuré et estimé (C'est également le cas pour les études citées précédemment).
 Les émissions de méthane par ébullition sont donc exclues du bilan.
 Rarement estimé ce flux peut représenter 17 à \SI{66}{\percent} d'une émission \citep{gogo2011a,christensen2003}, et être potentiellement très fort : plus de \SI{35}{\gcm} par événement \citep{glaser2009}.
-La présence de végétaux vasculaires qui en transportant le \chh dans l'atmosphère diminuent la concentration en \chh dans le sol tendraient cependant à diminuer ce phénomène en minimisant l'augmentation de la concentration en \chh dans la porosité du sol \citep{chanton2005}.
+La présence de végétaux vasculaires qui en transportant le \chh dans l'atmosphère diminuent la concentration en \chh dans le sol tendraient cependant à diminuer ce phénomène \citep{chanton2005}.
 
 
-\subsubsection{Représentativité locale et limitation du bilan}
 
-Si l'on excepte la placette n°5, les estimations de la RE à l'échelle de l'écosystème permettent de représenter les placettes de façon individuelle avec une NRMSE comprise entre 20 et \SI{100}{\percent} pour RE-1 et entre 20 et \SI{80}{\percent} pour RE-3.
-La majorité des placettes à une NRMSE d'environ \SI{55}{\percent} pour RE-1 et d'environ \SI{40}{\percent} pour RE-3 (Figure~\ref{fig:repr_loc}, RE-1 et RE-3).
-Ces observations permettent de soutenir l'intérêt d'inclure l'indice de végétation dans la modélisation de la RE.
-Pour la PPB, toujours à l'exception de la placette n°5, les estimation à l'échelle de l'écosystème permettent de représenter les placettes avec une NRMSE comprise entre 20 et \SI{90}{\percent} pour PPB-1 et entre 30 et \SI{100}{\percent} pour PPB-2.
-La majorité des placettes ayant une NRMSE d'environ \SI{50}{\percent} pour les deux modèles, avant autant (7) de placettes ayant une NRMSE inférieure à \SI{50}{\percent} que de placette (13) ayant une NRMSE supérieure.
-
+\subsubsection{Incertitudes et limitations du bilan}
 Les incertitudes les plus fortes du bilan sont sur les flux de \chh avec une NRMSE de \SI{32}{\percent} lors de la calibration et de \SI{68}{\percent} lors de la validation.
-Cette différence importante montre que l'estimation des flux de \chh à l'aide de l'indice de végétation à permis l'estimation de sa contribution au bilan de carbone de l'écosystème pour les années 2013 et 2014, mais que son utilisation dans d'autres conditions (année sèche, haute MAT) est fortement limitée.
+Cette différence importante montre que l'estimation des flux de \chh à l'aide de l'indice de végétation à permis l'estimation de sa contribution au bilan de carbone de l'écosystème pour les années 2013 et 2014, mais que son utilisation dans d'autres conditions (année sèche, température moyenne annuelle significativement différente) est fortement limitée.
 L'importance faible du \chh dans le bilan de carbone de la tourbière (en valeur absolue) rend ces incertitudes moins critiques que celles faite sur l'estimation de la PPB.
 Les incertitudes importantes sur la PPB, sont mises en évidence par les fortes variations des flux interpolés selon l'équation utilisée.
 Elles sont la source des variations observées en termes de bilan.
