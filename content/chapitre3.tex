@@ -1116,11 +1116,12 @@ Les paramètres varient dans des gammes similaires pour RE-1 et RE-3 entre 0 et 
 Les paramètres du modèle PPB-2 varient de façon importante, entre \num{-6.1} et \num{66} pour a, entre \num{23.9} et \num{90.4} pour b, entre \num{6.2} et \num{60.0} pour c et \num{-10.7} et \num{27.1} pour d.
 Que ce soit pour la RE ou la PPB , les gammes de paramètres sont larges et bien supérieure à \SI{10}{\percent} (analyse de sensibilité) mais cohérentes par rapport à celles obtenues à l'échelle de l'écosystème.
 
+
 \begin{figure}
 \centering
 \includegraphics[width=.32\textwidth]{chap3/BdC_p7_PPB2}
 \includegraphics[width=.32\textwidth]{chap3/BdC_p7_RE1}
-\includegraphics[width=.35\textwidth]{chap3/BdC_p7_RE3}
+\includegraphics[width=.32\textwidth]{chap3/BdC_p7_RE3}
 \caption{Distribution des flux estimés par placette en \si{gcma} pour le modèle PPB-2 (à gauche), RE-1 (au milieu) et RE-3 (à droite)}
 \label{fig:distrib_fl_p7}
 \end{figure}
@@ -1133,13 +1134,14 @@ Que ce soit pour la RE ou la PPB , les gammes de paramètres sont larges et bien
 
 %\subsubsection{Corrélation avec facteurs contrôlant}
 
+\clearpage
 \section{Discussion}
 
 La discussion de ce chapitre, s'articule autour de quatre parties.
-La première concerne les modèles calibrés à l'échelle de l'écosystème, leurs différences leurs qualités respectives.
-La seconde détaille les différents flux estimés par ces modèles.
-Le(s) bilan(s) de carbone issu(s) de ces flux sont exposés dans la troisième partie.
-Enfin la quatrième discute des éléments concernant la variabilité spatiale des flux.
+La première concerne les \textbf{modèles} calibrés à l'échelle de l'écosystème, leurs différences leurs qualités respectives.
+La seconde détaille les différents \textbf{flux} estimés par ces modèles.
+Le(s) \textbf{bilan(s)} de carbone issu(s) de ces flux sont exposés dans la troisième partie.
+Enfin la quatrième discute des éléments concernant la \textbf{variabilité spatiale} des flux.
 
 \subsection{Modèles à l'échelle de l'écosystème}
 
@@ -1149,14 +1151,15 @@ Enfin la quatrième discute des éléments concernant la variabilité spatiale d
 %\textit{Estimation de la PPB}
 
 À l'inverse du modèle PPB-2, le modèle PPB-1 ne prend pas en compte de façon directe la végétation.
-L'estimation des paramètres de PPB-1 conduit à une incertitude forte : supérieure à \SI{60}{\percent} pour les paramètres $a$ et $b$ et à \SI{20}{\percent} pour les paramètres $c$ et $i$ (Tableau~\ref{table:mdl_par}).
-Cette incertitude diminue pour PPB-2 avec l'intégration de l'IV, passant sous les \SI{20}{\percent} pour l'ensemble des paramètres.
+L'estimation des paramètres de PPB-1, lors de la phase de calibration, conduit à une incertitude forte : l'erreur standard est supérieure à \SI{60}{\percent} pour les paramètres $a$ et $b$ et à \SI{20}{\percent} pour les paramètres $c$ et $i$ (Tableau~\ref{table:mdl_par}).
+Cette incertitude diminue pour PPB-2 avec l'intégration de l'IV, l'erreur est alors inférieure à \SI{20}{\percent} pour l'ensemble des paramètres.
 Ces paramètres sont dans la gamme de ceux rapportés par \citet{june2004} : entre \num{23} et \SI{296.5}{\umle} pour la vitesse de transport des électrons photosynthétique à lumière saturante, entre \num{28.4} et \SI{55.7}{\degreeCelsius} pour la température optimale du transport et entre \num{13.9} et \SI{30.2}{\degreeCelsius} pour la différence de température à laquelle PPBsat vaut e\textsuperscript{-1}.
 Lors de la phase de calibration, l'intégration de l'IV augmente la significativité des estimations et la représentativité des données mesurées.
 
-Lors de l'évaluation cependant, l'augmentation de l'erreur du modèle PPB-2, intégrant l'IV, est supérieure et dépasse (en valeur absolue) celle du modèle PPB-1. l'apport de l'IV dans l'estimation de la PPB n'est donc pas généralisable.
-Par ailleurs, l'intégration de l'indice de végétation à un effet beaucoup plus important en 2013, avec un flux qui diminue de \SI{365}{\gcma}, qu'en 2014 ou la baisse n'est que de \SI{74}{\gcma}.
-La prise en compte de la végétation, si elle améliore les incertitudes statistiques du modèles, semblent sous-estimer la PPB.
+Lors de l'évaluation et malgré une végétation similaire, l'augmentation de la NRMSE du modèle PPB-2, intégrant l'IV, est supérieure et dépasse (en valeur absolue) celle du modèle PPB-1. l'apport de l'IV dans l'estimation de la PPB n'est donc pas généralisable.
+Par ailleurs, l'intégration de l'IV à un effet beaucoup plus important en 2013 (l'estimation du flux diminue de \SI{365}{\gcma}), qu'en 2014 (diminution de \SI{74}{\gcma}).
+
+La prise en compte de la végétation, si elle améliore les incertitudes statistiques sur l'estimation des paramètres du modèle, semblent conduire à une sous-estimation de la PPB.
 En effet le modèle PPB-2 ne rend pas compte des valeurs les plus élevées qui ont été mesurées (Figure~\ref{fig:BdC_GPP_interp}--B).
 Par ailleurs l'évaluation du modèle PPB-1 renvoie un erreur plus faible que celle du modèle PPB-2.
 
@@ -1188,22 +1191,27 @@ La diversité des espèces végétales rend difficile la mise en place de protoc
 %\textit{Estimation de la RE}
 \subsubsection{RE}
 
-À l'inverse de la PPB, l'intégration de la végétation pour modéliser la RE n'améliore que peu l'estimation de la RE lors de la phase de calibration : la différence entre les valeurs d'erreur standard est de \SI{5}{\percent} (Figures~\ref{fig:mdl_ER_Tair} et \ref{fig:ER_mdl_TairIVH}).
-En revanche lors de la phase d'évaluation, l'utilisation du recouvrement des herbacées semble améliorer l'estimation de façon plus importante avec une différence de \SI{11}{\percent} entre les valeurs d'erreur standard.
+À l'inverse de la PPB, l'intégration de la végétation pour modéliser la RE n'améliore que peu l'estimation de la RE lors de la phase de calibration : la différence entre les valeurs de la NRMSE est de \SI{5}{\percent} (Figures~\ref{fig:mdl_ER_Tair}--a et \ref{fig:ER_mdl_TairIVH}--a,d).
+En revanche lors de la phase d'évaluation, l'utilisation du recouvrement des herbacées semble améliorer l'estimation de façon plus importante avec une différence de \SI{11}{\percent} entre les valeurs de la NRMSE.
 Contrairement à la PPB la différence apportée par l'intégration de la végétation (RE-2 ou RE-3) est du même ordre de grandeur en 2013 et en 2014.
 Sur les 2 années, l'effet de l'intégration de la végétation est limité avec une différence de \SI{25}{\gcma} au maximum (entre RE-1 et RE-3), soit moins de \SI{2}{\percent} du flux.
-Encore une fois l'intérêt de l'évaluation est mis en avant puisqu'il permet de distinguer des modèles très proche lors de la calibration.
+%Encore une fois l'intérêt de l'évaluation est mis en avant puisqu'il permet de distinguer des modèles très proche lors de la calibration.
+L'intérêt de l'évaluation pour la RE ne réside pas tant dans la sélection d'une meilleure estimation des flux.
+Elle permet plutôt d'établir s'il est possible d'utiliser ou non un modèle dans un autre contexte.
+Pour la RE et le modèle RE-3 ce contexte reste contraint à l'intérieur du site.
 
 % % Incertitude
 Les incertitudes sur l'estimation des paramètres RE sont beaucoup moins importante que celle de la PPB.
 L'estimation des paramètres des modèles, à l'exception du paramètre c du modèles RE-2, ont une p-value inférieure à 0.05 (Tableau~\ref{table:mdl_par}).
-L'erreur calculée lors de l'évaluation de ces modèles, si elle augmente par rapport à la calibration, reste faible particulièrement pour le modèle RE-3 ou elle vaut moins de \SI{25}{\percent} (Figure~\ref{fig:ER_mdl_TairIVH}--f).
-La RE semble donc mieux contrainte que la PPB, avec une estimation des paramètres plus fiable et une différence entre les estimations issues des modèles plus limitée.
+La NRMSE calculée lors de l'évaluation de ces modèles, si elle augmente par rapport à la calibration, reste faible particulièrement pour le modèle RE-3 ou elle vaut moins de \SI{25}{\percent} (Figure~\ref{fig:ER_mdl_TairIVH}--f).
+La RE semble donc mieux contrainte que la PPB, avec une estimation des paramètres plus fiable et une différence entre les estimations issues des différents modèles plus limitée.
 
 \subsubsection{\fchh}
 %\noindent
 %\textit{Estimation du \fchh}
-La calibration des flux de \chh conduit à une erreur du même ordre de grandeur que celle obtenue pour PPB-1 (Figure~\ref{fig:CH4_mdl}). Cependant lors de l'évaluation l'erreur double montrant que ce résultat est spécifique à l'expérimentation.
+La calibration des flux de \chh conduit à une erreur du même ordre de grandeur que celle obtenue pour PPB-1 (Figure~\ref{fig:CH4_mdl}). 
+L'évaluation du modèle fait doubler la NRMSE et montre sa limite : son utilisation est nécessairement restreinte à cette étude particulière.
+
 
 \subsection{Les flux annuels à l'échelle de la tourbière de La Guette}
 
@@ -1222,18 +1230,21 @@ L'estimation des flux de PPB, est comprise entre 957 et \SI{1322}{\gcma} selon l
 Ces valeurs sont fortes, en comparaison la PPB estimée par  \citet{trudeau2014} ou \citet{peichl2014} dans des tourbières boréales sont respectivement comprises  123 et \SI{131}{\gcma} et entre 203 et \SI{503}{\gcma}.
 C'est d'ailleurs dans ces gammes de valeurs, inférieures à celles relevées sur la tourbière de La Guette, que sont comprises la majorité des estimations (Figure~\ref{fig:bib_vs_ppb}).
 
+Pour le modèle PPB-1 l'année 2013 a une PPB plus forte que 2014, cependant les incertitudes sont telles que la comparaison n'a pas grand sens.
+Pour les estimations faites avec PPB-2, l'incertitude est moins important mais reste forte, et montre l'inverse : une PPB supérieure 2014 qu'en 2013.
+Cette observation serait davantage cohérente avec les valeurs de l'IV, légèrement plus haute en 2014 (Figure~\ref{fig:veg_evol}).
+
 Une première hypothèse permettant d'expliquer une telle différence, est la différence entre les températures moyennes sur les sites.
 \SI{-4.3}{\degreeCelsius} et \SI{1.2}{\degreeCelsius} respectivement pour \citet{trudeau2014} et \citet{peichl2014}.
 Ces températures sont bien plus faible pour ces sites que sur la tourbière de La Guette.
 D'autres études faite à des latitudes plus basse et des températures moyennes annuelles plus forte, montrent des estimation de la PPB plus proche de celles estimées sur la tourbière de La Guette.
-Entre 534 et \SI{1058}{\gcma} par exemple pour \citet{beyer2015}, sur un site dont la température moyenne annuelle est de \SI{8.6}{\degreeCelsius} et avec une végétation proche de celle observée à La Guette (\textit{Molinia}, \textit{Eriophorum Augustifolium}, \textit{Sphagnum} spp).
+Entre 534 et \SI{1058}{\gcma} par exemple pour \citet{beyer2015}, sur un site dont la température moyenne annuelle est de \SI{8.6}{\degreeCelsius} et avec une végétation proche de celle observée sur la tourbière de La Guette (\textit{Molinia}, \textit{Eriophorum Augustifolium}, \textit{Sphagnum} spp).
 
 Une part de l'explication de la force de la PPB observée peut d'ailleurs être liée à la composition végétale du site.
 Ainsi \citet{jacobs2007} étudiant des prairies tourbeuses hollandaises, estiment des valeurs de PPB comprises entre 400 et \SI{2000}{\gcma} avec une moyenne de \SI{1300}{\gcma}.
 Sur des écosystèmes similaires, au Danemark, \citet{gorres2014} trouve des valeurs de PPB plus importantes encore, entre 1555 et \SI{2590}{\gcma}, mais avec des niveaux de nappe plus faible (< \SI{-30}{\centi\metre}).
 La tourbière de La Guette est envahie par une végétation vasculaire, notamment herbacée, la comparer à une prairie tourbeuse n'est donc pas moins pertinent que la comparer à une tourbière boréale, ou située à plus haute latitude.
-Dans ces deux cas les valeurs de PPB observé sont bien plus fort que ceux de la tourbière de La Guette.
-Il semble cohérent que les valeurs de la PPB de la tourbières de La Guette soit plus forte que celle mesurées dans des tourbières boréales, de par sa position géographique, elle subit un climat moins dur avec des hivers moins longs et froids et plus faible que celle mesurées dans des tourbières utilisées comme prairies permanentes.
+Dans ces deux cas les valeurs de PPB observées sont bien plus fortes que celles de la tourbière de La Guette.
 
 %\noindent
 %\textit{La respiration de l'écosystème}
@@ -1248,9 +1259,12 @@ Il semble cohérent que les valeurs de la PPB de la tourbières de La Guette soi
 
 Les observations sur l'intensité des flux de la PPB sont également valables pour la respiration : la RE estimée sur la tourbière de La Guette est plus forte que celles mesurées sur les tourbières boréales et plus faible que celles mesurées sur des prairies tourbeuses.
 La RE estimée sur la tourbière de La Guette est comprise entre 1232 et \SI{1337}{\gcma} selon l'année et le modèle considéré (Figure~\ref{fig:bib_vs_re}).
-La comparaison de ces valeurs à celles des études citées précédemment pour la PPB montre qu'elles sont plus forte que celles mesurées par \citet{peichl2014,trudeau2014} (137 à \SI{443}{\gcma} et 206 à \SI{234}{\gcma} respectivement).
-Ensuite elles s'approchent des valeurs mesurées par \citet{beyer2015} (585 à \SI{1052}{\gcma}) et enfin elles sont plus faibles que celles mesurées par \citet{jacobs2007} ou \citet{gorres2014} (500 à \SI{2000}{\gcma} et 2070 et \SI{3500}{\gcma} respectivement).
-Comme pour la PPB, la température et la composition végétale des sites sont des explications possibles à ces observations.
+Les estimations de la RE sont très proches pour les deux années, ce qui est cohérent avec le niveau de nappe d'eau relativement similaire également observé.
+La différence de température de l'air entre 2013 et 2014 (\num{9.1} et \SI{10.1}{\degreeCelsius respectivement}) n'est pas suffisante pour observer une différence significative.
+
+La comparaison de ces valeurs à celles des études citées précédemment (pour la PPB) montre qu'elles sont plus forte que celles mesurées par \citet{peichl2014} et \citet{trudeau2014} (137 à \SI{443}{\gcma} et 206 à \SI{234}{\gcma} respectivement).
+Elles s'approchent également des valeurs mesurées par \citet{beyer2015} (585 à \SI{1052}{\gcma}) et sont plus faibles que celles mesurées par \citet{jacobs2007} ou \citet{gorres2014} (500 à \SI{2000}{\gcma} et 2070 et \SI{3500}{\gcma} respectivement).
+Comme pour la PPB, la température moyenne annuelle et la composition végétale des sites sont des explications possibles à ces observations.
 
 %De la même façon que pour la PPB, les flux de la RE sont important si on les compare à des tourbières boréales et s'approchent davantage des flux mesurés dans les prairies sur sols tourbeux.
 %La Re sur la tourbière de La Guette, comprise entre 1232 et \SI{1337}{\gcma} est plus importante que celle observée par \citet{peichl2014,trudeau2014} (pour reprendre les études citées précédemment) qui s'établissent respectivement entre 137 et \SI{443}{\gcma} et 206 et \SI{234}{\gcma}.
@@ -1268,9 +1282,9 @@ Comme pour la PPB, la température et la composition végétale des sites sont d
 \end{figure}
 
 Comparés aux flux de \coo, les flux de \chh mesurés sur la tourbière de La Guette sont faibles : deux ordres de grandeur inférieurs.
-Ces flux sont dans la gammes de valeurs présente dans la littérature (Figure~\ref{fig:bib_vs_ch4}).
-Pour 2013 les valeurs mesurées sont proches de celle mesurée par \citet{nilsson2008} (entre 9 et \SI{14}{\gcma}).
-Plus généralement, \citet{nilsson2001} estiment les émissions des tourbières suèdoises entre 1,5 et \SI{40}{\gcma}.
+Ces flux sont dans la gamme des valeurs présentes dans la littérature, de 1 à \SI{40}{\gcma} (Figure~\ref{fig:bib_vs_ch4},  \citep{nilsson2001}).
+Pour 2013 les valeurs mesurées sont proches de celles mesurées par \citet{nilsson2008} (entre 9 et \SI{14}{\gcma}).
+%Plus généralement, \citet{nilsson2001} estiment les émissions des tourbières suèdoises entre 1,5 et \SI{40}{\gcma}.
 L'absence d'étiage en 2014 explique peut-être le doublement des flux en minimisant la zone aérobie et les possibilités d'oxydation du \chh \citep{lai2009}.
 Les faibles variations du niveau de nappe sont probablement à l'origine de l'absence de relation entre ce dernier et les flux de \chh.
 Ces observations vont dans le même sens que les observations faites par \citet{trudeau2012} et (à developper, de ref ds trudeau2012)
@@ -1280,10 +1294,10 @@ Ces observations vont dans le même sens que les observations faites par \citet{
 %\textit{Le carbone organique dissout}
 \subsubsection{Le COD}
 
-Les flux de COD estimés sur la tourbière de La Guette sont très faible comparés aux flux de \coo et relativement proche de ceux du \chh.
-Les valeurs de COD exporté par la tourbière sont dans la gamme de celles présente dans la littérature.
-Elles sont plus faibles que celles estimées par \citet{worrall2009} (entre 10 et \SI{86}{\gcma},
-Ces valeurs sont par contre plus forte que celles estimées par \citet{carroll1997} dans une tourbière de bas-marais d’Amérique du nord (\SI{3.4}{\gcma}) ou celles rapportées par \citet{waddington2000} (<\SI{6}{\gcma}) dans une tourbière de haut-marais suédoise.
+L'intensité des flux de COD estimés sur la tourbière de La Guette sont très faibles comparés aux flux de \coo.
+Par ailleurs, ils sont du même ordre de grandeur que les flux de \chh.
+Les quantité de COD exportées par la tourbière sont dans la gamme de celles présentes dans la littérature.
+Elles sont plus faibles que celles estimées par \citet{worrall2009} (entre 10 et \SI{86}{\gcma}),mais plus forte que celles estimées par \citet{carroll1997} dans une tourbière de bas-marais d’Amérique du nord (\SI{3.4}{\gcma}) ou celles rapportées par \citet{waddington2000} (<\SI{6}{\gcma}) dans une tourbière de haut-marais suédoise.
 
 Le doublement du flux de COD observé en 2014 par rapport à 2013 est lié à une quantité plus importante d'eau quittant la tourbière (Figure~\ref{fig:discharge}).
 Dans le même temps le niveau de nappe moyen mesuré en 2014 est légèrement supérieur à celui mesuré en 2013 et les précipitations sont du même ordre de grandeur (Figure~\ref{fig:WTL} et \ref{fig:pluvio}).
@@ -1292,67 +1306,6 @@ Ces observations permettent de faire l'hypothèse que l'année 2013 a permis à 
 
 \subsection{Estimations du bilan net de l'écosystème à l'échelle de la tourbière de La Guette}
 
-D'une manière générale, les bilans sont principalement contraints par les flux de \coo, le \chh ne jouant qu'un rôle marginal en termes de quantité de carbone.
-Ces observations sont cohérentes avec d'autres études comme \citet{bortoluzzi2006a,worrall2009}.
-Malgré tout si le \chh ne semble pas jouer un rôle majeur sur le bilan de carbone de la tourbière de La Guette, il faut cependant considérer le fait que seul le flux diffusif de \chh a pu être mesuré et estimé (C'est également le cas pour les études citées précédemment).
-Les émissions de méthane par ébullition sont donc exclues du bilan.
-Rarement estimé ce flux peut représenter 17 à \SI{66}{\percent} d'une émission \citep{gogo2011a,christensen2003}, et être potentiellement très fort : plus de \SI{35}{\gcm} par événement \cite{glaser2009}.
-La présence de végétaux vasculaires qui en transportant le \chh dans l'atmosphère diminuent la concentration en \chh dans le sol tendraient cependant à diminuer ce phénomène \citep{chanton2005}.
-
-La forte variabilité entre les différents bilans est à attribuer en grande majorité à l'erreur sur l'estimation du flux de PPB.
-
-Les bilans annuels ont des comportements différents en 2013 et en 2014.
-En 2013 l'écart entre les deux estimations les plus extrêmes est de \SI{462}{\gcm}.
-Cet écart est lié principalement à la prise en compte de la végétation (utilisation de PPB-2 au lieu de PPB-1).
-En comparaison l'écart observé entre estimations extrêmes est quatre fois plus faible en 2014 (\SI{120}{\gcm}).
-
-Selon le bilan considéré, la tourbière de La Guette stocke de faible quantité de C de l'ordre d'une dizaine de grammes par mètre carré, ou émet du carbone dans l'atmosphère de l'ordre de \num{14} à de \SI{233}{\gcma}.
-Ces valeurs, si on les compare à celle mesurées dans des prairies tourbeuses, ne sont pas aberrante en valeur absolue (Figure~\ref{fig:bib_vs_necb}).
-Elle reste cependant sujette à caution.
-En effet il est probable que le modèle PPB-2 sous-estime la PPB et donc sur-estime les pertes de carbone par la tourbière.
-Les modèles utilisant PPB-1 sont plus proches les uns des autres et semble indiquer que, si la tourbière semble fonctionner plutôt comme une source de carbone, c'est de façon plus légère.
-Ce constat est également cohérent avec les observations de terrain, qui montre un niveau de nappe particulièrement élevé pendant les deux années de mesure en comparaison avec les précédentes.
-
-Pour résumer, il est probable que la tourbière de La Guette fonctionne actuellement plutôt comme une légère source de carbone.
-
-
-
-Si l'on excepte la placette n°5, les estimations de la RE à l'échelle de l'écosystème permettent de représenter les placettes avec une erreur comprise entre 20 et \SI{100}{\percent} pour RE-1 et entre 20 et \SI{80}{\percent} pour RE-3.
-La majorité des placettes à une erreur d'environ \SI{55}{\percent} pour RE-1 et d'environ \SI{40}{\percent} pour RE-3 (Figure~\ref{fig:repr_loc}, RE-1 et RE-3).
-Ces observations permettent de soutenir l'intérêt d'inclure l'indice de végétation dans la modélisation de la RE.
-Pour la PPB, toujours à l'exception de la placette n°5, les estimation à l'échelle de l'écosystème permettent de représenter les placettes avec une erreur comprise entre 20 et \SI{90}{\percent} pour PPB-1 et entre 30 et \SI{100}{\percent} pour PPB-2.
-La majorité des placettes ayant une erreur d'environ \SI{50}{\percent} pour les deux modèles, avant autant (7) de placettes ayant une erreur inférieure à \SI{50}{\percent} que de placette (13) ayant une erreur supérieure.
-% Variations observées des bilans et importance relative des flux
-
-%La variation de bilan observée selon les équations utilisées sont du même ordre de grandeur que celle obtenues par \citep{worrall2009} quand il compare différentes méthode de calcul de bilan.
-
-
-% Valeurs comparées à la biblio
-
-%En terme de bilan la tourbière étudiée par \citep{bortoluzzi2006} est un puits de carbone en 2004 et en 2005 entre 67 et \SI{183}{\gcma} selon les années et la dominance végétale (Eriophorum vs Sphagnum).
-%Hypothèse : cette différence peut s'expliquer par la différence de végétation, la tourbière de La Guette est dominée par la Molinie, et surtout la différence en terme de température moyenne annuelle (\SI{6.6}{\degreeCelsius} contre \SI{10.5}{\degreeCelsius} pour La Guette sur les 2 années de mesure).
-
-% Incertitude/Sensibilité
-
-
-%\subsection{Représentativité du modèle à l'échelle de l'écosystème}
-
-%\textbf{Valeur absolue des flux}
-%
-%Les flux de \coo mesurés sont du même ordre de grandeur que ceux mesurés par \citep{bortoluzzi2006} sur une tourbière jurassienne de montagne quoique systématiquement légèrement supérieurs.
-%Les flux de \chh quand à ceux sont un ordre de grandeur en dessous de ceux mesuré à La Guette (\SI{0.03}{\uml} au maximum contre plus de \SI{0.2}{\uml}) (\textbf{comparé moyenne plutôt}).
-%Les flux sont moins fort que \citep{gorres2014}, mais plus fort que \citep{lund2015}
-%Les flux sont du même ordre de grandeur que \citep{gazovic2013} (\textbf{à détailler})
-%
-%Il faut noter que c'est le paramètre b de l'équation~\ref{eq:RE_TH} qui fait varier le bilan le plus sensiblement lorsqu'on lui applique une variation de $\pm$\SI{10}{\percent}.
-%Cependant la significativité de ce paramètre est forte (\textbf{et donc ?}).
-%
-%
-%\textbf{Différence entre 2013 et 2014}
-%
-%\textbf{apport d'un indice de végétation}
-
-
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{chap3/bib_vs_necb}
@@ -1360,33 +1313,57 @@ La majorité des placettes ayant une erreur d'environ \SI{50}{\percent} pour les
 \label{fig:bib_vs_necb}
 \end{figure}
 
+\subsubsection{Puits ou source ?}
+
+Quel que soit le bilan considéré, la tourbière de La Guette est soit à l'équilibre soit une source de carbone.
+Les quantités de carbone émises dans l'atmosphère sont comprises entre 0 et \SI{245}{\gcma} (Tableau~\ref{table:bdc}).
+Ces différences sont principalement liées à l'estimation de la PPB, les bilans calculés à l'aide du modèle PPB-2 estiment une source de carbone supérieure à \SI{200}{\gcma}.
+%Selon le bilan considéré, la tourbière de La Guette stocke de faible quantité de C de l'ordre d'une dizaine de grammes par mètre carré, ou émet du carbone dans l'atmosphère de l'ordre de \num{14} à de \SI{233}{\gcma}.
+Ces valeurs, si on les compare à celle mesurées dans des prairies tourbeuses, ne sont pas aberrante en valeur absolue (Figure~\ref{fig:bib_vs_necb}).
+Elles restent cependant sujettes à caution.
+En effet il est probable que le modèle PPB-2 sous-estime la PPB et donc sur-estime les pertes de carbone par la tourbière.
+Les estimations utilisant PPB-1 sont plus proches les unes des autres et semblent indiquer que la tourbière est une légère source de carbone ou s'approche d'un équilibre.
+Ce constat est également cohérent avec les observations de terrain, qui montre un niveau de nappe particulièrement élevé pendant les deux années de mesure en comparaison avec les précédentes.
+
+Pour résumer, il est probable que la tourbière de La Guette fonctionne actuellement plutôt comme une légère source de carbone.
 
 
-%\noindent
-%\textit{Sensibilité et limitations du bilan}
-\subsubsection{Sensibilité et limitations du bilan}
+Les bilans annuels ont des comportements différents en 2013 et en 2014.
+En 2013 l'écart entre les deux estimations les plus extrêmes est de \SI{462}{\gcm}.
+Cet écart est lié principalement à la prise en compte de la végétation (utilisation de PPB-2 au lieu de PPB-1).
+En comparaison l'écart observé entre estimations extrêmes est quatre fois plus faible en 2014 (\SI{120}{\gcm}).
 
-Les incertitudes les plus fortes du bilan sont sur les flux de \chh avec une erreur standard de \SI{32}{\percent} lors de la calibration et de \SI{68}{\percent} lors de la validation.
+
+\subsubsection{Importance relative des flux}
+
+D'une manière générale, les bilans sont principalement contraints par les flux de \coo, le \chh et le COD ne jouant qu'un rôle marginal en termes de quantité de carbone.
+Ces observations sont cohérentes avec d'autres études comme \citet{bortoluzzi2006a,worrall2009}.
+Malgré tout si le \chh ne semble pas jouer un rôle majeur sur le bilan de carbone de la tourbière de La Guette, il faut cependant considérer le fait que seul le flux diffusif de \chh a pu être mesuré et estimé (C'est également le cas pour les études citées précédemment).
+Les émissions de méthane par ébullition sont donc exclues du bilan.
+Rarement estimé ce flux peut représenter 17 à \SI{66}{\percent} d'une émission \citep{gogo2011a,christensen2003}, et être potentiellement très fort : plus de \SI{35}{\gcm} par événement \citep{glaser2009}.
+La présence de végétaux vasculaires qui en transportant le \chh dans l'atmosphère diminuent la concentration en \chh dans le sol tendraient cependant à diminuer ce phénomène en minimisant l'augmentation de la concentration en \chh dans la porosité du sol \citep{chanton2005}.
+
+
+\subsubsection{Représentativité locale et limitation du bilan}
+
+Si l'on excepte la placette n°5, les estimations de la RE à l'échelle de l'écosystème permettent de représenter les placettes de façon individuelle avec une NRMSE comprise entre 20 et \SI{100}{\percent} pour RE-1 et entre 20 et \SI{80}{\percent} pour RE-3.
+La majorité des placettes à une NRMSE d'environ \SI{55}{\percent} pour RE-1 et d'environ \SI{40}{\percent} pour RE-3 (Figure~\ref{fig:repr_loc}, RE-1 et RE-3).
+Ces observations permettent de soutenir l'intérêt d'inclure l'indice de végétation dans la modélisation de la RE.
+Pour la PPB, toujours à l'exception de la placette n°5, les estimation à l'échelle de l'écosystème permettent de représenter les placettes avec une NRMSE comprise entre 20 et \SI{90}{\percent} pour PPB-1 et entre 30 et \SI{100}{\percent} pour PPB-2.
+La majorité des placettes ayant une NRMSE d'environ \SI{50}{\percent} pour les deux modèles, avant autant (7) de placettes ayant une NRMSE inférieure à \SI{50}{\percent} que de placette (13) ayant une NRMSE supérieure.
+
+Les incertitudes les plus fortes du bilan sont sur les flux de \chh avec une NRMSE de \SI{32}{\percent} lors de la calibration et de \SI{68}{\percent} lors de la validation.
 Cette différence importante montre que l'estimation des flux de \chh à l'aide de l'indice de végétation à permis l'estimation de sa contribution au bilan de carbone de l'écosystème pour les années 2013 et 2014, mais que son utilisation dans d'autres conditions (année sèche, haute MAT) est fortement limitée.
-L'importance faible du \chh dans le bilan de carbone de la tourbière rend ces erreurs moins critiques que celles faite sur l'estimation de la PPB.
+L'importance faible du \chh dans le bilan de carbone de la tourbière (en valeur absolue) rend ces incertitudes moins critiques que celles faite sur l'estimation de la PPB.
 Les incertitudes importantes sur la PPB, sont mises en évidence par les fortes variations des flux interpolés selon l'équation utilisée.
 Elles sont la source des variations observées en termes de bilan.
-L'ajout d'un indice de végétation diminue d'incertitude des paramètres du modèle, mais cet apport n'est pas reflété par l'évaluation, malgré la similarité de la végétation.
+%L'ajout d'un indice de végétation diminue d'incertitude des paramètres du modèle, mais cet apport n'est pas reflété par l'évaluation, malgré la similarité de la végétation.
 À l'inverse la RE est bien contrainte.
 Sur les 2 années la différence entre les différentes équations utilisées ne dépassent pas \SI{25}{\gcma}.
 
-\textbf{sensibilité du bilan au variation des paramètres}
-
-%\textbf{limitations}
 Outre ces aspects ce bilan de carbone est aussi limité par sa représentativité. 
 Ainsi la strate arborée fortement présente dans certaines zones n'est pas directement prise en compte.
 De la même manière une partie restreinte de la tourbière mais néanmoins présente est constitué de touradons dont l'effet n'a pas été pris en compte. %\plop (\textbf{biblio effet microtype}).
-
-%
-%\begin{itemize}
-%\item pas de cartographie (pas grave si p7 maj bien représentée par mdl ecos)
-%\item extrapolation sur d'autres site difficile (cf validation)
-%\end{itemize}
 
 \subsection{Variabilité spatiale sur la tourbière de La Guette}
 
