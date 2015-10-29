@@ -782,11 +782,16 @@ On observe une différence entre les deux modèles :
 celui utilisant uniquement la température de l'air (PPB-1) présente un stockage plus important en 2013 qu'en 2014, tandis que le modèle prenant en compte la végétation (PPB-2) stocke moins de carbone en 2013 qu'en 2014.
 L'intégration de la végétation minimise également l'incertitude de l'estimation, la divisant approximativement par deux.
 
-La différence de comportement, entre les années de mesures, liée à l'intégration de la végétation est également visible dans l'estimation de la RE.
-La prise en compte de la végétation (modèles RE-2 et RE-3) conduit à une respiration plus forte en 2014 qu'en 2013 à l'inverse de RE-1.
-La différence entre l'estimation de la RE en 2013 et en 2014 diminue avec l'intégration de la végétation.
-Elle passe de 102 pour RE-1 à 78 puis 41 pour RE-2 et RE-3.
-Malgré ces différences, on observe une grande proximité dans les valeurs des flux interpolés sur les 2 années, quel  que soit le modèle, avec un écart maximum de \SI{25}{\gcma}.
+L'intégration de la végétation change également la différence entre 2013 et 2014 de la RE.
+Lorsque la végétation est intégrée (RE-2 et RE-3) la RE est supérieure en 2014.
+Lorsqu'elle ne l'est pas elle est supérieure en 2013.
+Ces différences restent inférieures à l'incertitude liée aux flux estimés et on observe une grande proximité dans les valeurs des flux interpolés sur les 2 années, quel  que soit le modèle, avec un écart maximum de \SI{25}{\gcma}.
+
+%La différence de comportement, entre les années de mesures, liée à l'intégration de la végétation est également visible dans l'estimation de la RE.
+%La prise en compte de la végétation (modèles RE-2 et RE-3) conduit à une respiration plus forte en 2014 qu'en 2013 à l'inverse de RE-1.
+%La différence entre l'estimation de la RE en 2013 et en 2014 diminue avec l'intégration de la végétation.
+%Elle passe de 102 pour RE-1 à 78 puis 41 pour RE-2 et RE-3.
+%Malgré ces différences, on observe une grande proximité dans les valeurs des flux interpolés sur les 2 années, quel  que soit le modèle, avec un écart maximum de \SI{25}{\gcma}.
 
 Les flux de \chh estimés ont une erreur importante et sont beaucoup plus faibles que les flux de la PPB ou de la RE.
 Le flux de \chh est au moins deux fois plus important en 2014 qu'en 2013.
@@ -859,14 +864,15 @@ Par contre la quantité d'eau sortant de l'écosystème est plus importante en 2
 
 \subsubsection{Représentativité locale du bilan de \coo}
 
-En recalculant la NRMSE individuelle de chaque placette, il est possible d'avoir une indication sur la représentativité locale des modèles calibrés à l'échelle de l'écosystème (Figure~\ref{fig:repr_loc}).
-PPB-1 et PPB-2 ont une distribution des valeurs de NRMSE relativement similaire, même si légèrement plus forte pour PPB-2.
-le modèle RE-3 présente des valeurs plus faibles et une distribution plus homogène de la NRMSE que RE-1, avec davantage de placette en dessous de \SI{50}{\percent}.
-Que ce soit pour la PPB ou la RE, la placette n°5 est systématiquement une NRMSE significativement plus élevée que les autres.
+En recalculant des valeurs de NRMSE individuelles pour chaque placette, il est possible d'avoir une indication sur la représentativité locale des modèles calibrés à l'échelle de l'écosystème (Figure~\ref{fig:repr_loc}).
+Que ce soit pour la PPB ou la RE, la placette n°5 a systématiquement une NRMSE significativement plus élevée que les autres.
 
-représenter les placettes de façon individuelle avec une NRMSE comprise entre 20 et \SI{100}{\percent} pour RE-1 et entre 20 et \SI{80}{\percent} pour RE-3.
-La majorité des placettes à une NRMSE d'environ \SI{55}{\percent} pour RE-1 et d'environ \SI{40}{\percent} pour RE-3 (Figure~\ref{fig:repr_loc}, RE-1 et RE-3).
-Pour la PPB, toujours à l'exception de la placette n°5, les estimation à l'échelle de l'écosystème permettent de représenter les placettes avec une NRMSE comprise entre 20 et \SI{90}{\percent} pour PPB-1 et entre 30 et \SI{100}{\percent} pour PPB-2.
+Pour la PPB et si l'on excepte la placette n°5, les estimations à l'échelle de l'écosystème permettent de représenter les placettes avec une NRMSE comprise entre 20 et \SI{90}{\percent} pour PPB-1 et entre 30 et \SI{100}{\percent} pour PPB-2.
+PPB-1 et PPB-2 ont une distribution des valeurs de NRMSE relativement similaire.
+
+La NRMSE de RE-1 est comprise entre 20 et \SI{100}{\percent}, celle de RE-3 entre 20 et \SI{80}{\percent}.
+La majorité des placettes ont une NRMSE d'environ \SI{55}{\percent} pour RE-1 et d'environ \SI{40}{\percent} pour RE-3 (Figure~\ref{fig:repr_loc}).
+le modèle RE-3 a des valeurs plus faibles et une distribution plus homogène de la NRMSE que RE-1, avec davantage de placette en dessous de \SI{50}{\percent} (12 contre 8).
 
 \begin{figure}
 \centering
