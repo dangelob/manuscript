@@ -207,12 +207,11 @@ Afin d'établir le bilan de carbone tout en gardant une discrimination entre les
 
 Concernant la respiration de l'écosystème, les températures utilisées dans la littérature sont variables : la température la plus utilisée est la température du sol à \SI{-5}{\centi\metre}  \citep{ballantyne2014}.
 D'autres auteurs utilisent aussi la température de l'air et la température du sol à \SI{-10}{\centi\metre} \citep{bortoluzzi2006a,kim1992}.
-L'utilisation de ces profondeurs sont justifiées par le fait que dans la tourbe, la respiration du sol est la plus importante au dessus du niveau de l'eau et donc en surface.
-\plop %\textbf{production CO2 ? profils ?}
-C'est également à des profondeurs relativement faibles que se situent la majorité des racines \plop.
+L'utilisation de ces profondeurs sont justifiées par le fait que dans la tourbe, la respiration du sol est la plus importante au dessus du niveau de l'eau et donc en surface \citep{Luo200661}. %\textbf{production CO2 ? profils ?}
+C'est également à des profondeurs relativement faibles que se situent la majorité des racines \citep{rydin2013c}.
 La respiration de ces racines peut contribuer à la respiration de l'écosystème pour 35 à \SI{60}{\percent} \citep{silvola1996,crow2005}.
-La RE est estimée directement à partir des données acquises moyennées en partant de la température connue pour contrôler une grande partie de ce flux.
-Les modèles les plus fréquemment utilisés (linéaire, exponentiel, arrhénius) ont été testés.
+%La RE est estimée directement à partir des données acquises moyennées en partant de la température connue pour contrôler une grande partie de ce flux.
+%Les modèles les plus fréquemment utilisés (linéaire, exponentiel, arrhénius) ont été testés.
 
 Il ne semble pas émerger de consensus dans la littérature quant aux facteurs contrôlant les émissions de \chh.
 Différents facteurs sont utilisés comme la température, \citep{alm1999,bubier1995b}, le niveau de la nappe \citep{bubier1993} ou encore la végétation \citep{bortoluzzi2006a}.
@@ -342,9 +341,9 @@ L'indice de végétation est également légèrement plus important en 2014.
 \label{fig:T_mean_evolution}
 \end{figure}
 
-La température de l'air mesurée manuellement dans les 20 placettes montre une variabilité saisonnière cohérente avec celle mesurée par la station météo. 
+La température de l'air mesurée manuellement dans les 20 placettes montre une variabilité saisonnière comprise entre 6 et \SI{32}{\degreeCelsius} cohérente avec celle mesurée par la station météo. 
 %bien que les valeurs semblent systématiquement supérieures.
-La variabilité saisonnière de la température est également visible quand elle est mesurée dans le sol avec cependant un amortissement et une diminution de la variabilité avec la profondeur (figure~\ref{fig:T_mean_evolution})
+La variabilité saisonnière de la température est également visible quand elle est mesurée dans le sol avec cependant un amortissement et une diminution de la variabilité avec la profondeur : les températures varient de 5 à \SI{17}{\degreeCelsius} et de 8 à \SI{14}{\degreeCelsius} à \num{-30} et \SI{-100}{\centi\metre} respectivement (Figure~\ref{fig:T_mean_evolution}).
 %chiffres ?
 
 \begin{figure}
@@ -366,10 +365,10 @@ La variabilité saisonnière de la température est également visible quand ell
 %\label{fig:pH_mean_evolution}
 %\end{figure}
 
-La conductivité moyenne mesurée dans l'eau des piézomètres des 20 placettes sur le site varie entre \num{35} et \SI{55}{\usml} (figure~\ref{fig:wtr_phychim}--A).
-En moyenne les valeurs de pH mesurées dans les placettes sont comprises entre 4 et 5 (figure~\ref{fig:wtr_phychim}--B).
+La conductivité moyenne mesurée dans l'eau des piézomètres des 20 placettes sur le site varie entre \num{35} et \SI{55}{\usml} (Figure~\ref{fig:wtr_phychim}--A).
+En moyenne les valeurs de pH mesurées dans les placettes sont comprises entre 4 et 5 (Figure~\ref{fig:wtr_phychim}--B).
 Ces valeurs sont cohérentes avec la classification en \textit{poor-fen} du site.
-Les concentrations en carbone organique dissout des eaux prélevées dans les piézomètres sont comprises en moyenne entre \num{10} et \SI{30}{\milli\gram\per\liter} à l'exception d'un point en octobre 2013 (figure~\ref{fig:wtr_phychim}--C).
+Les concentrations en carbone organique dissout des eaux prélevées dans les piézomètres sont comprises en moyenne entre \num{10} et \SI{30}{\milli\gram\per\liter} à l'exception d'un point en octobre 2013 (Figure~\ref{fig:wtr_phychim}--C).
 
 
 %\begin{figure}
@@ -579,7 +578,7 @@ Calibration de la RE utilisant l'équation~\ref{eq:RE_T}. En haut la représenta
 \caption{\label{fig:ER_mdl_TairIVH}Calibration de la RE prenant en compte la végétation en utilisant l'équation~\ref{eq:RE_TIV}, en haut, et l'équation~\ref{eq:RE_TH} en bas. Avec la représentativité des modèles et la distribution de leurs résidus (graphes a et b pour le premier et d et e pour le second), ainsi que leur évaluation sur un jeu de données indépendant (graphe c et f).}
 \end{figure}
 
-La relation exponentielle entre la RE et la température est reconnue \cite{luo2006}, et la RE est estimée avec l'équation :
+La relation exponentielle entre la RE et la température est reconnue \citep{luo2006}, et la RE est estimée avec l'équation :
 %L'estimation de la RE s'effectue avec l'équation :
 
 \begin{equation} \label{eq:RE_T}
@@ -1203,7 +1202,7 @@ Par ailleurs l'évaluation du modèle PPB-1 renvoie un erreur plus faible que ce
 %Après interpolation la différence nette observée entre les modèles PPB-1 et PPB-2 est probablement liée à une sous-estimation des flux par ce dernier.
 
 Les différences observées selon la façon d'estimer la PPB peuvent paraître importante, néanmoins elles sont du même ordre de grandeur que celle rencontré par \citet{worrall2009} qui compare différentes façons de modéliser des flux de gaz avec des équations différentes (et non pas juste des variations sur un type de modèle).
-Ces différences sont également liées à la valeur élevée des flux qui font que, surtout dans le cas de modèles exponentiels, de faibles variations peuvent avoir des effets importants comme en témoigne l'analyse de sensibilité des paramètres du modèle (Tableau~\ref{table:mdl_sensitiv_BdC}).
+%Ces différences sont également liées à la valeur élevée des flux qui font que, surtout dans le cas de modèles exponentiels, de faibles variations peuvent avoir des effets importants comme en témoigne l'analyse de sensibilité des paramètres du modèle (Tableau~\ref{table:mdl_sensitiv_BdC}).
 
 L'intégration de la végétation aux modèles d'estimation de la PPB est rarement réalisé \citep{bortoluzzi2006a,gorres2014}, probablement à cause de la difficulté à prendre en compte ce signal.
 La diversité des espèces végétales rend difficile la mise en place de protocole de suivi non-destructif généralisable à un grand nombre d'espèces.
@@ -1258,7 +1257,7 @@ L'évaluation du modèle fait doubler la NRMSE et montre sa limite : son utilisa
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{chap3/bib_vs_ppb}
-\caption{Relation entre la production primaire brute (PPB) et la température moyenne annuelle (en °C) dans la littérature (en gris) et pour ces travaux.}
+\caption{Relation entre la production primaire brute (PPB) et la température moyenne annuelle (en °C) dans la littérature (points gris) et pour ces travaux. Les couleurs correspondent aux différentes combinaisons de modèles utilisées.}
 \label{fig:bib_vs_ppb}
 \end{figure}
 
@@ -1289,7 +1288,7 @@ Dans ces deux cas les valeurs de PPB observées sont bien plus fortes que celles
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{chap3/bib_vs_re}
-\caption{Relation entre la respiration de l'écosystème (RE) et la température moyenne annuelle (en °C) dans la littérature (en gris) et pour ces travaux.}
+\caption{Relation entre la respiration de l'écosystème (RE) et la température moyenne annuelle (en °C) dans la littérature (points gris) et pour ces travaux. Les couleurs correspondent aux différentes combinaisons de modèles utilisées.}
 \label{fig:bib_vs_re}
 \end{figure}
 
@@ -1326,7 +1325,7 @@ Il ne semble par y avoir de différences significatives dans la représentativit
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{chap3/bib_vs_ch4}
-\caption{Relation entre les flux de \chh  et la température moyenne annuelle (en °C) dans la littérature (en gris) et pour ces travaux.}
+\caption{Relation entre les flux de \chh  et la température moyenne annuelle (en °C) dans la littérature (points gris) et pour ces travaux (en rouge).}
 \label{fig:bib_vs_ch4}
 \end{figure}
 
@@ -1357,29 +1356,36 @@ Ces observations permettent de faire l'hypothèse que l'année 2013 a permis à 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{chap3/bib_vs_necb}
-\caption{Relation entre le bilan de carbone net de l'écosystème (BCNE) et la température moyenne annuelle (en °C) dans la littérature (en gris) et pour ces travaux. La ligne de tirets sépare les écosystèmes stockant du carbone (au dessus) de ceux libérant du carbone (en dessous).}
+\caption{Relation entre le bilan de carbone net de l'écosystème (BCNE) et la température moyenne annuelle (en °C) dans la littérature (points gris) et pour ces travaux.  Les couleurs correspondent aux différentes combinaisons de modèles utilisées et la ligne de tirets sépare les écosystèmes stockant du carbone (au dessus) de ceux libérant du carbone (en dessous).}
 \label{fig:bib_vs_necb}
 \end{figure}
 
 \subsubsection{Puits ou source ?}
 
-En moyenne sur les deux années et selon les estimations des flux, la tourbière de La Guette est soit à l'équilibre soit une source de carbone.
+En moyenne sur les deux années la tourbière de La Guette est soit à l'équilibre soit une source de carbone selon les estimations des flux considérées.
 Les quantités de carbone émises dans l'atmosphère sont comprises entre 0 et \SI{245}{\gcma} (Tableau~\ref{table:bdc}).
 Ces différences sont principalement liées à l'estimation de la PPB, les bilans calculés à l'aide du modèle PPB-2 estiment une source de carbone supérieure à \SI{200}{\gcma}.
 %Selon le bilan considéré, la tourbière de La Guette stocke de faible quantité de C de l'ordre d'une dizaine de grammes par mètre carré, ou émet du carbone dans l'atmosphère de l'ordre de \num{14} à de \SI{233}{\gcma}.
 Ces valeurs, si on les compare à celle mesurées dans des prairies tourbeuses, ne sont pas aberrante en valeur absolue (Figure~\ref{fig:bib_vs_necb}).
-Elles restent cependant sujettes à caution.
-En effet il est probable que le modèle PPB-2 sous-estime la PPB et donc sur-estime les pertes de carbone par la tourbière (Figure~\ref{fig:BdC_GPP_interp}).
+Elles restent cependant sujettes à caution car il est possible que le modèle PPB-2 sous-estime la PPB et donc sur-estime les pertes de carbone par la tourbière (Figure~\ref{fig:BdC_GPP_interp}).
+Par contre le fait que les estimations qui utilisent PPB-2 montrent une source de carbone plus importante en 2013 qu'en 2014 semble cohérent.
+En effet le peu de baisse du niveau de la nappe d'eau mesuré pendant les deux années de mesure a eu lieu en 2013.
+Elles se rapprochent de celles mesurées dans des tourbières de bas-marais d'Amérique du nord : \SI{-145}{\gcma} \citep{carroll1997} ou celles mesurées dans une autre tourbière de bas-marais en Allemagne (\num{-142} à \SI{-565}{\gcma}) mais utilisée comme prairie permanente \citep{beyer2015}.
+
 Les estimations utilisant PPB-1 semblent indiquer que la tourbière est une légère source de carbone ou s'approche d'un équilibre.
-Ce constat est également cohérent avec les observations de terrain, qui montre un niveau de nappe particulièrement élevé pendant les deux années de mesure en comparaison avec les précédentes.
+Avec ces estimations les bilans 2013 et 2014 sont beaucoup plus proches et la PPB est légèrement plus forte en 2013 qu'en 2014.
+Même se cette observation semblent aller à l'inverse des observations de terrain (un IV plus fort en 2014) les incertitudes sont telles qu'il est difficile d'écarter les estimations utilisant PPB-1 sur ce seul aspect.
+%Ce constat est également cohérent avec les observations de terrain, qui montre un niveau de nappe particulièrement élevé pendant les deux années de mesure en comparaison avec les précédentes.
 
-Pour résumer, il est probable que la tourbière de La Guette fonctionne actuellement plutôt comme une légère source de carbone.
+Pour résumer, il est probable que la tourbière de La Guette a plutôt fonctionner comme une source en moyenne sur les deux années.
+Elle à probablement été une source plus importante en 2013 qu'en 2014 avec cependant une libération de carbone probablement un peu moins importante que celles prédites en utilisant PPB-2.
 
 
-Les bilans annuels ont des comportements différents en 2013 et en 2014.
-En 2013 l'écart entre les deux estimations les plus extrêmes est de \SI{462}{\gcm}.
-Cet écart est lié principalement à la prise en compte de la végétation (utilisation de PPB-2 au lieu de PPB-1).
-En comparaison l'écart observé entre estimations extrêmes est quatre fois plus faible en 2014 (\SI{120}{\gcm}).
+
+%Les bilans annuels ont des comportements différents en 2013 et en 2014.
+%En 2013 l'écart entre les deux estimations les plus extrêmes est de \SI{462}{\gcm}.
+%Cet écart est lié principalement à la prise en compte de la végétation (utilisation de PPB-2 au lieu de PPB-1).
+%En comparaison l'écart observé entre estimations extrêmes est quatre fois plus faible en 2014 (\SI{120}{\gcm}).
 
 
 \subsubsection{Importance relative des flux}
@@ -1435,7 +1441,7 @@ Dans ce cas le niveau élevé de la nappe d'eau et la proportion plus faible de 
 Les groupes Mix et Arbustes sont proches et sont des sources de carbone importantes.
 À la fois car la RE de ces groupes est plutôt élevée (> \SI{1200}{\gcma}, et à la fois car leur PPB est plutôt faible (située entre celle du groupe Mousse et celle du groupe Herbe).
 Le point commun de ces deux groupes est la proportion de la strate arbustive qui dépasse \SI{50}{\percent}.
-Ceci est cohérent avec la croissance limitée de la strate arbustive (par rapport à la strate herbacée) au cours de la saison de végétation (donc PPB plus faible) (\citep{rydin2013b}.
+Ceci est cohérent avec la croissance limitée de la strate arbustive (par rapport à la strate herbacée) au cours de la saison de végétation (donc PPB plus faible) \citep{rydin2013b}.
 La Re plus forte peut elle s'expliquer par la présence des racines.
 
 Le groupe Herbe est le plus particulier, son comportement varie de façon importante en fonction des modèles.
