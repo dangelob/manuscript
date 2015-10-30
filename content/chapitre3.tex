@@ -721,7 +721,7 @@ Les détails de l'estimation des paramètres de l'équation~\ref{eq:CH4_H} est v
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth, center]{chap3/CH4_BdCitp_IVcov}
-\caption{Flux de \coo interpolé à partir de FCH4. Les points violets représentent les moyennes des mesures mensuelles et leur déviation standard}
+\caption{Flux de \coo interpolé à partir de FCH4. Les points rouges représentent les moyennes des mesures mensuelles et leur déviation standard}
 \label{fig:BdC_CH4_interp}
 \end{figure}
 
@@ -969,21 +969,32 @@ le modèle RE-3 a des valeurs plus faibles et une distribution plus homogène de
 
 
 La classification hiérarchique a permis de distinguer 4 groupes de végétation (Figure~\ref{fig:tree}).
-Dans le groupe Mousse, la strate muscinale est majoritaire avec un recouvrement moyen de \SI{91}{\percent}, moins de \num{35} et \SI{15}{\percent} de recouvrement pour les herbacées et les arbustes respectivement (Figure~\ref{fig:distrib_grpveg}).
-Le groupe Mix est le plus homogène avec un recouvrement moyen des strates muscinales et arbustives de \num{63} et \SI{58}{\percent} chacune.
-C'est également le groupe ou il y a de moins d'herbacées avec un recouvrement de \SI{24}{\percent}.
-Dans le groupe Herbe, la strate herbacée est majoritaire avec un pourcentage de recouvrement moyen de \SI{63}{\percent}, la strate arbustive est moins présente (\SI{19}{\percent} en moyenne) et la strate muscinale est absente (\SI{1}{\percent}).
-La strate muscinale est également absente, ou presque, dans le groupe Arbuste (\SI{1}{\percent}).
-Dans ce groupe la strate herbacée à un pourcentage de recouvrement de \SI{33}{\percent} et la strate arbustive est majoritaire avec \SI{65}{\percent} de recouvrement moyen.
+Dans le groupe Mousse, la strate muscinale est majoritaire avec un recouvrement moyen de \SI{91}{\percent}, et des recouvrements inférieurs à \num{35} et \SI{15}{\percent} pour les strates herbacées et arbustives respectivement (Figure~\ref{fig:distrib_grpveg}).
+Le groupe Mix est le plus homogène avec un recouvrement moyen des strates muscinales et arbustives de \num{63} et \SI{58}{\percent}.
+C'est également le groupe dans lequel il y a le moins d'herbacées (\SI{24}{\percent}).
+Dans le groupe Herbe, la strate herbacée est majoritaire avec un recouvrement moyen de \SI{63}{\percent}, la strate arbustive est moins présente (\SI{19}{\percent} en moyenne) et la strate muscinale est absente ($\approx$\SI{1}{\percent}).
+La strate muscinale est également absente, dans le groupe Arbuste ($\approx$\SI{1}{\percent}), dans lequel la strate herbacée à un recouvrement de \SI{33}{\percent} et la strate arbustive de \SI{65}{\percent}.
 
-Les flux, calculés à partir des même équations que celles utilisées à l'échelle de l'écosystème entier, ont des NRMSE plus importantes : de \num{41} à \SI{66}{\percent} pour RE-1 et RE-2 et de \num{39} à \SI{65}{\percent} pour PPB-1 et PPB-2 (Tableau~\ref{table:flux_grp}).
+Les flux, calculés à partir des même équations que celles utilisées à l'échelle de l'écosystème entier, ont des NRMSE plus importantes : de \num{41} à \SI{66}{\percent} pour RE-1 et RE-3 et de \num{39} à \SI{65}{\percent} pour PPB-1 et PPB-2 (Tableau~\ref{table:flux_grp}).
 
-Pour la RE les flux sont du même ordre de grandeur que ceux calculés avec l'ensemble des placettes, que ce soit pour RE-1 ou RE-2.
-Le groupe Mousse a, pour les deux modèles, un flux annuel plus faible que le flux calculé à l'échelle de l'écosystème.
-Le groupe Arbuste est, quant à lui, le plus proche des flux « écosystèmes » tandis que le groupe Mix est au dessus.
-L'estimation de la RE du groupe Herbe est supérieure a celle estimée à l'échelle de l'écosystème pour RE-1 et inférieure pour RE-3.
-La RE du groupe Mousse est inférieur aux autres groupes que ce soit pour RE-1 ou RE-3. 
-Entre RE-1 et RE-3 les estimations du groupe Herbe diminue de façon importante (\num{-338}) alors qu'elles sont relativement similaire ($\pm$\num{50}) pour les autres groupes.
+Les flux de RE estimés en regroupant les placettes sont du même ordre de grandeur que ceux estimés pour l'ensemble de l'écosystème : entre \num{975(648)} et \SI{1453(740)}{\gcma} pour RE-1 et RE-3 (Tableau~\ref{table:flux_grp}).
+Les groupes Mix et Arbuste ont des flux similaires pour les deux modèles : \num{1365(670)} et \SI{1237(582)}{\gcma} pour RE-1 et \num{1393(681)} et \SI{1274(576)}{\gcma}.
+Ces flux sont les plus proches de ceux estimés à l'échelle de l'écosystème (\num{1286(231)} et \SI{1261(164)}{\gcma} pour RE-1 et RE-3).
+La prise en compte de la végétation (RE-3) fait diminuer fortement le flux estimé pour le groupe Herbe dont la RE passe de \num{1453(740)} à \SI{1115(455)}{\gcma}.
+Parmi l'ensemble des groupes, le groupe Mousse à la RE la plus faible quel que soit le modèle considéré : \num{975(648)} et \SI{1023(439)}{\gcma} respectivement pour RE-1 et RE-3.
+%Pour la RE les flux sont du même ordre de grandeur que ceux calculés avec l'ensemble des placettes, que ce soit pour RE-1 ou RE-2.
+%Le groupe Mousse a, pour les deux modèles, un flux annuel plus faible que le flux calculé à l'échelle de l'écosystème.
+%Le groupe Arbuste est, quant à lui, le plus proche des flux « écosystèmes » tandis que le groupe Mix est au dessus.
+%L'estimation de la RE du groupe Herbe est supérieure a celle estimée à l'échelle de l'écosystème pour RE-1 et inférieure pour RE-3.
+%La RE du groupe Mousse est inférieur aux autres groupes que ce soit pour RE-1 ou RE-3. 
+%Entre RE-1 et RE-3 les estimations du groupe Herbe diminue de façon importante (\num{-338}) alors qu'elles sont relativement similaire ($\pm$\num{50}) pour les autres groupes.
+
+Concernant la PPB, les estimations des modèles calibrés par groupes sont inférieures à celles calculées à l'échelle de l'écosystème.
+Ces relations sont relativiser en considération des fortes incertitudes (Tableau~\ref{table:flux_grp}).
+Ainsi les estimations par groupes de PPB-1 ont des valeurs comprises entre \num{886(501)} et \SI{1065(465)}{\gcma}, contre \SI{1290(400)}{\gcma} et les estimation de PPB-2 varient de \num{808(387)} à \SI{1277(642)}{\gcma}, par rapport à \SI{1070(203)}{\gcma} à l'échelle de l'écosystème.
+Seul la PPB du groupe Herbe estimée avec PPB-2 est supérieure aux estimations faite pour l'ensemble des placettes.
+À l'inverse de la RE, l'intégration de la végétation augmente, de \num{1056(682)} à \SI{1277(642)}{\gcma}, le flux du groupe Herbe.
+En revanche, comme pour la RE, le groupe Mousse est celui dont les flux sont les plus faibles (\num{808(387)} et \SI{808(387)}{\gcma} pour PPB-1 et PPB-2).
 
 Pour la PPB, les estimations de PPB-1 sont systématiquement inférieures à celles réalisées à l'échelle de l'écosystème.
 Pour PPB-2 seul le groupe Herbe à une estimation supérieure.
@@ -1075,26 +1086,26 @@ Arbuste &  \num{1274} & \num{0.53} & \num{45.25} & \num{953} & \num{0.46} & \num
 
 \begin{table}
 \centering
-\caption{Bilan de \coo par groupe de végétation (en \si{\gcma}) avec différentes combinaison de modèles. La dernière colonne représente de bilan de \coo à l'échelle de l'écosystème.}
+\caption{Bilan de \coo par groupe de végétation (en \si{\gcma}) avec différentes combinaisons de modèles. La dernière colonne représente de bilan de \coo à l'échelle de l'écosystème.}
 \label{table:bdc_grp}
-\begin{tabular}{llllll}  \toprule
-Modèles & Mousse & Mix & Herbe & Arbuste & Écosystème  \\ \midrule
+\begin{tabular}{lllll}  \toprule
+Modèles & Mousse & Mix & Herbe & Arbuste  \\ \midrule
 %\multicolumn{6}{l}{PPB-1, RE-1} \\
 %2013 &  \num{-147} & \num{-321} & \num{-436} & \num{-368} & \num{-15}\\
 %2014 &  \num{-32} & \num{-280} & \num{-357} & \num{-314} & +\num{23} \\
-PPB-1, RE-1 &  \num{-90} & \num{-300} & \num{-397} & \num{-341} & +\num{4}\\[+1ex]
+PPB-1, RE-1 &  \num{-90} & \num{-300} & \num{-397} & \num{-341}\\[+1ex]
 %\multicolumn{6}{l}{PPB-1, RE-3} \\
 %2013 &  \num{-136} & \num{-342} & \num{-2} & \num{-344} & +\num{82} \\
 %2014 &  \num{-139} & \num{-315} & \num{-116} & \num{-413} & \num{-23} \\
-PPB-1, RE-3 &  \num{-138} & \num{-328} & \num{-59} & \num{-378} & +\num{29} \\[+1ex]
+PPB-1, RE-3 &  \num{-138} & \num{-328} & \num{-59} & \num{-378} \\[+1ex]
 %\multicolumn{6}{l}{PPB-2, RE-1} \\
 %2013 &  \num{-274} & \num{-596} & \num{-356} & \num{-403} & \num{-380} \\
 %2014 &  \num{-61} & \num{-383} & +\num{5} & \num{-165}& \num{-51} \\
-PPB-2, RE-1 &  \num{-168} & \num{-489} & \num{-175} & \num{-284} & \num{-216} \\[+1ex]
+PPB-2, RE-1 &  \num{-168} & \num{-489} & \num{-175} & \num{-284} \\[+1ex]
 %\multicolumn{6}{l}{PPB-2, RE-3} \\
 %2013 &  \num{-263} & \num{-616} & +\num{79} & \num{-378} & \num{-283} \\
 %2014 &  \num{-168} & \num{-418} & +\num{245} & \num{-263} & \num{-97} \\
-PPB-2, RE-3 &  \num{-216} & \num{-517} & +\num{162} & \num{-321} & \num{-191}\\[+1ex]
+PPB-2, RE-3 &  \num{-216} & \num{-517} & +\num{162} & \num{-321} \\[+1ex]
 \bottomrule
 \end{tabular}
 \end{table}
@@ -1393,8 +1404,11 @@ Elles sont la source des variations observées en termes de bilan.
 Sur les 2 années la différence entre les différentes équations utilisées ne dépassent pas \SI{25}{\gcma}.
 
 Outre ces aspects ce bilan de carbone est aussi limité par sa représentativité. 
-Ainsi la strate arborée fortement présente dans certaines zones n'est pas directement prise en compte.
-De la même manière une partie restreinte de la tourbière mais néanmoins présente est constitué de touradons dont l'effet n'a pas été pris en compte. %\plop (\textbf{biblio effet microtype}).
+Différents éléments n'ont pas été pris en compte dans les mesures et l'établissement du bilan.
+La strate arborée notamment, largement présente dans certaines zones, n'est pas considérée directement.
+Les zones, restreintes, de touradons également, de même que les arbustes dépassant la taille de la chambre ou encore les zones d'eau libre.
+%Ainsi la strate arborée fortement présente dans certaines zones n'est pas directement prise en compte.
+%De la même manière une partie restreinte de la tourbière mais néanmoins présente est constitué de touradons dont l'effet n'a pas été pris en compte. %\plop (\textbf{biblio effet microtype}).
 
 \subsection{Variabilité spatiale sur la tourbière de La Guette}
 
