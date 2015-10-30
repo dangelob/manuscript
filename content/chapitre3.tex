@@ -462,7 +462,7 @@ L'ensemble de ces observations sont cohérentes avec les résultats des ACP (Ann
 %Le \chh ne montre pas de relation avec la température de l'air, mais une tendance exponentielle est visible vis-à-vis de l'indice de végétation (Figure~\ref{fig:Fl_FC}).
 %\textbf{(\chh et Température dans la tourbe ?)}
 
-\subsection{Estimation des flux}
+\subsection{Estimation des flux de GES}
 
 \subsubsection{Production primaire brute}
 
@@ -1104,27 +1104,31 @@ PPB-2, RE-3 &  \num{-216} & \num{-517} & +\num{162} & \num{-321} & \num{-191}\\[
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{chap3/loc_ER}
-\caption{Distribution de l'erreur standard (en gris) et des paramètres des modèles RE-1 et RE-3 (en noir) par placette (N=20)}
+\includegraphics[width=.98\textwidth]{chap3/loc_ER}
+\caption{Distribution de la NRMSE, du R\textsuperscript{2} (en gris) et des paramètres (en noir) des modèles RE-1 (à gauche) et RE-3 (à droite) calibrés par placette (N=20). Les lettres sous les graphes correspondent aux paramètres des équations utilisées.}
 \label{fig:loc_ER}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=1.15\textwidth, center]{chap3/loc_GPP}
-\caption{Distribution de l'erreur standard (en gris) et des paramètres du modèle PPB-2 (en noir) par placette (N=17)}
+\caption{Distribution de la NRMSE, du R\textsuperscript{2} (en gris) et des paramètres (en noir) du modèle PPB-2 calibré par placette (N=17). Les lettres sous les graphes correspondent aux paramètres des équations utilisées.}
 \label{fig:loc_GPP}
 \end{figure}
 
 Les modèles RE-1, RE-3 ont pu être calibré pour l'ensemble des 20 placettes et le modèle PPB-2 pour 17 d'entre elles.
 Le modèle RE-2, proche de RE-3 n'a pas été calibré quant au modèle PPB-1 sa calibration par placette ne convergeant pas pour la moitié d'entre elles, il a été laissé de côté.
-Pour les modèles RE-1 et RE-3 on constate des valeurs de NRMSE généralement plus forte que celles obtenues à l'échelle de l'écosystème : 18 et \SI{13}{\percent} respectivement (Figure~\ref{fig:mdl_ER_Tair}--a et \ref{fig:ER_mdl_TairIVH}--d et \ref{fig:loc_ER}).
-Cette tendance est également visible pour le modèle PPB-2 pour lequel la NRMSE vaut \SI{19}{\percent} à l'échelle de l'écosystème ce qui correspond à la limite basse des valeurs issue de la calibration par placette (Figure~\ref{fig:mdl_GPP_TairIV}--f et \ref{fig:loc_GPP})
 Il faut noter que le faible nombre de points rend l'estimation des paramètres limitée en terme de significativité.
-%Pour l'ensemble de ces modèles on constate une hausse de la NRMSE (Figure~\ref{fig:loc_ER} et \ref{fig:loc_GPP}), mais également une diminution très importante de la significativité .
-Les paramètres varient dans des gammes similaires pour RE-1 et RE-3 entre 0 et \num{1.1} pour a (RE-1) et a+c (RE-3) et entre \num{0.04} et \num{0.11} pour le paramètre b.
+Par ailleurs que ce soit pour la PPB ou la RE, la placette n°10 semble avoir un comportement particulier.
+
+
+Les R\textsuperscript{2} du modèle PPB-2, à l'exception de la placette n°10 , varient entre \num{0.5} et \num{0.9}.
+La NRMSE se distribue entre 20 et \SI{60}{\percent}, ces valeurs sont supérieures à celles du modèle calibré à l'échelle de l'écosystème (\SI{19}{\percent}, Figure~ \ref{fig:ER_mdl_TairIVH}--d et \ref{fig:loc_GPP})).
 Les paramètres du modèle PPB-2 varient de façon importante, entre \num{-6.1} et \num{66} pour a, entre \num{23.9} et \num{90.4} pour b, entre \num{6.2} et \num{60.0} pour c et \num{-10.7} et \num{27.1} pour d.
-Que ce soit pour la RE ou la PPB , les gammes de paramètres sont larges et bien supérieure à \SI{10}{\percent} (analyse de sensibilité) mais cohérentes par rapport à celles obtenues à l'échelle de l'écosystème.
+
+Toujours à l'exception de la placette n°10, pour les modèles RE-1 et RE-3 on constate une distribution des R\textsuperscript{2} au dessus de \num{0.5}, avec 11 placettes au dessus de \num{0.7} pour RE-1 et 15 pour RE-3.
+Les valeurs de leurs NRMSE sont généralement plus élevées que celles obtenues à l'échelle de l'écosystème : entre 20 et \SI{55}{\percent} pour RE-1 (contre \SI{18}{\percent} à l'échelle de l'écosystème) et entre 15 et \SI{50}{\percent} pour RE-3 (contre \SI{13}{\percent}, Figure~\ref{fig:mdl_ER_Tair}--a, \ref{fig:ER_mdl_TairIVH}--d et \ref{fig:loc_ER}).
+Les paramètres varient dans des gammes similaires pour RE-1 et RE-3 entre 0 et \num{1.1} pour a (RE-1) et a+c (RE-3) et entre \num{0.04} et \num{0.11} pour le paramètre b.
 
 
 \begin{figure}
@@ -1136,6 +1140,17 @@ Que ce soit pour la RE ou la PPB , les gammes de paramètres sont larges et bien
 \label{fig:distrib_fl_p7}
 \end{figure}
 
+
+Sur les deux années, les quantités de carbone assimilées par la PPB (modèle PPB-2) varient entre 507 et \SI{1409}{\gcma}, avec une majorité des placettes autour de \SI{1100}{\gcma} et une moyenne de \SI{1052(238)}{\gcma}.
+Pour la RE, la distribution des flux du modèle RE-1 s'échelonne entre 633 et \SI{1832}{\gcma} avec une moyenne de \SI{1275(314)}{\gcma} et entre 828 et \SI{2371}{gcma} avec une moyenne de \SI{1218(363)}{\gcma} pour le modèle RE-3.
+
+Enfin il ne semble pas y avoir de gradient spatial des flux que ce soit pour la PPB ou la RE (Annexe~\ref{sec:carte_flux}).
+
+
+%Que ce soit pour la RE ou la PPB , les gammes de paramètres sont larges mais cohérentes par rapport à celles obtenues à l'échelle de l'écosystème.
+
+
+
 %Concernant la RE, les modèles RE-1 et RE-3 ont des valeurs de NRMSE relativement proche d'environ \SI{50}{\percent}, avec deux outliers pour RE-1 et un pour RE-3 (Figure~\ref{fig:loc_ER}).
 %Les paramètres varient dans des gammes similaires pour les deux modèles.
 
@@ -1144,7 +1159,7 @@ Que ce soit pour la RE ou la PPB , les gammes de paramètres sont larges et bien
 
 %\subsubsection{Corrélation avec facteurs contrôlant}
 
-\clearpage
+%\clearpage
 \section{Discussion}
 
 La discussion de ce chapitre, s'articule autour de quatre parties.
