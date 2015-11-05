@@ -135,7 +135,7 @@ Les mesures automatiquement acquises via la station météo installée sur le si
 \subsection{Variables élaborées utilisées}
 
 Les mesures de recouvrement de la végétation ont été sommées par strate végétale.
-On utilisera donc RSM, RSA, RSH pour distinguer les recouvrements respectif de la strate muscinale (\textit{Sphagnum spp.}), arbustive (\textit{Erica tetralix} et \textit{Calluna vulgaris}), et herbacée (\textit{Molinia caerula} et \textit{Eriophorum augustifolium}).
+On utilisera donc RSM, RSH, RSA pour distinguer les recouvrements respectif de la strate muscinale (\textit{Sphagnum spp.}), herbacée (\textit{Molinia caerula} et \textit{Eriophorum augustifolium}) et arbustive (\textit{Erica tetralix} et \textit{Calluna vulgaris}).
 Un indice de végétation, représentant la quantité de végétation présente dans une embase est également calculé de la façon suivante : 
 
 \begin{equation}
@@ -146,19 +146,20 @@ Avec :
 \begin{itemize}
 \item $\sum R_{max}$ La somme des pourcentage de recouvrements maximum par strates.
 \item RSM le pourcentage de recouvrement de la strate muscinale
-\item RSA le pourcentage de recouvrement de la strate arbustive
 \item RSH le pourcentage de recouvrement le la strate herbacée
+\item RSA le pourcentage de recouvrement de la strate arbustive
 \end{itemize}
 
 Le niveau de nappe est composé de deux mesures, l'une du haut du piézomètre jusqu'au niveau de la nappe et l'autre du haut du pièzomètre jusqu'à la surface du sol. 
 Par la suite, et en l'absence de précisions, le niveau de nappe se réfère à la différence entre ces deux mesures et donc à la distance entre la surface du sol et le niveau de la nappe (Négative sous la surface du sol et inversement).
+En cas de présence de Sphaignes, le haut des capitulums est pris comme référence (z=0)
 
 \subsection{Estimation des flux de GES dans le bilan de C}
 
 L'estimation des flux de GES pour calculer un bilan de carbone se fait en trois étapes.
 La première consiste à établir des relations empiriques entre les flux et un ou plusieurs facteurs contrôlant.
 C'est la phase de \textbf{calibration}.
-La seconde, l'\textbf{évaluation/validation}, teste la pertinence de ces relations sur un jeu de données indépendantes.
+La seconde, l'\textbf{évaluation}, teste la pertinence de ces relations sur un jeu de données indépendantes.
 La troisième, l'\textbf{interpolation}, utilise ces relations empiriques et les données acquises à plus haute fréquence, pour intégrer dans le temps les mesures ponctuelles sur l'ensemble des deux années de mesure. 
 La chronique ainsi reconstituée permet ensuite d'estimer les quantités de carbone annuelles déplacées via des différents flux et d'en calculer leur bilan.
 
@@ -169,13 +170,33 @@ Pour estimer le bilan de carbone du site il est donc nécessaire d'établir des 
 %Ces relations empiriques permettront d'interpoler les données acquises mensuellement sur l'ensemble des deux années de mesure et de reconstituer ainsi une chronique de flux dont l'intégration dans le temps permettra d'estimer une quantité de carbone sur l'année.
 Pour établir ces modèles empiriques les données acquises ont été moyennées par campagne de mesure ; ceci permettant, dans un premier temps, de s'affranchir de la variabilité spatiale des flux et ne considérer que la variabilité temporelle.
 Les relations entre flux et facteurs contrôlant ont ensuite été étudiées deux à deux, notamment en réalisant une analyse en composante principale (ACP).
-Cette analyse permet de déterminer quels sont les relations entre les variables et plus particulièrement quelles sont celles qui influent le plus sur les flux de GES.
+Cette analyse permet de déterminer quels sont les relations entre les variables et plus particulièrement quelles sont celles qui détermine le plus les flux de GES.
 Le nombre de données acquises pour le \coo et le \chh étant différent, une ACP a été réalisée pour chacun de ses gaz (Annexe~\ref{sec:acp}).
 Une fois le facteur de contrôle prépondérant d'un gaz établi, grâce à l'ACP et à la littérature, une relation empirique est établie entre les deux.
 La forme de cette relation et la littérature conditionne ensuite les équations testées.
 Elles sont évaluées à l'aide du coefficient de détermination (R\textsuperscript{2}) et de la racine carré de l'erreur quadratique normalisée par la moyenne (\textit{Normalised Root Mean Square Error}, NRMSE).
-Le R$^{2}$ est utilisé comme indicateur de la proportion de la variabilité des données expliquée par le modèle, sa valeur est généralement comprise entre 0 et 1.
-La RMSE et sa normalisation par la moyenne NRMSE sont utilisés comme indicateur de l'écart entre les données mesurées et les données modélisées.
+Le R$^{2}$ est utilisé comme indicateur de la proportion de la variabilité des données expliquée par le modèle, sa valeur est comprise entre 0 et 1 (pour les équations linéaires) : 
+
+$$ R^{2} = 1 - \frac{\sum(y-\hat{y})^2}{\sum(y-\bar{y})^2} $$ 
+
+Avec : 
+\begin{itemize}
+\item $y$ : données mesurées
+\item $\hat{y}$ : données modélisées
+\item $\bar{y}$ : la moyenne des données mesurées
+\end{itemize}
+
+La RMSE et sa normalisation par la moyenne NRMSE sont utilisés comme indicateur de l'écart entre les données mesurées et les données modélisées :
+
+$$ RMSE = \sqrt{\frac{\sum(y - \hat{y})^2}{N}} $$
+
+$$ NRMSE = 100 \times \frac{RMSE}{\bar{y}} $$
+
+Avec les notations précédentes et : 
+\begin{itemize}
+\item $N$ : le nombre d'observations
+%\item $\bar{y}$ : la moyenne des données mesurées
+\end{itemize}
 Les résidus\footnote{Les résidus sont défini comme la différence entre les valeurs mesurées et estimées.} sont également étudiés dans le but d'éviter un biais ou une hétéroscédasticité\footnote{On parle d'homoscédasticité lorsque la variance de l'erreur d'une variable est constante, et l'hétéroscédasticité lorsque qu'elle ne l'est pas} dans les données (Figure~\ref{fig:ref_resid}).
 
 \begin{figure}[!htb]
@@ -185,8 +206,8 @@ Les résidus\footnote{Les résidus sont défini comme la différence entre les v
 \label{fig:ref_resid}
 \end{figure}
 
-Puis les résidus de ces modèles de base ont ensuite été étudiés en fonction des facteurs de contrôle restant.
-Dans le cas où une tendance est visible avec l'un d'entre eux, le facteur est ajouté \plop.
+Puis les résidus de ces modèles de base ont été étudiés en fonction des facteurs de contrôle restant.
+Dans le cas où une tendance est visible avec l'un d'entre eux, le facteur est ajouté \citep{bortoluzzi2006a}.
 En plus des indicateurs précédent, la pertinence de l'ajout d'un paramètre est évalué à l'aide du  critère d'information d'Akaike (\textit{Akaike Information Criterion}, AIC).
 L'AIC permet de déterminer la pertinence de l'ajout d'un paramètre sur la représentation des données par le modèle.
 
@@ -205,7 +226,7 @@ L'AIC permet de déterminer la pertinence de l'ajout d'un paramètre sur la repr
 %La RMSE et sa normalisation par la moyenne NRMSE sont utilisés comme indicateur de l'écart entre les données mesurées et les données modélisées.
 %L'AIC permet de déterminer la pertinence de l'ajout d'un paramètre sur la représentation des données par le modèle.
 
-La température a été choisie comme base de départ à la construction des modèles de RE et PPB, car (i) c'est le facteur de contrôle le plus souvent invoqué et (ii) les corrélations avec les flux étaient les plus forte.
+La température a été choisie comme base de départ à la construction des modèles de RE et PPB, car (i) c'est le facteur de contrôle le plus souvent invoqué dans la littérature et (ii) les corrélations avec les flux étaient les plus forte (cf ACP, annexe~\ref{sec:acp}).
 
 \begin{center}
 \begin{minipage}{.85\textwidth}
@@ -219,11 +240,12 @@ Afin d'établir le bilan de carbone tout en gardant une discrimination entre les
 \end{minipage}
 \end{center}
 
-Concernant la respiration de l'écosystème, les températures utilisées dans la littérature sont variables : la température la plus utilisée est la température du sol à \SI{-5}{\centi\metre}  \citep{ballantyne2014}.
+Concernant la respiration de l'écosystème, les températures utilisées dans la littérature sont variables.
+La température la plus utilisée est la température du sol à \SI{-5}{\centi\metre}  \citep{ballantyne2014}.
 D'autres auteurs utilisent aussi la température de l'air et la température du sol à \SI{-10}{\centi\metre} \citep{bortoluzzi2006a,kim1992}.
 L'utilisation de ces profondeurs sont justifiées par le fait que dans la tourbe, la respiration du sol est la plus importante au dessus du niveau de l'eau et donc en surface \citep{Luo200661}. %\textbf{production CO2 ? profils ?}
-C'est également à des profondeurs relativement faibles que se situent la majorité des racines \citep{rydin2013c}.
-La respiration de ces racines peut contribuer à la respiration de l'écosystème pour 35 à \SI{60}{\percent} \citep{silvola1996,crow2005}.
+C'est également en surface que se situent la majorité des racines \citep{rydin2013c}.
+La respiration des racines contribue à la respiration de l'écosystème pour 35 à \SI{60}{\percent} \citep{silvola1996,crow2005}.
 %La RE est estimée directement à partir des données acquises moyennées en partant de la température connue pour contrôler une grande partie de ce flux.
 %Les modèles les plus fréquemment utilisés (linéaire, exponentiel, arrhénius) ont été testés.
 
@@ -233,9 +255,9 @@ Ces facteurs peuvent être utilisés seuls ou conjointement.
 
 \subsubsection{Évaluation/validation}
 
-Après la phase de calibration, les facteurs de contrôle utilisés dans les modèles ont été évalués à l'aide de données indépendantes acquises dans le cadre d'un suivi expérimental mis en place dans le même site en 2014.
+Après la phase de calibration, les facteurs de contrôle utilisés dans les modèles ont été évalués à l'aide de données indépendantes acquises en 2014, dans le cadre d'un suivi expérimental mis en place sur la tourbière de La Guette pour le projet CARBIODIV (cf annexe~\ref{sec:carbiodiv}).
 %Cette dernière est également un suivi des mêmes flux de gaz, sur le même site pendant l'année 2014.
-Les méthodes de mesures des flux de \coo et de \chh sont strictement identiques à celles utilisées pour établir le bilan de carbone.
+Les méthodes de mesures des flux de \coo et de \chh sont strictement identiques (ainsi que les opérateurs) à celles utilisées pour établir le bilan de carbone.
 En revanche le positionnement des placettes est beaucoup plus classique : proches les unes des autres, et avec différents traitements.
 Afin de pouvoir les comparer, seule les placettes de contrôles, (n'ayant donc subie aucune manipulation) de cette expérimentation seront utilisées soit 4 placettes dans une station en amont et 4 en aval de la tourbière de La Guette (plus de détails dans l'annexe~\ref{sec:carbiodiv}).
 Le terme d'évaluation est ici préféré à celui de validation car le nouveau jeu de données utilisé, bien qu'indépendant de celui utilisé pour la calibration, n'a pas été acquis de manière strictement identique, notamment au niveau de la représentativité spatiale (répartition des embases sur le site).
@@ -246,7 +268,7 @@ Enfin les facteurs contrôlants ont été interpolés à une fréquence horaire 
 Pour des données dont l'acquisition est manuelle uniquement, comme la végétation, une interpolation linéaire est faite entre les points de mesures.
 Pour les données acquises à la fois automatiquement par la station météorologique et manuellement, comme la température de l'air ou de la tourbe, l'interpolation est faite à partir de la relation entre les mesures continues et ponctuelles.
 Les flux sont ensuite recalculés (en \si{\micro\mole\per\square\meter\per\hour}) à l'échelle horaire sur les deux années de mesure puis sommés afin d'estimer les bilans de carbone.
-Ces bilans sont par la suite exprimés en \si{\gram C m^{-2}} par période de temps (souvent l'année).
+Ces bilans sont par la suite exprimés en \si{\gram C m^{-2}} par période de temps à l'année, sauf quand précisé.
 
 %L'interpolation étant soit une simple interpolation linéaire entre les données mensuelles, soit une relation avec les facteurs acquis par la station météorologique.
 %À l'aide de ces interpolations et des équations les flux ont ensuite été recalculés, à l'échelle horaire, sur les 2 années de mesure puis les flux ont été sommés afin de calculer les bilans.
@@ -255,8 +277,8 @@ Ces bilans sont par la suite exprimés en \si{\gram C m^{-2}} par période de te
 
 En plus des flux gazeux, les flux de COD sont pris en compte dans le bilan de carbone.
 Le flux de COD entrant dans la tourbière est estimé à partir des précipitations et de leur concentration en COD.
-La concentration en COD dans les eaux de pluie est généralement comprise entre \num{0.5} et \SI{2.5}{\milli\gram\per\litre}(\citep{sigg2014}).
-Le flux de COD sortant est calculé les résultats  du modèle de \citet{binet2013} permettant d'estimer une quantité d'eau sortant à l'exutoire du bassin versant de l'écosystème et des concentrations en COD mesurées pendant les deux années de mesure.
+La concentration en COD des eaux de pluie est généralement comprise entre \num{0.5} et \SI{2.5}{\milli\gram\per\litre}(\citep{sigg2014}).
+Le flux de COD sortant est calculé à partir des résultats  du modèle de \citet{binet2013} permettant d'estimer une quantité d'eau sortant à l'exutoire du bassin versant de l'écosystème et des concentrations en COD mesurées pendant les deux années de mesure.
 %Une mesure ponctuelle de la concentration en DOC de l'eau de pluie du site l'a estimé à \SI{0.34}{\mgl}.
 
 \begin{equation}
@@ -279,11 +301,11 @@ La variabilité spatiale des flux a été caractérisée en utilisant deux appro
 %Deux approches ont été testées afin de caractériser la variabilité spatiale des flux et du bilan.
 La première consiste à calibrer par placette les modèles sélectionnés lors de la modélisation à l'échelle de l'écosystème.
 Cette opération permet ainsi calculer des flux par placette.
-L'inconvénient de cette méthode est le faible nombre de points utilisé pour chaque calibration, ce qui peut conduire à une forte erreur sur l'estimation des paramètres voire à la non convergence des modèles.
-La seconde approche permet de palier en partie à ce souci en calibrant les modèles à partir de groupes de placettes.
+L'inconvénient de cette méthode est le faible nombre de points utilisé pour chaque calibration, ce qui peut conduire à une erreur importante sur l'estimation des paramètres voire à la non convergence des modèles.
+La seconde approche permet de palier en partie à ce problème en calibrant les modèles à partir de groupes de placettes.
 Ces ensembles ont été fait en regroupant les placettes ayant la composition végétale la plus proche.
-Ce choix se justifie par le fait que la végétation joue un rôle important tout en étant délicate à prendre en compte.
-La température, plus facile à mesurer et le niveau de la nappe, qui n'a que peu varié, semblaient des choix moins pertinent. 
+Ce choix se justifie par le fait que la végétation joue un rôle important sur les flux de carbone (photosynthèse, transport)
+La température, plus facile à mesurer, et le niveau de la nappe, qui n'a que peu varié, semblaient des choix moins pertinent. 
 Le partitionnement à été faite par classification hiérarchique ascendante.
 C'est une méthode déterministe qui consiste, à partir de l'ensemble des individus (ici nos différentes placettes de mesure), de les regrouper en classes de plus en plus grande.
 Les points sont regroupés par similarité, les deux points les plus proches sont fusionnés, puis les deux suivants et ce jusqu'à ce qu'il ne reste qu'une seule classe.
@@ -301,10 +323,10 @@ Cette classification est généralement représentée par un dendrogramme, elle 
 
 Pour chaque flux, l'erreur sur le bilan annuel est calculé en multipliant ce flux par l'erreur quadratique normalisée, calculée lors de la calibration.
 Pour les bilans, l'erreur associée est calculée comme la somme des erreurs associées aux flux composant le bilan.
-Chacune de ces erreur étant pondérée par leur importance relative par rapport à la somme, en valeur absolue des flux \citep{waddington2000}.
+Chacune de ces erreurs est pondérée en fonction de leur importance relative par rapport à la somme, en valeur absolue, des flux \citep{waddington2000}.
 
 \begin{equation}
-E_{(bilan)} = (\chi_{PPB} \times NRMSE_{PPB}) + (\chi_{RE} \times NRMSE_{RE}) (\chi_{\fchh} \times NRMSE_{\fchh})
+E_{(bilan)} = (\chi_{PPB} \times NRMSE_{PPB}) + (\chi_{RE} \times NRMSE_{RE}) + (\chi_{\fchh} \times NRMSE_{\fchh})
 \end{equation}
 
 Avec : 
@@ -314,7 +336,7 @@ Avec :
 \item $NRMSE_{flux}$ la racine carré de l'erreur quadratique normalisée à la moyenne associée au flux
 \end{itemize}
 
-Ces erreurs ne sont qu'une part de l'erreur totale qui devrait être associée à ces flux. Elle ne considère par exemple pas les erreurs aléatoires et systématiques liées aux mesures.
+Ces erreurs ne sont qu'une part de l'erreur totale qui devrait être associée à ces flux. Elle ne considère pas les erreurs aléatoires et systématiques liées aux mesures, qui sont supposées négligeable par rapport à l'erreur provenant de l'estimation des paramètres des équations et de la variablité spatiale des flux.
 
 
 \section{Résultats}
@@ -326,7 +348,7 @@ Ces erreurs ne sont qu'une part de l'erreur totale qui devrait être associée �
 \begin{figure}
 \centering
 \includegraphics[width=1.15\textwidth, center]{chap3/WTL_mean_evolution}
-\caption{Évolution du niveau moyen de la nappe mesuré dans les 20 placettes entre mars 2013 et février 2015. Les valeurs correspondent à la distance entre le niveau de nappe et la surface du sol (en cm).}
+\caption{Variabilité temporelle du niveau moyen de la nappe mesuré dans les 20 placettes entre mars 2013 et février 2015. Les valeurs correspondent à la distance entre le niveau de nappe et la surface du sol (en cm).}
 \label{fig:WTL_mean_evolution}
 \end{figure}
 
@@ -344,20 +366,20 @@ Ces observations sont cohérentes avec les mesures acquises automatiquement et �
 \end{figure}
 
 L'évolution saisonnière de la végétation sur la tourbière de La Guette est visible (Figure~\ref{fig:veg_evol}).
-Cette variabilité est majoritairement contrôlée par la strate herbacée qui meurt à la fin de la saison de végétation tandis que les arbustes et les mousses résistent.
-la saison de végétation, pour les herbacées, semble avoir commencé un peu plus tôt en 2014 avec une végétation qui commence à croître en avril tandis qu'il faut attendre la campagne de mai en 2013.
+Cette variabilité est majoritairement contrôlée par la strate herbacée qui meurt à la fin de la saison de végétation tandis que les arbustes et les mousses sont pérennes.
+La saison de végétation, pour les herbacées, a commencé un peu plus tôt en 2014 (Figure~\ref{fig:veg_evol}) avec une végétation qui commence à croître en avril tandis qu'il faut attendre la campagne de mai en 2013.
 L'indice de végétation est également légèrement plus important en 2014.
 
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth, center]{chap3/T_mean_evolution}
-\caption{Évolution moyenne des températures de l'air (Tair) et du sol à \SIlist{-5;-30;-50;-100}{\centi\metre} (T5, T30, T50 et T100 respectivement) mesurée dans les 20 placettes entre mars 2013 et février 2015}
+\caption{Variabilité temporelle des moyennes des températures de l'air (Tair) et du sol à \SIlist{-5;-30;-50;-100}{\centi\metre} (T5, T30, T50 et T100 respectivement) mesurée dans les 20 placettes entre mars 2013 et février 2015}
 \label{fig:T_mean_evolution}
 \end{figure}
 
-La température de l'air mesurée manuellement dans les 20 placettes montre une variabilité saisonnière comprise entre 6 et \SI{32}{\degreeCelsius} cohérente avec celle mesurée par la station météo. 
+La température de l'air mesurée manuellement dans les 20 placettes montre une variabilité saisonnière comprise entre 6 et \SI{32}{\degreeCelsius} cohérente avec celle mesurée par la station météorologique. 
 %bien que les valeurs semblent systématiquement supérieures.
-La variabilité saisonnière de la température est également visible quand elle est mesurée dans le sol avec cependant un amortissement et une diminution de la variabilité avec la profondeur : les températures varient de 5 à \SI{17}{\degreeCelsius} et de 8 à \SI{14}{\degreeCelsius} à \num{-30} et \SI{-100}{\centi\metre} respectivement (Figure~\ref{fig:T_mean_evolution}).
+La variabilité saisonnière de la température est également visible quand elle est mesurée dans le sol avec un amortissement et une diminution de la variabilité spatiale avec la profondeur : les températures varient de 5 à \SI{17}{\degreeCelsius} et de 8 à \SI{14}{\degreeCelsius} à \num{-30} et \SI{-100}{\centi\metre} respectivement (Figure~\ref{fig:T_mean_evolution}).
 %chiffres ?
 
 \begin{figure}
@@ -365,7 +387,7 @@ La variabilité saisonnière de la température est également visible quand ell
 \includegraphics[width=1\textwidth, center]{chap3/cond_mean_evolution}
 \includegraphics[width=1\textwidth, center]{chap3/pH_mean_evolution}
 \includegraphics[width=1\textwidth, center]{chap3/NPOC_mean_evolution}
-\caption{Cinétique des moyennes de la conductivité (A), du pH (B) et du carbone organique dissout (C) mesurés dans l'eau des piézomètres entre mars 2013 et février 2015.}
+\caption{Variabilité temporelle des moyennes de la conductivité (A), du pH (B) et du carbone organique dissout (C) mesurés dans l'eau des piézomètres entre mars 2013 et février 2015.}
 \label{fig:wtr_phychim}
 \end{figure}
 
@@ -409,7 +431,7 @@ Les concentrations en carbone organique dissout des eaux prélevées dans les pi
 	\includegraphics[width=1\textwidth, center]{chap3/GPP_evolution_avg}
 	\includegraphics[width=1\textwidth, center]{chap3/ER_evolution_avg}
 	\includegraphics[width=1\textwidth, center]{chap3/NEE_evolution_avg}
-\caption{Cinétique des flux de \coo moyen mesurés sur les 20 placettes entre mars 2013 et février 2015. Avec la PPB (A), la RE (B) et l'ENE (C) ; les barres d'erreur représentent la déviation standard.}
+\caption{Variabilité temporelle des flux de \coo moyen mesurés sur les 20 placettes entre mars 2013 et février 2015. Avec la PPB (A), la RE (B) et l'ENE (C) ; les barres d'erreur représentent la déviation standard.}
 \label{fig:flux_evolution_avg}
 \end{figure}
 
