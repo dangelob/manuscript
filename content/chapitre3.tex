@@ -343,7 +343,7 @@ Le nom de ces groupes (Arbuste, Herbe, Mix et Mousse) reflète la végétation m
 
 Pour chaque flux, l'erreur sur le bilan annuel est calculé en multipliant ce flux par l'erreur quadratique normalisée, calculée lors de la calibration.
 Pour les bilans, l'erreur associée est calculée comme la somme des erreurs associées aux flux composant le bilan.
-Chacune de ces erreurs est pondérée en fonction de leur importance relative par rapport à la somme, en valeur absolue, des flux \citep{waddington2000}.
+Chacune de ces erreurs est pondérée en fonction de leur importance relative par rapport à la somme des flux en valeur absolue \citep{waddington2000}.
 
 \begin{equation}
 E_{(bilan)} = (\chi_{PPB} \times NRMSE_{PPB}) + (\chi_{RE} \times NRMSE_{RE}) + (\chi_{\fchh} \times NRMSE_{\fchh})
@@ -552,7 +552,7 @@ PPB = \frac{PPBsat * i * PAR}{PPBsat + i * PAR}
 \label{fig:mdl_GPP_Tair}
 \end{figure}
 
-L'utilisation de l'équation de June seule, avec la température de l'air comme variable explicative de la PPBsat, permet d'expliquer 66 \% des variations observées avec une NRMSE de \SI{32}{\percent} (Figure~\ref{fig:mdl_GPP_Tair}-a).
+L'utilisation de l'équation de June seule, avec la température de l'air comme variable explicative de la PPBsat, permet d'expliquer 66 \% des variations observées avec une NRMSE de \SI{32}{\percent} (Figure~\ref{fig:mdl_GPP_Tair}-a) et un AIC de 95 (Tableau~\ref{table:mdl_par}).
 Les résidus de ce modèle se répartissent de façon relativement homogène et non biaisée (Figure~\ref{fig:mdl_GPP_Tair}-b).
 Corrélés avec l'indice de végétation IV, ils présentent une tendance linéaire croissante (Figure~\ref{fig:mdl_GPP_Tair}-c).
 On observe la même tendance avec le recouvrement de la strate herbacée avec une dispersion des points plus importante (Figure~\ref{fig:mdl_GPP_Tair}-d).
@@ -575,6 +575,7 @@ PPBsat = (a * IV + d) * exp\left(\frac{T - b}{c}\right)^2
 \end{figure}
 
 Cette nouvelle équation permet d'expliquer une part plus importante des variations de PPBsat (R$^{2}$ = 0,85) et augmente la proximité entre les données mesurées et les données modélisées : la NRMSE diminue à \SI{21}{\percent}. (Figure~\ref{fig:mdl_GPP_TairIV}-a).
+Par ailleurs son AIC est plus faible que pour l'équation précédente : 80 (Tableau~\ref{table:mdl_par}).
 Les résidus de cette équation semblent répartis de façon moins homogène que précédemment.
 Avec notamment un resserrement des points autour de zéro à l'exception d'un point de valeur supérieur à \num{4} (Figure~\ref{fig:mdl_GPP_TairIV}-b).
 Le biais reste malgré tout faible au regard de l'amélioration apportée.
@@ -583,7 +584,7 @@ Comme précédemment, la NRMSE de la PPB, de \SI{19}{\percent}, est du même ord
 La NRMSE de PPBsat et PPB diminue avec la prise en compte de l'indice de végétation lors de la calibration.
 En revanche, l'évaluation sur les données de test de ce dernier modèle montre une NRMSE importante (\SI{58}{\percent}), supérieure à celle du modèle ne prenant pas en compte la végétation (Figure~\ref{fig:mdl_GPP_TairIV}--h).
 Cette évaluation montre également une tendance importante à sous-estimer les valeurs mesurées.
-Néanmoins ce modèle intégrant la végétation permet de diminuer de façon importante l'erreur associée à l'estimation des paramètres de l'équation.
+Néanmoins ce modèle, intégrant la végétation, permet de diminuer de façon importante l'erreur associée à l'estimation des paramètres de l'équation.
 
 Dans la suite du texte le modèle permettant d'estimer la PPB à partir des équations~\ref{eq:juneTair} et \ref{eq:PPB_bubier} sera nommé \textbf{PPB-1} et celui utilisant les équations~\ref{eq:PPB_bubier} et \ref{eq:juneTairIV} sera nommée \textbf{PPB-2}.
 
@@ -642,7 +643,7 @@ La relation exponentielle entre la RE et la température est reconnue \citep{luo
 RE = a*exp(b*T)
 \end{equation}
 
-La température de l'air utilisée dans un modèle exponentiel permet d'expliquer \SI{90}{\percent} des variations de la respiration de l'écosystème avec une NRMSE de \SI{18}{\percent} (Figure~\ref{fig:mdl_ER_Tair}--a).
+La température de l'air utilisée dans un modèle exponentiel permet d'expliquer \SI{90}{\percent} des variations de la respiration de l'écosystème avec une NRMSE de \SI{18}{\percent} (Figure~\ref{fig:mdl_ER_Tair}--a) et un AIC de 47.
 Les résidus de cette équation sont répartis de façon non-biaisée (Figure~\ref{fig:mdl_ER_Tair}--b).
 L'évaluation de ce modèle montre une NRMSE de \SI{35}{\percent} avec une tendance à sous-estimer les valeurs mesurées (Figure~\ref{fig:mdl_ER_Tair}--c).
 Une légère tendance, est visible entre les résidus et l'indice de végétation ainsi qu'avec le recouvrement de la strate herbacée (Figure~\ref{fig:mdl_ER_Tair}--d,e) mais pas avec le niveau de la nappe (Figure~\ref{fig:mdl_ER_Tair}--f).
@@ -662,6 +663,7 @@ RE = (a*RSH + c)*exp(b*T)
 
 Les calibrations de ces nouvelles équations sont présentées dans la figure~\ref{fig:ER_mdl_TairIVH}-a,b et \ref{fig:ER_mdl_TairIVH}-d,e respectivement.
 Dans les deux cas, la NRMSE diminue pour avoisiner \SI{13}{\percent}, avec des résidus qui se répartissent de façon non-biaisée.
+L'AIC diminue également jusqu'à 37 et 35 respectivement pour les équations~\ref{eq:RE_TIV} et \ref{eq:RE_TH}.
 L'évaluation de ces deux équations montre cependant des différences :
 D'une part l'équation~\ref{eq:RE_TIV} ne permet pas de diminuer la NRMSE (\SI{34}{\percent}) et est très proche des \SI{35}{\percent} calculé pour l'évaluation du modèle n'intégrant pas la végétation (Figure~\ref{fig:ER_mdl_TairIVH}--c).
 D'autre part l'évaluation de l'équation~\ref{eq:RE_TH} montre une NRMSE plus faible de \SI{23}{\percent} (Figure~\ref{fig:ER_mdl_TairIVH}--f).
@@ -921,8 +923,10 @@ Par contre la quantité d'eau sortant de l'écosystème est plus importante en 2
 
 \subsubsection{Représentativité locale du bilan de \coo}
 
-En recalculant des valeurs de NRMSE individuelles pour chaque placette, il est possible d'avoir une indication sur la représentativité locale des modèles calibrés à l'échelle de l'écosystème (Figure~\ref{fig:repr_loc}).
-Que ce soit pour la PPB ou la RE, la placette n°5 a systématiquement une NRMSE significativement plus élevée que les autres.
+Il est possible d'avoir une indication sur la représentativité locale des modèles calibrés à l'échelle de l'écosystème en recalculant les flux mesurés sur chaque placette à l'aide des modèles en question et en recalculant une RMSE (Figure~\ref{fig:repr_loc}).
+%En recalculant des valeurs de NRMSE individuelles pour chaque placette, il est possible d'avoir une indication sur la représentativité locale des modèles calibrés à l'échelle de l'écosystème (Figure~\ref{fig:repr_loc}).
+
+Que ce soit pour la PPB ou la RE, la placette n°5 a systématiquement une NRMSE significativement plus élevée que les autres (Figure~\ref{fig:repr_loc}).
 
 Pour la PPB et si l'on excepte la placette n°5, les estimations à l'échelle de l'écosystème permettent de représenter les placettes avec une NRMSE comprise entre 20 et \SI{90}{\percent} pour PPB-1 et entre 30 et \SI{100}{\percent} pour PPB-2.
 PPB-1 et PPB-2 ont une distribution des valeurs de NRMSE relativement similaire.
@@ -1213,7 +1217,8 @@ Les paramètres varient dans des gammes similaires pour RE-1 et RE-3 entre 0 et 
 Sur les deux années, les quantités de carbone assimilées par la PPB (modèle PPB-2) varient entre 507 et \SI{1409}{\gcma}, avec une majorité des placettes autour de \SI{1100}{\gcma} et une moyenne de \SI{1052(238)}{\gcma}.
 Pour la RE, la distribution des flux du modèle RE-1 s'échelonne entre 633 et \SI{1832}{\gcma} avec une moyenne de \SI{1275(314)}{\gcma} et entre 828 et \SI{2371}{\gcma} avec une moyenne de \SI{1218(363)}{\gcma} pour le modèle RE-3.
 
-Enfin il ne semble pas y avoir de gradient spatial des flux que ce soit pour la PPB ou la RE (Annexe~\ref{sec:carte_flux}).
+Enfin la répartition spatiale des flux calculés par placette, que ce soit la PPB ou la RE, ne semble pas s'organiser suivant un gradient particulier (Annexe~\ref{sec:carte_flux}).
+% il ne semble pas y avoir de gradient spatial des flux que ce soit pour la PPB ou la RE (Annexe~\ref{sec:carte_flux}).
 
 
 %Que ce soit pour la RE ou la PPB , les gammes de paramètres sont larges mais cohérentes par rapport à celles obtenues à l'échelle de l'écosystème.
@@ -1547,7 +1552,7 @@ Il n'est donc pas surprenant que la Molinie se soit développée sans difficult�
 \subsubsection{Quantification de la variabilité spatiale}
 
 La distribution des flux calculés par placette permet, de faire une première estimation quantifié de la variabilité spatiale.
-La variabilité spatiale mesurée sur le site de La Guette est relativement forte comparée aux moyennes observées dans différents sites (Figure~\ref{fig:vs_bib}--A).
+La variabilité spatiale mesurée sur le site de La Guette est relativement importante comparée aux moyennes observées dans différents sites (Figure~\ref{fig:vs_bib}--A).
 La variabilité spatiale de la RE, similaire en 2013 et 2014, l'est davantage encore (Figure~\ref{fig:vs_bib}--B).
 La variabilité spatiale du bilan, dépasse les moyennes relevées dans la littérature (Figure~\ref{fig:vs_bib}--C).
 
