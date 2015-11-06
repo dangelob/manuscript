@@ -82,6 +82,11 @@ Les mesures se sont donc limitées aux placettes accessibles depuis le ponton (p
 
 % (lourd, difficilement transportable dans un milieu tourbeux).
 
+\subsubsection{Mesures du COD}
+
+Des échantillons d'eau prélevés à l'exutoire de la tourbière ont été prélevés, et leur concentration en COD a été mesurée moins de 24 heures après le prélèvement.
+Les analyses de COD ont été faite, après filtration à \SI{0.45}{\micro\metre} en utilisant la technique dite NPOC (\textit{Non Purgeable Organic Carbon}) dans laquelle le carbone inorganique présent dans l'échantillon est transformé en \coo par l'ajout d'un acide puis évacué (purgé) avant que l'échantillon ne soit injecté dans un four et analysé par un détecteur Infra-rouge.
+
 \subsubsection{Mesures des facteurs contrôlant}
 
 
@@ -128,9 +133,8 @@ Le PAR est mesuré au début et à la fin des mesures de l'ENE.
 Le recouvrement de végétation est estimé visuellement.
 Des prélèvements d'eau ont été effectués chaque mois pour mesurer le pH et la conductivité (mesures effectuées sur le terrain après les mesures de flux).
 Les échantillons d'eau prélevés dans les 20 placettes ont été congelés pour la mesure ultérieure de la concentration en carbone organique dissout (COD).
-D'autres échantillons d'eau prélevés à l'exutoire de la tourbière ont été prélevés, pour ces derniers aucun traitement de congélation n'a été effectué et la concentration en COD a été mesurée moins de 24 heures après le prélèvement.
-Les analyses de COD ont été faite en utilisant la technique dite NPOC (\textit{Non Purgeable Organic Carbon}) dans laquelle le carbone inorganique présent dans l'échantillon est transformé en \coo par l'ajout d'un acide puis évacué (purgé) avant que l'échantillon ne soit injecté dans un four et analysé par un détecteur Infra-rouge.
 Dans les tourbières la quantité de carbone inorganique est généralement considéré comme négligeable \citep{worrall2009}.
+
 L'ensemble de ces mesures nécessitant d'accéder aux placettes régulièrement, des planches de bois ont été utilisées comme pontons mobiles pour limiter les perturbations. La dispersion des placettes sur l'ensemble du site a rendu impossible une installation plus permanente.
 
 Les mesures automatiquement acquises via la station météo installée sur le site depuis 2010 sont la température de l'air, la température de la tourbe à \num{-5}, \num{-10}, \num{-20} et \SI{-40}{\centi\metre} de profondeur, la vitesse et la direction du vent, l'humidité relative de l'air, le rayonnement solaire, et la pression atmosphérique (Tableau~\ref{table:ls_var}).
@@ -148,9 +152,9 @@ IV = \frac{RSM + RSA + RSH}{\sum R{max}}
 Avec :
 \begin{itemize}
 \item $\sum R_{max}$ La somme des pourcentage de recouvrements maximum par strates.
-\item RSM le pourcentage de recouvrement de la strate muscinale
-\item RSH le pourcentage de recouvrement le la strate herbacée
-\item RSA le pourcentage de recouvrement de la strate arbustive
+\item RSM le pourcentage de recouvrement de la strate muscinale mesuré
+\item RSH le pourcentage de recouvrement le la strate herbacée mesuré
+\item RSA le pourcentage de recouvrement de la strate arbustive mesuré
 \end{itemize}
 
 Le niveau de nappe est composé de deux mesures, l'une du haut du piézomètre jusqu'au niveau de la nappe et l'autre du haut du pièzomètre jusqu'à la surface du sol. 
@@ -176,7 +180,7 @@ Les relations entre flux et facteurs contrôlant ont ensuite été étudiées de
 Cette analyse permet de déterminer quels sont les relations entre les variables et plus particulièrement quelles sont celles qui détermine le plus les flux de GES.
 Le nombre de données acquises pour le \coo et le \chh étant différent, une ACP a été réalisée pour chacun de ses gaz (Annexe~\ref{sec:acp}).
 Une fois le facteur de contrôle prépondérant d'un gaz établi, grâce à l'ACP et à la littérature, une relation empirique est établie entre les deux.
-La forme de cette relation et la littérature conditionne ensuite les équations testées.
+%La forme de cette relation et la littérature conditionne ensuite les équations testées.
 Elles sont évaluées à l'aide du coefficient de détermination (R\textsuperscript{2}) et de la racine carré de l'erreur quadratique normalisée par la moyenne (\textit{Normalised Root Mean Square Error}, NRMSE).
 Le R$^{2}$ est utilisé comme indicateur de la proportion de la variabilité des données expliquée par le modèle, sa valeur est comprise entre 0 et 1 (pour les équations linéaires) : 
 
@@ -200,7 +204,7 @@ Avec les notations précédentes et :
 \item $N$ : le nombre d'observations
 %\item $\bar{y}$ : la moyenne des données mesurées
 \end{itemize}
-Les résidus\footnote{Les résidus sont défini comme la différence entre les valeurs mesurées et estimées.} sont également étudiés dans le but d'éviter un biais ou une hétéroscédasticité\footnote{On parle d'homoscédasticité lorsque la variance de l'erreur d'une variable est constante, et l'hétéroscédasticité lorsque qu'elle ne l'est pas} dans les données (Figure~\ref{fig:ref_resid}).
+Les résidus\footnote{Les résidus sont défini comme la différence entre les valeurs mesurées et celles calculées par un modèle.} sont également étudiés dans le but d'éviter un biais ou une hétéroscédasticité\footnote{On parle d'homoscédasticité lorsque la variance de l'erreur d'une variable est constante, et l'hétéroscédasticité lorsque qu'elle ne l'est pas} dans les données (Figure~\ref{fig:ref_resid}).
 
 \begin{figure}[!htb]
 \centering
@@ -211,8 +215,19 @@ Les résidus\footnote{Les résidus sont défini comme la différence entre les v
 
 Puis les résidus de ces modèles de base ont été étudiés en fonction des facteurs de contrôle restant.
 Dans le cas où une tendance est visible avec l'un d'entre eux, le facteur est ajouté \citep{bortoluzzi2006a}.
-En plus des indicateurs précédent, la pertinence de l'ajout d'un paramètre est évalué à l'aide du  critère d'information d'Akaike (\textit{Akaike Information Criterion}, AIC).
-L'AIC permet de déterminer la pertinence de l'ajout d'un paramètre sur la représentation des données par le modèle.
+En plus des indicateurs précédent, la pertinence de l'ajout d'un paramètre est évalué à l'aide du  critère d'information d'Akaike (\textit{Akaike Information Criterion}, AIC) \citep{akaike1974,burnham2002} :
+
+$$ AIC = -2 \times log(L) + 2\times k $$ 
+
+Avec :
+\begin{itemize}
+\item $L$ : le maximum de la fonction de vraisemblance
+\item $k$ : le nombre de paramètres à estimer
+\item $\bar{y}$ : la moyenne des données mesurées
+\end{itemize}
+
+L'AIC est un indicateur qui permet de déterminer si l'ajout d'un paramètre dans un modèle est pertinent (autrement dit, si l'ajout d'un paramètre vaut l'information qu'il apporte), afin d'éviter de le sur-ajuster.
+Pour cela on considère la valeur la plus faible de l'AIC comme le meilleur indicateur.
 
 %\vspace{\abovedisplayskip}
 
@@ -273,6 +288,7 @@ Pour les données acquises à la fois automatiquement par la station météorolo
 Les flux sont ensuite recalculés (en \si{\micro\mole\per\square\meter\per\hour}) à l'échelle horaire sur les deux années de mesure puis sommés afin d'estimer les bilans de carbone.
 Ces bilans sont par la suite exprimés en \si{\gram C m^{-2}} par période de temps à l'année, sauf quand précisé.
 
+Le détails des équations utilisées et de la qualité des différents modèles est présenté dans la partie résultat.
 %L'interpolation étant soit une simple interpolation linéaire entre les données mensuelles, soit une relation avec les facteurs acquis par la station météorologique.
 %À l'aide de ces interpolations et des équations les flux ont ensuite été recalculés, à l'échelle horaire, sur les 2 années de mesure puis les flux ont été sommés afin de calculer les bilans.
 
@@ -313,6 +329,7 @@ Le partitionnement à été faite par classification hiérarchique ascendante.
 C'est une méthode déterministe qui consiste, à partir de l'ensemble des individus (ici nos différentes placettes de mesure), de les regrouper en classes de plus en plus grande.
 Les points sont regroupés par similarité, les deux points les plus proches sont fusionnés, puis les deux suivants et ce jusqu'à ce qu'il ne reste qu'une seule classe.
 Cette classification est généralement représentée par un dendrogramme, elle a été appliquée sur les recouvrements végétaux mesurés et permet de distinguer quatre groupes (Figure~\ref{fig:tree}).
+Le nom de ces groupes (Arbuste, Herbe, Mix et Mousse) reflète la végétation majoritaire.
 
 \begin{figure}[t]
 \centering
@@ -531,7 +548,7 @@ PPB = \frac{PPBsat * i * PAR}{PPBsat + i * PAR}
 \begin{figure} %[!htb]
 \centering
 \includegraphics[width=1.15\textwidth, center]{chap3/mdl_GPP_Tair}
-\caption{Résultats de la calibration de la PPB. En haut la PPBsat (équation~\ref{eq:juneTair} avec la représentativité du modèle et la distribution des résidus (graphes a et b). Au milieu les tendances entre les résidus de cette équation et l'indice de végétation, le pourcentage de recouvrement de la strate herbacée et le niveau de la nappe (graphes c, d et e). Et en bas la PPB (équation~\ref{eq:PPB_bubier}), sa représentativité et la distribution des résidus de l'équation (graphes f et g) et l'évaluation sur un jeu de données indépendant (graphe h).}
+\caption{Résultats de la calibration de la PPB. En haut la PPBsat (équation~\ref{eq:juneTair} avec la représentativité du modèle et la distribution des résidus (graphes a et b). Au milieu les tendances entre les résidus de cette équation et l'indice de végétation, le pourcentage de recouvrement de la strate herbacée et le niveau de la nappe (graphes c, d et e). Et en bas la PPB (équation~\ref{eq:PPB_bubier}), sa représentativité et la distribution des résidus de l'équation (graphes f et g) et l'évaluation sur un jeu de données indépendant (graphe h, annexe~\ref{sec:carbiodiv})).}
 \label{fig:mdl_GPP_Tair}
 \end{figure}
 
@@ -541,7 +558,7 @@ Corrélés avec l'indice de végétation IV, ils présentent une tendance linéa
 On observe la même tendance avec le recouvrement de la strate herbacée avec une dispersion des points plus importante (Figure~\ref{fig:mdl_GPP_Tair}-d).
 Par contre aucune relation n'est visible avec le niveau de la nappe d'eau (Figure~\ref{fig:mdl_GPP_Tair}-e)
 Le pourcentage de recouvrement des sphaignes (non présenté) ne montre également, aucune tendance avec les résidus de cette équation.
-La PPB calculée à partir de l'équation~\ref{eq:juneTair} a une NRMSE de \SI{31}{\percent}, du même ordre de grandeur que celle de PPBsat (Figure~\ref{fig:mdl_GPP_Tair}-f) et les résidus se répartissent de façon relativement homogène et non biaisée (Figure~\ref{fig:mdl_GPP_Tair}-g).
+La PPB calculée à partir des équations~\ref{eq:juneTair} et \ref{eq:PPB_bubier} a une NRMSE de \SI{31}{\percent}, du même ordre de grandeur que celle de PPBsat (Figure~\ref{fig:mdl_GPP_Tair}-f) et les résidus se répartissent de façon relativement homogène et non biaisée (Figure~\ref{fig:mdl_GPP_Tair}-g).
 Cependant l'évaluation du modèle sur les données de tests a une NRMSE plus forte qui atteint \SI{47}{\percent}(Figure~\ref{fig:mdl_GPP_Tair}-h).
 Par ailleurs une forte incertitude est présente concernant l'estimation des paramètres qui ont tous une erreur standard importante, (parfois plus importante que la valeur du paramètre), et une faible significativité (Tableau~\ref{table:mdl_par}).
 Afin de prendre en compte la tendance linéaire entre les résidus et l'indice de végétation (IV) nous avons adapté le modèle, à la manière de \citet{bortoluzzi2006a}, pour y intégré une fonction linéaire de la végétation :
@@ -553,7 +570,7 @@ PPBsat = (a * IV + d) * exp\left(\frac{T - b}{c}\right)^2
 \begin{figure} %[!htb]
 \centering
 \includegraphics[width=1.15\textwidth, center]{chap3/mdl_GPP_TairIV}
-\caption{Résultats de la calibration de la PPB en prenant en compte la végétation. En haut la PPBsat (équation~\ref{eq:juneTairIV} avec la représentativité du modèle et la distribution des résidus (graphes a et b). Au milieu les tendances entre les résidus de cette équation et l'indice de végétation, le pourcentage de recouvrement de la strate herbacée et le niveau de la nappe (graphes c, d et e). Et en bas la PPB (équation~\ref{eq:PPB_bubier}), sa représentativité et la distribution des résidus de l'équation (graphes f et g) et l'évaluation sur un jeu de données indépendant (graphe h).}
+\caption{Résultats de la calibration de la PPB en prenant en compte la végétation. En haut la PPBsat (équation~\ref{eq:juneTairIV} avec la représentativité du modèle et la distribution des résidus (graphes a et b). Au milieu les tendances entre les résidus de cette équation et l'indice de végétation, le pourcentage de recouvrement de la strate herbacée et le niveau de la nappe (graphes c, d et e). Et en bas la PPB (équation~\ref{eq:PPB_bubier}), sa représentativité et la distribution des résidus de l'équation (graphes f et g) et l'évaluation sur un jeu de données indépendant (graphe h, annexe~\ref{sec:carbiodiv}).}
 \label{fig:mdl_GPP_TairIV}
 \end{figure}
 
@@ -575,34 +592,34 @@ Dans la suite du texte le modèle permettant d'estimer la PPB à partir des équ
 \centering
 \caption{Valeur des paramètres des équations utilisées pour modéliser les flux et sensibilité relative (en \%) des flux en réponse à une variation de $\pm$\SI{10}{\percent} de chacun des paramètres des modèles.}
 \label{table:mdl_par}
-\begin{tabular}{llccccc}\toprule
+\begin{tabular}{llcccccc}\toprule
 
-& par & valeur & se & pval & \SI{-10}{\percent} & +\SI{+10}{\percent} \\ \midrule
-\multicolumn{7}{l}{PPB-1 -- équations~\ref{eq:juneTair} et \ref{eq:PPB_bubier}}  \\ [+.5ex]
-& a & 26.23 & 62.07 & 0.68 & -9.7 & +9.6 	\\
-& b & 53.68 & 61.27 & 0.39 & +43.7 &-35.1 \\
-& c & 27.21 & 28.56 & 0.35 &-22.5 & +21.9 \\
-& i &  1.84 & 21.6  & 0.93 & -0.4 &  +0.4 \\[+1ex]
-\multicolumn{7}{l}{PPB-2 -- équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier}}  \\ [+.5ex]
-& a & 39.44 & 18.89 & 0.05 & -11.8 & +11.5 \\
-& b & 40.27 & 19.11 & 0.05 & +15.8 & -17.2 \\
-& c & 25.23 & 14.35 & 0.1 & -8.1 & +6.7 \\
-& d & -3.73 & 3.49 & 0.3 & +2.8 & -2.8 \\
-& i &  0.26 & 0.25 & 0.31 & -1.3 & +1.1 \\[+1ex]
-\multicolumn{7}{l}{RE-1 -- équation~\ref{eq:RE_T}}  \\ [+.5ex]
-& a & 0.34 & 0.08 & 0 & -10 & +10 \\
-& b & 0.10 & 0.01 & 0 & -22.6 & +29.9  \\[+1ex]
-\multicolumn{7}{l}{RE-2 -- équation~\ref{eq:RE_TIV}}  \\ [+.5ex]
-& a & 0.92 & 0.34 & 0.02 & -7.3 & +7.3 \\
-& b & 0.09 & 0.01 & 0.00 & -19.5 & 24.7 \\
-& c & 0.14 & 0.09 & 0.14 & +2.7 & -2.7  \\[+1ex]
-\multicolumn{7}{l}{RE-3 -- équation~\ref{eq:RE_TH}}  \\ [+.5ex]
-& a & 0 & 0 & 0.01 & -3.9 & +3.9 \\
-& b & 0.08 & 0.01 & 0 & -18.8 & +23.6 \\
-& c & 0.33 & 0.06 & 0 & -6.1 & +6.1 \\[+1ex]
-\multicolumn{7}{l}{FCH4 -- équation~\ref{eq:CH4_H}}  \\ [+.5ex]
-& a & 0 & 0 & 0.48 & -10 & +10 \\
-& b & 13.01 & 2.82 & 0 & -43.9 & +79.2 \\[+1ex]
+& par & valeur & se & pval & \SI{-10}{\percent} & +\SI{+10}{\percent} & AIC \\ \midrule
+\multicolumn{7}{l}{PPB-1 -- équations~\ref{eq:juneTair} et \ref{eq:PPB_bubier}} & 95 \\ [+.5ex]
+& a & 26.23 & 62.07 & 0.68 & -9.7 & +9.6 & \\
+& b & 53.68 & 61.27 & 0.39 & +43.7 &-35.1 & \\
+& c & 27.21 & 28.56 & 0.35 &-22.5 & +21.9 & \\
+& i &  1.84 & 21.6  & 0.93 & -0.4 &  +0.4 & \\[+1ex]
+\multicolumn{7}{l}{PPB-2 -- équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier}} & 80 \\ [+.5ex]
+& a & 39.44 & 18.89 & 0.05 & -11.8 & +11.5 &\\
+& b & 40.27 & 19.11 & 0.05 & +15.8 & -17.2 &\\
+& c & 25.23 & 14.35 & 0.1 & -8.1 & +6.7 &\\
+& d & -3.73 & 3.49 & 0.3 & +2.8 & -2.8 &\\
+& i &  0.26 & 0.25 & 0.31 & -1.3 & +1.1 &\\[+1ex]
+\multicolumn{7}{l}{RE-1 -- équation~\ref{eq:RE_T}} & 47 \\ [+.5ex]
+& a & 0.34 & 0.08 & 0 & -10 & +10 &\\
+& b & 0.10 & 0.01 & 0 & -22.6 & +29.9 &\\[+1ex]
+\multicolumn{7}{l}{RE-2 -- équation~\ref{eq:RE_TIV}} & 37 \\ [+.5ex]
+& a & 0.92 & 0.34 & 0.02 & -7.3 & +7.3 &\\
+& b & 0.09 & 0.01 & 0.00 & -19.5 & 24.7 &\\
+& c & 0.14 & 0.09 & 0.14 & +2.7 & -2.7  &\\[+1ex]
+\multicolumn{7}{l}{RE-3 -- équation~\ref{eq:RE_TH}} & 35  \\ [+.5ex]
+& a & 0 & 0 & 0.01 & -3.9 & +3.9 &\\
+& b & 0.08 & 0.01 & 0 & -18.8 & +23.6 &\\
+& c & 0.33 & 0.06 & 0 & -6.1 & +6.1 &\\[+1ex]
+\multicolumn{7}{l}{FCH4 -- équation~\ref{eq:CH4_H}}  &\\ [+.5ex]
+& a & 0 & 0 & 0.48 & -10 & +10 &\\
+& b & 13.01 & 2.82 & 0 & -43.9 & +79.2 & \\[+1ex]
 \bottomrule
 \end{tabular}
 \end{table}
@@ -613,9 +630,9 @@ Dans la suite du texte le modèle permettant d'estimer la PPB à partir des équ
 \centering
 \includegraphics[width=1.05\textwidth, center]{chap3/mdl_ER_Tair}
 \caption{\label{fig:mdl_ER_Tair}
-Calibration de la RE utilisant l'équation~\ref{eq:RE_T}. En haut la représentativité du modèle et la distribution des résidus (graphes a et b), ainsi que son évaluation sur un jeu de données indépendant (graphe c). En bas les tendances entre les résidus de cette équation et l'indice de végétation, le pourcentage de recouvrement de la strate herbacée et le niveau de la nappe (graphes c, d et e).}
+Calibration de la RE utilisant l'équation~\ref{eq:RE_T}. En haut la représentativité du modèle et la distribution des résidus (graphes a et b), ainsi que son évaluation sur un jeu de données indépendant (graphe c, annexe~\ref{sec:carbiodiv})). En bas les tendances entre les résidus de cette équation et l'indice de végétation, le pourcentage de recouvrement de la strate herbacée et le niveau de la nappe (graphes c, d et e).}
 \includegraphics[width=1.05\textwidth, center]{chap3/mdl_ER_Tair_IVH}
-\caption{\label{fig:ER_mdl_TairIVH}Calibration de la RE prenant en compte la végétation en utilisant l'équation~\ref{eq:RE_TIV}, en haut, et l'équation~\ref{eq:RE_TH} en bas. Avec la représentativité des modèles et la distribution de leurs résidus (graphes a et b pour le premier et d et e pour le second), ainsi que leur évaluation sur un jeu de données indépendant (graphe c et f).}
+\caption{\label{fig:ER_mdl_TairIVH}Calibration de la RE prenant en compte la végétation en utilisant l'équation~\ref{eq:RE_TIV}, en haut, et l'équation~\ref{eq:RE_TH} en bas. Avec la représentativité des modèles et la distribution de leurs résidus (graphes a et b pour le premier et d et e pour le second), ainsi que leur évaluation sur un jeu de données indépendant (graphe c et f, annexe~\ref{sec:carbiodiv})).}
 \end{figure}
 
 La relation exponentielle entre la RE et la température est reconnue \citep{luo2006}, et la RE est estimée avec l'équation :
@@ -768,7 +785,9 @@ Les détails de l'estimation des paramètres de l'équation~\ref{eq:CH4_H} est v
 
 
 Les interpolations des flux de PPB montrent une variabilité saisonnière proche de celle mesurée sur le terrain (Figure~\ref{fig:BdC_GPP_interp}). 
-Les valeurs mesurées les plus grandes (partie supérieure de la barre rouge sur la figure~\ref{fig:BdC_GPP_interp}) ne semblent pas être reproduite par le modèle PPB-2 à l'inverse du modèle PPB-1 (courbes noires sur la figure~\ref{fig:BdC_GPP_interp}).
+%Les valeurs mesurées les plus grandes (partie supérieure de la barre rouge sur la figure~\ref{fig:BdC_GPP_interp}) ne semblent pas être reproduite par le modèle PPB-2 à l'inverse du modèle PPB-1 (courbes noires sur la figure~\ref{fig:BdC_GPP_interp}).
+Les surface grise présentes sur la figure~\ref{fig:BdC_GPP_interp} sont liées au fait que la PPB tombe à zéro toutes les nuits.
+Globalement le modèle PPB-2 semble mieux représenter les moyennes des flux mesurés sur le site.
 Dans les deux cas les modèles semblent sur-estimer la valeur de PPB mesurées fin 2014 et sous-estimer la PPB en été (en 2013 principalement pour PPB-1 et les 2 années pour PPB-2).
 
 Pour la RE, l'interpolation reproduit également les variations saisonnières mesurées (Figure~\ref{fig:BdC_ER_interp}).
@@ -1231,12 +1250,12 @@ Cette incertitude diminue pour PPB-2 avec l'intégration de l'IV, l'erreur est a
 Ces paramètres sont dans la gamme de ceux rapportés par \citet{june2004} : entre \num{23} et \SI{296.5}{\umle} pour la vitesse de transport des électrons photosynthétique à lumière saturante, entre \num{28.4} et \SI{55.7}{\degreeCelsius} pour la température optimale du transport et entre \num{13.9} et \SI{30.2}{\degreeCelsius} pour la différence de température à laquelle PPBsat vaut e\textsuperscript{-1}.
 Lors de la phase de calibration, l'intégration de l'IV augmente la significativité des estimations et la représentativité des données mesurées.
 
-Lors de l'évaluation et malgré une végétation similaire, l'augmentation de la NRMSE du modèle PPB-2, intégrant l'IV, est supérieure et dépasse (en valeur absolue) celle du modèle PPB-1. l'apport de l'IV dans l'estimation de la PPB n'est donc pas pertinente pour le jeu de données indépendant utilisé.
+Lors de l'évaluation et malgré une végétation similaire, l'augmentation de la NRMSE du modèle PPB-2, intégrant l'IV, est supérieure et dépasse (en valeur absolue) celle du modèle PPB-1. l'apport de l'IV dans l'estimation de la PPB n'est donc pas pertinent pour le jeu de données indépendant utilisé.
 Par ailleurs, l'intégration de l'IV à un effet beaucoup plus important en 2013 (l'estimation du flux diminue de \SI{365}{\gcma}), qu'en 2014 (diminution de \SI{74}{\gcma}).
-
-La prise en compte de la végétation, si elle améliore les incertitudes statistiques sur l'estimation des paramètres du modèle, semblent conduire à une sous-estimation de la PPB.
-En effet le modèle PPB-2 ne rend pas compte des valeurs les plus élevées qui ont été mesurées (Figure~\ref{fig:BdC_GPP_interp}--B).
-Par ailleurs l'évaluation du modèle PPB-1 renvoie un erreur plus faible que celle du modèle PPB-2.
+%
+%La prise en compte de la végétation, si elle améliore les incertitudes statistiques sur l'estimation des paramètres du modèle, semblent conduire à une sous-estimation de la PPB.
+%En effet le modèle PPB-2 ne rend pas compte des valeurs les plus élevées qui ont été mesurées (Figure~\ref{fig:BdC_GPP_interp}--B).
+%Par ailleurs l'évaluation du modèle PPB-1 renvoie un erreur plus faible que celle du modèle PPB-2.
 
 %
 %Après interpolation la différence nette observée entre les modèles PPB-1 et PPB-2 est probablement liée à une sous-estimation des flux par ce dernier.
@@ -1266,19 +1285,21 @@ La diversité des espèces végétales rend difficile la mise en place de protoc
 %\textit{Estimation de la RE}
 \subsubsection{RE}
 
-À l'inverse de la PPB, l'intégration de la végétation pour modéliser la RE n'améliore que peu l'estimation de la RE lors de la phase de calibration : la différence entre les valeurs de la NRMSE est de \SI{5}{\percent} (Figures~\ref{fig:mdl_ER_Tair}--a et \ref{fig:ER_mdl_TairIVH}--a,d).
-En revanche lors de la phase d'évaluation, l'utilisation du recouvrement des herbacées semble améliorer l'estimation de façon plus importante avec une différence de \SI{11}{\percent} entre les valeurs de la NRMSE.
-Contrairement à la PPB la différence apportée par l'intégration de la végétation (RE-2 ou RE-3) est du même ordre de grandeur en 2013 et en 2014.
+À l'inverse de la PPB, l'intégration de la végétation pour modéliser la RE améliore peu l'estimation de la RE lors de la phase de calibration : la différence entre les valeurs de la NRMSE est de \SI{5}{\percent} (Figures~\ref{fig:mdl_ER_Tair}--a et \ref{fig:ER_mdl_TairIVH}--a,d).
+En revanche lors de la phase d'évaluation, l'utilisation du recouvrement des herbacées améliore l'estimation de façon plus importante avec une différence de \SI{11}{\percent} entre les valeurs de NRMSE.
+La différence apportée par l'intégration de la végétation (RE-2 ou RE-3) est du même ordre de grandeur en 2013 et en 2014.
 Sur les 2 années, l'effet de l'intégration de la végétation est limité avec une différence de \SI{25}{\gcma} au maximum (entre RE-1 et RE-3), soit moins de \SI{2}{\percent} du flux.
 %Encore une fois l'intérêt de l'évaluation est mis en avant puisqu'il permet de distinguer des modèles très proche lors de la calibration.
 L'intérêt de l'évaluation pour la RE ne réside pas tant dans la sélection d'une meilleure estimation des flux.
 Elle permet plutôt d'établir s'il est possible d'utiliser ou non un modèle dans un autre contexte.
-Pour la RE et le modèle RE-3 ce contexte reste contraint à l'intérieur du site.
+%Pour la RE et le modèle RE-3 ce contexte reste contraint à l'intérieur du site.
+Ainsi on peut envisager d'utiliser le modèle RE-3 sur d'autres données issues du même site.
 
 % % Incertitude
 Les incertitudes sur l'estimation des paramètres RE sont beaucoup moins importante que celle de la PPB.
-L'estimation des paramètres des modèles, à l'exception du paramètre c du modèles RE-2, ont une p-value inférieure à 0.05 (Tableau~\ref{table:mdl_par}).
-La NRMSE calculée lors de l'évaluation de ces modèles, si elle augmente par rapport à la calibration, reste faible particulièrement pour le modèle RE-3 ou elle vaut moins de \SI{25}{\percent} (Figure~\ref{fig:ER_mdl_TairIVH}--f).
+L'estimation des paramètres des modèles, à l'exception du paramètre c du modèle RE-2, ont une p-value inférieure à 0,05 (Tableau~\ref{table:mdl_par}).
+La NRMSE calculée lors de l'évaluation de ces modèles est certes plus importante que celle issue de la calibration, mais elle reste faible.
+Ceci est particulièrement vrai pour le modèle RE-3 ou elle vaut moins de \SI{25}{\percent} (Figure~\ref{fig:ER_mdl_TairIVH}--f).
 La RE semble donc mieux contrainte que la PPB, avec une estimation des paramètres plus fiable et une différence entre les estimations issues des différents modèles plus faible.
 
 \subsubsection{\fchh}
@@ -1306,19 +1327,21 @@ Ces valeurs sont élevées, en comparaison avec la PPB estimée par  \citet{trud
 Elles sont respectivement comprises  123 et \SI{131}{\gcma} et entre 203 et \SI{503}{\gcma}.
 C'est d'ailleurs dans ces gammes de valeurs, inférieures à celles relevées sur la tourbière de La Guette, que sont comprises la majorité des estimations (Figure~\ref{fig:bib_vs_ppb}).
 
-Pour le modèle PPB-1 l'année 2013 a une PPB plus forte que 2014, cependant les incertitudes sont telles que la comparaison n'a pas grand sens.
-Pour les estimations faites avec PPB-2, l'incertitude est moins important mais reste forte, et montre l'inverse : une PPB supérieure 2014 qu'en 2013.
-Cette observation serait davantage cohérente avec les valeurs de l'IV, légèrement plus haute en 2014 (Figure~\ref{fig:veg_evol}).
+%Pour le modèle PPB-1 l'année 2013 a une PPB plus forte que 2014, cependant les incertitudes sont telles que la comparaison n'a pas grand sens.
+%Pour les estimations faites avec PPB-2, l'incertitude est moins important mais reste forte, et montre l'inverse : une PPB supérieure 2014 qu'en 2013.
+%Cette observation serait davantage cohérente avec les valeurs de l'IV, légèrement plus haute en 2014 (Figure~\ref{fig:veg_evol}).
 
-Une première hypothèse permettant d'expliquer une telle différence, est la différence entre les températures moyennes sur les sites :
+Une première hypothèse permettant d'expliquer cet écart, est la différence entre les températures moyennes sur les sites :
 \SI{-4.3}{\degreeCelsius} et \SI{1.2}{\degreeCelsius} pour \citet{trudeau2014} et \citet{peichl2014} respectivement.
 Ces températures sont bien plus faibles pour ces sites que sur la tourbière de La Guette.
-D'autres études faite à des latitudes plus basse et des températures moyennes annuelles plus forte, montrent des estimation de la PPB plus proche de celles estimées sur la tourbière de La Guette.
+Il semble que la PPB soit systématiquement inférieure à \SI{500}{\gcma} quand les températures moyennes annuelles ne dépassent pas \SI{5}{\degreeCelsius}. 
+Au delà la gamme des flux est beaucoup plus large (Figure~\ref{fig:bib_vs_ppb}).
+Ainsi d'autres études faite à des latitudes plus basse et des températures moyennes annuelles plus forte, montrent des estimation de la PPB plus proche de celles estimées sur la tourbière de La Guette.
 Entre 534 et \SI{1058}{\gcma} par exemple pour \citet{beyer2015}, sur un site dont la température moyenne annuelle est de \SI{8.6}{\degreeCelsius} et avec une végétation proche de celle observée sur la tourbière de La Guette (\textit{Molinia caerulea}, \textit{Eriophorum augustifolium}, \textit{Sphagnum} spp).
 
 Une part de l'explication de l'intensité de la PPB observée peut d'ailleurs être liée à la composition végétale du site.
 Ainsi, \citet{jacobs2007} pour des prairies tourbeuses hollandaises, estiment des valeurs de PPB comprises entre 400 et \SI{2000}{\gcma} avec une moyenne de \SI{1300}{\gcma}.
-Sur des écosystèmes similaires, au Danemark, \citet{gorres2014} trouve des valeurs de PPB plus importantes encore, entre 1555 et \SI{2590}{\gcma}, mais avec des niveaux de nappe plus faible (< \SI{-30}{\centi\metre}).
+Sur des écosystèmes similaires, au Danemark, \citet{gorres2014} trouvent des valeurs de PPB plus importantes encore, entre 1555 et \SI{2590}{\gcma}, mais avec des niveaux de nappe d'eau plus faibles (< \SI{-30}{\centi\metre}).
 La tourbière de La Guette est envahie par une végétation vasculaire, notamment herbacée.
 La comparer à des prairies tourbeuses est donc pertinent.
 Dans ces deux cas les valeurs de PPB observées sont plus élevées que celles de la tourbière de La Guette.
@@ -1337,15 +1360,17 @@ Dans ces deux cas les valeurs de PPB observées sont plus élevées que celles d
 Les observations sur l'intensité des flux de la PPB sont également valables pour la respiration : la \textbf{RE} estimée sur la tourbière de La Guette est plus élevée que celles mesurées sur les tourbières boréales et plus faible que celles mesurées sur des prairies tourbeuses.
 La RE estimée sur la tourbière de La Guette est comprise entre 1232 et \SI{1337}{\gcma} selon l'année et le modèle considéré (Figure~\ref{fig:bib_vs_re}).
 Les estimations de la RE sont très proches pour les deux années, ce qui est cohérent avec le niveau de nappe d'eau relativement similaire également observé.
-La différence de température de l'air entre 2013 et 2014 (\num{9.1} et \SI{10.1}{\degreeCelsius respectivement}) n'est pas suffisante pour observer une différence significative.
+La différence de température de l'air entre 2013 et 2014 (\num{9.1} et \SI{10.1}{\degreeCelsius} respectivement) n'est pas suffisante pour observer une différence significative.
 
-La comparaison de ces valeurs à celles des études citées précédemment, pour la PPB, montre qu'elles sont plus forte que celles mesurées par \citet{peichl2014} et \citet{trudeau2014} (137 à \SI{443}{\gcma} et 206 à \SI{234}{\gcma} respectivement).
+La comparaison de ces valeurs à celles des études citées précédemment, pour la PPB, montre qu'elles sont plus importantes que celles mesurées par \citet{peichl2014} et \citet{trudeau2014} (137 à \SI{443}{\gcma} et 206 à \SI{234}{\gcma} respectivement).
 Elles s'approchent également des valeurs mesurées par \citet{beyer2015} (585 à \SI{1052}{\gcma}) et sont plus faibles que celles mesurées par \citet{jacobs2007} ou \citet{gorres2014} (500 à \SI{2000}{\gcma} et 2070 et \SI{3500}{\gcma} respectivement).
 Comme pour la PPB, la température moyenne annuelle et la composition végétale des sites sont des explications possibles à ces observations.
 
 %De la même façon que pour la PPB, les flux de la RE sont important si on les compare à des tourbières boréales et s'approchent davantage des flux mesurés dans les prairies sur sols tourbeux.
 %La Re sur la tourbière de La Guette, comprise entre 1232 et \SI{1337}{\gcma} est plus importante que celle observée par \citet{peichl2014,trudeau2014} (pour reprendre les études citées précédemment) qui s'établissent respectivement entre 137 et \SI{443}{\gcma} et 206 et \SI{234}{\gcma}.
 %Elles sont en revanche plus faible que celle mesurées par \citep{jacobs2007}, entre 500 et \SI{2000}{\gcma}, ou par \citep{gorres2014} : entre 2070 et \SI{3500}{\gcma}. 
+
+De façon générale, les flux estimés sur la tourbière de La Guette sont cohérent avec les estimations relevées dans la littérature.
 
 
 \subsubsection{Représentativité locale des flux de \coo}
@@ -1393,6 +1418,25 @@ Le doublement du flux de COD observé en 2014 par rapport à 2013 est lié à un
 Dans le même temps le niveau de nappe moyen mesuré en 2014 est légèrement supérieur à celui mesuré en 2013 et les précipitations sont du même ordre de grandeur (Figure~\ref{fig:WTL} et \ref{fig:pluvio}).
 Ces observations permettent de faire l'hypothèse que l'année 2013 a permis à la tourbière de reconstituer une partie de son stock d'eau perdu lors des années précédentes plus sèches.
 
+
+
+\subsubsection{Incertitudes et limitations du bilan}
+Les incertitudes les plus fortes du bilan sont sur les flux de \chh avec une NRMSE de \SI{32}{\percent} lors de la calibration et de \SI{68}{\percent} lors de la validation.
+Cette différence importante montre que l'estimation des flux de \chh à l'aide de l'indice de végétation à permis l'estimation de sa contribution au bilan de carbone de l'écosystème pour les années 2013 et 2014, mais que son utilisation dans d'autres conditions (année sèche, température moyenne annuelle significativement différente) est limitée.
+L'importance faible du \chh dans le bilan de carbone de la tourbière rend ces incertitudes moins critiques que celles faite sur l'estimation de la PPB.
+Les incertitudes importantes sur la PPB, sont mises en évidence par les fortes variations des flux interpolés selon l'équation utilisée.
+Elles sont la source des variations observées en termes de bilan.
+%L'ajout d'un indice de végétation diminue d'incertitude des paramètres du modèle, mais cet apport n'est pas reflété par l'évaluation, malgré la similarité de la végétation.
+À l'inverse la RE est bien contrainte.
+Sur les 2 années la différence entre les différentes équations utilisées ne dépassent pas \SI{25}{\gcma}.
+
+En outre le bilan de carbone est aussi limité par sa représentativité. 
+Différents éléments n'ont pas été pris en compte dans les mesures et l'établissement du bilan.
+La strate arborée notamment, largement présente dans certaines zones, n'est pas considérée directement.
+Les zones, restreintes, de touradons également, de même que les arbustes dépassant la taille de la chambre ou encore les zones d'eau libre.
+%Ainsi la strate arborée fortement présente dans certaines zones n'est pas directement prise en compte.
+%De la même manière une partie restreinte de la tourbière mais néanmoins présente est constitué de touradons dont l'effet n'a pas été pris en compte. %\plop (\textbf{biblio effet microtype}).
+
 \subsection{Estimations du bilan net de l'écosystème à l'échelle de la tourbière de La Guette}
 
 \begin{figure}
@@ -1404,15 +1448,20 @@ Ces observations permettent de faire l'hypothèse que l'année 2013 a permis à 
 
 \subsubsection{Puits ou source ?}
 
-En moyenne sur les deux années la tourbière de La Guette est soit à l'équilibre soit une source de carbone selon les estimations des flux considérées.
+En considérant les estimations qui semblent les plus pertinentes pour la PPB (PPB-2) et pour la RE (RE-3), on peut dire la tourbière de La Guette est une source de carbone.
+Ainsi elle émet, en moyenne sur les deux années, environ \SI{220(33)}{\gcma}
 Les quantités de carbone émises dans l'atmosphère sont comprises entre 0 et \SI{245}{\gcma} (Tableau~\ref{table:bdc}).
-Ces différences sont principalement liées à l'estimation de la PPB.
-Les bilans calculés à l'aide du modèle PPB-2 estiment une source de carbone supérieure à \SI{200}{\gcma}.
+%Ces différences sont principalement liées à l'estimation de la PPB.
+%Les bilans calculés à l'aide du modèle PPB-2 estiment une source de carbone supérieure à \SI{200}{\gcma}.
 %Selon le bilan considéré, la tourbière de La Guette stocke de faible quantité de C de l'ordre d'une dizaine de grammes par mètre carré, ou émet du carbone dans l'atmosphère de l'ordre de \num{14} à de \SI{233}{\gcma}.
 Ces valeurs, sont du même ordre de grandeur que celles mesurées dans des prairies tourbeuses (Figure~\ref{fig:bib_vs_necb}).
-Elles restent cependant sujettes à caution car il est possible que le modèle PPB-2 sous-estime la PPB et donc sur-estime les pertes de carbone par la tourbière (Figure~\ref{fig:BdC_GPP_interp}).
-Par contre le fait que les estimations qui utilisent PPB-2 montrent une source de carbone plus importante en 2013 qu'en 2014 semble cohérent.
-En effet le peu de baisse du niveau de la nappe d'eau mesuré pendant les deux années de mesure a eu lieu en 2013.
+%Elles restent cependant sujettes à caution car il est possible que le modèle PPB-2 sous-estime la PPB et donc sur-estime les pertes de carbone par la tourbière (Figure~\ref{fig:BdC_GPP_interp}).
+La tourbière est également une source de carbone plus importante en 2013 (\SI{-301(47)}{\gcma}) qu'en 2014 (\SI{-138(20)}{\gcma}).
+La légère baisse du niveau de la nappe d'eau en 2013 ne se traduit pas par une RE plus importante et cette différence est principalement liée à une hausse de la PPB.
+Cette hausse de la PPB est peut être liée à l'histoire du site : les années précédant les mesures sont sèches est ont pu amoindrir le potentiel de photosynthèse de l'écosystème, notamment de ses plantes pérennes (mousses et arbustes).
+Ce potentiel en cours de rétablissement pendant le suivi serait donc plus fort en 2014.
+%Par contre le fait que les estimations qui utilisent PPB-2 montrent une source de carbone plus importante en 2013 qu'en 2014 semble cohérent.
+%En effet le peu de baisse du niveau de la nappe d'eau mesuré pendant les deux années de mesure a eu lieu en 2013.
 Elles se rapprochent de celles mesurées dans des tourbières de bas-marais d'Amérique du nord : \SI{-145}{\gcma} \citep{carroll1997} ou celles mesurées dans une autre tourbière de bas-marais en Allemagne (\num{-142} à \SI{-565}{\gcma}) mais utilisée comme prairie permanente \citep{beyer2015}.
 
 Les estimations utilisant PPB-1 semblent indiquer que la tourbière est une légère source de carbone ou s'approche d'un équilibre.
@@ -1442,23 +1491,6 @@ Rarement estimé, ce flux peut représenter 17 à \SI{66}{\percent} d'une émiss
 La présence de végétaux vasculaires qui en transportant le \chh dans l'atmosphère diminuent la concentration en \chh dans le sol tendraient cependant à diminuer ce phénomène \citep{chanton2005}.
 
 
-
-\subsubsection{Incertitudes et limitations du bilan}
-Les incertitudes les plus fortes du bilan sont sur les flux de \chh avec une NRMSE de \SI{32}{\percent} lors de la calibration et de \SI{68}{\percent} lors de la validation.
-Cette différence importante montre que l'estimation des flux de \chh à l'aide de l'indice de végétation à permis l'estimation de sa contribution au bilan de carbone de l'écosystème pour les années 2013 et 2014, mais que son utilisation dans d'autres conditions (année sèche, température moyenne annuelle significativement différente) est limitée.
-L'importance faible du \chh dans le bilan de carbone de la tourbière rend ces incertitudes moins critiques que celles faite sur l'estimation de la PPB.
-Les incertitudes importantes sur la PPB, sont mises en évidence par les fortes variations des flux interpolés selon l'équation utilisée.
-Elles sont la source des variations observées en termes de bilan.
-%L'ajout d'un indice de végétation diminue d'incertitude des paramètres du modèle, mais cet apport n'est pas reflété par l'évaluation, malgré la similarité de la végétation.
-À l'inverse la RE est bien contrainte.
-Sur les 2 années la différence entre les différentes équations utilisées ne dépassent pas \SI{25}{\gcma}.
-
-En outre le bilan de carbone est aussi limité par sa représentativité. 
-Différents éléments n'ont pas été pris en compte dans les mesures et l'établissement du bilan.
-La strate arborée notamment, largement présente dans certaines zones, n'est pas considérée directement.
-Les zones, restreintes, de touradons également, de même que les arbustes dépassant la taille de la chambre ou encore les zones d'eau libre.
-%Ainsi la strate arborée fortement présente dans certaines zones n'est pas directement prise en compte.
-%De la même manière une partie restreinte de la tourbière mais néanmoins présente est constitué de touradons dont l'effet n'a pas été pris en compte. %\plop (\textbf{biblio effet microtype}).
 
 \subsection{Variabilité spatiale sur la tourbière de La Guette}
 
