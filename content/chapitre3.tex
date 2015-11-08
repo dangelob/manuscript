@@ -326,9 +326,10 @@ Ces ensembles ont été faits en regroupant les placettes ayant la composition v
 Ce choix se justifie par le fait que la végétation joue un rôle important sur les flux de carbone (photosynthèse, transport).
 La température, plus facile à mesurer, et le niveau de la nappe, qui n'a que peu varié, semblaient des choix moins pertinents. 
 Le partitionnement à été fait par classification hiérarchique ascendante.
-C'est une méthode déterministe qui consiste, à partir de l'ensemble des individus (ici nos différentes placettes de mesure), de les regrouper en classes de plus en plus grandes.
+C'est une méthode déterministe qui consiste, à partir de l'ensemble des individus (ici nos différentes placettes de mesure), à les regrouper en classes de plus en plus grandes.
 Les points sont regroupés par similarité, les deux points les plus proches sont fusionnés, puis les deux suivants et ce jusqu'à ce qu'il ne reste qu'une seule classe.
-Cette classification est généralement représentée par un dendrogramme, elle a été appliquée sur les recouvrements végétaux mesurés et permet de distinguer quatre groupes (Figure~\ref{fig:tree}).
+Cette classification est généralement représentée par un dendrogramme.
+Elle a été appliquée sur les recouvrements végétaux mesurés et permet de distinguer quatre groupes (Figure~\ref{fig:tree}).
 Le nom de ces groupes (Arbuste, Herbe, Mix et Mousse) reflète la végétation majoritaire.
 
 \begin{figure}[t]
@@ -340,6 +341,7 @@ Le nom de ces groupes (Arbuste, Herbe, Mix et Mousse) reflète la végétation m
 
 
 \subsection{Estimation de l'erreur associée aux flux et aux bilans}
+\label{subsec:erreur_bilan}
 
 Pour chaque flux, l'erreur sur le bilan annuel est calculé en multipliant ce flux par l'erreur quadratique normalisée, calculée lors de la calibration.
 Pour les bilans, l'erreur associée est calculée comme la somme des erreurs associées aux flux composant le bilan.
@@ -805,10 +807,10 @@ La différence sur les cumuls quand les modèles de RE utilisent ou non la vég�
 
 \begin{table}
 \centering
-\caption{Cumul annuel des flux, en \si{\gcma}, en fonction des modèles utilisés.}
+\caption{Cumul annuel des flux par année et moyen sur les deux années, en \si{\gcma}, en fonction des modèles utilisés. Les équations correspondent à celles détaillée dans le texte. L'incertitude associée à chaque flux est estimé à partir de la NRMSE.}
 \label{table:flux}
 \begin{tabular}{llllll}\toprule
-ID & Flux & équation & 2013 & 2014 & moyen \\ \midrule
+Modèle & Flux & Équation(s) & 2013 & 2014 & Moyen \\ \midrule
 PPB-1 & PPB & \ref{eq:juneTair} et \ref{eq:PPB_bubier} & 1322 $\pm$ 410 & 1258 $\pm$ 390 & 1290 $\pm$ 400 \\
 PPB-2 & & \ref{eq:juneTairIV} et \ref{eq:PPB_bubier} & 957 $\pm$ 182 & 1184 $\pm$ 225 & 1070 $\pm$ 203 \\[+1.5ex]
 RE-1 & RE & \ref{eq:RE_T} & 1337 $\pm$ 241 & 1235 $\pm$ 222 & 1286 $\pm$ 231 \\
@@ -823,7 +825,7 @@ FCOD & COD & \ref{eq:COD} & 8 $\pm$ 1  & 16 $\pm$ 1 & 12 $\pm$ 1 \\
 
 \begin{table}
 \centering
-\caption{Bilan de carbone annuel, en \si{\gcma}, en fonction des modèles utilisés. Les valeurs entre parenthèses représentent l'erreur associée au bilan}
+\caption{Bilan de carbone annuel, en \si{\gcma}, en fonction des modèles utilisés. Les valeurs entre parenthèses représentent l'erreur associée au bilan (son calcul est décrit dans la partie~\ref{subsec:erreur_bilan})}
 \label{table:bdc}
 \begin{tabular}{llll}\toprule
 combinaison de modèles & 2013 & 2014 & moyen \\ \midrule
@@ -1419,13 +1421,13 @@ Ces observations corroborent les observations faites par \citet{trudeau2012} et 
 %\textit{Le carbone organique dissout}
 \subsubsection{Le COD}
 
-L'intensité des flux de COD estimés sur la tourbière de La Guette est très faible comparée aux flux de \coo.
+Les flux de COD estimés sur la tourbière de La Guette est très faible comparée aux flux de \coo.
 Par ailleurs, ils sont du même ordre de grandeur que les flux de \chh.
 Les quantités de COD exportées par la tourbière sont dans la gamme de celles présentes dans la littérature.
 Elles sont plus faibles que celles estimées par \citet{worrall2009} (entre 10 et \SI{86}{\gcma}), mais plus importantes que celles estimées par \citet{carroll1997} dans une tourbière de bas-marais d’Amérique du nord (\SI{3.4}{\gcma}) ou celles rapportées par \citet{waddington2000} (<\SI{6}{\gcma}) dans une tourbière de haut-marais suédoise.
 
-Le doublement du flux de COD observé en 2014 par rapport à 2013 est lié à une quantité plus importante d'eau quittant la tourbière et présentant des concentrations en COD similaires (Figure~\ref{fig:discharge}).
-Dans le même temps le niveau de nappe moyen mesuré en 2014 est légèrement supérieur à celui mesuré en 2013 et les précipitations sont du même ordre de grandeur (Figure~\ref{fig:WTL} et \ref{fig:pluvio}).
+Le doublement du flux de COD observé en 2014 par rapport à 2013 est lié à une quantité plus importante d'eau quittant la tourbière (Figure~\ref{fig:discharge}) et présentant des concentrations en COD similaires.
+Dans le même temps, le niveau de nappe moyen mesuré en 2014 est légèrement supérieur à celui mesuré en 2013 et les précipitations sont du même ordre de grandeur (Figure~\ref{fig:WTL} et \ref{fig:pluvio}).
 Ces observations permettent de faire l'hypothèse que l'année 2013 a permis à la tourbière de reconstituer une partie de son stock d'eau perdu lors des années précédentes plus sèches.
 
 
