@@ -21,7 +21,7 @@
 \begin{longtable}{llllllllllllll}
 %\footnotesize
 %\centering
-\caption{ Références et données utilisés. La colonne « Année » se réfère aux années de mesure, les flux (ENE, RE, PPB, \chh, COD, BCNE) sont exprimés en \si{\gcma}. La colonne « Classif » décrit le type de tourbière (Haut-marais : bog ou Bas-marais : fen). La colonne « Manag. » décrit une éventuelle utilisation du site. Les colonnes « TMA » et « PMA » correspondent respectivement aux températures moyennes annuelles et aux précipitation moyennes annuelles. Les latitudes et longitudes (colonne « Lat/Lon ») sont exprimés en degrés décimaux}\\
+\caption{Références et données utilisées. La colonne « Année » se réfère aux années de mesure, les flux (ENE, RE, PPB, \chh, COD, BCNE) sont exprimés en \si{\gcma}. La colonne « Classif » décrit le type de tourbière (Haut-marais : bog ou Bas-marais : fen). La colonne « Manag. » décrit une éventuelle utilisation du site. Les colonnes « TMA » et « PMA » correspondent respectivement aux températures moyennes annuelles et aux précipitation moyennes annuelles. Les latitudes et longitudes (colonne « Lat/Lon ») sont exprimées en degrés décimaux}\\
 \label{table:bibliodata}\\
 %\vspace*{-1cm}\\
 %\begin{tabular}{cccccccccccccccc}
@@ -245,7 +245,7 @@ Année & ENE & RE & PPB & \chh & COD & BCNE & Flux considérés & Classif. & Man
 
 
 
-\section{package m70r}
+\section{Package m70r}
 \label{sec:pckg_m70r}
 
 \begin{figure}[!htbp]
@@ -255,13 +255,13 @@ Année & ENE & RE & PPB & \chh & COD & BCNE & Flux considérés & Classif. & Man
 \label{fig:m70r_diagplot}
 \end{figure}
 
-Ce package contient une série de fonctions à utiliser avec le language R et qui permettent de traiter les fichiers *.m70 issue des sondes Vaisala.
+Ce package contient une série de fonctions à utiliser avec le language R et qui permettent de traiter les fichiers *.m70 issus des sondes Vaisala.
 
 \begin{itemize}
 \item Générer des planches de graphes pour diagnostiquer les flux (Figure~\ref{fig:m70r_diagplot})
 \item De comparer l'effet du retrait de certains points. La figure~\ref{fig:m70r_diagplot} montre ainsi une mesure pour laquelle l'assimilation de \coo par photosynthèse est tellement forte qu'elle semble être stoppée abruptement au delà d'un certain seuil.
 \item De conserver les changements effectués dans un fichier séparé du fichier source, qui reste donc intact.
-\item De calculer les flux net.
+\item De calculer les flux nets.
 \end{itemize}
 
 \clearpage
@@ -269,7 +269,7 @@ Ce package contient une série de fonctions à utiliser avec le language R et qu
 \section{Résultats des ACP}
 \label{sec:acp}
 
-Les données de \chh étant moins nombreuses que les données de \coo, deux ACP ont été effectuées, l'une sans les données de \chh et l'autre avec, afin de maximiser le nombre d'observation utilisés.
+Les données de \chh étant moins nombreuses que les données de \coo, deux ACP ont été effectuées, l'une sans les données de \chh et l'autre avec, afin de maximiser le nombre d'observations utilisées.
 
 \subsubsection{ACP des flux de \coo et des facteurs contrôlants (sans \chh)}
 
@@ -301,18 +301,30 @@ Les données de \chh étant moins nombreuses que les données de \coo, deux ACP 
 \section{Le projet \textsc{carbiodiv}}
 \label{sec:carbiodiv}
 
-Ce projet vise à restaurer l'hydrologie de la tourbière de La Guette et de suivre les effets de cette restauration sur les flux de carbone et la biodiversité.
+Le projet CARBIODIV vise à restaurer l'hydrologie de la tourbière de La Guette et de suivre les effets de cette restauration sur les flux de GES (\coo et \chh) sont suivis et la biodiversité.
+Des seuils devant minimiser les pertes d'eau de la tourbière ont été installés en février 2014 ainsi que deux stations scientifiques permettant le suivi des GES et des facteurs environnementaux que ce soit l'hydrologie et la géochimie des eaux, la végétation, les flux de GES, les caractéristiques du sol.
+Dans chaque station ont été installées douze placettes, avec quatre réplicats pour trois traitements :
+\begin{itemize}
+\item Contrôle : pas de modifications, ce sont les témoins
+\item Étrépage : les dix premiers centimètre de la végétation sont retirés
+\item Étrépage + ré-ensemencement : en plus du traitement précédent, des sphaignes sont introduites dans les placettes
+\end{itemize}
 Ce projet implique donc des laboratoires scientifiques (ISTO, LPC2E) une cellule de recherche et développement de l'Université d'Orléans (CETRAHE), des associations (SNE, CERCOPE, LIN'Eco), et une entreprise (Environnement41).
 
-Carte Nécessaire.
 
+\begin{figure}[!hbt]
+\centering
+\includegraphics[width=\textwidth]{annexes/carte_carbiodiv}\\
+\caption{Schéma de fonctionnement des seuils installés sur la tourbière de La Guette}
+\label{fig:carte_carbiodiv}
+\end{figure}
 
 
 
 
 
 \clearpage
-\section{Calibrations flux de GES et facteurs contrôlant}
+\section{Calibrations flux de GES et facteurs contrôlants}
 \label{sec:calib_flux}
 
 \begin{figure}[!hbt]
@@ -325,13 +337,97 @@ Carte Nécessaire.
 
 
 
+\clearpage
+\section{Tableau modélisation par groupe de végétation}
+\label{sec:mdl_grp_veg}
+
+%\begin{table}
+%\centering
+%\caption{Valeur des paramètres des équations utilisées pour modéliser les flux et sensibilité relative (en \%) des flux en réponse à une variation de $\pm$\SI{10}{\percent} de chacun des paramètres des modèles.}
+%\label{table:mdl_par_grp_veg}
+%\hspace*{-1cm}
+%\begin{tabular}{llcccccccccccc}\toprule
+%\multicolumn{2}{l}{Groupe :} & \multicolumn{3}{c}{Mousse} & \multicolumn{3}{c}{Mix} & \multicolumn{3}{c}{Herbe} & \multicolumn{3}{c}{Arbuste}\\
+%& par & valeur & se & pval & valeur & se & pval & valeur & se & pval & valeur & se & pval  \\ \midrule
+%\multicolumn{14}{l}{PPB-1 -- équations~\ref{eq:juneTair} et \ref{eq:PPB_bubier}}  \\ [+.5ex]
+%& a & 11.22 & 17.48 & 0.000 & 1155 & 2998 & 0.974 & 80.90 & 930 & 0.916 & 18.74 & 312 & 0.753 \\
+%& b & 33.09 & 17.01 & 0.000 & 167 & 521 & 0.850  & 72.30 & 283.52 & 0.729 & 54.21 & 185 & 0.597 \\
+%& c & 14.56 & 37.24 & 0.016 & 64.49 & 304.6 & 0.747 & 32.24 & 164.12 & 0.551 & 31.05 & 164 & 0.551\\
+%%& i &  1.84 & 21.6  & 0.93 \\[+1ex]
+%\multicolumn{14}{l}{PPB-2 -- équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier}}  \\ [+.5ex]
+%& a & 16.74 & 49.53 & 0.062 & 42.91 &  70.19 & 0.175 & 38.57 & 31.68 & 0.007 & 23.96 & 33.90 & 0.010\\
+%& b & 31.87 & 14.40 & 0.000 & 51.49 &  47.42 & 0.052 & 35.69 & 38.50 & 0.021 & 33.27 & 47.74 & 0.054\\
+%& c & 14.60 & 34.89 & 0.012 & 30.34 &  43.26 & 0.035 & 21.99 & 60.90 & 0.123 & 23.57 & 70.42 & 0.176\\
+%& d &  2.12 & 202.8 & 0.629 & -1.83 & 256.27 & 0.702 &  0.10 &  2123 & 0.963 &  0.27 & 910.8 & 0.914\\
+%%& i &  1.84 & 21.6  & 0.93 \\[+1ex]
+%\multicolumn{14}{l}{RE-1 -- équation~\ref{eq:RE_T}}  \\ [+.5ex]
+%& a & 0.23 & 19.90 & 0.48 & 18.80 & 0.000 & 0.32 & 41.44 & \\
+%& b & 0.11 &  6.47 & 0.09 &  7.11 & 0.000 & 0.11 \\[+1ex]
+%\multicolumn{14}{l}{RE-3 -- équation~\ref{eq:RE_TH}}  \\ [+.5ex]
+%& a & 0 & 0 & 0.01 \\
+%& b & 0.08 & 0.01 & \\
+%& c & 0.33 & 0.06 & 0 \\[+1ex]
+%\bottomrule
+%\end{tabular}
+%\hspace*{-1cm}
+%\end{table}
+
+\begin{table}
+\centering
+\caption{Valeurs des paramètres des équations utilisées pour modéliser les flux de RE par groupe de végétation avec se l'erreur standard (en \si{\percent}) et pval la p-value.}
+\label{table:mdl_par_grp_veg_er}
+\hspace*{-1cm}
+\begin{tabular}{lccccccccc}\toprule
+%\multicolumn{2}{l}{Groupe :} & \multicolumn{3}{c}{Mousse} & \multicolumn{3}{c}{Mix} & \multicolumn{3}{c}{Herbe} & \multicolumn{3}{c}{Arbuste}\\
+ & \multicolumn{3}{l}{a} & \multicolumn{3}{l}{b} & \multicolumn{3}{l}{c} \\  \cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10}
+Groupe & valeur & se & pval & valeur & se & pval & valeur & se & pval \\ \midrule
+\multicolumn{10}{l}{RE-1 -- équation~\ref{eq:RE_T}}  \\ [+.5ex]
+Mousse  & 0.23 & 19.90 & 0.000 & 0.11 &  6.47 & 0.000 & & & \\
+Mixe    & 0.48 & 18.80 & 0.000 & 0.09 &  7.11 & 0.000 & & & \\
+Herbe   & 0.32 & 41.44 & 0.027 & 0.11 & 13.47 & 0.000 & & & \\
+Arbuste & 0.50 & 26.02 & 0.001 & 0.09 & 11.10 & 0.000 & & & \\
+\multicolumn{10}{l}{RE-3 -- équation~\ref{eq:RE_TH}}  \\ [+.5ex]
+Mousse  & 0.00 &  38.47 & 0.019 & 0.08 &  8.32 & 0.000 & 0.27 & 15.28 & 0.000 \\ 
+Mixe    & 0.00 & 219.38 & 0.654 & 0.09 &  7.93 & 0.000 & 0.49 & 19.16 & 0.000 \\
+Herbe   & 0.01 &  48.37 & 0.054 & 0.08 & 14.79 & 0.000 & 0.26 & 42.80 & 0.032 \\
+Arbuste & 0.01 &  34.85 & 0.011 & 0.07 & 11.09 & 0.000 & 0.47 & 19.93 & 0.000 \\
+\bottomrule
+\end{tabular}
+\hspace*{-1cm}
+\end{table}
+
+%\begin{table}
+\begin{sidewaystable}
+\centering
+\caption{Valeurs des paramètres des équations utilisées pour modéliser les flux de PPB par groupe de végétation avec se l'erreur standard (en \si{\percent}) et pval la p-value.}
+\label{table:mdl_par_grp_veg_gpp}
+%\hspace*{-1cm}
+\begin{tabular}{lcccccccccccc}\toprule
+%\multicolumn{2}{l}{Groupe :} & \multicolumn{3}{c}{Mousse} & \multicolumn{3}{c}{Mix} & \multicolumn{3}{c}{Herbe} & \multicolumn{3}{c}{Arbuste}\\
+ & \multicolumn{3}{l}{a} & \multicolumn{3}{l}{b} & \multicolumn{3}{l}{c} & \multicolumn{3}{l}{d} \\ \cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10} \cmidrule(lr){11-13}
+Groupe & valeur & se & pval & valeur & se & pval & valeur & se & pval & valeur & se & pval \\ \midrule
+\multicolumn{13}{l}{PPB-1 -- équations~\ref{eq:juneTair} et \ref{eq:PPB_bubier}}  \\ [+.5ex]
+Mousse & 11.22 & 17.48 & 0.000 & 33.09 & 17.01 & 0.000 & 14.56 & 37.24 & 0.016 &   &  &  \\
+Mix & 1154.99 & 2997.91 & 0.974 & 167.22 & 521.44 & 0.850 & 64.49 & 304.55 & 0.747 &   &  &  \\
+Herbe & 80.90 & 930.16 & 0.916 & 72.30 & 283.52 & 0.729 & 32.24 & 216.07 & 0.650 &   &   &  \\ 
+Arbuste & 18.74 & 312.12 & 0.753 & 54.21 & 185.21 & 0.597 & 31.05 & 164.12 & 0.551 &   &   &  \\ [+1ex]
+\multicolumn{13}{l}{PPB-2 -- équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier}}  \\ [+.5ex]
+Mousse & 16.74 & 49.53 & 0.062 & 31.87 & 14.40 & 0.000 & 14.60 & 34.89 & 0.012 & 2.12 & 202.80 & 0.629 \\ 
+Mix & 42.91 & 70.19 & 0.175 & 51.49 & 47.42 & 0.052 & 30.34 & 43.26 & 0.035 & -1.83 & -256.27 & 0.702 \\ 
+Herbe & 38.57 & 31.68 & 0.007 & 35.69 & 38.50 & 0.021 & 21.99 & 60.90 & 0.123 & 0.10 & 2122.54 & 0.963 \\
+Arbuste & 23.96 & 33.90 & 0.010 & 33.27 & 47.74 & 0.054 & 23.57 & 70.42 & 0.176 & 0.27 & 910.80 & 0.914 \\
+\bottomrule
+\end{tabular}
+%\hspace*{-1cm}
+\end{sidewaystable}
+%\end{table}
 
 
 
 
 
 \clearpage
-\section{Cartes des flux par placettes}
+\section{Cartes des flux par placette}
 \label{sec:carte_flux}
 
 \subsection{PPB}
@@ -365,13 +461,13 @@ La calibration des placettes p05, p13 et p15 n'a pas convergée.
 
 
 
-\section{protocole végétation}
+\section{Protocole végétation}
 \label{sec:protocole_veg}
 
 
 Le suivi non-destructif d'une végétation n'est pas triviale et nécessite la mise en place de protocoles particuliers en fonction du type de végétation.
 L'objectif est de pouvoir estimer une biomasse produite en impactant au minimum la végétation en place.
-Pour l'ensemble des espèces végétales présentes dans les embases servant à la mesure des flux un recouvrement à été estimé, à l’œil.
+Pour l'ensemble des espèces végétales présentes dans les embases servant à la mesure des flux un recouvrement a été estimé, à l’œil.
 
 
 \subsubsection{La strate arbustive}
@@ -384,7 +480,7 @@ Pour la strate arbustive des mesures de hauteur moyenne ont été effectuées, e
 \end{figure}
 
 \subsubsection{La strate herbacée}
-Pour la strate herbacée, en 2013, 5 individus des deux espèces majoritaires (Eriophorum vaginatum ? augustifolium ?, Molinia Caerulea) ont été marqués afin de pourvoir les mesurer plusieurs fois au cours de la saison.
+Pour la strate herbacée, en 2013, 5 individus des deux espèces majoritaires (Eriophorum vaginatum ? augustifolium ?, Molinia Caerulea) ont été marqués afin de pouvoir les mesurer plusieurs fois au cours de la saison.
 Cependant les difficultés à retrouver les individus marqués couplés à la mort d'un nombre important d'entre eux n'ont pas permis d'acquérir de résultats significatifs.
 En conséquence en 2014 ces deux espèces ont fait l'objet de comptage exhaustif et de mesure de hauteur moyenne.
 
@@ -432,7 +528,7 @@ En conséquence en 2014 ces deux espèces ont fait l'objet de comptage exhaustif
 		\caption{Eriphorum -- surface}
 	\end{subfigure}
 %    \caption{Caption place holder}
-\caption{Calibration de la biomasse herbacées pour \textit{molinia Caerulea} (a), pour \textit{eriophorum} (b) et de la surface de feuille pour \textit{molinia Caerulea} (c), pour \textit{eriophorum} (d) en fonction de la hauteur}
+\caption{Calibration de la biomasse herbacée pour \textit{molinia Caerulea} (a), pour \textit{eriophorum} (b) et de la surface de feuille pour \textit{molinia Caerulea} (c), pour \textit{eriophorum} (d) en fonction de la hauteur}
 \label{fig:cal_herb}
 \end{figure}
 
@@ -454,90 +550,6 @@ En conséquence en 2014 ces deux espèces ont fait l'objet de comptage exhaustif
 
 
 
-\clearpage
-\section{Tableau modélisation par groupe de végétation}
-\label{sec:mdl_grp_veg}
-
-%\begin{table}
-%\centering
-%\caption{Valeur des paramètres des équations utilisées pour modéliser les flux et sensibilité relative (en \%) des flux en réponse à une variation de $\pm$\SI{10}{\percent} de chacun des paramètres des modèles.}
-%\label{table:mdl_par_grp_veg}
-%\hspace*{-1cm}
-%\begin{tabular}{llcccccccccccc}\toprule
-%\multicolumn{2}{l}{Groupe :} & \multicolumn{3}{c}{Mousse} & \multicolumn{3}{c}{Mix} & \multicolumn{3}{c}{Herbe} & \multicolumn{3}{c}{Arbuste}\\
-%& par & valeur & se & pval & valeur & se & pval & valeur & se & pval & valeur & se & pval  \\ \midrule
-%\multicolumn{14}{l}{PPB-1 -- équations~\ref{eq:juneTair} et \ref{eq:PPB_bubier}}  \\ [+.5ex]
-%& a & 11.22 & 17.48 & 0.000 & 1155 & 2998 & 0.974 & 80.90 & 930 & 0.916 & 18.74 & 312 & 0.753 \\
-%& b & 33.09 & 17.01 & 0.000 & 167 & 521 & 0.850  & 72.30 & 283.52 & 0.729 & 54.21 & 185 & 0.597 \\
-%& c & 14.56 & 37.24 & 0.016 & 64.49 & 304.6 & 0.747 & 32.24 & 164.12 & 0.551 & 31.05 & 164 & 0.551\\
-%%& i &  1.84 & 21.6  & 0.93 \\[+1ex]
-%\multicolumn{14}{l}{PPB-2 -- équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier}}  \\ [+.5ex]
-%& a & 16.74 & 49.53 & 0.062 & 42.91 &  70.19 & 0.175 & 38.57 & 31.68 & 0.007 & 23.96 & 33.90 & 0.010\\
-%& b & 31.87 & 14.40 & 0.000 & 51.49 &  47.42 & 0.052 & 35.69 & 38.50 & 0.021 & 33.27 & 47.74 & 0.054\\
-%& c & 14.60 & 34.89 & 0.012 & 30.34 &  43.26 & 0.035 & 21.99 & 60.90 & 0.123 & 23.57 & 70.42 & 0.176\\
-%& d &  2.12 & 202.8 & 0.629 & -1.83 & 256.27 & 0.702 &  0.10 &  2123 & 0.963 &  0.27 & 910.8 & 0.914\\
-%%& i &  1.84 & 21.6  & 0.93 \\[+1ex]
-%\multicolumn{14}{l}{RE-1 -- équation~\ref{eq:RE_T}}  \\ [+.5ex]
-%& a & 0.23 & 19.90 & 0.48 & 18.80 & 0.000 & 0.32 & 41.44 & \\
-%& b & 0.11 &  6.47 & 0.09 &  7.11 & 0.000 & 0.11 \\[+1ex]
-%\multicolumn{14}{l}{RE-3 -- équation~\ref{eq:RE_TH}}  \\ [+.5ex]
-%& a & 0 & 0 & 0.01 \\
-%& b & 0.08 & 0.01 & \\
-%& c & 0.33 & 0.06 & 0 \\[+1ex]
-%\bottomrule
-%\end{tabular}
-%\hspace*{-1cm}
-%\end{table}
-
-\begin{table}
-\centering
-\caption{Valeur des paramètres des équations utilisées pour modéliser les flux de RE par groupe de végétation avec se l'erreur standard (en \si{\percent}) et pval la p-value.}
-\label{table:mdl_par_grp_veg_er}
-\hspace*{-1cm}
-\begin{tabular}{lccccccccc}\toprule
-%\multicolumn{2}{l}{Groupe :} & \multicolumn{3}{c}{Mousse} & \multicolumn{3}{c}{Mix} & \multicolumn{3}{c}{Herbe} & \multicolumn{3}{c}{Arbuste}\\
- & \multicolumn{3}{l}{a} & \multicolumn{3}{l}{b} & \multicolumn{3}{l}{c} \\  \cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10}
-Groupe & valeur & se & pval & valeur & se & pval & valeur & se & pval \\ \midrule
-\multicolumn{10}{l}{RE-1 -- équation~\ref{eq:RE_T}}  \\ [+.5ex]
-Mousse  & 0.23 & 19.90 & 0.000 & 0.11 &  6.47 & 0.000 & & & \\
-Mixe    & 0.48 & 18.80 & 0.000 & 0.09 &  7.11 & 0.000 & & & \\
-Herbe   & 0.32 & 41.44 & 0.027 & 0.11 & 13.47 & 0.000 & & & \\
-Arbuste & 0.50 & 26.02 & 0.001 & 0.09 & 11.10 & 0.000 & & & \\
-\multicolumn{10}{l}{RE-3 -- équation~\ref{eq:RE_TH}}  \\ [+.5ex]
-Mousse  & 0.00 &  38.47 & 0.019 & 0.08 &  8.32 & 0.000 & 0.27 & 15.28 & 0.000 \\ 
-Mixe    & 0.00 & 219.38 & 0.654 & 0.09 &  7.93 & 0.000 & 0.49 & 19.16 & 0.000 \\
-Herbe   & 0.01 &  48.37 & 0.054 & 0.08 & 14.79 & 0.000 & 0.26 & 42.80 & 0.032 \\
-Arbuste & 0.01 &  34.85 & 0.011 & 0.07 & 11.09 & 0.000 & 0.47 & 19.93 & 0.000 \\
-\bottomrule
-\end{tabular}
-\hspace*{-1cm}
-\end{table}
-
-%\begin{table}
-\begin{sidewaystable}
-\centering
-\caption{Valeur des paramètres des équations utilisées pour modéliser les flux de PPB par groupe de végétation avec se l'erreur standard (en \si{\percent}) et pval la p-value.}
-\label{table:mdl_par_grp_veg_gpp}
-%\hspace*{-1cm}
-\begin{tabular}{lcccccccccccc}\toprule
-%\multicolumn{2}{l}{Groupe :} & \multicolumn{3}{c}{Mousse} & \multicolumn{3}{c}{Mix} & \multicolumn{3}{c}{Herbe} & \multicolumn{3}{c}{Arbuste}\\
- & \multicolumn{3}{l}{a} & \multicolumn{3}{l}{b} & \multicolumn{3}{l}{c} & \multicolumn{3}{l}{d} \\ \cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10} \cmidrule(lr){11-13}
-Groupe & valeur & se & pval & valeur & se & pval & valeur & se & pval & valeur & se & pval \\ \midrule
-\multicolumn{13}{l}{PPB-1 -- équations~\ref{eq:juneTair} et \ref{eq:PPB_bubier}}  \\ [+.5ex]
-Mousse & 11.22 & 17.48 & 0.000 & 33.09 & 17.01 & 0.000 & 14.56 & 37.24 & 0.016 &   &  &  \\
-Mix & 1154.99 & 2997.91 & 0.974 & 167.22 & 521.44 & 0.850 & 64.49 & 304.55 & 0.747 &   &  &  \\
-Herbe & 80.90 & 930.16 & 0.916 & 72.30 & 283.52 & 0.729 & 32.24 & 216.07 & 0.650 &   &   &  \\ 
-Arbuste & 18.74 & 312.12 & 0.753 & 54.21 & 185.21 & 0.597 & 31.05 & 164.12 & 0.551 &   &   &  \\ [+1ex]
-\multicolumn{13}{l}{PPB-2 -- équations~\ref{eq:juneTairIV} et \ref{eq:PPB_bubier}}  \\ [+.5ex]
-Mousse & 16.74 & 49.53 & 0.062 & 31.87 & 14.40 & 0.000 & 14.60 & 34.89 & 0.012 & 2.12 & 202.80 & 0.629 \\ 
-Mix & 42.91 & 70.19 & 0.175 & 51.49 & 47.42 & 0.052 & 30.34 & 43.26 & 0.035 & -1.83 & -256.27 & 0.702 \\ 
-Herbe & 38.57 & 31.68 & 0.007 & 35.69 & 38.50 & 0.021 & 21.99 & 60.90 & 0.123 & 0.10 & 2122.54 & 0.963 \\
-Arbuste & 23.96 & 33.90 & 0.010 & 33.27 & 47.74 & 0.054 & 23.57 & 70.42 & 0.176 & 0.27 & 910.80 & 0.914 \\
-\bottomrule
-\end{tabular}
-%\hspace*{-1cm}
-\end{sidewaystable}
-%\end{table}
 
 
 \clearpage
