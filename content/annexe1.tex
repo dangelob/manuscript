@@ -1,6 +1,6 @@
 % Annexe 1
 % Photos
-
+\renewcommand{\thesection}{\Alph{section}}
 \renewcommand\thefigure{\thesection.\arabic{figure}}    
 \renewcommand\thetable{\thesection.\arabic{table}}    
 %\section{A nice appendix}
@@ -372,7 +372,7 @@ Ce projet implique des laboratoires scientifiques (ISTO, LPC2E) une cellule de r
 %\hspace*{-1cm}
 %\end{table}
 
-\begin{table}
+\begin{table}[H]
 \centering
 \caption{Valeurs des paramètres des équations utilisées pour modéliser les flux de RE par groupe de végétation avec se l'erreur standard (en \si{\percent}) et pval la p-value.}
 \label{table:mdl_par_grp_veg_er}
@@ -472,7 +472,8 @@ Pour l'ensemble des espèces végétales présentes dans les embases servant à 
 
 \subsubsection{La strate arbustive}
 Pour la strate arbustive des mesures de hauteur moyenne ont été effectuées, en mesurant depuis le niveau du sol, ou le toit des sphaignes, si elles étaient présentes, jusqu'au sommet de l'individu.
-\begin{figure}
+
+\begin{figure}[H]
 \includegraphics[width=.5\textwidth]{chap2/cal_tetra_eq}
 \includegraphics[width=.5\textwidth]{chap2/cal_tetra_eq}
 \caption{Calibration de la biomasse en fonction de la hauteur}

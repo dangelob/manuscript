@@ -25,7 +25,7 @@
 \usepackage{framed}					%allow to do the box arround the title
 
 % Other packages ---------------------------------------------------------------
-\usepackage[load-configurations=abbreviations]{siunitx}		% Pour les unités
+\usepackage[load-configurations=abbreviations, allow-number-unit-breaks]{siunitx}		% Pour les unités
 \sisetup{locale = FR,
 detect-all, % permet de garder la même font que dans le texte
 separate-uncertainty = true, % signe plus ou moins avant incertitudes
@@ -131,9 +131,9 @@ list-units=single               % L'unité ne s'affiche qu'au dernier élément
 \listoftables
 \addcontentsline{toc}{chapter}{Liste des tableaux}
 
-%\include{front_back_pages/avantPropos}
+\include{front_back_pages/avantPropos}
 
-\include{front_back_pages/remerciement}
+%\include{front_back_pages/remerciement}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Mainmatter
@@ -182,22 +182,20 @@ list-units=single               % L'unité ne s'affiche qu'au dernier élément
 
 
 % Index ------------------------------------------------------------------------
-\cleardoublepage
-\phantomsection % Permet "d'accrocher" hyperref
-\addcontentsline{toc}{chapter}{Index}
-\printindex
+%\cleardoublepage
+%\phantomsection % Permet "d'accrocher" hyperref
+%\addcontentsline{toc}{chapter}{Index}
+%\printindex
 
 % Annexes ----------------------------------------------------------------------
 \appendix
 %\setcounter{mtc}{15}
 \chapter{Annexes}
 %\addcontentsline{toc}{chapter}{Annexes}
-\renewcommand{\thesection}{\Alph{section}}
 \include{content/annexe1}
 
 % 4e de couverture -------------------------------------------------------------
 \include{front_back_pages/backcover}
-%\listoftodos
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
