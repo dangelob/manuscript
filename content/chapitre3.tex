@@ -41,7 +41,7 @@ Cette partie contient la description de la stratégie d'échantillonnage et le d
 Elle explicite également le calcul de variables élaborées utilisées par la suite, détaille le principe permettant l'estimation du bilan de carbone du site à l'échelle saisonnière et décrit la stratégie d'étude de la variabilité spatiale.
 Enfin elle précise comment sont calculées les erreurs associées aux flux et bilans.
 
-\subsection{Design expérimental}
+\subsection{Protocole d'observation}
 
 En juin 2011, 20 placettes ont été installées selon un échantillonnage aléatoire stratifié:
 La surface de la tourbière active (\SI{13}{\hectare}) a été divisée selon une grille de 20 mailles et un point, choisi aléatoirement dans chaque maille, localise chaque placette (Figure~\ref{fig:carteVS}).
@@ -56,7 +56,7 @@ Cependant elle implique généralement un placement des embases proches les unes
 %Elles peuvent également être séparées en zone dans la tourbière, haut-marais \textit{versus} bas-marais, ou réhabilité \textit{versus} non-réhabilité.
 %Afin de gagner en représentativité spatiale, la taille du site le permettant, il a donc été décidé de positionner des placettes sur l'ensemble du site.
 Le placement des 20 embases sur l'ensemble du site, sa taille l'autorisant, permet de gagner en représentativité spatiale.
-Sur ces placettes ont été réalisées des mesures de \textbf{flux de gaz} et de \textbf{facteurs contrôlants}.
+Sur ces placettes ont été réalisées des mesures de \textbf{flux de gaz} et de \textbf{variables environnementales}.
 
 \begin{figure}
 \centering
@@ -87,7 +87,7 @@ Les mesures se sont donc limitées aux placettes accessibles depuis le ponton (p
 Des échantillons d'eau ont été prélevés à l'exutoire de la tourbière, et leur concentration en COD a été mesurée moins de 24 heures après le prélèvement.
 Les analyses de COD ont été faites, après filtration à \SI{0.45}{\micro\metre}, en utilisant la technique dite NPOC (\textit{Non Purgeable Organic Carbon}) dans laquelle le carbone inorganique présent dans l'échantillon est transformé en \coo par l'ajout d'un acide puis évacué (purgé) avant que l'échantillon ne soit injecté dans un four et analysé par un détecteur Infra-rouge.
 
-\subsubsection{Mesures des facteurs contrôlant}
+\subsubsection{Mesures des variables environnementales}
 
 
 \begin{table}
@@ -127,7 +127,7 @@ Les analyses de COD ont été faites, après filtration à \SI{0.45}{\micro\metr
 \end{table}
 
 
-Les facteurs contrôlant mesurés manuellement sont la pression atmosphérique, le rayonnement photosynthétique actif (\textit{photosyntheticaly active radiation}, PAR), les températures du sol à différentes profondeurs, la végétation (pourcentage de recouvrement), le niveau de la nappe d'eau (Tableau~\ref{table:ls_var}).
+Les variables environnementales mesurés manuellement sont la pression atmosphérique, le rayonnement photosynthétique actif (\textit{photosyntheticaly active radiation}, PAR), les températures du sol à différentes profondeurs, la végétation (pourcentage de recouvrement), le niveau de la nappe d'eau (Tableau~\ref{table:ls_var}).
 La pression atmosphérique est mesurée au début et à la fin des mesures de flux.
 Le PAR est mesuré au début et à la fin des mesures de l'ENE.
 Le recouvrement de végétation est estimé visuellement.
@@ -164,7 +164,7 @@ En cas de présence de Sphaignes, le haut des capitulums est pris comme référe
 \subsection{Estimation des flux de GES dans le bilan de C}
 
 L'estimation des flux de GES pour calculer un bilan de carbone se fait en trois étapes.
-La première consiste à établir des relations empiriques entre les flux et un ou plusieurs facteurs contrôlant.
+La première consiste à établir des relations empiriques entre les flux et un ou plusieurs variables environnementales.
 C'est la phase de \textbf{calibration}.
 La seconde, l'\textbf{évaluation}, teste la pertinence de ces relations sur un jeu de données indépendantes.
 La troisième, l'\textbf{interpolation}, utilise ces relations empiriques et les données acquises à plus haute fréquence, pour intégrer dans le temps les mesures ponctuelles sur l'ensemble des deux années de mesure. 
@@ -176,32 +176,43 @@ La chronique ainsi reconstituée permet ensuite d'estimer les quantités de carb
 Pour estimer le bilan de carbone du site il est donc nécessaire d'établir des modèles reliant des flux mesurés ponctuellement avec des variables explicatives mesurées à haute fréquence (par exemple entre la respiration de l'écosystème et la température de l'air).
 %Ces relations empiriques permettront d'interpoler les données acquises mensuellement sur l'ensemble des deux années de mesure et de reconstituer ainsi une chronique de flux dont l'intégration dans le temps permettra d'estimer une quantité de carbone sur l'année.
 Pour établir ces modèles empiriques, les données acquises ont été moyennées par campagne de mesures ; ceci permettant, dans un premier temps, de s'affranchir de la variabilité spatiale des flux et ne considérer que la variabilité temporelle.
-Les relations entre flux et facteurs contrôlant ont ensuite été étudiées deux à deux, notamment en réalisant une analyse en composante principale (ACP).
+Les relations entre flux et variables environnementales ont ensuite été étudiées deux à deux, notamment en réalisant une analyse en composante principale (ACP).
 Cette analyse permet de déterminer quelles sont les relations entre les variables et plus particulièrement quelles sont celles qui déterminent le plus les flux de GES.
 Le nombre de données acquises pour le \coo et le \chh étant différent, une ACP a été réalisée pour chacun de ces gaz (Annexe~\ref{sec:acp}).
 Une fois le facteur de contrôle prépondérant d'un gaz établi, grâce à l'ACP et à la littérature, une relation empirique est établie entre les deux.
 %La forme de cette relation et la littérature conditionne ensuite les équations testées.
-Elles sont évaluées à l'aide du coefficient de détermination (R\textsuperscript{2}) et de la racine carré de l'erreur quadratique normalisée par la moyenne (\textit{Normalised Root Mean Square Error}, NRMSE).
+Elles sont évaluées à l'aide du coefficient de détermination ajusté (R\textsuperscript{2}) et de la racine carré de l'erreur quadratique normalisée par la moyenne (\textit{Normalised Root Mean Square Error}, NRMSE).
 Le R$^{2}$ est utilisé comme indicateur de la proportion de la variabilité des données expliquée par le modèle, sa valeur est comprise entre 0 et 1 (pour les équations linéaires) : 
 
-$$ R^{2} = 1 - \frac{\sum(y-\hat{y})^2}{\sum(y-\bar{y})^2} $$ 
+$$ R^{2}_{non~ajust\acute{e}} = 1 - \frac{\sum(y-\hat{y})^2}{\sum(y-\bar{y})^2} $$ 
 
 Avec : 
 \begin{itemize}
+\item $R^{2}_{non~ajust\acute{e}}$ : le R\textsuperscript{2} non ajusté
 \item $y$ : données mesurées
 \item $\hat{y}$ : données modélisées
 \item $\bar{y}$ : la moyenne des données mesurées
 \end{itemize}
 
+$$ R^{2} = 1 - (1-R^{2}_{non~ajust\acute{e}})\frac{n-1}{n-p-1} $$ 
+
+Avec : 
+\begin{itemize}
+\item $R^{2}$ : le R\textsuperscript{2} ajusté
+\item $R^{2}_{non~ajust\acute{e}}$ : le R\textsuperscript{2} non ajusté
+\item $n$ : le nombre d'observations
+\item $p$ : nombre de variables explicatives
+\end{itemize}
+
 La RMSE et sa normalisation par la moyenne NRMSE sont utilisées comme indicateur de l'écart entre les données mesurées et les données modélisées :
 
-$$ RMSE = \sqrt{\frac{\sum(y - \hat{y})^2}{N}} $$
+$$ RMSE = \sqrt{\frac{\sum(y - \hat{y})^2}{n}} $$
 
 $$ NRMSE = 100 \times \frac{RMSE}{\bar{y}} $$
 
 Avec les notations précédentes et : 
 \begin{itemize}
-\item $N$ : le nombre d'observations
+\item $n$ : le nombre d'observations
 %\item $\bar{y}$ : la moyenne des données mesurées
 \end{itemize}
 Les résidus\footnote{Les résidus sont définit comme la différence entre les valeurs mesurées et celles calculées par un modèle.} sont également étudiés dans le but d'éviter un biais ou une hétéroscédasticité\footnote{On parle d'homoscédasticité lorsque la variance de l'erreur d'une variable est constante, et l'hétéroscédasticité lorsque qu'elle ne l'est pas} dans les données (Figure~\ref{fig:ref_resid}).
@@ -213,7 +224,7 @@ Les résidus\footnote{Les résidus sont définit comme la différence entre les 
 \label{fig:ref_resid}
 \end{figure}
 
-Puis les résidus de ces modèles de base ont été étudiés en fonction des facteurs de contrôle restants.
+Puis les résidus de ces modèles de base ont été étudiés en fonction des variables environnementales restantes.
 Dans le cas où une tendance est visible avec l'un d'entre eux, le facteur est ajouté \citep{bortoluzzi2006a}.
 En plus des indicateurs précédents, la pertinence de l'ajout d'un paramètre est évalué à l'aide du  critère d'information d'Akaike (\textit{Akaike Information Criterion}, AIC) \citep{akaike1974,burnham2002} :
 
@@ -268,7 +279,7 @@ La respiration des racines contribue à la respiration de l'écosystème pour 35
 %Les modèles les plus fréquemment utilisés (linéaire, exponentiel, arrhénius) ont été testés.
 
 Il ne semble pas émerger de consensus dans la littérature quant aux facteurs contrôlant les émissions de \chh.
-Différents facteurs sont utilisés comme la température \citep{alm1999,bubier1995b}, le niveau de la nappe \citep{bubier1993} ou encore la végétation \citep{bortoluzzi2006a}.
+Différents facteurs sont utilisés comme la température \citep{alm1999,bubier1995b}, le niveau de la nappe \citep{bubier1993a} ou encore la végétation \citep{bortoluzzi2006a}.
 Ces facteurs peuvent être utilisés seuls ou conjointement.
 
 \subsubsection{Évaluation}
@@ -282,7 +293,7 @@ Le terme d'évaluation est ici préféré à celui de validation car le nouveau 
 
 \subsubsection{Interpolation}
 
-Enfin les facteurs contrôlants ont été interpolés à une fréquence horaire identique à celle de la station météo présente sur le site:
+Enfin les variables environnementales ont été interpolés à une fréquence horaire identique à celle de la station météo présente sur le site:
 pour des données dont l'acquisition est manuelle uniquement, comme la végétation, une interpolation linéaire est faite entre les points de mesures.
 Pour les données acquises à la fois automatiquement par la station météorologique et manuellement, comme la température de l'air ou de la tourbe, l'interpolation est faite à partir de la relation entre les mesures continues et ponctuelles.
 Les flux sont ensuite recalculés (en \si{\micro\mole\per\square\meter\per\hour}) à l'échelle horaire sur les deux années de mesure puis sommés afin d'estimer les bilans de carbone.
@@ -330,12 +341,12 @@ C'est une méthode déterministe qui consiste, à partir de l'ensemble des indiv
 Les points sont regroupés par similarité, les deux points les plus proches sont fusionnés, puis les deux suivants et ce jusqu'à ce qu'il ne reste qu'une seule classe.
 Cette classification est généralement représentée par un dendrogramme.
 Elle a été appliquée sur les recouvrements végétaux mesurés et permet de distinguer quatre groupes (Figure~\ref{fig:tree}).
-Le nom de ces groupes (Arbuste, Herbe, Mix et Mousse) reflète la végétation majoritaire.
+Le nom de ces groupes (Chaméphyte ligneux, Graminoïde, Hétérogène et Bryophytes) reflète la végétation majoritaire.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=.8\textwidth]{chap3/tree}
-\caption{Partitionnement des placettes en fonction de leur similarité en termes de composition végétale (pourcentage des strates muscinales, herbacées et arbustives)}
+\caption{Partitionnement des placettes en fonction de leur similarité en termes de composition végétale (pourcentage des strates muscinales, herbacées et arbustives). L'algorithme Lance-Williams est utilisé avec une matrice de distance euclidienne.}
 \label{fig:tree}
 \end{figure}
 
@@ -363,9 +374,9 @@ Ces erreurs ne sont qu'une part de l'erreur totale qui devrait être associée �
 
 \section{Résultats}
 
-\subsection{Cinétique des facteurs contrôlants et des flux de GES}
+\subsection{Cinétique des variables environnementales et des flux de GES}
 
-\subsubsection{Facteurs contrôlants}
+\subsubsection{Variables environnementales}
 
 \begin{figure}
 \centering
@@ -388,14 +399,14 @@ Ces observations sont cohérentes avec les mesures acquises automatiquement et �
 \end{figure}
 
 L'évolution saisonnière de la végétation sur la tourbière de La Guette est visible (Figure~\ref{fig:veg_evol}).
-Cette variabilité est majoritairement contrôlée par la strate herbacée qui meurt à la fin de la saison de végétation tandis que les arbustes et les mousses sont pérennes.
+Cette variabilité est majoritairement contrôlée par la strate herbacée qui hiverne à la fin de la saison de végétation, perdant ses parties aériennes, à l'inverse des chaméphytes ligneux et des bryophytes.
 La saison de végétation, pour les herbacées, a commencé un peu plus tôt en 2014 (Figure~\ref{fig:veg_evol}) avec une végétation qui commence à croître en avril tandis qu'il faut attendre la campagne de mai en 2013.
 L'indice de végétation est également légèrement plus important en 2014.
 
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth, center]{chap3/T_mean_evolution}
-\caption{Variabilité temporelle des moyennes des températures de l'air (Tair) et du sol à \SIlist{-5;-30;-50;-100}{\centi\metre} (T5, T30, T50 et T100 respectivement) mesurées dans les 20 placettes entre mars 2013 et février 2015}
+\caption{Variabilité temporelle des moyennes des températures de l'air et du sol à \SIlist{-5;-30;-50;-100}{\centi\metre} mesurées dans les 20 placettes entre mars 2013 et février 2015}
 \label{fig:T_mean_evolution}
 \end{figure}
 
@@ -453,12 +464,12 @@ Les concentrations en carbone organique dissout des eaux prélevées dans les pi
 	\includegraphics[width=1\textwidth, center]{chap3/GPP_evolution_avg}
 	\includegraphics[width=1\textwidth, center]{chap3/ER_evolution_avg}
 	\includegraphics[width=1\textwidth, center]{chap3/NEE_evolution_avg}
-\caption{Variabilité temporelle des flux de \coo moyen mesurés sur les 20 placettes entre mars 2013 et février 2015. Avec la PPB (A), la RE (B) et l'ENE (C) ; les barres d'erreur représentent la déviation standard.}
+\caption{Variabilité temporelle des flux de \coo moyen mesurés sur les 20 placettes entre mars 2013 et février 2015. Avec la PPB (A), la RE (B) et l'ENE (C) ; les barres d'erreur représentent l'écart type.}
 \label{fig:flux_evolution_avg}
 \end{figure}
 
 %\subsubsection{PBB}
-Comme pour les facteurs contrôlants, des mesures de \coo ont été effectuées de mars 2013 à février 2015.
+Comme pour les variables environnementales, des mesures de \coo ont été effectuées de mars 2013 à février 2015.
 De novembre 2013 à février 2014 les mesures ont été interrompues suite à des problèmes techniques.
 Cependant les deux saisons de végétation ont pu être mesurées dans leur ensemble, permettant d'avoir un jeu de données représentatif sur le fonctionnement de l'écosystème.
 
@@ -476,11 +487,11 @@ En 2013 les valeurs de l'\textbf{ENE} (bilan des flux de \coo entrant et sortant
 %Elles augmentent jusqu'à atteindre \SI{5.19(451)}{\uml}
 %Concernant l'ENE (bilan des flux de \coo entrant et sortant), elle augmente en 2013 jusque \SI{5.19(451)}{\uml}, avec un maximum en juin, avant de diminuer jusqu'à la fin de l'année.
 Cependant, cette baisse est moins uniforme que celle des deux flux précédents, avec notamment une augmentation de l'ENE entre juillet et août 2013.
-%Ceci étant, il faut également noter les valeurs importantes de la déviation standard particulièrement en juin et en août.
+%Ceci étant, il faut également noter les valeurs importantes de l'écart type particulièrement en juin et en août.
 En 2014, l'ENE maximum est atteinte en juillet avec \SI{5.79(277)}{\uml}.
 %Cette baisse est cependant plus homogène qu'en 2013.
 Les valeurs moyennes annuelles de l'ENE sont très proches et sont de \SI{2.85(305)}{\uml} pour 2013 et \SI{2.93(277)}{\uml} pour 2014.
-À noter également que pour l'ensemble des flux, la déviation standard augmente avec les valeurs mesurées.
+À noter également que pour l'ensemble des flux, l'écart type augmente avec les valeurs mesurées.
 
 %\subsubsection{Le \chh}
 
@@ -491,28 +502,28 @@ Les valeurs moyennes maximales atteignent \num{0.078} en 2013 et \SI{0.196}{\uml
 \begin{figure}
 \centering
 \includegraphics[width=1.15\textwidth, center]{chap3/CH4_evolution_avg}
-\caption{Évolution des flux de \chh moyens sur cinq placettes entre mars 2013 et février 2015. Les barres d'erreur représentent la déviation standard.}
+\caption{Évolution des flux de \chh moyens sur cinq placettes entre mars 2013 et février 2015. Les barres d'erreur représentent l'écart type.}
 \label{fig:CH4_evolution_avg}
 \end{figure}
 
 %\subsubsection{Le Carbone Organique Dissous (COD)}
 
 
-\subsubsection{Relations entre flux gazeux et facteurs contrôlants}
+\subsubsection{Relations entre flux gazeux et variables environnementales}
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{chap3/Fl_FC}
-\caption{Relations entre les flux de gaz (exprimés en \si{\uml}) et une sélection de facteurs contrôlants : l'indice de végétation à droite (IV, sans unité), le niveau de la nappe d'eau au milieu (cm) et la température de l'air (Tair en \si{\degreeCelsius})}
+\caption{Relations entre les flux de gaz (exprimés en \si{\uml}) et une sélection de variables environnementales : l'indice de végétation à droite (IV, sans unité), le niveau de la nappe d'eau au milieu (cm) et la température de l'air (Tair en \si{\degreeCelsius})}
 \label{fig:Fl_FC}
 \end{figure}
 
 Comme précisé précédemment, le niveau de la nappe d'eau a très peu varié pendant les deux années de mesures, hormis un faible étiage d'août à octobre 2013.
-De ce fait aucune relation claire n'est identifiable entre les flux et le niveau de la nappe que ce soit pour le \coo (PPB et RE) ou le \chh (Figure~\ref{fig:Fl_FC}--B,E et H).
-La relation entre les flux de carbone (PPB et Re) et la température de l'air est de type exponentielle (Figure~\ref{fig:Fl_FC}--C et F).
+De ce fait aucune relation claire n'est identifiable entre les flux et le niveau de la nappe que ce soit pour le \coo (PPB et RE) ou le \chh (Figure~\ref{fig:Fl_FC}--B,E et H, coefficient de corrélation: r=0,5, r=0,4, et r=-0,3 respectivement).
+La relation entre les flux de carbone (PPB et Re) et la température de l'air est de type exponentielle (Figure~\ref{fig:Fl_FC}--C et F, r=0,7 pour les deux).
 %Le décrivent une tendance exponentielle.
-Une tendance similaire est visible entre les flux de PPB et l'indice de végétation (IV), et dans une moindre mesure pour RE et \chh (Figure~\ref{fig:Fl_FC}--A,D et G).
-Pour le \chh, aucune tendance n'est visible avec la température ou le niveau de la nappe, même si pour ce dernier il semble y avoir un maximum d'émission entre 0 et \SI{-10}{\centi\metre}.
+Une tendance similaire est visible entre les flux de PPB et l'indice de végétation (IV), et dans une moindre mesure pour RE et \chh (Figure~\ref{fig:Fl_FC}--A,D et G, r=0,4, r=0,5 et r=0,5 respectivement).
+Pour le \chh, aucune tendance n'est visible avec la température (r=0,2) ou le niveau de la nappe, même si pour ce dernier il semble y avoir un maximum d'émission entre 0 et \SI{-10}{\centi\metre}.
 Les flux de \chh montrent une tendance exponentielle avec l'indice de végétation.
 
 L'ensemble de ces observations sont cohérentes avec les résultats des ACP (Annexe~\ref{sec:carbiodiv}).
@@ -581,7 +592,7 @@ Par ailleurs son AIC est plus faible que pour l'équation précédente : 80 (Tab
 Les résidus de cette équation semblent répartis de façon moins homogène que précédemment.
 Avec notamment un resserrement des points autour de zéro à l'exception d'un point de valeur supérieure à \num{4} (Figure~\ref{fig:mdl_GPP_TairIV}-b).
 Le biais reste malgré tout faible au regard de l'amélioration apportée.
-Aucune tendance claire ne se dégage des résidus lorsqu'ils sont mis en relation avec des facteurs contrôlant tels que les recouvrements végétaux (que ce soit celui des sphaignes ou des herbacées), ou le niveau de la nappe d'eau (Figure~\ref{fig:mdl_GPP_TairIV}--c,d,e).
+Aucune tendance claire ne se dégage des résidus lorsqu'ils sont mis en relation avec des variables telles que les recouvrements végétaux (que ce soit celui des sphaignes ou des herbacées), ou le niveau de la nappe d'eau (Figure~\ref{fig:mdl_GPP_TairIV}--c,d,e).
 Comme précédemment, la NRMSE de la PPB, de \SI{19}{\percent}, est du même ordre de grandeur que celle de PPBsat (Figure~\ref{fig:mdl_GPP_TairIV}--f).
 La NRMSE de PPBsat et PPB diminue avec la prise en compte de l'indice de végétation lors de la calibration.
 En revanche, l'évaluation sur les données de test de ce dernier modèle montre une NRMSE importante (\SI{58}{\percent}), supérieure à celle du modèle ne prenant pas en compte la végétation (Figure~\ref{fig:mdl_GPP_TairIV}--h).
@@ -724,7 +735,7 @@ Les paramètres des différentes équations sont présentés dans le tableau~\re
 %\label{fig:CH4_T}
 %\end{figure}
 
-Les relations entre les facteurs contrôlants mesurés et les flux de \chh sont moins claires que celles concernant le \coo.
+Les relations entre les variables environnementales mesurées et les flux de \chh sont moins claires que celles concernant le \coo.
 La corrélation la plus importante est liée à la végétation (Figure~\ref{fig:Fl_FC}).
 Les flux de \chh ne montrent pas de tendance à augmenter de façon exponentielle avec la température de l'air.
 Cependant cette relation se renforce d'autant plus que l'on utilise des températures mesurées à forte profondeur (Figure~\ref{fig:CH4_T}).
@@ -741,7 +752,7 @@ F_{CH_{4}} = a*exp(b*IV)
 \end{equation}
 
 Avec les données acquises, l'indice de végétation est le meilleur prédicteur (Figure~\ref{fig:CH4_mdl}), car il explique \SI{78}{\percent} de la variabilité des flux \chh avec une NRMSE de \SI{32}{\percent} (Figure~\ref{fig:CH4_mdl}--a).
-Aucune tendance ne semble se dégager entre les résidus de cette équation et les facteurs contrôlants mesurés (Figure~\ref{fig:CH4_mdl}--d,e,f).
+Aucune tendance ne semble se dégager entre les résidus de cette équation et les variables mesurées (Figure~\ref{fig:CH4_mdl}--d,e,f).
 
 L'évaluation de cette équation montre une tendance à sous-estimer les flux de \chh et une NRMSE qui double par rapport à la phase de calibration en atteignant \SI{68}{\percent} (Figure~\ref{fig:CH4_mdl}--c).
 Les détails de l'estimation des paramètres de l'équation~\ref{eq:CH4_H} sont visibles dans le tableau~\ref{table:mdl_par} sous le nom FCH4.
@@ -768,21 +779,21 @@ Les détails de l'estimation des paramètres de l'équation~\ref{eq:CH4_H} sont 
 \begin{figure}[!hbt]
 \centering
 \includegraphics[width=1\textwidth, center]{chap3/BdC_GPP_interp}
-\caption{Flux de \coo interpolé à l'heure à partir de PPB-1 (en haut) et PPB-2 (en bas). Les points rouges représentent les moyennes des mesures mensuelles et leur déviation standard}
+\caption{Flux de \coo interpolé à l'heure à partir de PPB-1 (en haut) et PPB-2 (en bas). Les points rouges représentent les moyennes des mesures mensuelles et leur écart type}
 \label{fig:BdC_GPP_interp}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth, center]{chap3/BdC_ER_interp}
-\caption{Flux de \coo interpolé à l'heure à partir de RE-1 (en haut), RE-2 (au milieu) et RE-3 (en bas). Les points rouges représentent les moyennes des mesures mensuelles et leur déviation standard}
+\caption{Flux de \coo interpolé à l'heure à partir de RE-1 (en haut), RE-2 (au milieu) et RE-3 (en bas). Les points rouges représentent les moyennes des mesures mensuelles et leur écart type}
 \label{fig:BdC_ER_interp}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth, center]{chap3/CH4_BdCitp_IVcov}
-\caption{Flux de \coo interpolé à partir de FCH4. Les points rouges représentent les moyennes des mesures mensuelles et leur déviation standard}
+\caption{Flux de \chh interpolé à partir de FCH4. Les points rouges représentent les moyennes des mesures mensuelles et leur écart type}
 \label{fig:BdC_CH4_interp}
 \end{figure}
 
@@ -1032,56 +1043,56 @@ Le modèle RE-3 a des valeurs plus faibles et une distribution plus homogène de
 
 
 La classification hiérarchique a permis de distinguer 4 groupes de végétation (Figure~\ref{fig:tree}).
-Dans le groupe Mousse, la strate muscinale est majoritaire avec un recouvrement moyen de \SI{91}{\percent}, et des recouvrements inférieurs à \num{35} et \SI{15}{\percent} pour les strates herbacées et arbustives respectivement (Figure~\ref{fig:distrib_grpveg}).
-Le groupe Mix est le plus homogène avec un recouvrement moyen des strates muscinales et arbustives de \num{63} et \SI{58}{\percent}.
+Dans le groupe Bryophytes, la strate muscinale est majoritaire avec un recouvrement moyen de \SI{91}{\percent}, et des recouvrements inférieurs à \num{35} et \SI{15}{\percent} pour les strates herbacées et arbustives respectivement (Figure~\ref{fig:distrib_grpveg}).
+Le groupe Hétérogène est le plus homogène avec un recouvrement moyen des strates muscinales et arbustives de \num{63} et \SI{58}{\percent}.
 C'est également le groupe dans lequel il y a le moins d'herbacées (\SI{24}{\percent}).
-Dans le groupe Herbe, la strate herbacée est majoritaire avec un recouvrement moyen de \SI{63}{\percent}, la strate arbustive est moins présente (\SI{19}{\percent} en moyenne) et la strate muscinale est absente ($\approx$\SI{1}{\percent}).
-La strate muscinale est également absente, dans le groupe Arbuste ($\approx$\SI{1}{\percent}), dans lequel la strate herbacée à un recouvrement de \SI{33}{\percent} et la strate arbustive de \SI{65}{\percent}.
+Dans le groupe Graminoïde, la strate herbacée est majoritaire avec un recouvrement moyen de \SI{63}{\percent}, la strate arbustive est moins présente (\SI{19}{\percent} en moyenne) et la strate muscinale est absente ($\approx$\SI{1}{\percent}).
+La strate muscinale est également absente, dans le groupe Chaméphyte ligneux ($\approx$\SI{1}{\percent}), dans lequel la strate herbacée à un recouvrement de \SI{33}{\percent} et la strate arbustive de \SI{65}{\percent}.
 
 Les flux, calculés pour chaque groupe à partir des même équations que celles utilisées à l'échelle de l'écosystème entier, ont des NRMSE plus importantes : de \num{41} à \SI{66}{\percent} pour RE-1 et RE-3 et de \num{39} à \SI{65}{\percent} pour PPB-1 et PPB-2 (Tableau~\ref{table:flux_grp}).
 
 Les flux de RE estimés en regroupant les placettes selon leur végétation sont du même ordre de grandeur que ceux estimés pour l'ensemble de l'écosystème : entre \num{975(648)} et \SI{1453(740)}{\gcma} pour RE-1 et RE-3 (Tableau~\ref{table:flux_grp}).
-Les groupes Mix et Arbuste ont des flux similaires pour les deux modèles : \num{1365(670)} et \SI{1237(582)}{\gcma} pour RE-1 et \num{1393(681)} et \SI{1274(576)}{\gcma} pour RE-3.
+Les groupes Hétérogène et Chaméphyte ligneux ont des flux similaires pour les deux modèles : \num{1365(670)} et \SI{1237(582)}{\gcma} pour RE-1 et \num{1393(681)} et \SI{1274(576)}{\gcma} pour RE-3.
 Ces flux sont les plus proches de ceux estimés à l'échelle de l'écosystème (\num{1286(231)} et \SI{1261(164)}{\gcma} pour RE-1 et RE-3).
-La prise en compte de la végétation (RE-3) fait diminuer fortement le flux estimé pour le groupe Herbe dont la RE passe de \num{1453(740)} à \SI{1115(455)}{\gcma}.
-Parmi l'ensemble des groupes, le groupe Mousse à la RE la plus faible quel que soit le modèle considéré : \num{975(648)} et \SI{1023(439)}{\gcma} respectivement pour RE-1 et RE-3.
+La prise en compte de la végétation (RE-3) fait diminuer fortement le flux estimé pour le groupe Graminoïde dont la RE passe de \num{1453(740)} à \SI{1115(455)}{\gcma}.
+Parmi l'ensemble des groupes, le groupe Bryophytes à la RE la plus faible quel que soit le modèle considéré : \num{975(648)} et \SI{1023(439)}{\gcma} respectivement pour RE-1 et RE-3.
 %Pour la RE les flux sont du même ordre de grandeur que ceux calculés avec l'ensemble des placettes, que ce soit pour RE-1 ou RE-2.
-%Le groupe Mousse a, pour les deux modèles, un flux annuel plus faible que le flux calculé à l'échelle de l'écosystème.
-%Le groupe Arbuste est, quant à lui, le plus proche des flux « écosystèmes » tandis que le groupe Mix est au dessus.
-%L'estimation de la RE du groupe Herbe est supérieure a celle estimée à l'échelle de l'écosystème pour RE-1 et inférieure pour RE-3.
-%La RE du groupe Mousse est inférieur aux autres groupes que ce soit pour RE-1 ou RE-3. 
-%Entre RE-1 et RE-3 les estimations du groupe Herbe diminue de façon importante (\num{-338}) alors qu'elles sont relativement similaire ($\pm$\num{50}) pour les autres groupes.
+%Le groupe Bryophytes a, pour les deux modèles, un flux annuel plus faible que le flux calculé à l'échelle de l'écosystème.
+%Le groupe Chaméphyte ligneux est, quant à lui, le plus proche des flux « écosystèmes » tandis que le groupe Hétérogène est au dessus.
+%L'estimation de la RE du groupe Graminoïde est supérieure a celle estimée à l'échelle de l'écosystème pour RE-1 et inférieure pour RE-3.
+%La RE du groupe Bryophytes est inférieur aux autres groupes que ce soit pour RE-1 ou RE-3. 
+%Entre RE-1 et RE-3 les estimations du groupe Graminoïde diminue de façon importante (\num{-338}) alors qu'elles sont relativement similaire ($\pm$\num{50}) pour les autres groupes.
 
 Concernant la PPB, les estimations des modèles calibrés par groupes sont inférieures à celles calculées à l'échelle de l'écosystème.
 Ces relations sont à relativiser en considération des fortes incertitudes (Tableau~\ref{table:flux_grp}, annexe~\ref{sec:mdl_grp_veg}).
 Ainsi les estimations par groupes de PPB-1 ont des valeurs comprises entre \num{886(501)} et \SI{1065(465)}{\gcma}, contre \SI{1290(400)}{\gcma} et les estimation de PPB-2 varient de \num{808(387)} à \SI{1277(642)}{\gcma}, par rapport à \SI{1070(203)}{\gcma} à l'échelle de l'écosystème.
-Seules la PPB du groupe Herbe estimée avec PPB-2 est supérieure aux estimations faites pour l'ensemble des placettes.
-À l'inverse de la RE, l'intégration de la végétation augmente, de \num{1056(682)} à \SI{1277(642)}{\gcma}, le flux du groupe Herbe.
-En revanche, comme pour la RE, le groupe Mousse est celui dont les flux sont les plus faibles (\num{886(501)} et \SI{808(387)}{\gcma} pour PPB-1 et PPB-2).
+Seules la PPB du groupe Graminoïde estimée avec PPB-2 est supérieure aux estimations faites pour l'ensemble des placettes.
+À l'inverse de la RE, l'intégration de la végétation augmente, de \num{1056(682)} à \SI{1277(642)}{\gcma}, le flux du groupe Graminoïde.
+En revanche, comme pour la RE, le groupe Bryophytes est celui dont les flux sont les plus faibles (\num{886(501)} et \SI{808(387)}{\gcma} pour PPB-1 et PPB-2).
 
 Pour la PPB, les estimations de PPB-1 sont systématiquement inférieures à celles réalisées à l'échelle de l'écosystème.
-Pour PPB-2 seul le groupe Herbe à une estimation supérieure.
-Les différences entre PPB-1 et PPB-2 sont plus importantes que celles observées pour RE, même si la plus grande différence (\num{221}) est observée pour le même groupe, le groupe Herbe.
-Le groupe Mix a cependant une différence du même ordre de grandeur (\num{189}), tandis que pour les deux autres groupes cette différence est plus faible (78 et 58 respectivement pour les groupes Mousse et Arbuste).
+Pour PPB-2 seul le groupe Graminoïde à une estimation supérieure.
+Les différences entre PPB-1 et PPB-2 sont plus importantes que celles observées pour RE, même si la plus grande différence (\num{221}) est observée pour le même groupe, le groupe Graminoïde.
+Le groupe Hétérogène a cependant une différence du même ordre de grandeur (\num{189}), tandis que pour les deux autres groupes cette différence est plus faible (78 et 58 respectivement pour les groupes Bryophytes et Chaméphyte ligneux).
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{chap3/distrib_grpveg}
-\caption{Recouvrement végétal moyen par strate (en \si{\percent}) des 4 groupes, les groupes sont nommés en fonction de la végétation majoritaire. Les barres d'erreur représentent la déviation standard.}
+\caption{Recouvrement végétal moyen par strate (en \si{\percent}) des 4 groupes, les groupes sont nommés en fonction de la végétation majoritaire. Les barres d'erreur représentent l'écart type.}
 \label{fig:distrib_grpveg}
 \end{figure}
 
-En termes de bilan de \coo, les groupes Arbuste et Mousse sont ceux qui sont le moins impactés par le choix des modèles (Tableau~\ref{table:bdc_grp}).
-Quand la végétation n'est pas prise en compte pour l'estimation de la RE (modèle RE-1), le groupe Mousse est celui dont le bilan est le moins négatif.
-Quand la végétation est prise en compte (modèle RE-3) c'est le groupe Herbe qui perd le moins de carbone (PPB-1, RE-3) voire qui en stocke (PPB-2, RE-3).
-Les groupes Mix et Arbustes ont des valeurs de bilan généralement proches quand la végétation n'est pas prise en compte dans l'estimation de la PPB.
+En termes de bilan de \coo, les groupes Chaméphyte ligneux et Bryophytes sont ceux qui sont le moins impactés par le choix des modèles (Tableau~\ref{table:bdc_grp}).
+Quand la végétation n'est pas prise en compte pour l'estimation de la RE (modèle RE-1), le groupe Bryophytes est celui dont le bilan est le moins négatif.
+Quand la végétation est prise en compte (modèle RE-3) c'est le groupe Graminoïde qui perd le moins de carbone (PPB-1, RE-3) voire qui en stocke (PPB-2, RE-3).
+Les groupes Hétérogène et Chaméphyte ligneux ont des valeurs de bilan généralement proches quand la végétation n'est pas prise en compte dans l'estimation de la PPB.
 %Les bilans de \coo calculés par groupe de végétations sont présentés dans le tableau~\ref{table:bdc_grp}.
-%On constante que du point de vue de l'ENE les groupes Mousse et Mix sont relativement proche, et que le groupe Arbuste est du même ordre de grandeur bien qu'avec une ENE un peu plus élevée.
-%Le groupe Herbe est le seul groupe présentant une ENE positive, du même ordre de grandeur que les précédentes en valeur absolue.
-%Dans le détail, la RE est la plus forte, supérieure à \SI{1200}{\gcma}, dans les groupes Mix et Arbuste.
-%Elle est plus faible dans les groupes Mousse et Herbe (environ \SI{1000}{\gcma}).
-%Pour la PPB, la valeur la plus faible est dans le groupe Mousse et la plus forte dans le groupe Herbe avec plus de \SI{1300}{\gcma}, soit une différence de plus de \SI{600}{\gcma}.
-%Les groupes Mix et Arbuste sont relativement proches avec des valeurs intermédiaires avoisinant \SI{1000}{\gcma}.
+%On constante que du point de vue de l'ENE les groupes Bryophytes et Hétérogène sont relativement proche, et que le groupe Chaméphyte ligneux est du même ordre de grandeur bien qu'avec une ENE un peu plus élevée.
+%Le groupe Graminoïde est le seul groupe présentant une ENE positive, du même ordre de grandeur que les précédentes en valeur absolue.
+%Dans le détail, la RE est la plus forte, supérieure à \SI{1200}{\gcma}, dans les groupes Hétérogène et Chaméphyte ligneux.
+%Elle est plus faible dans les groupes Bryophytes et Graminoïde (environ \SI{1000}{\gcma}).
+%Pour la PPB, la valeur la plus faible est dans le groupe Bryophytes et la plus forte dans le groupe Graminoïde avec plus de \SI{1300}{\gcma}, soit une différence de plus de \SI{600}{\gcma}.
+%Les groupes Hétérogène et Chaméphyte ligneux sont relativement proches avec des valeurs intermédiaires avoisinant \SI{1000}{\gcma}.
 
 
 
@@ -1092,10 +1103,10 @@ Les groupes Mix et Arbustes ont des valeurs de bilan généralement proches quan
 %\label{table:bdc_grp}
 %\begin{tabular}{llll}\toprule
 %groupe & PPB-2 & RE-3 & ENE \\ \midrule
-%Mousse &  \num{714} & \num{1023} & \num{-308} \\
-%Mix &  \num{1045} & \num{1385} & \num{-340} \\
-%Herbe &  \num{1323} & \num{1057} & \num{266} \\
-%Arbuste &  \num{1002} & \num{1262} & \num{-260} \\
+%Bryophytes &  \num{714} & \num{1023} & \num{-308} \\
+%Hétérogène &  \num{1045} & \num{1385} & \num{-340} \\
+%Graminoïde &  \num{1323} & \num{1057} & \num{266} \\
+%Chaméphyte ligneux &  \num{1002} & \num{1262} & \num{-260} \\
 %\bottomrule
 %\end{tabular}
 %\end{table}
@@ -1108,15 +1119,15 @@ Les groupes Mix et Arbustes ont des valeurs de bilan généralement proches quan
 & \multicolumn{3}{c}{RE} &  \multicolumn{3}{c}{PPB} \\ \cmidrule(lr){2-4} \cmidrule(lr){5-7} 
 groupe & valeur & R\textsuperscript{2} & NRMSE & valeur & R\textsuperscript{2} & NRMSE\\ \midrule
 & \multicolumn{3}{l}{RE-1} &  \multicolumn{3}{l}{PPB-1} \\
-Mousse &  \num{975} & \num{0.22} & \num{66.48} & \num{886} & \num{0.42} & \num{56.54} \\
-Mix &  \num{1365} & \num{0.58} & \num{49.09} & \num{1065} & \num{0.56} & \num{43.70}  \\
-Herbe &  \num{1453} & \num{0.56} & \num{50.93}  & \num{1056} & \num{0.42} & \num{64.66} \\
-Arbuste &  \num{1237} & \num{0.49} & \num{47.02} & \num{895} & \num{0.31} & \num{58.86}  \\ [+1ex]
+Bryophytes &  \num{975} & \num{0.22} & \num{66.48} & \num{886} & \num{0.42} & \num{56.54} \\
+Hétérogène &  \num{1365} & \num{0.58} & \num{49.09} & \num{1065} & \num{0.56} & \num{43.70}  \\
+Graminoïde &  \num{1453} & \num{0.56} & \num{50.93}  & \num{1056} & \num{0.42} & \num{64.66} \\
+Chaméphyte ligneux &  \num{1237} & \num{0.49} & \num{47.02} & \num{895} & \num{0.31} & \num{58.86}  \\ [+1ex]
 & \multicolumn{3}{l}{RE-3} &  \multicolumn{3}{l}{PPB-2} \\
-Mousse &  \num{1023} & \num{0.68} & \num{42.91} & \num{808} & \num{0.58} & \num{47.92} \\
-Mix &  \num{1393} & \num{0.58} & \num{48.88} & \num{876} & \num{0.65} & \num{38.93}  \\
-Herbe &  \num{1115} & \num{0.72} & \num{40.84}  & \num{1277} & \num{0.65} & \num{50.30} \\
-Arbuste &  \num{1274} & \num{0.53} & \num{45.25} & \num{953} & \num{0.46} & \num{52.14}  \\
+Bryophytes &  \num{1023} & \num{0.68} & \num{42.91} & \num{808} & \num{0.58} & \num{47.92} \\
+Hétérogène &  \num{1393} & \num{0.58} & \num{48.88} & \num{876} & \num{0.65} & \num{38.93}  \\
+Graminoïde &  \num{1115} & \num{0.72} & \num{40.84}  & \num{1277} & \num{0.65} & \num{50.30} \\
+Chaméphyte ligneux &  \num{1274} & \num{0.53} & \num{45.25} & \num{953} & \num{0.46} & \num{52.14}  \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -1126,7 +1137,7 @@ Arbuste &  \num{1274} & \num{0.53} & \num{45.25} & \num{953} & \num{0.46} & \num
 %\caption{Bilan des flux de \coo en \si{\gcma}, en utilisant PPB-2 et RE-3}
 %\label{table:bdc_grp}
 %\begin{tabular}{llllll}  \cmidrule[0.08em](r){1-5}%\toprule
-%année & Mousse & Mix & Herbe & Arbuste & \\ \cmidrule(r){1-5} %\midrule
+%année & Bryophytes & Hétérogène & Graminoïde & Chaméphyte ligneux & \\ \cmidrule(r){1-5} %\midrule
 %\multicolumn{6}{l}{PPB-1, RE-1} \\
 %%2013 &  \num{-147} & \num{-321} & \num{-436} & \num{-368} & \num{-15}\\
 %%2014 &  \num{-32} & \num{-280} & \num{-357} & \num{-314} & +\num{23} \\
@@ -1149,10 +1160,10 @@ Arbuste &  \num{1274} & \num{0.53} & \num{45.25} & \num{953} & \num{0.46} & \num
 
 \begin{table}
 \centering
-\caption{Bilan de \coo par groupe de végétation (en \si{\gcma}) avec différentes combinaisons de modèles. La dernière colonne représente de bilan de \coo à l'échelle de l'écosystème.}
+\caption{Bilan de \coo par groupe de végétation (en \si{\gcma}) avec différentes combinaisons de modèles.}
 \label{table:bdc_grp}
 \begin{tabular}{lllll}  \toprule
-Modèles & Mousse & Mix & Herbe & Arbuste  \\ \midrule
+Modèles & Bryophytes & Hétérogène & Graminoïde & Chaméphyte ligneux  \\ \midrule
 %\multicolumn{6}{l}{PPB-1, RE-1} \\
 %2013 &  \num{-147} & \num{-321} & \num{-436} & \num{-368} & \num{-15}\\
 %2014 &  \num{-32} & \num{-280} & \num{-357} & \num{-314} & +\num{23} \\
@@ -1257,7 +1268,8 @@ Cette incertitude diminue pour PPB-2 avec l'intégration de l'IV, l'erreur est a
 Ces paramètres sont dans la gamme de ceux rapportés par \citet{june2004} : entre \num{23} et \SI{296.5}{\umle} pour la vitesse de transport des électrons photosynthétique à lumière saturante, entre \num{28.4} et \SI{55.7}{\degreeCelsius} pour la température optimale du transport et entre \num{13.9} et \SI{30.2}{\degreeCelsius} pour la différence de température à laquelle PPBsat vaut e\textsuperscript{-1}.
 Lors de la phase de calibration, l'intégration de l'IV augmente la significativité des estimations et la représentativité des données mesurées.
 
-Lors de l'évaluation et malgré une végétation similaire, l'augmentation de la NRMSE du modèle PPB-2, intégrant l'IV, est supérieure et dépasse (en valeur absolue) celle du modèle PPB-1. l'apport de l'IV dans l'estimation de la PPB n'est donc pas pertinent pour le jeu de données indépendant utilisé.
+Lors de l'évaluation et malgré une végétation similaire, l'augmentation de la NRMSE du modèle PPB-2, intégrant l'IV, est supérieure et dépasse (en valeur absolue) celle du modèle PPB-1. 
+L'apport de l'IV dans l'estimation de la PPB n'est donc pas pertinent pour le jeu de données indépendant utilisé.
 Par ailleurs, l'intégration de l'IV à un effet beaucoup plus important en 2013 (l'estimation du flux diminue de \SI{365}{\gcma}), qu'en 2014 (diminution de \SI{74}{\gcma}).
 %
 %La prise en compte de la végétation, si elle améliore les incertitudes statistiques sur l'estimation des paramètres du modèle, semblent conduire à une sous-estimation de la PPB.
@@ -1267,7 +1279,7 @@ Par ailleurs, l'intégration de l'IV à un effet beaucoup plus important en 2013
 %
 %Après interpolation la différence nette observée entre les modèles PPB-1 et PPB-2 est probablement liée à une sous-estimation des flux par ce dernier.
 
-Les différences observées selon la façon d'estimer la PPB peuvent paraître importante, néanmoins elles sont du même ordre de grandeur que celles rencontrées par \citet{worrall2009} qui compare différentes approches pour modéliser des flux de gaz avec des équations différentes.
+Les différences observées selon la façon d'estimer la PPB peuvent paraître importante, néanmoins elles sont du même ordre de grandeur que celles rencontrées par \citet{worrall2009} qui comparent différentes approches pour modéliser des flux de gaz.
 %Ces différences sont également liées à la valeur élevée des flux qui font que, surtout dans le cas de modèles exponentiels, de faibles variations peuvent avoir des effets importants comme en témoigne l'analyse de sensibilité des paramètres du modèle (Tableau~\ref{table:mdl_sensitiv_BdC}).
 
 L'intégration de la végétation aux modèles d'estimation de la PPB est rarement réalisée \citep{bortoluzzi2006a,gorres2014}, probablement à cause de la difficulté à prendre en compte ce signal.
@@ -1470,7 +1482,7 @@ Ces valeurs sont du même ordre de grandeur que celles mesurées dans des prairi
 %Elles restent cependant sujettes à caution car il est possible que le modèle PPB-2 sous-estime la PPB et donc sur-estime les pertes de carbone par la tourbière (Figure~\ref{fig:BdC_GPP_interp}).
 La tourbière est également une source de carbone plus importante en 2013 (\SI{-301(47)}{\gcma}) qu'en 2014 (\SI{-138(20)}{\gcma}).
 La légère baisse du niveau de la nappe d'eau en 2013 ne se traduit pas par une RE plus importante et cette différence est principalement liée à une hausse de la PPB.
-Cette hausse de la PPB est peut être liée à l'histoire du site : les années précédant les mesures sont sèches et ont pu amoindrir le potentiel de photosynthèse de l'écosystème, notamment de ses plantes pérennes (mousses et arbustes).
+Cette hausse de la PPB est peut être liée à l'histoire du site : les années précédant les mesures sont sèches et ont pu amoindrir le potentiel de photosynthèse de l'écosystème, notamment de ses plantes pérennes (bryophytes et chaméphytes ligneux).
 Ce potentiel en cours de rétablissement pendant le suivi serait donc plus fort en 2014.
 %Par contre le fait que les estimations qui utilisent PPB-2 montrent une source de carbone plus importante en 2013 qu'en 2014 semble cohérent.
 %En effet le peu de baisse du niveau de la nappe d'eau mesuré pendant les deux années de mesure a eu lieu en 2013.
@@ -1496,8 +1508,10 @@ Elles se rapprochent de celles mesurées dans des tourbières de bas-marais d'Am
 
 D'une manière générale, les bilans sont principalement fonction de l'intensité des flux de \coo.
 Le \chh et le COD ont une place marginale en termes de quantité de carbone.
+Malgré tout il faut noter que le méthane a un potentiel de réchauffement global équivalent à 86 fois celui du \coo à l'horizon de 20 ans \citep{myhre2013}.
+Cette caractéristique lui confère une importance élevée vis-à-vis du réchauffement malgré les faibles quantité de carbone émises.
 Ces observations sont cohérentes avec d'autres études comme \citet{bortoluzzi2006a,worrall2009}.
-Cependant si le \chh ne semble pas jouer un rôle majeur sur le bilan de carbone de la tourbière de La Guette, il faut considérer le fait que seul le flux diffusif de \chh a pu être mesuré et estimé (c'est également le cas pour les études citées précédemment).
+Cependant si les quantités de C émise sous forme de \chh sont faibles dans le bilan de carbone de la tourbière de La Guette, il faut considérer le fait que seul le flux diffusif de \chh a pu être mesuré et estimé (c'est également le cas pour les études citées précédemment).
 Les émissions de \chh par ébullition sont exclues du bilan.
 Rarement estimé, ce flux peut représenter 17 à \SI{66}{\percent} d'une émission \citep{gogo2011,christensen2003}, et être potentiellement très fort : plus de \SI{35}{\gcm} par événement \citep{glaser2009}.
 La présence de végétaux vasculaires qui en transportant le \chh dans l'atmosphère diminuent la concentration en \chh dans le sol tendraient cependant à diminuer ce phénomène \citep{chanton2005}.
@@ -1516,7 +1530,7 @@ La présence de végétaux vasculaires qui en transportant le \chh dans l'atmosp
 \label{fig:carte_grpveg}
 \end{figure}
 
-Si quelques placettes proche géographiquement ont des recouvrements végétaux voisins (les placettes p18 et p19 ; p02, p03 et p04 ; p12, p14 et p16) les autres ne présentent pas un tel lien (Figure~\ref{fig:carte_grpveg}).
+Si quelques placettes proches géographiquement ont des recouvrements végétaux voisins (les placettes p18 et p19 ; p02, p03 et p04 ; p12, p14 et p16) les autres ne présentent pas un tel lien (Figure~\ref{fig:carte_grpveg}).
 Par ailleurs, au sein d'une même classe peuvent être rassemblées des placettes très éloignées spatialement, les placettes p01 et p15 par exemple ou les placettes p02 et p17 ou p09 et p20.
 Ceci montre une variabilité spatiale importante du recouvrement végétal mais également que cette variabilité ne semble pas répartie géographiquement, selon un gradient quelconque.
 
@@ -1524,31 +1538,31 @@ Ceci montre une variabilité spatiale importante du recouvrement végétal mais 
 
 L'estimation des flux par groupe de végétation montre que lorsque la strate muscinale est la plus importante, l'intensité des flux est plus faible.
 Cette observation est valable pour la PPB, et est cohérente avec la littérature qui rapporte une productivité plus faible des sphaignes (notamment par rapport aux herbacées) \citep{rydin2013b,beyer2015}. 
-La RE du groupe Mousse est également plus faible que celle des autres groupes.
+La RE du groupe Bryophytes est également plus faible que celle des autres groupes.
 Dans ce cas le niveau élevé de la nappe d'eau et la proportion plus faible de plantes vasculaires, qui permettent l'aération du milieu et la stimulation de la RE par la libération d'exsudats racinaires, peut expliquer la faible intensité du flux.
 
-Les groupes Mix et Arbustes sont proches et sont des sources de carbone importantes quelle que soit la combinaison de modèles.
-La RE de ces groupes est plutôt élevée (> \SI{1200}{\gcma}), et est couplée à une PPB plutôt faible (située entre celle du groupe Mousse et celle du groupe Herbe).
+Les groupes Hétérogène et Chaméphyte ligneux sont proches et sont des sources de carbone importantes quelle que soit la combinaison de modèles.
+La RE de ces groupes est plutôt élevée (> \SI{1200}{\gcma}), et est couplée à une PPB plutôt faible (située entre celle du groupe Bryophytes et celle du groupe Graminoïde).
 Le point commun de ces deux groupes est la proportion de la strate arbustive qui dépasse \SI{50}{\percent}.
 Ceci est cohérent avec la croissance limitée de la strate arbustive (par rapport à la strate herbacée) au cours de la saison de végétation (donc PPB plus faible) \citep{rydin2013b}.
 La Re plus forte peut elle s'expliquer par la présence des racines.
 
-Le groupe Herbe est le plus particulier, son comportement varie de façon importante en fonction des modèles.
+Le groupe Graminoïde est le plus particulier, son comportement varie de façon importante en fonction des modèles.
 C'est le seul groupe dont une des estimations du bilan de \coo est positive (fonction puits).
 Cette observation est contraire à ce que l'on attend.
 En effet notre hypothèse de départ relie un envahissement par une végétation vasculaire à une augmentation de la RE, causée par une meilleure aération du milieu, et donc à un bilan qui tendrait davantage à être une source de carbone.
-Cette augmentation de la RE n'est pas visible, le groupe Herbe est même celui pour lequel la RE est la plus faible.
+Cette augmentation de la RE n'est pas visible, le groupe Graminoïde est même celui pour lequel la RE est la plus faible.
 Pour expliquer cette observation on peut faire l'hypothèse que le potentiel de photosynthèse des plantes pérennes, notamment des sphaignes, n'ait pas encore retrouvé son maximum après avoir été affaibli pendant les années sèches précédant les mesures.
 Cette hypothèse est cohérente avec une photosynthèse forte de la Molinie telle qu'on peut l'observer (Tableau~\ref{table:flux_grp}).
-La PPB de la strate herbacée (principalement la Molinie) n'est pas ou peu limitée que ce soit par l'histoire du site (c'est une plante annuelle).
+La PPB de la strate herbacée (principalement la Molinie) n'est pas ou peu limitée que ce soit par l'histoire du site.
 
 Par ailleurs, la strate herbacée n'est pas ou peu affectée par le niveau élevé de la nappe d'eau.
 %ou le niveau de la nappe.
-En effet les espèces de cette strate (\textit{Molinia caerulea} et \textit{Eriophorum augustifolium})ont la capacité d'échanger du gaz de leur racines à l'atmosphère grâce à l'aérenchyme, ce qui leur permet de se développer dans des milieux inondés \citep{taylor2001,rydin2013c}.
+En effet les espèces de cette strate (\textit{Molinia caerulea} et \textit{Eriophorum augustifolium}) ont la capacité d'échanger du gaz de leur racines à l'atmosphère grâce à l'aérenchyme, ce qui leur permet de se développer dans des milieux inondés \citep{taylor2001,rydin2013c}.
 Il n'est donc pas surprenant que la Molinie se soit développée sans difficulté apparente pendant les deux années.
 %Pour expliquer cette observation on peut faire l'hypothèse que le niveau de nappe élevé limite la respiration, notamment hétérotrophe, la respiration hétérotrophe étant moins limitée par la capacité de la strate herbacée à échanger du gaz de leur racines à l'atmosphère grâce à l'aérenchyme \citep{taylor2001,rydin2013c}.
 %De la même manière la PPB ne serait pas ou peu limitée par le niveau de la nappe d'eau, ce qui est cohérent avec les observations de terrain montrant un développement de la Molinie aussi important en 2013 qu'en 2014.
-%Le bilan du groupe Herbe s'expliquerait donc par le niveau élevé de la nappe d'eau limitant la respiration hétérotrophe tout en ne limitant pas, ou moins la PPB.
+%Le bilan du groupe Graminoïde s'expliquerait donc par le niveau élevé de la nappe d'eau limitant la respiration hétérotrophe tout en ne limitant pas, ou moins la PPB.
 %Il n'est cependant par sure que sur le long terme cette situation perdure.
 
 \subsubsection{Quantification de la variabilité spatiale}

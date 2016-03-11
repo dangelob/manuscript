@@ -15,7 +15,7 @@ Ce chapitre porte sur la variabilité journalière de la RE et plus particulièr
 Le premier point est lié à l'utilisation, dans la littérature, de températures mesurées à différentes profondeurs pour représenter RE.
 Il s'avère que la relation entre la RE et la température est fonction de la profondeur \citep{pavelka2007,graf2008}.
 Le choix de cette profondeur a une importance limitée à l'échelle d'une année et des mesures à faible fréquence.
-En revanche, il l'est davantage pour des mesures à plus haute fréquence et à une échelle journalière, du fait que les vagues de chaleur mettent un certain temps à diffuser dans le sol.
+En revanche, il l'est davantage pour des mesures à plus haute fréquence et à une échelle journalière, du fait du temps de propagation de la chaleur dans le sol.
 À ces échelles la synchronisation des variations peut s'avérer pertinente. 
 
 Le second point explore la sensibilité à la température de la RE entre le jour et la nuit.
@@ -43,14 +43,22 @@ Ces résultats ont fait l'objet d'écriture d'un article actuellement soumis à 
 
 \section{Abstract}
 
+%The temperature dependence of Ecosystem Respiration (ER) is often assessed based on the temperature of one specific layer.
+%Air temperature or temperatures in the first ten centimetres of the soil profile are the most frequently used temperatures in models.
+%However, previous studies showed that the relationship between ER and temperature is depth dependent, making depth selection for temperature measurements an important issue, especially at short time-scales.
+%The present study explores one possible way to assess this relationship by synchronising the ER and temperature signals and to test if the relationship between ER and temperature differs between daytime and nighttime.
+%To do so, ER measurements were undertaken in 2013 in four \textit{Sphagnum}-peatlands across France using the closed chamber method. 
+%The ER fluxes were measured hourly during 72 hours in each of four replicates in each site.
+%Synchronised data were determined for each depth (from surface to 30 cm depth) by selecting the time-delay leading to the best correlation between ER and soil temperatures and ER was then modelled.
+%Our results showed that: (i) the delay between ER and soil temperature is greater in peat than in mineral soils; (ii) at a daily time-scale synchronisation can improve the ER representation using soil temperatures; (iii) daytime ER sensitivity is higher than nighttime when spatial variability between replicates is low and when temperature amplitude is large.
 The temperature dependence of Ecosystem Respiration (ER) is often assessed based on the temperature of one specific layer.
 Air temperature or temperatures in the first ten centimetres of the soil profile are the most frequently used temperatures in models.
 However, previous studies showed that the relationship between ER and temperature is depth dependent, making depth selection for temperature measurements an important issue, especially at short time-scales.
 The present study explores one possible way to assess this relationship by synchronising the ER and temperature signals and to test if the relationship between ER and temperature differs between daytime and nighttime.
 To do so, ER measurements were undertaken in 2013 in four \textit{Sphagnum}-peatlands across France using the closed chamber method. 
 The ER fluxes were measured hourly during 72 hours in each of four replicates in each site.
-Synchronised data were determined for each depth (from surface to 30 cm depth) by selecting the time-delay leading to the best correlation between ER and soil temperatures and ER was then modelled.
-Our results showed that: (i) the delay between ER and soil temperature is greater in peat than in mineral soils; (ii) at a daily time-scale synchronisation can improve the ER representation using soil temperatures; (iii) daytime ER sensitivity is higher than nighttime when spatial variability between replicates is low and when temperature amplitude is large.
+Synchronisation between ER and T signal were determined for each depth (from surface to 30 cm depth) by selecting the time-delay leading to the best correlation between ER and soil temperatures and ER was then modelled.
+Our results showed that: (i) the delay between ER and soil temperature is greater in peat than in mineral soils; (ii) at a daily time-scale synchronisation can improve the model representation using soil temperatures; (iii) daytime ER sensitivity to temperature is higher than nighttime when spatial variability between replicates is low and when temperature amplitude is large.
 
 \section{Introduction}
 At a global scale, Ecosystem Respiration (ER) and photosynthesis are the most important fluxes between the atmosphere and the biosphere, accounting for 98 and 123 PgC yr $^{-1}$, respectively \citep{Bond-Lamberty2010,Beer2010}. 
@@ -63,27 +71,75 @@ Peatlands are efficient C storage ecosystems.
 They cover only 3\,\% of the global terrestrial area, but contain from 270 to 455 Pg C as SOC, i.e. from 10 to 30\,\% of the world's soil C \citep{gorham1991, turunen2002}.
 Thus, peatlands are considered as a “hot spots” for SOC storage, and their evolution under current environmental changes deserves attention.
 
+%As in many other terrestrial ecosystems, many factors affect ER variability in peatlands: temperature, soil water content, vegetation, and substrate supply \citep{luo2006}.
+%All these factors are thought to be affected by global change, with unknown consequences on the C balance \citep{limpens2008}.
+%%Part of this uncertainty stems from the different formulations used to model the temperature sensitivity.
+%ER is often related to temperature: either to air temperature \citep[e.g.,][]{bortoluzzi2006a}, or soil temperature.
+%%In the latter situation, different soil depths are used:
+%The most commonly used soil temperatures are those at -5 cm \citep{ballantyne2014,gorres2014} and -10 cm \citep{kim1992,zhu2015}.
+%%5 cm for \citet{Ballantyne2014,Gorres2014}, 10 cm for \citet{Kim1992,Zhu2015}.
+%In some studies, different depths are used and the selected one depends on the goodness-of-fit \citep{gunther2014, zhu2015}.
+%%Multiple depths are also used, the depth being chosen from the best goodness of fit \citep{Gunther2014, Zhu2015}.
+%All these studies use the chamber method to measure gas fluxes.
+%Even though most studies use -5 cm soil temperature, no clear consensus exists.
+%In addition \citet{pavelka2007} and \citet{graf2008} showed that the relationship between ER and temperature is depth dependent since heat transfer in the soil profile is not instantaneous and leads to a time-delay between the temperature and the ER signals.
+%%Time-delay might also lead to bias in Q$_{10}$ estimations which is widely use to describe the relationship between ER and the temperature despite its drawback \citep{Phillips2011, Davidson2006}.\textbf{(expliquer mieux avantages/inconvenients)}
+%The relationship between ER and temperature is often described using the Q$_{10}$ indicator, which represents the proportional increase of a reaction rate due to a 10\textdegree C rise in temperature.
+%However, even if the Q$_{10}$ seems coherent at a global scale \citep{mahecha2010}, reported values show a significant variability at the ecosystem level \citep{graf2008}.
+%Because the measured Q$_{10}$ are not linked to a single reaction but to multiple processes, numerous issues arise \citep{davidson2006}.
+%Among them are the time-scale considered \citep{curielyuste2004}, the depth \citep{graf2008} and the time-delays between ER and soil temperatures \citep{phillips2011}.
+%One way to deal with the time-delays might be data synchronisation according to \citet{pavelka2007}.
+%Another issue is the difference between the daytime and nighttime ER relationship with temperature. 
+%\citet{juszczak2012}, for example, showed that there are significant differences between ER modelled with daytime and nighttime data.
+%Assessing these differences may be important when working at a daily timescale and when treating data from eddy-covariance measurements.
+%
+%Based on these previous studies, we expected that time-delays in \textit{Sphagnum}-dominated peatlands would be significant, even in the first 10 centimetres depth and that they would lead to a better description of observed data once taken into account, especially through data synchronisation.
+%To our knowledge no studies have explored the time-delay between ER and soil temperature in peatlands yet.
+%Differences in the ER--temperature relationship between daytime and nighttime datasets were also expected.
+%To test these predictions, ER fluxes, during the growing season in 4 \textit{Sphagnum}-dominated peatlands were measured in 2013.
+%Continuous measurements over 72 hours were carried out in each site using static dark chambers.
+%Air and soil temperature were also monitored.
+%Specifically, the relationship between ER and temperature, measured at different depths in peat was studied and the difference between daytime and nighttime measurements was assessed.
+%
+%The aim of this study was (i) to highlight any time-delay at the daily timescale between ER and soil temperature at different depths in peatlands (ii) to assess the effect of synchronisation between ER and temperature in the representation of the diel ER variations (iii) to use the improved model to assess whether there is a difference between nighttime and daytime ER.
+
 As in many other terrestrial ecosystems, many factors affect ER variability in peatlands: temperature, soil water content, vegetation, and substrate supply \citep{luo2006}.
 All these factors are thought to be affected by global change, with unknown consequences on the C balance \citep{limpens2008}.
-%Part of this uncertainty stems from the different formulations used to model the temperature sensitivity.
-ER is often related to temperature: either to air temperature \citep[e.g.,][]{bortoluzzi2006a}, or soil temperature.
-%In the latter situation, different soil depths are used:
+Among them the temperature affect ER directly (biochemical reaction rates) and indirectly (vegetation, and particularly root growth, transport rates) \citep{luo2006} and is thus largely utilized to model ER.
+Different temperature may be used: either air \citep[e.g.,][]{bortoluzzi2006a}, or soil temperature.
 The most commonly used soil temperatures are those at -5 cm \citep{ballantyne2014,gorres2014} and -10 cm \citep{kim1992,zhu2015}.
-%5 cm for \citet{Ballantyne2014,Gorres2014}, 10 cm for \citet{Kim1992,Zhu2015}.
 In some studies, different depths are used and the selected one depends on the goodness-of-fit \citep{gunther2014, zhu2015}.
-%Multiple depths are also used, the depth being chosen from the best goodness of fit \citep{Gunther2014, Zhu2015}.
-All these studies use the chamber method to measure gas fluxes.
-Even though most studies use -5 cm soil temperature, no clear consensus exists.
-In addition \citet{pavelka2007} and \citet{graf2008} showed that the relationship between ER and temperature is depth dependent since heat transfer in the soil profile is not instantaneous and leads to a time-delay between the temperature and the ER signals.
-%Time-delay might also lead to bias in Q$_{10}$ estimations which is widely use to describe the relationship between ER and the temperature despite its drawback \citep{Phillips2011, Davidson2006}.\textbf{(expliquer mieux avantages/inconvenients)}
+All these studies use the chamber method to measure gas fluxes and even though most studies use -5 cm soil temperature, no clear consensus exists.
+
 The relationship between ER and temperature is often described using the Q$_{10}$ indicator, which represents the proportional increase of a reaction rate due to a 10\textdegree C rise in temperature.
 However, even if the Q$_{10}$ seems coherent at a global scale \citep{mahecha2010}, reported values show a significant variability at the ecosystem level \citep{graf2008}.
-Because the measured Q$_{10}$ are not linked to a single reaction but to multiple processes, numerous issues arise \citep{davidson2006}.
+Because the calculated Q$_{10}$ are not linked to a single reaction but to multiple processes, numerous issues arise \citep{davidson2006}.
+
 Among them are the time-scale considered \citep{curielyuste2004}, the depth \citep{graf2008} and the time-delays between ER and soil temperatures \citep{phillips2011}.
-One way to deal with the time-delays might be data synchronisation according to \citet{pavelka2007}.
+Hence \citet{pavelka2007} and \citet{graf2008} showed that the relationship between ER and temperature is depth dependent since heat transfer in the soil profile is not instantaneous and leads to a time-delay between the temperature and the ER signals.
+One way to deal with the time-delays might be to synchronise ER fluxes and temperature measurements according to \citet{pavelka2007}.
 Another issue is the difference between the daytime and nighttime ER relationship with temperature. 
 \citet{juszczak2012}, for example, showed that there are significant differences between ER modelled with daytime and nighttime data.
 Assessing these differences may be important when working at a daily timescale and when treating data from eddy-covariance measurements.
+
+%As in many other terrestrial ecosystems, many factors affect ER variability in peatlands: temperature, soil water content, vegetation, and substrate supply \citep{Luo2006}.
+%All these factors are thought to be affected by global change, with unknown consequences on the C balance \citep{Limpens2008}.
+%Among these factors, temperature is very often used to model ER.
+%Different temperature may be used: either air \citep[e.g.,][]{bortoluzzi2006a}, or soil temperature.
+%The most commonly used soil temperatures are those at -5 cm \citep{Ballantyne2014,Gorres2014} and -10 cm \citep{Kim1992,Zhu2015}.
+%In some studies, different depths are used and the selected one depends on the goodness-of-fit \citep{Gunther2014, Zhu2015}.
+%All these studies use the chamber method to measure gas fluxes.
+%Even though most studies use -5 cm soil temperature, no clear consensus exists.
+%In addition \citet{Pavelka2007} and \citet{Graf2008} showed that the relationship between ER and temperature is depth dependent since heat transfer in the soil profile is not instantaneous and leads to a time-delay between the temperature and the ER signals.
+%
+%The relationship between ER and temperature is often described using the Q$_{10}$ indicator, which represents the proportional increase of a reaction rate due to a 10\textdegree C rise in temperature.
+%However, even if the Q$_{10}$ seems coherent at a global scale \citep{Mahecha2010}, reported values show a significant variability at the ecosystem level \citep{Graf2008}.
+%Because the calculated Q$_{10}$ are not linked to a single reaction but to multiple processes, numerous issues arise \citep{Davidson2006}.
+%Among them are the time-scale considered \citep{CurielYuste2004}, the depth \citep{Graf2008} and the time-delays between ER and soil temperatures \citep{Phillips2011}.
+%One way to deal with the time-delays might be data synchronisation (synchronisation between ER fluxes and temperature measurements) according to \citet{Pavelka2007}.
+%Another issue is the difference between the daytime and nighttime ER relationship with temperature. 
+%\citet{Juszczak2012}, for example, showed that there are significant differences between ER modelled with daytime and nighttime data.
+%Assessing these differences may be important when working at a daily timescale and when treating data from eddy-covariance measurements.
 
 Based on these previous studies, we expected that time-delays in \textit{Sphagnum}-dominated peatlands would be significant, even in the first 10 centimetres depth and that they would lead to a better description of observed data once taken into account, especially through data synchronisation.
 To our knowledge no studies have explored the time-delay between ER and soil temperature in peatlands yet.
@@ -93,7 +149,7 @@ Continuous measurements over 72 hours were carried out in each site using static
 Air and soil temperature were also monitored.
 Specifically, the relationship between ER and temperature, measured at different depths in peat was studied and the difference between daytime and nighttime measurements was assessed.
 
-The aim of this study was (i) to highlight any time-delay at the daily timescale between ER and soil temperature at different depths in peatlands (ii) to assess the effect of synchronisation between ER and temperature in the representation of the diel ER variations (iii) to use the improved model to assess whether there is a difference between nighttime and daytime ER.
+The aim of this study was (i) to highlight any time-delay at the daily timescale between ER and soil temperature at different depths in peatlands (ii) to assess the effect of synchronisation between ER and temperature in the model representation of the diel ER variations (iii) to use the improved model to assess whether there is a difference between nighttime and daytime ER.
 
 \subsection{Study sites}
 The study was performed on four French \textit{Sphagnum}-dominated peatlands:
@@ -105,7 +161,8 @@ During the measurements the water table level remained constant at to -12, -7, -
 
 \subsection{Data acquisition}
 Fieldwork was conducted between July and October 2013. 
-In each site, four plots (replicates) with similar plant cover were chosen.
+Four plots (replicates) with similar plant cover, were chosen at each site.
+For the most part the plant covers consist of \textit{Sphagnum} spp.
 Four cylindrical PVC collars (diameter: 31 cm, height: 15 cm) were inserted into the peat the day before beginning the measurements.
 For 72 hours, CO$_{2}$ fluxes were measured in the 4 plots once an hour in random order.
 These measurements were undertaken using a closed static chamber (diameter of 30.5 cm, height of 30 cm), with a GMP343 Vaisala probe.
@@ -113,24 +170,18 @@ ER was measured with a transparent chamber covered by an opaque material to avoi
 Inside the chamber the air was homogenized with a fan in order to minimize concentration gradients \citep{pumpanen2004}.
 Measurement lasted a maximum of 5 min with CO$_{2}$ concentration recorded every 5 seconds as well as the relative humidity and the temperature inside the chamber.
 
-In each site a weather station and a data logger were set up near the plots to provide meteorological and environmental data recorded every second: surface temperature (air temperature as close as possible to the surface: 5 cm), peat temperature (at -5, -10, -20 and -30 cm depth), air relative humidity and solar radiation. 
+At each site a weather station and a data logger were set up near the plots to provide meteorological and environmental data recorded every second: air relative humidity, solar radiation, peat temperature (at -5, -10, -20 and -30 cm depth) and surface air temperature.
+This temperature was measured as close as possible considering the sensor and shelter size (below 15~cm). It will be referred as the 0 depth in the figures.
 %These environmental parameters were recorded every second.
 
-After the 72 hours of measurements four peat cores (30 cm height and 15 cm diameter), one for each replicate, were extracted at each site for physico-chemical characterisation.
+After the 72 hours of measurements, at each site and for each replicate, one peat core (30 cm height and 15 cm diameter) was extracted for physico-chemical characterisation.
+The results of these analyses are shown as supplementary materials.
 
 \subsection{Data synchronisation}
 
-The synchronisations between ER fluxes and temperatures were calculated for each depth and time-delays: 
-% were then calculated.
-%To avoid an artificial increase of data observations, no interpolations were made. (\textbf{clarifier phrase précédente})
-The acquisition frequency between temperature and ER were different.
-Thus an average of the temperatures recorded during the ER measurement time was calculated for all depths at the corresponding CO$_{2}$ flux measurement time.
-%Then the temperature averaging procedure was repeated, with shifts of 10 minutes which is a compromise between precision and calculation time.
-%This was performed up to 24 hours.
-Then the temperature averaging procedure was repeated at 10-minute increments, until a 24 hour shift.
-The 10-minute step was a compromise between precision and calculation time.
-%With this procedure, the number of observation per site was constant.(\textbf{clarifier phrase précédente})
-Next a correlation coefficient was calculated for each time step and temperature measurement depth.
+For each ER measurement, an average of the recorded temperature during the measurement time is made for each temperature measurement depth.
+Then this averaging procedure was repeated, multiple times, with a 10 minutes shift between the ER and temperature data series, until a 24 hour time step was reach.
+Next a correlation coefficient was calculated between ER and temperature for each time step and temperature measurement depth.
 Finally the synchronisation was determined for each depth, by selecting the time-delay corresponding to the highest correlation coefficient.
 Negative correlations caused by the phase shift were discarded.
 
@@ -141,13 +192,15 @@ Three widely used models \citet{fang2001} were implemented to study the relation
 \begin{align}
 ER & = \alpha + \beta T \label{eq_lin}\\
 ER & = \alpha e^{\beta T} ; Q_{10}=e^{10*\beta} \label{eq_exp}\\
-ER & = \alpha e^{\frac{-Ea}{RT}} \label{eq_arr}
+ER & = \alpha e^{\frac{-\beta}{RT}} \label{eq_arr}
 %ER & = ae^{\frac{-b}{T-c}} \label{eq_lt}
 \end{align}
 
 
 %Linearization  was used over non-linear regression for robustness as measurements at daily scale leads to important ER variability relatively to the temperatures (Figure~\ref{fig:er_tair_tpeat}).
 ER was estimated using air temperature, soil temperatures at -5, -10, -20 and -30 cm depth with both non-synchronised and synchronised datasets.
+$\alpha$ and $\beta$ are the fitted parameters, ER the Ecosystem Respiration, T the temperature at a given depth, R the ideal gaz constant.
+In the Arrhenius equation, $\beta$ represent the activation energy.
 Calculations were implemented in R, and modelled data were adjusted to measured data using Ordinary Least Squares (OLS).
 The goodness-of-fit was estimated by calculating the regression coefficient (R$^{2}$) and the root mean square error normalized by the mean (NRMSE).
 
@@ -155,8 +208,8 @@ The goodness-of-fit was estimated by calculating the regression coefficient (R$^
 
 To test whether the relationship between ER and temperature differed during daytime and nighttime, the dataset was split into two groups which were then compared.
 The data between 10 am and 5 pm were considered as representative of the day and data between 11 pm and 6 am as representative of the night.
-Only the air temperature and the -5 cm depth peat temperature (with synchronised and non-synchronised data) were investigated as they provide the best ER representation.
-The data for day and night were centred to account for natural differences in measurement, since: during the day both temperature and ER are higher than in the night.
+Only the air temperature and the -5 cm depth peat temperature (with synchronised and non-synchronised data) were investigated as they lead the the highest R$^{2}$ and the lowest NRMSE.
+The data for day and night were centred (each data point was subtracted by the mean for each site and each replicate) to account for natural differences in measurement, since: during the day both temperature and ER are higher than in the night.
 %Finally a paired student test was applied on the ratio between the centred ER and the centred temperature.
 Using these centred data, ratios between ER and temperatures were calculated.
 Finally a paired Student's t test was applied on the mean of the replicate for each site and each temperature to assess the significance of the differences between day and night measurements.
@@ -190,14 +243,14 @@ Then the peat was crushed and C, H, N and S analyses were performed with an elem
 
 \subsection{Air temperature and ER variability}
 
-Mean surface air temperatures were about 14-15\,\textdegree C for all sites, except for LGT which was 20.8 $\pm$ 7.4\,\textdegree C, (Figure~\ref{fig:er_tair_tpeat} -- H).
-The lowest mean temperature and amplitude were found at BDZ: 14.4 $\pm$ 3.3\,\textdegree C (Figure~\ref{fig:er_tair_tpeat} -- E).
+During the period of experiments, mean surface air temperatures were about 14-15\,\textdegree C for all sites, except for LGT which was 20.8 $\pm$ 7.4\,\textdegree C, (Figure~\ref{fig:er_tair_tpeat} -- H).
+The lowest mean temperature and standard deviation were found at BDZ: 14.4 $\pm$ 3.3\,\textdegree C (Figure~\ref{fig:er_tair_tpeat} -- E).
 In LDM and FRN, the mean surface air temperatures were respectively 14.9 $\pm$ 8.7\,\textdegree C and 15.0 $\pm$ 10.3\,\textdegree C (Figure~\ref{fig:er_tair_tpeat} -- F, G)
 Surface air temperature was the highest in FRN.
 %FRN surface air temperature amplitude was the highest among all sites.
 %Temperature range was the largest in FRN: 15.0 $\pm$ 10.4\,\textdegree C (Figure~\ref{fig:er_tair_tpeat} -- F).
 
-At -5 cm depth, BDZ and LGT had lower mean temperatures than at the surface: 14.1 $\pm$ 1.5\,\textdegree C and 20.3 $\pm$ 1.7\,\textdegree C respectively, whereas the opposite was observed in FRN and LDM with 16.3 $\pm$ 2.4\,\textdegree C and 15.9 $\pm$ 1.0\,\textdegree C respectively.
+At -5 cm depth, BDZ and LGT had lower mean peat temperatures than their air surface counterparts: 14.1 $\pm$ 1.5\,\textdegree C and 20.3 $\pm$ 1.7\,\textdegree C respectively, whereas the opposite was observed in FRN and LDM with 16.3 $\pm$ 2.4\,\textdegree C and 15.9 $\pm$ 1.0\,\textdegree C respectively.
 Mean soil temperatures were still higher at -10 cm for both sites, but only in LDM at -20 cm.
 At -30 cm the soil temperature amplitude ranged from 0.2 in LDM to 0.6 in LGT and FRN.
 Overall conditions were warmer in LGT than in the other sites and LDM, despite a large amplitude of surface air temperature, had a particularly low soil temperature amplitude.
@@ -212,13 +265,11 @@ In BDZ and LGT, ER mean values were 3.12 $\pm$ 0.92 and 4.10 $\pm$ 1.15\,\textmu
 \begin{figure}
 \centering
 \includegraphics[width=1.15\textwidth, center]{chap5/ER_Tair_Tpeat}
-\caption{Ecosystem Respiration (ER), air and peat temperature, in the 4 sites (Bernadouze: BDZ, Frasne: FRN, Landemarais: LDM, La Guette: LGT).}
+\caption{Ecosystem Respiration (ER), air and peat temperature, in the 4 sites (Bernadouze: BDZ, Frasne: FRN, Landemarais: LDM, La Guette: LGT). All data points from all replicates are shown.}
 \label{fig:er_tair_tpeat}
 \end{figure}
 
 \subsection{ER and soil temperature synchronisation}
-%\subsection{Synchronisation RE et température du sol}
-
 Figure~\ref{fig:er_tair_tpeat} shows that the deeper the temperature was measured, the greater the shift with respect to ER.
 Taking this shift into account by synchronising soil temperatures with ER led to a significant positive linear correlation between the temperature measurement depth and the synchronisation time-delay (all sites pooled, R$^2$=0.94, p$<$0.001; Figure~\ref{fig:lag_depth}).
 The range of estimated time-delays decreased with depth up to -20 cm.
@@ -302,13 +353,13 @@ The improvement gained by using synchronised data was higher at -5 cm and -10 cm
 %The improvement gained by using synchronised data was lower, deeper in the profile: 0.12, 0.11 on average for -20 and -30 cm depth.
 
 A similar observation can be made for NRMSE.
-Regardless of some exceptions at deeper layers especially at -20 cm depth, the NRMSE values show that using synchronised data rather than non-synchronised ones improved the representation of ER variability at a daily timescale, indicating that depth measurements dependence is smaller for models using synchronised data than for models using non-synchronised data.
+Regardless of some exceptions at deeper layers especially at -20 cm depth, the NRMSE values show that using synchronised data rather than non-synchronised ones improved the model representation of ER variability at a daily timescale, indicating that depth measurements dependence is smaller for models using synchronised data than for models using non-synchronised data.
 However with increasing depth R$^{2}$ values still decreased and NRMSE values still increased.
 For FRN, LDM and LGT, synchronised data at -5 cm depth gave a better account of the ER variability than surface air temperature (Figure~\ref{fig:models_comparison}).
 This was not the case in LDM, where temperature at the surface was the best descriptor of ER.
 For both R$^{2}$ and NRMSE the values at -20 cm depth were better than those observed at -10 or -30 cm depth.
 This pattern was observed with different magnitudes among sites, and was particularly visible in FRN and LGT.
-For the most part, the synchronisation of data led to higher R$^{2}$ and NRMSE values for models using one soil temperature, at a daily scale on \textit{sphagnum}-dominated peatlands.
+For the most part, the synchronisation of data led to higher R$^{2}$ and smaller NRMSE values for models using one soil temperature, at a daily scale on \textit{sphagnum}-dominated peatlands.
 
 \begin{figure}[]
 \centering
@@ -333,7 +384,7 @@ Below this depth, Q$_{10}$ estimated with both methods either decreased downward
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{chap5/oneT_Q10}
-\caption{Profile of Q$_{10}$ with depth for synchronised (white) and non synchronised (black) data and exponential model in the 4 sites (Bernadouze: BDZ, Frasne: FRN, Landemarais: LDM, La Guette: LGT).}.
+\caption{Profile of Q$_{10}$ with depth for synchronised (white) and non synchronised (black) data and exponential model in the 4 sites (Bernadouze: BDZ, Frasne: FRN, Landemarais: LDM, La Guette: LGT).The inset display the same datas but with their full range extend.}
 \label{fig:oneT_Q10}
 \end{figure}
 %\textbf{CG: Mentionner ce qu'est une valeur réaliste du Q10 (entre 1.5 et 2.5 si je me souviens bien, en s'appuyant sur des références), texte mieux dit en dessous}
@@ -345,9 +396,10 @@ Below this depth, Q$_{10}$ estimated with both methods either decreased downward
 For BDZ and LDM sites no significant differences were found between daytime and nighttime data no matter which model was used, whereas differences were found for FRN and LGT (Figure~\ref{fig:diff_JN}). 
 In FRN, synchronisation increased the significance of the differences: p $<$ 0.001 with and p $<$ 0.01 without synchronisation respectively.
 The same pattern was found in LGT but with lower significance.
-Hence models using -5 cm depth with non-synchronised data are not significantly different but those using synchronised data are.
+%Hence models using -5 cm depth with non-synchronised data are not significantly different but those using synchronised data are.
 %Note that, for LGT, the model using synchronised data with -5 cm depth temperature and the model using air temperature do not show the same differences:
 Note that, for LGT, the model using air temperature had a daytime slope that was higher than the nighttime one, which was the opposite of all the other cases.
+The use of the synchronisation to model ER enhance the significance of the observed differences as models models using -5 cm depth with non-synchronised data are not significantly different but those using synchronised data are.
 % do not show the same difference between daytime and nighttime.
 %Daytime slope are superior to nighttime ones for the former as are all the other differences and inferior for the latter.
 
@@ -419,21 +471,26 @@ level  & N & C & H & S & $\Phi_{T}$ & $\Phi_{R}$ & $\Phi_{E}$ & solid & Bd \\
 
 
 The ER fluxes calculated in the 4 sites were in the same order of magnitude as those of peatlands found in the literature.
-\citet{bortoluzzi2006a}, for instance, found ER values ranging from 2 to 5\, during the same period as this study, i.e. July to October 2004.
+\citet{bortoluzzi2006a}, for instance, found ER values ranging from 2 to 5\,\textmu mol\,m$^{-2}$\,s$^{-1}$  during the same period as this study, i.e. July to October 2004.
 In the present study, the models performed poorly in 2 sites, BDZ and LDM.
-For BDZ, amplitudes of both ER and temperatures were low  (Figure~\ref{fig:er_tair_tpeat} -- A, E) making the representation of ER possible only on a short temperature span.
+For BDZ, amplitudes of both ER and temperatures were low  (Figure~\ref{fig:er_tair_tpeat} -- A, E) making the model representation of ER possible only on a short temperature span.
 With such low ranges of both ER and temperature, it can be assumed that ER variability was due to the variability between plots.
 % and the noise more preponderant.
 For LDM, the ER fluxes were measured in plots that were more heterogeneous than expected, resulting in strong variability (Figure~\ref{fig:er_tair_tpeat} -- C).
 %Actually the replicates can be grouped 2 by 2, one group showing ER values close to XXXX data and the other :XXXX.
 This observation is consistent with the high NRMSE value calculated for this site (39.3 \% for BDZ against 26.1 \% for LDM) whereas the R$^{2}$ values for these two sites were close, 0.19 and 0.32 for BDZ and LDM respectively, using surface air temperature and an exponential relationship.
-It is noteworthy that in FRN the NRMSE values were high with respect to R$^{2}$ values.
+%It is noteworthy that in FRN the NRMSE values were high with respect to R$^{2}$ values.
 %It is noteworthy that in FRN the NRMSE values were higher than in the other sites.
-This result can be explained by the fact that the mean ER flux was low (1.75\,\textmu mol\,m$^{-2}$\,s$^{-1}$) and thus had a strong influence on NRMSE as we used mean normalization.
-Finally at -20 cm depth, models using non-synchronised data showed, an increase in R$^{2}$ and a decrease in NRMSE which was more or less observable in the different sites:
-clearly in FRN, LGT and to a lesser extent in LDM, but barely perceivable in BDZ.
+%This result can be explained by the fact that the mean ER flux was low (1.75\,\textmu mol\,m$^{-2}$\,s$^{-1}$) and thus had a strong influence on NRMSE as we used mean normalization.
+%Finally at -20 cm depth, models using non-synchronised data showed, an increase in R$^{2}$ and a decrease in NRMSE which was more or less observable in the different sites:
+%clearly in FRN, LGT and to a lesser extent in LDM, but barely perceivable in BDZ.
+%At this depth the temperature and the ER signal phases are opposed making the non-synchronised models better at representing ER than at -10 or -30 centimetres but with a reverse relationship.
+%The ER fluxes thus show different behaviours either in their amplitude or in their homogeneity
+In Frasne the NRMSE values were high with respect to R$^{2}$ values, this result can be explained by the fact that the mean ER flux was low (1.75\,\textmu mol\,m$^{-2}$\,s$^{-1}$) and thus had a strong influence on NRMSE as we used mean normalization.
+Finally at -20 cm depth, models using non-synchronised data showed, an increase in R$^{2}$ and a decrease in NRMSE which was more or less observable in the different sites. %:
+%clearly in FRN, LGT and to a lesser extent in LDM, but barely perceivable in BDZ.
 At this depth the temperature and the ER signal phases are opposed making the non-synchronised models better at representing ER than at -10 or -30 centimetres but with a reverse relationship.
-The ER fluxes thus show different behaviours either in their amplitude or in their homogeneity
+The ER fluxes thus show different behaviours either in their amplitude or in their homogeneity.
 
 %\subsection{Temps de latence entre température et RE}
 \subsection{Time-delay between temperature and ER}
@@ -457,10 +514,10 @@ Overall, it should be noted that the time-delays were similar in all the studied
 \subsection{Synchronising ER and temperature improves ER sensitivity to temperature representation}
 
 In spite of the importance of lags between physical phenomenona and biological activities \citep{vargas2010}, few studies have addressed the effect of time-delays between soil temperature and global biological activity (ER) at the daily timescale.
-At this scale, we showed in peatlands that using synchronised data improved the representation of the temperature sensitivity of ER.
+At this scale, we showed in peatlands that using synchronised data improved the model representation of the temperature sensitivity of ER.
 The improvement provided by synchronisation was evidenced at shallow depth.
 The best goodness-of-fit obtained with synchronised data and models using one temperature, was found at -5 cm depth.
-These observations are in agreement with those of \citet{pavelka2007} who also found a decreasing effect of synchronisation with depth.
+These observations are in agreement with those of \citet{pavelka2007} who also found a decreasing dependence of ER on temperature synchronisation with depth.
 Such a lesser depth effect could be explained by a simultaneous decrease in temperature amplitude.
 Because the goodness-of-fit of the non-synchronised data increases at -20 cm, the synchronisation effect  strongly decreases at this depth.
 This pattern is visible, with various amplitudes, in the different sites.
@@ -472,14 +529,15 @@ Finally in our study these models, using synchronised -5 cm depth temperature, s
 %\subsection{Différence entre mesure de RE faite le jour et la nuit}
 \subsection{Differences between daytime and nighttime ER measurements}
 
-The significant differences observed between daytime and nighttime measurements corroborate other studies in which these differences were found using chamber techniques \citep{juszczak2012,darenova2014}.
+The use of synchronisation might allow to see differences between daytime and nighttime measurement that might not have been evidenced otherwise.
+The significant differences observed between daytime and nighttime measurements in this study corroborate others in which these differences were found using chamber techniquess \citep{juszczak2012,darenova2014}.
 The fact that some sites show significant differences (FRN and LGT) and not others (BDZ and LDM) seems to be linked to the variability between plots and temperature amplitude.
 When temperature amplitude was low, most of the variability originated from spatial variability between plots.
 %the noise in the data: less noise, higher significance and high noise lower or no significance.
 This was also corroborated by a test done on LGT where we calculated the day and night differences only on the last two days when temperature amplitude was the greatest.
 %thus avoiding the first noisy day.
 As a result the significance increased from p\,$<$\,0.05 to p\,$<$\,0.01 for the synchronised model using -5 cm depth temperature and the differences observed in the model using air temperature were no longer significant any more (p\,$>$\,0.05).
-
+These differences could be linked to the substrate production that occur during photosynthesis, and thus during daytime only, which may favour the respiration \citep{weedon2013}.
 
 %\subsection{La sensibilité du Q10 à la profondeur de la température et à la synchronisation}
 \subsection{Q$_{10}$ sensitivity to temperature depth and synchronisation}
@@ -491,18 +549,24 @@ This apparent contradiction may be explained by the length of the study.
 %Because of the short duration of the study, the effect of the time-delays on the relationship between ER and the temperatures are preponderant over the relation itself.
 Because of its short duration, the effect of the time-delays on ER were preponderant over the temperature effect.
 Synchronisation also led to meaningless high Q$_{10}$ values because synchronisation can explain a higher proportion of ER flux with a smaller temperature variation.
-Temperature amplitude decreases with depth because of soil dampening.
+Temperature amplitude decreases with depth because of soil dampening, absorbing heat along the path of heat propagation.
 
 
 \section{Conclusions}  %% \conclusions[modified heading if necessary]
 
-We showed that the time-delays between ER and soil temperatures at different depths are significant on a daily timescale as the signals are shifted 30 minutes every centimetre.
-At this scale the  use of synchronised soil temperature, to take into account these time-delays, can improve the representation of ER particularly in the first 10 centimetres.
-Only one of the studied sites showed highly significant differences between daytime and nighttime measurements.
-However it is possible that such differences exist in the other sites, depending on the environmental conditions (e.g. temperature amplitude) and spatial variability in the ER fluxes.
-Addressing questions of bio-physical coupling in determining ER at different timescales requires high frequency observations \citep{Vargas2011}.
-Even if the automated chamber technique is increasingly used, it cannot be easily deployed in some sites due to tall vegetation, power supply difficulties, or harsh environmental conditions.
-In contrast, temperature measurements at different depths are easy to conduct, robust to harsh conditions and can be powered by a small solar panel.
+We showed that the time-delays between ER and soil temperatures in peat soils at different depths are significant on a daily timescale as the signals are shifted approximately 30 minutes every centimetre.
+At this scale the  use of synchronised soil temperature, to take into account these time-delays, can improve the model representation of ER particularly in the first 10 centimetres.
+The synchronisation also allow to evidence differences between daytime and nighttime measurements.
+One of the studied sites showed highly significant differences between daytime and nighttime measurements.
+However it is possible that such differences exist in the other sites, depending on the environmental conditions (e.g. temperature amplitude) and the spatial variability of the physico-chemical properties of the peat (e.g. soil wetness).
+%Addressing questions of bio-physical coupling in determining ER at different timescales requires high frequency observations \citep{Vargas2011}.
+%Ev-en if the automated chamber technique is increasingly used, it cannot be easily deployed in some sites due to tall vegetation, power supply difficulties, or harsh environmental conditions.
+%In contrast, temperature measurements at different depths are easy to conduct, robust to harsh conditions and can be powered by a small solar panel.
+%A calibration campaign with human manipulated closed chambers could be carried out to assess ER variability at different timescales.
+%Coupling temperature profile and punctual ER measurements and then using synchronised data in models may be a good alternative in sites where automated chambers are not easily implantable.
+With high frequency measurements (automated chamber technique is increasingly used) the temperature depth used to model ER is critical especially to assess processes that occur at a daily time scale.
+Thus the synchronisation can be a way to improve ER model representation allowing for instance a better discrimination between daytime and nighttime measurements.
+Temperature measurements at different depths are easy to conduct, robust to harsh conditions and can be powered by a small solar panel.
 A calibration campaign with human manipulated closed chambers could be carried out to assess ER variability at different timescales.
 Coupling temperature profile and punctual ER measurements and then using synchronised data in models may be a good alternative in sites where automated chambers are not easily implantable.
 
